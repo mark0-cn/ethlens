@@ -1,0 +1,197 @@
+{
+  "slug": "l1-zkevm-breakout-6",
+  "series": "L1",
+  "number": 6,
+  "title": "L1 zkEVM Breakout #6",
+  "subtitle": "L1 zkEVM 专题会议",
+  "kicker": "L1 ZKEVM BREAKOUT",
+  "date": "2026-07-08",
+  "dateLabel": "2026 年 7 月 8 日",
+  "topic": "L1 zkEVM 进展",
+  "translationStatus": "reviewed",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/l1-zkevm-breakout-006-july-08-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/l1-zkevm-breakout-006-july-08-2026_en.srt",
+    "zh": "../../media/subtitles/zh/l1-zkevm-breakout-006-july-08-2026_zh.srt"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 17,
+      "decisions": 3,
+      "actionItems": 3
+    },
+    "sections": [
+      {
+        "title": "规范与测试更新",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "zkEVM 规范 v0.50 已发布，基于 Glamsterdam 和 DevNet 6 重新建立基线；支持使用外部 transition tool（Geth）填充基准测试 fixture。",
+            "seek": 441
+          },
+          {
+            "text": "guest 输入中的 SSZ max-length 细化将改变 hash tree root 计算；所有实现者都需要检查并调整。",
+            "seek": 523
+          },
+          {
+            "text": "Hive dashboard 现在在同一视图中跟踪 ethrex 和 Besu 的 execution-witness 合规性，以及首次 guest program 测试运行。",
+            "seek": 791
+          },
+          {
+            "text": "Geth execution-witness 生成中的 bug 已修复并合并；基准 fixture 已重新填充，结果看起来正确。",
+            "seek": 844
+          }
+        ]
+      },
+      {
+        "title": "Guest API 标准化",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "已接受 8 项 guest API 标准（ISA I/O、加密加速器、终止、内存、静态库、linker script）；ELF 加载和加速内存操作仍开放审查。",
+            "seek": 1153
+          },
+          {
+            "text": "ELF 加载标准：建议可执行段采用 execute-and-read 语义；不建议 execute-only（Zisk 当前采用的方式），因为没有工具链保证文本段只包含指令。",
+            "seek": 1213
+          },
+          {
+            "text": "静态库中的 precompile 不得在 guest heap 上分配；必须使用单独隔离的 scratch 区域，其他供应商应检查是否存在这种冲突。",
+            "seek": 1454
+          },
+          {
+            "text": "会议提出方向：Ethereum guest program 应使用未经修改的标准工具链构建，以尽量缩小可信计算基。",
+            "seek": 1499
+          }
+        ]
+      },
+      {
+        "title": "同步协议与递归证明",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "弱主观性同步最多可能需要 113,000 个 slot（约 26.9 GB 证明内容）；有人提出递归执行证明（SSZ Merkle tree 或 MMR），以通过 gossip 验证链前缀。",
+            "seek": 1616
+          },
+          {
+            "text": "递归证明方案可以通过消除复杂的请求-响应同步来简化共识客户端；近期计划编写概念验证规范并实现。",
+            "seek": 1904
+          }
+        ]
+      },
+      {
+        "title": "证明器基础设施与基准测试",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "EF 集群可扩展性：对于大区块，GPU 证明从 1 张扩展到整台机器时接近线性；在 2 到 4 张 GPU 之间观察到 CPU 瓶颈。",
+            "seek": 2056
+          },
+          {
+            "text": "在主网 EST 6M gas 区块上仍观察到 OOM kill；根因仍在调查。",
+            "seek": 2104
+          },
+          {
+            "text": "新的 ZK-Boost 版本适配了当前兼容的输入格式；proof-request 和 verification API 更新为要求将 chain config 作为公开输入。",
+            "seek": 2158
+          }
+        ]
+      },
+      {
+        "title": "分配器安全性",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Bump allocator（BAM）速度最快，但在当前约 0.5 GB 上限下会使高 gas 区块 OOM；提高到 1.5 GB 可绕过失败，却几乎没有余量，因此建议使用更成熟的分配器（如 DLmalloc）以确保安全。",
+            "seek": 3187
+          },
+          {
+            "text": "OpenVM 2.1 将支持 4 GB guest memory（聊天中 Yi Sun 提供）；其他大多数 zkVM 可能不会超过 1 GB（Marcin）。",
+            "seek": 3430
+          }
+        ]
+      },
+      {
+        "title": "EVM 形式化规范",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "EVM SAIL 规范（evm-sail）已达到 100% EEST 测试合规；可提取到 Lean、Isleris/Iris，用于二进制合规证明和 RISC-V guest program 验证。",
+            "seek": 2504
+          },
+          {
+            "text": "目标是让 SAIL 规范与 Python 执行规范实现功能对等，使核心开发者能够直接为单一形式化规范贡献。",
+            "seek": 2581
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "ELF 加载标准采用可执行段的 execute-and-read 语义；不建议使用 execute-only 解释方式。",
+            "seek": 1291
+          },
+          {
+            "text": "确定方向：Ethereum guest program 必须使用未经修改的标准工具链构建，以限制可信计算基。",
+            "seek": 1499
+          },
+          {
+            "text": "由于在更高 gas limit 下存在 OOM 导致的存活性风险，不建议生产 guest program 使用 Bump allocator；应优先采用更成熟的分配器。",
+            "seek": 3430
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "所有 guest program 实现者",
+            "text": "检查 zkEVM 规范 v0.50 的 SSZ max-length 变更，并相应更新 hash tree root 计算。",
+            "seek": 523
+          },
+          {
+            "owner": "Nethermind 和其他 EL 团队",
+            "text": "通过在 dashboard 仓库 JSON 中添加分支条目，将 Nethermind（以及其他客户端）加入 execution-witness Hive dashboard。",
+            "seek": 1109
+          },
+          {
+            "owner": "zkVM 供应商",
+            "text": "审计 precompile 静态库是否存在 guest heap 分配冲突；如有影响，添加隔离的 scratch 区域。",
+            "seek": 1454
+          }
+        ]
+      },
+      {
+        "title": "目标日期",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "递归证明链前缀概念验证规范与实现：Francesco 负责，未来几天完成",
+            "seek": 1912
+          },
+          {
+            "text": "下一次 zkEVM 发布应同时包含测试 fixture 和由 Geth 填充的基准 fixture",
+            "seek": 908
+          }
+        ]
+      }
+    ]
+  }
+}

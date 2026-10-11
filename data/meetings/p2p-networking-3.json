@@ -1,0 +1,97 @@
+{
+  "slug": "p2p-networking-3",
+  "series": "P2P",
+  "number": 3,
+  "title": "P2P Networking #3",
+  "subtitle": "P2P 网络专题会议",
+  "kicker": "P2P NETWORKING",
+  "date": "2026-07-01",
+  "dateLabel": "2026 年 7 月 1 日",
+  "topic": "P2P 网络进展",
+  "translationStatus": "reviewed",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/p2p-networking-003-july-01-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/p2p-networking-003-july-01-2026_en.srt",
+    "zh": "../../media/subtitles/zh/p2p-networking-003-july-01-2026_zh.srt"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 6,
+      "decisions": 1,
+      "actionItems": 1
+    },
+    "sections": [
+      {
+        "title": "客户端更新",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Lighthouse 已在 Hoodi 和 Sepolia 默认启用 partial columns；mesh peer 中约 2.5/6 已升级；带宽降至 2 MiB/s，DA 平均延迟降至约 1.15 秒。",
+            "seek": 186
+          },
+          {
+            "text": "Prysm：Fulu partial column 变更已合入发布分支；Gloas partial column 变更本周正在审查；目标在 Gloas DevNet 6 测试。",
+            "seek": 660
+          },
+          {
+            "text": "Teku 正在积极推进 PeerDAS，并发布了多个修复版本；PeerDAS 很可能已用于生产。",
+            "seek": 1148
+          }
+        ]
+      },
+      {
+        "title": "测试进展",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "计划在 Gloas DevNet 6 测试 Gloas partial column 变更，而不是使用 BlobDevNet 0。",
+            "seek": 473
+          },
+          {
+            "text": "Sparse blob pool 已合入 Glamsterdam DevNet（Prysm）；尚无 EL 客户端实现 FCU v4 / GetBlobs v4，因此有效测试受限。",
+            "seek": 875
+          },
+          {
+            "text": "Nethermind 的 GetBlobsV4 存在已知 bug（issue #12147）；Erigon 的 sparse blob pool PR 已开放审查，预计很快发布。",
+            "seek": 1095
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "Gloas partial column 变更将在 Gloas DevNet 6 测试，不使用 BlobDevNet 0。",
+            "seek": 512
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "Bosul Mun",
+            "text": "在 sparse blob pool 频道报告 Nethermind GetBlobsV4 bug，并 @FLCL。",
+            "seek": 1156
+          }
+        ]
+      }
+    ]
+  }
+}

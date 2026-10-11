@@ -1,0 +1,1496 @@
+1
+00:05:44,240 --> 00:05:48,560
+Hello everyone.
+
+2
+00:05:46,479 --> 00:05:50,080
+Hi Thomas, how you doing?
+
+3
+00:05:48,560 --> 00:05:50,639
+>> Yeah, fine. Are you?
+
+4
+00:05:50,080 --> 00:05:54,360
+>> Nice.
+
+5
+00:05:50,639 --> 00:05:54,360
+>> Very good. Very good.
+
+6
+00:05:55,600 --> 00:06:02,160
+So, let's get started. So today we're
+
+7
+00:05:59,120 --> 00:06:04,880
+going to just mention like team updates
+
+8
+00:06:02,160 --> 00:06:06,479
+and a bit of of the blocker and and
+
+9
+00:06:04,880 --> 00:06:08,000
+improvement we have made over
+
+10
+00:06:06,479 --> 00:06:10,800
+simulations.
+
+11
+00:06:08,000 --> 00:06:13,919
+Um so let's get started with the team
+
+12
+00:06:10,800 --> 00:06:16,880
+update. Um Zim first.
+
+13
+00:06:13,919 --> 00:06:19,440
+>> Uh hey uh since Gender is not there I'm
+
+14
+00:06:16,880 --> 00:06:21,039
+giving the update on behalf of Zim. So
+
+15
+00:06:19,440 --> 00:06:24,240
+over the past week, we've been working
+
+16
+00:06:21,039 --> 00:06:27,199
+on uh uh the couple of suggestions that
+
+17
+00:06:24,240 --> 00:06:29,840
+were proposed both by the Zen team uh
+
+18
+00:06:27,199 --> 00:06:31,440
+ourselves and e lambda. Uh we've
+
+19
+00:06:29,840 --> 00:06:34,160
+released a new image and we've been
+
+20
+00:06:31,440 --> 00:06:37,759
+testing that out locally. Uh we are yet
+
+21
+00:06:34,160 --> 00:06:40,000
+to uh address all of the uh uh spec
+
+22
+00:06:37,759 --> 00:06:42,080
+issues that were raised uh over the past
+
+23
+00:06:40,000 --> 00:06:44,639
+week which we'll be doing and hopefully
+
+24
+00:06:42,080 --> 00:06:46,560
+releasing a new image later today or
+
+25
+00:06:44,639 --> 00:06:48,240
+early tomorrow. Uh once that's done,
+
+26
+00:06:46,560 --> 00:06:51,840
+we'll run another round of interrupt
+
+27
+00:06:48,240 --> 00:06:54,160
+testing uh and uh keep you posted. Uh
+
+28
+00:06:51,840 --> 00:06:57,600
+parally uh I've also been running a long
+
+29
+00:06:54,160 --> 00:06:59,599
+running DevNet on the service. Uh no
+
+30
+00:06:57,600 --> 00:07:02,479
+issue has been identified apart from
+
+31
+00:06:59,599 --> 00:07:05,360
+what was already raised last week. Uh
+
+32
+00:07:02,479 --> 00:07:08,400
+yeah, that's the update from the side.
+
+33
+00:07:05,360 --> 00:07:13,039
+Thank you.
+
+34
+00:07:08,400 --> 00:07:15,440
+>> Great. Thanks. Um Ree.
+
+35
+00:07:13,039 --> 00:07:16,720
+>> All right. On the re side, uh we've also
+
+36
+00:07:15,440 --> 00:07:19,039
+been experimenting with the
+
+37
+00:07:16,720 --> 00:07:22,319
+optimizations proposed in uh both the
+
+38
+00:07:19,039 --> 00:07:24,720
+documents by lambda and seam. Uh we
+
+39
+00:07:22,319 --> 00:07:28,560
+found skipping the type one aggregation
+
+40
+00:07:24,720 --> 00:07:30,000
+to have like a drastic impact. Uh and
+
+41
+00:07:28,560 --> 00:07:32,639
+and we we tried the 8 seconds
+
+42
+00:07:30,000 --> 00:07:36,639
+optimization uh 8second slots uh which
+
+43
+00:07:32,639 --> 00:07:40,960
+works as well. Uh but but so I'm running
+
+44
+00:07:36,639 --> 00:07:44,319
+a currently running a devet on uh
+
+45
+00:07:40,960 --> 00:07:48,000
+I'm going to share the link here.
+
+46
+00:07:44,319 --> 00:07:50,319
+here uh with rene lambda and uh we have
+
+47
+00:07:48,000 --> 00:07:53,199
+the optimizations proposed uh the
+
+48
+00:07:50,319 --> 00:07:55,919
+skipping the uh removing the proposer
+
+49
+00:07:53,199 --> 00:07:58,080
+moving the proposal signature and uh
+
+50
+00:07:55,919 --> 00:08:01,120
+skipping the type one aggregation and
+
+51
+00:07:58,080 --> 00:08:03,120
+the early bird optimization uh and we
+
+52
+00:08:01,120 --> 00:08:06,240
+find we find it to be running quite
+
+53
+00:08:03,120 --> 00:08:09,280
+stable and quite uh like the head and
+
+54
+00:08:06,240 --> 00:08:13,599
+finalization difference is quite low uh
+
+55
+00:08:09,280 --> 00:08:15,599
+it's 14 to 15 most of the time uh but uh
+
+56
+00:08:13,599 --> 00:08:18,960
+I I don't think we have aligned on which
+
+57
+00:08:15,599 --> 00:08:20,800
+path we want to take forward. Uh uh so
+
+58
+00:08:18,960 --> 00:08:25,599
+so if if we align on that on the call,
+
+59
+00:08:20,800 --> 00:08:30,479
+we can push this into master on on the
+
+60
+00:08:25,599 --> 00:08:33,120
+uh on the scaling side. Uh Hzner Hzner
+
+61
+00:08:30,479 --> 00:08:36,719
+prices have gone up by quite a bit. They
+
+62
+00:08:33,120 --> 00:08:38,240
+doubled their prices and and they uh
+
+63
+00:08:36,719 --> 00:08:40,800
+they haven't approved us for additional
+
+64
+00:08:38,240 --> 00:08:42,640
+servers. So we looking into uh we're
+
+65
+00:08:40,800 --> 00:08:45,600
+looking into other options for uh
+
+66
+00:08:42,640 --> 00:08:48,000
+hosting our dev nets and on the hive
+
+67
+00:08:45,600 --> 00:08:50,640
+side uh we saw that the hive instance
+
+68
+00:08:48,000 --> 00:08:52,000
+was getting full so we restarted it and
+
+69
+00:08:50,640 --> 00:08:55,360
+we are looking into better ways to
+
+70
+00:08:52,000 --> 00:08:57,839
+improve uh it's to like purge old uh
+
+71
+00:08:55,360 --> 00:08:59,839
+historical data from it. That that's all
+
+72
+00:08:57,839 --> 00:09:01,440
+from the team side and uh we are also
+
+73
+00:08:59,839 --> 00:09:04,440
+trying to integrate with the shadow
+
+74
+00:09:01,440 --> 00:09:04,440
+fuzz.
+
+75
+00:09:04,720 --> 00:09:09,399
+Thanks. Um, clean.
+
+76
+00:09:14,959 --> 00:09:19,519
+>> Okay, Lion.
+
+77
+00:09:17,120 --> 00:09:21,680
+>> Yep. Thanks, Thomas. Hi, everyone. Um,
+
+78
+00:09:19,519 --> 00:09:24,640
+so yeah, uh, we've just been, uh,
+
+79
+00:09:21,680 --> 00:09:27,680
+focusing on making the code base of Lant
+
+80
+00:09:24,640 --> 00:09:29,279
+more maintainable. to just implementing
+
+81
+00:09:27,680 --> 00:09:32,080
+refactorings
+
+82
+00:09:29,279 --> 00:09:35,200
+uh and have just been testing uh a five
+
+83
+00:09:32,080 --> 00:09:37,920
+node uh devet on a single server and
+
+84
+00:09:35,200 --> 00:09:40,720
+have just been trying to resolve the
+
+85
+00:09:37,920 --> 00:09:43,760
+interrop issues. Uh we noticed that um
+
+86
+00:09:40,720 --> 00:09:48,000
+we were still tracking an old commit for
+
+87
+00:09:43,760 --> 00:09:50,880
+lean spec uh and have recently um
+
+88
+00:09:48,000 --> 00:09:54,080
+updated uh our commit to the latest
+
+89
+00:09:50,880 --> 00:09:56,959
+version. Uh so thanks Ethlam the team
+
+90
+00:09:54,080 --> 00:09:59,440
+for uh suggesting the fix. Uh but yeah
+
+91
+00:09:56,959 --> 00:10:03,600
+we're still debugging some additional
+
+92
+00:09:59,440 --> 00:10:05,440
+issues uh and we'll uh post an update in
+
+93
+00:10:03,600 --> 00:10:08,240
+uh in the telegram chat once we have a
+
+94
+00:10:05,440 --> 00:10:11,040
+new image available. Um and as well as
+
+95
+00:10:08,240 --> 00:10:14,000
+we found out that um the images that we
+
+96
+00:10:11,040 --> 00:10:16,560
+were publishing uh we were building
+
+97
+00:10:14,000 --> 00:10:19,519
+images with cache enabled uh in the git
+
+98
+00:10:16,560 --> 00:10:22,000
+workflow. So uh basically the
+
+99
+00:10:19,519 --> 00:10:24,000
+optimization that we were working on
+
+100
+00:10:22,000 --> 00:10:25,519
+didn't actually translate unless the
+
+101
+00:10:24,000 --> 00:10:28,000
+image was built on the server from
+
+102
+00:10:25,519 --> 00:10:30,959
+source. Uh but we've disabled that and
+
+103
+00:10:28,000 --> 00:10:33,760
+um it should uh notice there should be
+
+104
+00:10:30,959 --> 00:10:36,800
+no improvements in aggregations and
+
+105
+00:10:33,760 --> 00:10:40,839
+block building. Uh so yeah uh that's the
+
+106
+00:10:36,800 --> 00:10:40,839
+update from our side. Thanks.
+
+107
+00:10:41,760 --> 00:10:49,200
+>> Thank you. Um Islam.
+
+108
+00:10:46,079 --> 00:10:52,160
+>> Hello. Hello. Um, we continue running
+
+109
+00:10:49,200 --> 00:10:55,200
+interrupt delets and recently made our
+
+110
+00:10:52,160 --> 00:10:57,440
+graphana public which shows metrics and
+
+111
+00:10:55,200 --> 00:11:00,160
+logs of all the deets we run in our
+
+112
+00:10:57,440 --> 00:11:02,720
+servers. We share the the link in the
+
+113
+00:11:00,160 --> 00:11:04,560
+ter channel. Uh, we fixed a blog
+
+114
+00:11:02,720 --> 00:11:07,040
+building issue where we didn't
+
+115
+00:11:04,560 --> 00:11:08,640
+necessarily include the best payload. We
+
+116
+00:11:07,040 --> 00:11:10,399
+temporarily disable regressive
+
+117
+00:11:08,640 --> 00:11:14,240
+aggregation in the aggregator while we
+
+118
+00:11:10,399 --> 00:11:16,320
+work on other aggregation optimizations.
+
+119
+00:11:14,240 --> 00:11:18,560
+And we implemented an optimization for
+
+120
+00:11:16,320 --> 00:11:20,160
+signature aggregation where we now start
+
+121
+00:11:18,560 --> 00:11:22,079
+aggregating during the destation
+
+122
+00:11:20,160 --> 00:11:23,920
+interval if we collect enough
+
+123
+00:11:22,079 --> 00:11:26,320
+signatures.
+
+124
+00:11:23,920 --> 00:11:27,920
+We're working on doing a second run of
+
+125
+00:11:26,320 --> 00:11:30,480
+aggregation during the safe target
+
+126
+00:11:27,920 --> 00:11:33,360
+computation interval.
+
+127
+00:11:30,480 --> 00:11:36,959
+Uh we also implemented the recent spec
+
+128
+00:11:33,360 --> 00:11:39,680
+changes sharing the general channel.
+
+129
+00:11:36,959 --> 00:11:42,320
+uh and we made some fixes to our hive
+
+130
+00:11:39,680 --> 00:11:46,480
+test driver and we are currently passing
+
+131
+00:11:42,320 --> 00:11:48,640
+all spec test in hive uh and we in in
+
+132
+00:11:46,480 --> 00:11:53,440
+the if P2P
+
+133
+00:11:48,640 --> 00:11:56,000
+uh RS front we are adding fuzzing to our
+
+134
+00:11:53,440 --> 00:11:59,440
+library to our port we will share an
+
+135
+00:11:56,000 --> 00:12:05,279
+image of it lambda uh that will be able
+
+136
+00:11:59,440 --> 00:12:05,279
+to run uh with P2P um soon thank
+
+137
+00:12:06,560 --> 00:12:11,639
+Great. Thanks, Gim
+
+138
+00:12:16,480 --> 00:12:19,480
+Grandin.
+
+139
+00:12:20,560 --> 00:12:26,320
+>> Hello, good afternoon. So, we worked on
+
+140
+00:12:23,920 --> 00:12:28,880
+it llamar proposal on optimization the
+
+141
+00:12:26,320 --> 00:12:31,120
+option one and option two and then we
+
+142
+00:12:28,880 --> 00:12:34,800
+also made some lane spec fixes. So we're
+
+143
+00:12:31,120 --> 00:12:36,639
+currently testing locally to um
+
+144
+00:12:34,800 --> 00:12:38,720
+we'll release a new image once our local
+
+145
+00:12:36,639 --> 00:12:42,079
+testing is done and also release a
+
+146
+00:12:38,720 --> 00:12:45,240
+shadow image for shadow testing also.
+
+147
+00:12:42,079 --> 00:12:45,240
+Thank you.
+
+148
+00:12:46,639 --> 00:12:56,720
+Um great. So that on on the side of um
+
+149
+00:12:53,120 --> 00:13:03,519
+of spec I didn't update that much on
+
+150
+00:12:56,720 --> 00:13:06,560
+spec fixes um especially the one um that
+
+151
+00:13:03,519 --> 00:13:08,399
+were like mentioned by some issues with
+
+152
+00:13:06,560 --> 00:13:11,040
+formal verification. This was very
+
+153
+00:13:08,399 --> 00:13:13,839
+helpful. Um I think this was done by
+
+154
+00:13:11,040 --> 00:13:15,680
+Shuki or something I think if I remember
+
+155
+00:13:13,839 --> 00:13:19,360
+correctly. So yeah, this was very
+
+156
+00:13:15,680 --> 00:13:22,560
+useful. Um some small bugs and like this
+
+157
+00:13:19,360 --> 00:13:24,639
+is the first time that I see some bugs
+
+158
+00:13:22,560 --> 00:13:26,720
+like detected by formal verification. So
+
+159
+00:13:24,639 --> 00:13:30,560
+that's cool.
+
+160
+00:13:26,720 --> 00:13:34,399
+Uh it allowed us like to to fix some
+
+161
+00:13:30,560 --> 00:13:38,000
+some stuff that are either minor or or
+
+162
+00:13:34,399 --> 00:13:40,399
+medium let us say. Um we also discuss
+
+163
+00:13:38,000 --> 00:13:43,440
+with the content specification team
+
+164
+00:13:40,399 --> 00:13:47,920
+about this repo. So we are extracting
+
+165
+00:13:43,440 --> 00:13:50,959
+right now um SSD um specification that
+
+166
+00:13:47,920 --> 00:13:54,079
+was done in linspec into a specific repo
+
+167
+00:13:50,959 --> 00:13:57,440
+that is currently under test within the
+
+168
+00:13:54,079 --> 00:14:00,560
+official like consensus beacon spec
+
+169
+00:13:57,440 --> 00:14:02,399
+uh with Justinia and his team. And once
+
+170
+00:14:00,560 --> 00:14:04,320
+that is okay, this will be transferred
+
+171
+00:14:02,399 --> 00:14:07,680
+into the official Ethereum GitHub
+
+172
+00:14:04,320 --> 00:14:09,760
+organization and we will able to we'll
+
+173
+00:14:07,680 --> 00:14:12,320
+be able to import that directly into the
+
+174
+00:14:09,760 --> 00:14:16,000
+spec. Um
+
+175
+00:14:12,320 --> 00:14:18,320
+removing all of the SSD code. Um so that
+
+176
+00:14:16,000 --> 00:14:21,440
+is a good synergy that we have right now
+
+177
+00:14:18,320 --> 00:14:23,600
+with the content spec team. Um so that
+
+178
+00:14:21,440 --> 00:14:26,560
+is about the spec
+
+179
+00:14:23,600 --> 00:14:29,440
+about like the cryptography. Uh we are
+
+180
+00:14:26,560 --> 00:14:31,519
+continuing working on um on binary
+
+181
+00:14:29,440 --> 00:14:34,480
+fields. Uh we are making several
+
+182
+00:14:31,519 --> 00:14:37,120
+improvements um discussions technical
+
+183
+00:14:34,480 --> 00:14:42,959
+discussions and stuff like this
+
+184
+00:14:37,120 --> 00:14:47,040
+especially on on bin 64 and on um
+
+185
+00:14:42,959 --> 00:14:49,760
+on linvm binary like a feel free to say
+
+186
+00:14:47,040 --> 00:14:53,040
+a few words about your work.
+
+187
+00:14:49,760 --> 00:14:57,760
+>> Yes hello everyone. Uh so essentially we
+
+188
+00:14:53,040 --> 00:15:02,000
+can now do above 500 XMss aggregated per
+
+189
+00:14:57,760 --> 00:15:05,399
+second with pl and so black three that's
+
+190
+00:15:02,000 --> 00:15:05,399
+it thanks
+
+191
+00:15:06,399 --> 00:15:13,519
+>> yeah great and so we are also working on
+
+192
+00:15:08,959 --> 00:15:15,440
+bin 64 with gym um in order also to be
+
+193
+00:15:13,519 --> 00:15:17,279
+to have like comparison with circuit
+
+194
+00:15:15,440 --> 00:15:19,760
+based approach
+
+195
+00:15:17,279 --> 00:15:24,480
+we are also making good progress there
+
+196
+00:15:19,760 --> 00:15:26,880
+um So that's pretty much it um
+
+197
+00:15:24,480 --> 00:15:29,120
+about like DevNet's implementation. I
+
+198
+00:15:26,880 --> 00:15:34,160
+think that the next logical step will be
+
+199
+00:15:29,120 --> 00:15:35,760
+like to simulate with the two new um
+
+200
+00:15:34,160 --> 00:15:39,360
+improvements that I've been proposed
+
+201
+00:15:35,760 --> 00:15:41,920
+last week by reim by Zim and
+
+202
+00:15:39,360 --> 00:15:45,040
+and Islam.
+
+203
+00:15:41,920 --> 00:15:49,440
+Um so I think that all of you most of
+
+204
+00:15:45,040 --> 00:15:51,920
+you guys have experimented with that. Um
+
+205
+00:15:49,440 --> 00:15:55,279
+so I yeah I think this is what we should
+
+206
+00:15:51,920 --> 00:15:58,600
+do and observe some result with this uh
+
+207
+00:15:55,279 --> 00:15:58,600
+yeah mercy.
+
+208
+00:15:58,800 --> 00:16:04,639
+Yeah, sorry. I have I have a question
+
+209
+00:16:00,800 --> 00:16:07,279
+for um Shik because the during his
+
+210
+00:16:04,639 --> 00:16:09,120
+update he mentioned about the Zim
+
+211
+00:16:07,279 --> 00:16:12,079
+proposal. I was trying to understand
+
+212
+00:16:09,120 --> 00:16:13,519
+which of the optimization did he is
+
+213
+00:16:12,079 --> 00:16:15,120
+running currently with the link he
+
+214
+00:16:13,519 --> 00:16:16,959
+shared.
+
+215
+00:16:15,120 --> 00:16:20,240
+uh we are skipping compaction so
+
+216
+00:16:16,959 --> 00:16:22,720
+skipping the type one application and uh
+
+217
+00:16:20,240 --> 00:16:27,360
+we are doing the early bird uh early
+
+218
+00:16:22,720 --> 00:16:29,920
+bird block building and uh the the third
+
+219
+00:16:27,360 --> 00:16:33,600
+optimization that was shared by ETH
+
+220
+00:16:29,920 --> 00:16:37,120
+lambda which is uh removing the block uh
+
+221
+00:16:33,600 --> 00:16:40,480
+the the proposer signature from from the
+
+222
+00:16:37,120 --> 00:16:43,120
+proof or something yeah so so those
+
+223
+00:16:40,480 --> 00:16:45,519
+those three uh they're implemented in E
+
+224
+00:16:43,120 --> 00:16:47,920
+lambda as well as uh in so we just
+
+225
+00:16:45,519 --> 00:16:50,959
+testing it out against ETH lambda.
+
+226
+00:16:47,920 --> 00:16:54,639
+>> Sorry if I got you. Eat lambda had three
+
+227
+00:16:50,959 --> 00:16:56,160
+um optimization. Which one did you skip?
+
+228
+00:16:54,639 --> 00:16:57,839
+>> No, we didn't skip any. We implemented
+
+229
+00:16:56,160 --> 00:17:00,720
+all three and that's the one I'm testing
+
+230
+00:16:57,839 --> 00:17:02,000
+on the uh on the metrics page that I
+
+231
+00:17:00,720 --> 00:17:04,799
+sent.
+
+232
+00:17:02,000 --> 00:17:08,160
+>> Okay. What about the proposal from Zim
+
+233
+00:17:04,799 --> 00:17:09,600
+the interval time increase? Did you is
+
+234
+00:17:08,160 --> 00:17:11,600
+that also part of
+
+235
+00:17:09,600 --> 00:17:14,319
+>> uh we ran a quick test with it but we
+
+236
+00:17:11,600 --> 00:17:16,480
+haven't been running like large uh cuz
+
+237
+00:17:14,319 --> 00:17:18,880
+that's like the last resort. So we are
+
+238
+00:17:16,480 --> 00:17:21,120
+testing everything else out before uh we
+
+239
+00:17:18,880 --> 00:17:23,439
+resolve to 8second slots.
+
+240
+00:17:21,120 --> 00:17:26,439
+>> Oh okay. Okay. Thank you.
+
+241
+00:17:23,439 --> 00:17:26,439
+>> Yeah.
+
+242
+00:17:28,640 --> 00:17:35,120
+So yeah, I haven't much else like um to
+
+243
+00:17:32,480 --> 00:17:36,960
+say um I think that this is important
+
+244
+00:17:35,120 --> 00:17:38,640
+that you guys are experimenting with
+
+245
+00:17:36,960 --> 00:17:43,039
+this optimizations
+
+246
+00:17:38,640 --> 00:17:45,280
+and to have like numbers. So if I like
+
+247
+00:17:43,039 --> 00:17:47,919
+just as an update is lambda I I have
+
+248
+00:17:45,280 --> 00:17:49,200
+seen that in the in the telegram channel
+
+249
+00:17:47,919 --> 00:17:51,360
+you mentioned that you did some
+
+250
+00:17:49,200 --> 00:17:54,400
+experimentations
+
+251
+00:17:51,360 --> 00:17:58,000
+um and you published some some graphana
+
+252
+00:17:54,400 --> 00:18:00,240
+I didn't have time to look at it how
+
+253
+00:17:58,000 --> 00:18:03,360
+many validators do you render these
+
+254
+00:18:00,240 --> 00:18:06,640
+simulations with
+
+255
+00:18:03,360 --> 00:18:10,160
+>> we are running currently with uh I think
+
+256
+00:18:06,640 --> 00:18:13,207
+16 uh validators on
+
+257
+00:18:10,160 --> 00:18:13,760
+>> okay And on two of our devets they are
+
+258
+00:18:13,207 --> 00:18:16,640
+[clears throat]
+
+259
+00:18:13,760 --> 00:18:19,919
+the each each one of those 16 node
+
+260
+00:18:16,640 --> 00:18:22,799
+devets is running on a single server.
+
+261
+00:18:19,919 --> 00:18:26,320
+Uh so there are some CPU contention and
+
+262
+00:18:22,799 --> 00:18:29,520
+such. U
+
+263
+00:18:26,320 --> 00:18:35,120
+we are also running then
+
+264
+00:18:29,520 --> 00:18:38,160
+a single ignet with only lambdas.
+
+265
+00:18:35,120 --> 00:18:41,919
+Uh that's one more like a smoke test. Uh
+
+266
+00:18:38,160 --> 00:18:45,280
+it's also a single single subnet that
+
+267
+00:18:41,919 --> 00:18:49,200
+one uh the 16 node deets I mentioned
+
+268
+00:18:45,280 --> 00:18:52,240
+before are uh each runs in with I think
+
+269
+00:18:49,200 --> 00:18:54,880
+four subnets. Yeah.
+
+270
+00:18:52,240 --> 00:18:59,600
+And uh we are also running a fourth
+
+271
+00:18:54,880 --> 00:19:02,559
+seven fourth devet with 32 uh only
+
+272
+00:18:59,600 --> 00:19:05,039
+lambda nodes and four subets just to
+
+273
+00:19:02,559 --> 00:19:07,840
+like see how it
+
+274
+00:19:05,039 --> 00:19:12,080
+>> goes with um the most extreme
+
+275
+00:19:07,840 --> 00:19:14,160
+configuration. I think we if we go to 64
+
+276
+00:19:12,080 --> 00:19:15,600
+the like the server doesn't have the
+
+277
+00:19:14,160 --> 00:19:18,600
+resources I think.
+
+278
+00:19:15,600 --> 00:19:18,600
+>> Yeah.
+
+279
+00:19:19,120 --> 00:19:26,960
+Um okay and so what you guys thinks are
+
+280
+00:19:24,720 --> 00:19:29,039
+the blockers right now to scale a bit
+
+281
+00:19:26,960 --> 00:19:32,240
+more the number of validators do you
+
+282
+00:19:29,039 --> 00:19:35,600
+have an idea or like are the proposals
+
+283
+00:19:32,240 --> 00:19:36,960
+that you made last week sufficient or we
+
+284
+00:19:35,600 --> 00:19:40,559
+need more
+
+285
+00:19:36,960 --> 00:19:42,960
+>> so uh I I wanted clarity on this what
+
+286
+00:19:40,559 --> 00:19:45,760
+are we defining as the uh acceptance
+
+287
+00:19:42,960 --> 00:19:49,440
+criteria here are we okay for
+
+288
+00:19:45,760 --> 00:19:52,240
+justification and finalization to um
+
+289
+00:19:49,440 --> 00:19:54,240
+increase in burst. uh sometimes up to 30
+
+290
+00:19:52,240 --> 00:19:58,400
+minutes we don't have finality and then
+
+291
+00:19:54,240 --> 00:20:04,000
+suddenly it jumps up or do do we want a
+
+292
+00:19:58,400 --> 00:20:07,360
+a regular uh I mean u uh increase say
+
+293
+00:20:04,000 --> 00:20:09,520
+there should be a finality every uh say
+
+294
+00:20:07,360 --> 00:20:13,919
+12 seconds or some I mean 12 minutes or
+
+295
+00:20:09,520 --> 00:20:16,400
+so uh because at the moment uh whatever
+
+296
+00:20:13,919 --> 00:20:20,559
+uh uh optimizations we are done we still
+
+297
+00:20:16,400 --> 00:20:22,960
+have this uh uh jump every 30 minutes 45
+
+298
+00:20:20,559 --> 00:20:25,840
+minutes, sometimes even longer. Uh so
+
+299
+00:20:22,960 --> 00:20:28,159
+that's something we'd have to agree on.
+
+300
+00:20:25,840 --> 00:20:30,400
+>> I I I think that we need some kind of
+
+301
+00:20:28,159 --> 00:20:32,320
+stability otherwise this is not
+
+302
+00:20:30,400 --> 00:20:37,840
+realistic with with what we want to
+
+303
+00:20:32,320 --> 00:20:41,360
+show. But are you able like to
+
+304
+00:20:37,840 --> 00:20:44,880
+like to find what are the root cause of
+
+305
+00:20:41,360 --> 00:20:46,400
+uh these jumps? Is it some hardware
+
+306
+00:20:44,880 --> 00:20:48,159
+stuff or like
+
+307
+00:20:46,400 --> 00:20:50,000
+>> uh hardware is definitely one of the
+
+308
+00:20:48,159 --> 00:20:52,799
+causes. The other is most of the
+
+309
+00:20:50,000 --> 00:20:55,120
+aggregates and block uh uh production
+
+310
+00:20:52,799 --> 00:20:56,799
+gets delayed because of the uh
+
+311
+00:20:55,120 --> 00:20:59,440
+configuration of the service that we are
+
+312
+00:20:56,799 --> 00:21:02,320
+running in. Uh if you look at the uh
+
+313
+00:20:59,440 --> 00:21:05,039
+logs right now aggregates from most of
+
+314
+00:21:02,320 --> 00:21:08,960
+the subnets are uh almost always
+
+315
+00:21:05,039 --> 00:21:10,720
+delayed. So um I mean although
+
+316
+00:21:08,960 --> 00:21:14,919
+justification and finalizations are
+
+317
+00:21:10,720 --> 00:21:14,919
+happening but they are always late.
+
+318
+00:21:16,559 --> 00:21:22,240
+>> Okay. Um and so this is due to like the
+
+319
+00:21:20,159 --> 00:21:23,600
+hardware plus the configuration of the
+
+320
+00:21:22,240 --> 00:21:25,679
+server, right?
+
+321
+00:21:23,600 --> 00:21:30,400
+>> Yeah.
+
+322
+00:21:25,679 --> 00:21:34,720
+>> Okay. Uh Anchal. Yeah.
+
+323
+00:21:30,400 --> 00:21:37,440
+>> Yeah. So I had added uh one optim one
+
+324
+00:21:34,720 --> 00:21:40,320
+work around for this in the proposal doc
+
+325
+00:21:37,440 --> 00:21:42,480
+that was shared earlier last week. So in
+
+326
+00:21:40,320 --> 00:21:44,960
+that like uh right now how we do
+
+327
+00:21:42,480 --> 00:21:49,039
+finalization and justification is that
+
+328
+00:21:44,960 --> 00:21:51,440
+we want to have a twothird majority uh
+
+329
+00:21:49,039 --> 00:21:53,520
+aggregation aggregated payload over a
+
+330
+00:21:51,440 --> 00:21:59,840
+particular source.
+
+331
+00:21:53,520 --> 00:22:02,799
+If we can uh if we have like a
+
+332
+00:21:59,840 --> 00:22:05,760
+aggregate that already justifies
+
+333
+00:22:02,799 --> 00:22:09,520
+something of a future slot. We we don't
+
+334
+00:22:05,760 --> 00:22:12,159
+add them to the aggregates that haven't
+
+335
+00:22:09,520 --> 00:22:14,400
+been justified but we have like a uh
+
+336
+00:22:12,159 --> 00:22:18,320
+suppose we have from A to B and from A
+
+337
+00:22:14,400 --> 00:22:21,919
+to C. So A to B should have 2/3 of the
+
+338
+00:22:18,320 --> 00:22:26,080
+votes and A to proceed. But this can be
+
+339
+00:22:21,919 --> 00:22:27,840
+additive. We don't add them. Uh so we
+
+340
+00:22:26,080 --> 00:22:30,880
+can
+
+341
+00:22:27,840 --> 00:22:34,080
+implement this and this should improve
+
+342
+00:22:30,880 --> 00:22:37,360
+uh like the time it takes to justify and
+
+343
+00:22:34,080 --> 00:22:39,760
+finalize. Uh but the only downside of
+
+344
+00:22:37,360 --> 00:22:43,679
+this is that if we still don't finalize
+
+345
+00:22:39,760 --> 00:22:49,480
+for long time then calculating this will
+
+346
+00:22:43,679 --> 00:22:49,480
+uh have like huge memory allocations.
+
+347
+00:22:51,440 --> 00:22:54,440
+Okay.
+
+348
+00:22:56,159 --> 00:23:00,799
+Okay. Yes. Sense.
+
+349
+00:22:58,320 --> 00:23:03,120
+So,
+
+350
+00:23:00,799 --> 00:23:06,960
+yeah. Mercia,
+
+351
+00:23:03,120 --> 00:23:08,559
+>> sorry. I wanted to ask is there like a Z
+
+352
+00:23:06,960 --> 00:23:10,400
+um node running somewhere with this
+
+353
+00:23:08,559 --> 00:23:13,760
+optimization that we can actually see
+
+354
+00:23:10,400 --> 00:23:16,720
+because it's more like a speculation and
+
+355
+00:23:13,760 --> 00:23:19,960
+then we need to like have a data to back
+
+356
+00:23:16,720 --> 00:23:19,960
+this up.
+
+357
+00:23:20,880 --> 00:23:25,360
+Uh we don't have an image ready yet with
+
+358
+00:23:23,120 --> 00:23:29,559
+this uh optimization. We'll release one
+
+359
+00:23:25,360 --> 00:23:29,559
+and let you know once it's available.
+
+360
+00:23:29,919 --> 00:23:34,480
+Uh excluding the uh the longest slot,
+
+361
+00:23:32,640 --> 00:23:36,320
+right? Everything else I think is
+
+362
+00:23:34,480 --> 00:23:40,760
+already merged to master but we'll
+
+363
+00:23:36,320 --> 00:23:40,760
+release an official image later.
+
+364
+00:23:47,280 --> 00:23:53,440
+Okay. So at least on on my side I
+
+365
+00:23:49,919 --> 00:23:55,679
+haven't much to say more like next week
+
+366
+00:23:53,440 --> 00:24:00,640
+uh we will not have this call because we
+
+367
+00:23:55,679 --> 00:24:03,440
+are like traveling and and stuff. Um
+
+368
+00:24:00,640 --> 00:24:05,679
+so yeah if this is okay to you guys let
+
+369
+00:24:03,440 --> 00:24:09,039
+us
+
+370
+00:24:05,679 --> 00:24:13,159
+think like everything async and let's go
+
+371
+00:24:09,039 --> 00:24:13,159
+back to this call in two weeks.
+
+372
+00:24:16,240 --> 00:24:20,960
+Thanks a lot, guys. See you. Bye. Bye.
+
+373
+00:24:18,640 --> 00:24:24,360
+>> Bye. Bye. Thank you.
+
+374
+00:24:20,960 --> 00:24:24,360
+>> Thank you guys.
+

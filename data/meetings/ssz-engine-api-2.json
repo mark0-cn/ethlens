@@ -1,0 +1,117 @@
+{
+  "slug": "ssz-engine-api-2",
+  "series": "SSZ",
+  "number": 2,
+  "title": "SSZ Engine API #2",
+  "subtitle": "SSZ Engine API 专题会议",
+  "kicker": "SSZ ENGINE API",
+  "date": "2026-07-10",
+  "dateLabel": "2026 年 7 月 10 日",
+  "topic": "SSZ Engine API 进展",
+  "translationStatus": "reviewed",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/ssz-engine-api-002-july-10-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/ssz-engine-api-002-july-10-2026_en.srt",
+    "zh": "../../media/subtitles/zh/ssz-engine-api-002-july-10-2026_zh.srt"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 6,
+      "decisions": 2,
+      "actionItems": 2
+    },
+    "sections": [
+      {
+        "title": "测试更新",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Project zkEVM 的 SSZ 支持正在集成进 EELS Amsterdam 分支；后续将补充参考向量和 REST 抽象。",
+            "seek": 305
+          },
+          {
+            "text": "EELS 计划最终作为临时 EL 响应 Engine 请求，供 CL 测试使用；短期目标是 FastAPI/OpenRPC。",
+            "seek": 336
+          }
+        ]
+      },
+      {
+        "title": "SSZ Engine API 设计",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Jacek（Nimbus）提议让 REST 路径与 Beacon API 命名空间对齐，以便二者共存于同一端口；这对统一客户端尤其重要。",
+            "seek": 466
+          },
+          {
+            "text": "发现 top-up sync 缺口：当前 Engine API 无法让 CL 可靠确定从何处开始回填，才能追上未同步 EL 的 head。",
+            "seek": 536
+          },
+          {
+            "text": "提议在 Engine 端口暴露 ETH get-latest-canonical-block（由 FCU 标记的 head），让 CL 无需 EL P2P 即可驱动 top-up sync。",
+            "seek": 2190
+          },
+          {
+            "text": "SSZ REST Engine API 目前缺少现有 JSON-RPC Engine 规范保证提供的 ETH 命名空间方法对应项（如 chainID、syncing 等）；需要明确界定范围。",
+            "seek": 2634
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "同意 SSZ Engine API 必须明确规定 Engine 端口提供哪些 ETH 命名空间端点，并与 Beacon API 的编码约定保持一致。",
+            "seek": 2634
+          },
+          {
+            "text": "SSZ Engine API 的 ETH 命名空间方法清单应尽可能精简；不得自动沿用 JSON-RPC Engine 规范中的全部方法。",
+            "seek": 2990
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "Marius Van Der Wijden",
+            "text": "准备一份文档，解释 Engine 端口当前的 ETH 命名空间方法清单、保留理由和可移除候选项，并提交 ACDE 与 ACDC 征求更广泛意见。",
+            "seek": 2951
+          },
+          {
+            "owner": "Tamaghna Chourdhuri / Dustin",
+            "text": "发布 top-up sync 设计的公开文档，纳入 Jacek 的 HackMD 和链跟随机制，以征求缺席客户端团队的意见。",
+            "seek": 3008
+          }
+        ]
+      },
+      {
+        "title": "目标日期",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "下一次 SSZ Engine API 会议；top-up sync 和命名空间范围文档应在会前分发",
+            "date": "约 2026 年 7 月 24 日（两周后）",
+            "seek": 3089
+          }
+        ]
+      }
+    ]
+  }
+}

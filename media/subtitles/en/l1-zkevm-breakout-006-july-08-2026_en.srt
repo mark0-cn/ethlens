@@ -1,0 +1,4332 @@
+1
+00:00:22,560 --> 00:00:25,560
+Hello.
+
+2
+00:01:56,240 --> 00:02:01,920
+Hey, can you hear me?
+
+3
+00:01:58,880 --> 00:02:04,719
+>> Hello. Yes. Hi. How are you?
+
+4
+00:02:01,920 --> 00:02:10,119
+>> Nice. Fine. And you?
+
+5
+00:02:04,719 --> 00:02:10,119
+>> I'm I'm good as well. Thanks for
+
+6
+00:02:11,200 --> 00:02:14,520
+>> Hey, Omar.
+
+7
+00:03:13,519 --> 00:03:16,920
+Hello. Hello.
+
+8
+00:03:17,200 --> 00:03:20,239
+Hey.
+
+9
+00:03:19,200 --> 00:03:24,720
+>> Hello.
+
+10
+00:03:20,239 --> 00:03:27,200
+>> Nice. Audio works.
+
+11
+00:03:24,720 --> 00:03:31,760
+Looks like
+
+12
+00:03:27,200 --> 00:03:35,080
+recording also works. So it seems wait
+
+13
+00:03:31,760 --> 00:03:35,080
+let's see
+
+14
+00:03:36,799 --> 00:03:42,280
+let me quickly make you co-host
+
+15
+00:03:44,640 --> 00:03:49,560
+nice.
+
+16
+00:03:46,560 --> 00:03:49,560
+Okay
+
+17
+00:03:51,200 --> 00:03:56,879
+cool. Let's wait maybe one or two
+
+18
+00:03:54,400 --> 00:03:59,879
+minutes for people to join and we can
+
+19
+00:03:56,879 --> 00:03:59,879
+start.
+
+20
+00:05:22,560 --> 00:05:30,840
+Okay, let's start. Um,
+
+21
+00:05:26,800 --> 00:05:30,840
+I will share my screen.
+
+22
+00:05:31,680 --> 00:05:35,240
+Hold a second.
+
+23
+00:05:36,639 --> 00:05:40,440
+Can you see my screen?
+
+24
+00:05:41,520 --> 00:05:48,160
+>> Yep.
+
+25
+00:05:43,840 --> 00:05:51,360
+>> Cool. Okay. So, welcome everyone to CGVM
+
+26
+00:05:48,160 --> 00:05:54,720
+breakout call number six.
+
+27
+00:05:51,360 --> 00:05:56,560
+Uh today we have a pretty simple agenda.
+
+28
+00:05:54,720 --> 00:06:00,240
+Um
+
+29
+00:05:56,560 --> 00:06:03,520
+we have mainly project updates as usual
+
+30
+00:06:00,240 --> 00:06:06,319
+and then Ben which is uh our intern in
+
+31
+00:06:03,520 --> 00:06:09,120
+the CAVM project uh will do some
+
+32
+00:06:06,319 --> 00:06:12,080
+presentation.
+
+33
+00:06:09,120 --> 00:06:16,560
+Uh first of all I want to highlight an
+
+34
+00:06:12,080 --> 00:06:19,759
+ETH research post made by Magner.
+
+35
+00:06:16,560 --> 00:06:23,120
+Um it's a very cool exploration on how
+
+36
+00:06:19,759 --> 00:06:26,800
+CQVMs not only uh helps on the
+
+37
+00:06:23,120 --> 00:06:29,600
+computational side of block verification
+
+38
+00:06:26,800 --> 00:06:33,440
+but also on the bandwidth side which is
+
+39
+00:06:29,600 --> 00:06:36,560
+something that maybe is not usually um
+
+40
+00:06:33,440 --> 00:06:39,199
+sold enough. Uh so yeah I highly
+
+41
+00:06:36,560 --> 00:06:41,520
+recommend people to take a look. uh is
+
+42
+00:06:39,199 --> 00:06:44,639
+very well written and it's also connects
+
+43
+00:06:41,520 --> 00:06:46,639
+with other upcoming uh proposals
+
+44
+00:06:44,639 --> 00:06:50,400
+regarding blocking blobs and things like
+
+45
+00:06:46,639 --> 00:06:53,680
+that. So yeah uh I want to thank Mike
+
+46
+00:06:50,400 --> 00:06:55,840
+for for writing this. Uh probably a lot
+
+47
+00:06:53,680 --> 00:07:02,520
+of people here already recognize him
+
+48
+00:06:55,840 --> 00:07:02,520
+from from working some some time ago.
+
+49
+00:07:03,120 --> 00:07:08,000
+uh I will start with the updates for
+
+50
+00:07:05,840 --> 00:07:10,000
+projects number one and two which are
+
+51
+00:07:08,000 --> 00:07:13,599
+related to the execution witness against
+
+52
+00:07:10,000 --> 00:07:17,680
+program specs and tests.
+
+53
+00:07:13,599 --> 00:07:20,080
+Uh uh okay so first of all the main uh
+
+54
+00:07:17,680 --> 00:07:22,240
+spec and test update is the release of
+
+55
+00:07:20,080 --> 00:07:25,199
+CGVM
+
+56
+00:07:22,240 --> 00:07:27,599
+version 050
+
+57
+00:07:25,199 --> 00:07:31,360
+which is basically a rebase on top of
+
+58
+00:07:27,599 --> 00:07:34,800
+glassardanet 6 which is a net that was
+
+59
+00:07:31,360 --> 00:07:39,199
+launched some days ago.
+
+60
+00:07:34,800 --> 00:07:41,680
+Apart from this rebase, um
+
+61
+00:07:39,199 --> 00:07:45,840
+this release also supports using
+
+62
+00:07:41,680 --> 00:07:48,319
+external um transition tools for filling
+
+63
+00:07:45,840 --> 00:07:50,479
+uh east fixtures.
+
+64
+00:07:48,319 --> 00:07:52,720
+The main intention we have with this is
+
+65
+00:07:50,479 --> 00:07:54,639
+being able to fill
+
+66
+00:07:52,720 --> 00:07:58,720
+uh benchmarks
+
+67
+00:07:54,639 --> 00:08:00,720
+fixtures in east using G
+
+68
+00:07:58,720 --> 00:08:02,400
+because you cannot really do that today
+
+69
+00:08:00,720 --> 00:08:04,319
+with Python with the Python
+
+70
+00:08:02,400 --> 00:08:08,240
+implementation. This is simply something
+
+71
+00:08:04,319 --> 00:08:11,039
+that already happens in in in like in
+
+72
+00:08:08,240 --> 00:08:14,960
+Glamsterlam uh benchmark filling it. It
+
+73
+00:08:11,039 --> 00:08:17,280
+always uses an external EL for that and
+
+74
+00:08:14,960 --> 00:08:18,800
+we are simply sticking to that uh
+
+75
+00:08:17,280 --> 00:08:21,039
+reality.
+
+76
+00:08:18,800 --> 00:08:24,479
+So the whole idea here is that in each
+
+77
+00:08:21,039 --> 00:08:27,919
+CGVM release apart from publishing
+
+78
+00:08:24,479 --> 00:08:29,919
+normal tests as fixtures
+
+79
+00:08:27,919 --> 00:08:32,800
+uh we can also publish benchmark
+
+80
+00:08:29,919 --> 00:08:35,039
+fixtures. Um and I will talk a bit more
+
+81
+00:08:32,800 --> 00:08:39,120
+on that later.
+
+82
+00:08:35,039 --> 00:08:44,399
+Uh on spec changes the I kind of refine
+
+83
+00:08:39,120 --> 00:08:47,440
+a bit some of the SSC uh max length in
+
+84
+00:08:44,399 --> 00:08:49,760
+some lists in the guest input.
+
+85
+00:08:47,440 --> 00:08:51,360
+Um and I did some refactor and
+
+86
+00:08:49,760 --> 00:08:53,839
+simplifications
+
+87
+00:08:51,360 --> 00:08:58,240
+which shouldn't affect guest programs.
+
+88
+00:08:53,839 --> 00:09:01,760
+But uh these SSC uh changes
+
+89
+00:08:58,240 --> 00:09:04,399
+are important to to take a look for for
+
+90
+00:09:01,760 --> 00:09:07,920
+you to adjust because it will clearly
+
+91
+00:09:04,399 --> 00:09:09,760
+change the history root calculations of
+
+92
+00:09:07,920 --> 00:09:11,839
+of of
+
+93
+00:09:09,760 --> 00:09:14,399
+things. Um
+
+94
+00:09:11,839 --> 00:09:17,760
+the release description has a link to
+
+95
+00:09:14,399 --> 00:09:19,920
+the PR. So you can simply look there the
+
+96
+00:09:17,760 --> 00:09:22,000
+PR concretely and you will see there
+
+97
+00:09:19,920 --> 00:09:25,519
+this the changes. So should be pretty
+
+98
+00:09:22,000 --> 00:09:28,959
+easy to to find what you should change.
+
+99
+00:09:25,519 --> 00:09:33,279
+Apart from that I added some extra tests
+
+100
+00:09:28,959 --> 00:09:36,320
+uh which are mainly related to invalid
+
+101
+00:09:33,279 --> 00:09:41,600
+guest program inputs. So for example mal
+
+102
+00:09:36,320 --> 00:09:44,240
+former uh SSC input byes uh wrong schem
+
+103
+00:09:41,600 --> 00:09:46,000
+IDs or adding trailing byes and things
+
+104
+00:09:44,240 --> 00:09:48,320
+like that.
+
+105
+00:09:46,000 --> 00:09:50,880
+Uh apart from that I added some extra
+
+106
+00:09:48,320 --> 00:09:53,200
+tests for the chain config part of the
+
+107
+00:09:50,880 --> 00:09:56,399
+stateless input. So for example
+
+108
+00:09:53,200 --> 00:09:58,959
+providing a chain config which doesn't
+
+109
+00:09:56,399 --> 00:10:00,800
+match the block being validated. So
+
+110
+00:09:58,959 --> 00:10:04,399
+let's say
+
+111
+00:10:00,800 --> 00:10:07,519
+uh that the chain config uh signals that
+
+112
+00:10:04,399 --> 00:10:09,440
+you are in a fork which doesn't match
+
+113
+00:10:07,519 --> 00:10:12,240
+the time stamp of of the block that you
+
+114
+00:10:09,440 --> 00:10:15,440
+are validating and things like that. And
+
+115
+00:10:12,240 --> 00:10:18,720
+finally uh some extra tests regarding
+
+116
+00:10:15,440 --> 00:10:21,040
+public key uh validation.
+
+117
+00:10:18,720 --> 00:10:24,560
+Um as you remember stateless input has
+
+118
+00:10:21,040 --> 00:10:26,959
+public keys for speeding up signature
+
+119
+00:10:24,560 --> 00:10:29,680
+verification in transactions.
+
+120
+00:10:26,959 --> 00:10:32,160
+But there's a special quer regarding
+
+121
+00:10:29,680 --> 00:10:36,720
+doing a parity check.
+
+122
+00:10:32,160 --> 00:10:39,040
+Uh this is related to ECDSA
+
+123
+00:10:36,720 --> 00:10:41,680
+and it's very easy to forget about this
+
+124
+00:10:39,040 --> 00:10:45,279
+check. So uh basically just created a
+
+125
+00:10:41,680 --> 00:10:47,360
+test that is making sure that people are
+
+126
+00:10:45,279 --> 00:10:50,480
+validating this these provided public
+
+127
+00:10:47,360 --> 00:10:52,079
+keys correctly. So if you pass the test
+
+128
+00:10:50,480 --> 00:10:58,079
+you should be fine and if you don't pass
+
+129
+00:10:52,079 --> 00:11:02,240
+the test uh you will know why. Um
+
+130
+00:10:58,079 --> 00:11:04,880
+so apart from that um in the CGVM
+
+131
+00:11:02,240 --> 00:11:09,600
+benchmark workflow repo I created a new
+
+132
+00:11:04,880 --> 00:11:12,560
+CLI tool which allows to use RPCs from
+
+133
+00:11:09,600 --> 00:11:16,000
+CLS and ELS in a devet
+
+134
+00:11:12,560 --> 00:11:18,880
+to create stateless input
+
+135
+00:11:16,000 --> 00:11:22,000
+uh bytes. So what this basically means
+
+136
+00:11:18,880 --> 00:11:27,680
+is that we can join existing devst from
+
+137
+00:11:22,000 --> 00:11:30,160
+glamsterdam and publish in an R2 bucket
+
+138
+00:11:27,680 --> 00:11:32,720
+the stateless input byes that would
+
+139
+00:11:30,160 --> 00:11:34,720
+would be used by guest programs uh for
+
+140
+00:11:32,720 --> 00:11:38,880
+these blocks
+
+141
+00:11:34,720 --> 00:11:41,440
+and um yeah this is already working
+
+142
+00:11:38,880 --> 00:11:43,120
+pretty well. Um
+
+143
+00:11:41,440 --> 00:11:46,079
+uh there are already two guest programs
+
+144
+00:11:43,120 --> 00:11:48,959
+that used this before and this was
+
+145
+00:11:46,079 --> 00:11:50,880
+pretty useful to them because they found
+
+146
+00:11:48,959 --> 00:11:54,320
+some bugs.
+
+147
+00:11:50,880 --> 00:11:58,240
+Um so those bugs that were found were
+
+148
+00:11:54,320 --> 00:12:00,480
+upstream as forks Amsterdam new tests.
+
+149
+00:11:58,240 --> 00:12:04,480
+Uh so these are like new tests in the
+
+150
+00:12:00,480 --> 00:12:06,959
+base default branch for mist which
+
+151
+00:12:04,480 --> 00:12:09,680
+weren't really covered before. So this
+
+152
+00:12:06,959 --> 00:12:11,760
+turned out to be pretty useful.
+
+153
+00:12:09,680 --> 00:12:14,480
+So the idea here is that we can keep
+
+154
+00:12:11,760 --> 00:12:17,600
+mounting on the the the next DevNet from
+
+155
+00:12:14,480 --> 00:12:21,680
+Glamsterdam and keep just kind of
+
+156
+00:12:17,600 --> 00:12:24,320
+assuming that AD25 is kind of glam ready
+
+157
+00:12:21,680 --> 00:12:26,240
+in a way. Uh and all this is
+
+158
+00:12:24,320 --> 00:12:29,760
+infrastructure that we can continue to
+
+159
+00:12:26,240 --> 00:12:32,880
+use whenever he starts. So we are kind
+
+160
+00:12:29,760 --> 00:12:37,519
+of front running a lot of tooling and
+
+161
+00:12:32,880 --> 00:12:40,720
+and yeah useful um testing here apart
+
+162
+00:12:37,519 --> 00:12:44,160
+from east tests.
+
+163
+00:12:40,720 --> 00:12:46,320
+Uh apart from that uh in the previous
+
+164
+00:12:44,160 --> 00:12:51,720
+call I mentioned that I was working on
+
+165
+00:12:46,320 --> 00:12:51,720
+this uh hive dashboard to
+
+166
+00:12:52,240 --> 00:12:56,240
+kind of have a single place to see how
+
+167
+00:12:54,720 --> 00:12:59,839
+much
+
+168
+00:12:56,240 --> 00:13:03,279
+stateful yells and guest programs
+
+169
+00:12:59,839 --> 00:13:07,680
+pass uh the tests
+
+170
+00:13:03,279 --> 00:13:11,360
+and um yeah so at that point in time so
+
+171
+00:13:07,680 --> 00:13:16,399
+in the previous call I had like only Um
+
+172
+00:13:11,360 --> 00:13:19,680
+I think it was Ethrex uh runs regarding
+
+173
+00:13:16,399 --> 00:13:23,440
+execution witness generation compliance
+
+174
+00:13:19,680 --> 00:13:26,800
+and now we have Ethrex and Bessu uh
+
+175
+00:13:23,440 --> 00:13:31,440
+execution witness compliance
+
+176
+00:13:26,800 --> 00:13:35,680
+runs and also uh the first guest program
+
+177
+00:13:31,440 --> 00:13:37,600
+um test running which is pretty nice. So
+
+178
+00:13:35,680 --> 00:13:40,480
+now in a single dashboard we can see
+
+179
+00:13:37,600 --> 00:13:43,760
+both uh yeah stateful else constructing
+
+180
+00:13:40,480 --> 00:13:46,880
+the execution witness correctly and also
+
+181
+00:13:43,760 --> 00:13:49,279
+being able to see if guest programs
+
+182
+00:13:46,880 --> 00:13:51,920
+uh using the stateless input byes uh are
+
+183
+00:13:49,279 --> 00:13:54,480
+passing the tests.
+
+184
+00:13:51,920 --> 00:13:57,360
+Um so the idea now is to continue
+
+185
+00:13:54,480 --> 00:14:00,959
+working on this uh for this next for
+
+186
+00:13:57,360 --> 00:14:02,800
+this uh new release that we did uh keep
+
+187
+00:14:00,959 --> 00:14:05,360
+track things in a single dashboard
+
+188
+00:14:02,800 --> 00:14:08,240
+hopefully.
+
+189
+00:14:05,360 --> 00:14:12,320
+Um
+
+190
+00:14:08,240 --> 00:14:15,839
+I also did some experimental benchmark
+
+191
+00:14:12,320 --> 00:14:18,560
+fixture filling using GU and this turned
+
+192
+00:14:15,839 --> 00:14:24,079
+out to be pretty useful.
+
+193
+00:14:18,560 --> 00:14:27,279
+Um, I share these benchmarks
+
+194
+00:14:24,079 --> 00:14:29,680
+uh in the Discord channel and Omar used
+
+195
+00:14:27,279 --> 00:14:31,680
+them to try to see if things were
+
+196
+00:14:29,680 --> 00:14:35,680
+working correctly
+
+197
+00:14:31,680 --> 00:14:38,240
+and we found some problems and yes, this
+
+198
+00:14:35,680 --> 00:14:41,519
+ended up in me fixing a bug in G
+
+199
+00:14:38,240 --> 00:14:44,560
+regarding execution witness generation
+
+200
+00:14:41,519 --> 00:14:46,240
+which is already merged. So thanks Gary
+
+201
+00:14:44,560 --> 00:14:50,160
+from the guest theme team for measuring
+
+202
+00:14:46,240 --> 00:14:53,680
+that pretty fast. And after fixing this
+
+203
+00:14:50,160 --> 00:14:57,120
+I refilled the benchmark fixtures
+
+204
+00:14:53,680 --> 00:14:59,279
+and it seems to be working pretty well.
+
+205
+00:14:57,120 --> 00:15:01,760
+So what this means is that probably in
+
+206
+00:14:59,279 --> 00:15:04,399
+the next release
+
+207
+00:15:01,760 --> 00:15:07,680
+u I will be including or trying to
+
+208
+00:15:04,399 --> 00:15:10,560
+include uh benchmark fixtures using G.
+
+209
+00:15:07,680 --> 00:15:14,160
+So it will contain both test fixtures
+
+210
+00:15:10,560 --> 00:15:17,040
+and benchmark fixtures. Not sure yet for
+
+211
+00:15:14,160 --> 00:15:20,000
+which gas limits but we can start with
+
+212
+00:15:17,040 --> 00:15:23,199
+some number and we can go on from there
+
+213
+00:15:20,000 --> 00:15:27,040
+because maybe for big numbers we will
+
+214
+00:15:23,199 --> 00:15:28,959
+have some CI issues on on filling them
+
+215
+00:15:27,040 --> 00:15:31,360
+which are already a challenge in the
+
+216
+00:15:28,959 --> 00:15:33,760
+east repo
+
+217
+00:15:31,360 --> 00:15:36,560
+and apart from that some kind updates
+
+218
+00:15:33,760 --> 00:15:39,760
+that I've seen out there u might not be
+
+219
+00:15:36,560 --> 00:15:45,839
+complete um Han has done some really
+
+220
+00:15:39,760 --> 00:15:48,839
+nice uh updates on press regarding um
+
+221
+00:15:45,839 --> 00:15:48,839
+um
+
+222
+00:15:49,360 --> 00:15:57,440
+yeah some some overall like uh fixes
+
+223
+00:15:52,800 --> 00:15:59,839
+that are required um on ethrex. He has
+
+224
+00:15:57,440 --> 00:16:02,399
+also done some optimizations regarding
+
+225
+00:15:59,839 --> 00:16:03,920
+how uh the execution witness is
+
+226
+00:16:02,399 --> 00:16:06,000
+verified.
+
+227
+00:16:03,920 --> 00:16:09,411
+So the execution of witness verification
+
+228
+00:16:06,000 --> 00:16:10,399
+has a 2x speed up which is really nice.
+
+229
+00:16:09,411 --> 00:16:13,120
+[gasps]
+
+230
+00:16:10,399 --> 00:16:16,480
+And on the sess side I know they have
+
+231
+00:16:13,120 --> 00:16:19,279
+been also working on trying the CISK
+
+232
+00:16:16,480 --> 00:16:23,680
+accelerators regarding
+
+233
+00:16:19,279 --> 00:16:27,440
+uh 256 bits integers. This is some
+
+234
+00:16:23,680 --> 00:16:29,600
+pre-ompiles that CISK has and uh Marian
+
+235
+00:16:27,440 --> 00:16:32,320
+has already experimented a bit with this
+
+236
+00:16:29,600 --> 00:16:34,560
+and uh the CESU team has done
+
+237
+00:16:32,320 --> 00:16:38,240
+experiments on their size and have have
+
+238
+00:16:34,560 --> 00:16:41,120
+found some results. It looks like uh
+
+239
+00:16:38,240 --> 00:16:42,880
+it's still not having a lot of return on
+
+240
+00:16:41,120 --> 00:16:46,399
+investment.
+
+241
+00:16:42,880 --> 00:16:47,839
+Um but yeah, just wanted to mention that
+
+242
+00:16:46,399 --> 00:16:49,839
+there was like some external
+
+243
+00:16:47,839 --> 00:16:53,320
+experimentation apart from our team on
+
+244
+00:16:49,839 --> 00:16:53,320
+on this side.
+
+245
+00:16:53,839 --> 00:16:57,759
+Uh okay. So regarding project number six
+
+246
+00:16:56,160 --> 00:16:59,360
+which is regarding benchmarking and
+
+247
+00:16:57,759 --> 00:17:01,440
+metrics
+
+248
+00:16:59,360 --> 00:17:05,520
+I just want to highlight two articles
+
+249
+00:17:01,440 --> 00:17:10,799
+that were uh published this last month.
+
+250
+00:17:05,520 --> 00:17:13,280
+One is from S from the Silkworm team
+
+251
+00:17:10,799 --> 00:17:15,919
+where he's explaining a bit more how
+
+252
+00:17:13,280 --> 00:17:18,400
+he's exploring potential new execution
+
+253
+00:17:15,919 --> 00:17:20,720
+witness redesigns
+
+254
+00:17:18,400 --> 00:17:24,559
+uh mainly regarding
+
+255
+00:17:20,720 --> 00:17:27,360
+uh how to validate the provided state.
+
+256
+00:17:24,559 --> 00:17:29,120
+Uh so yeah, take a look at that article.
+
+257
+00:17:27,360 --> 00:17:32,880
+It's pretty nice. I think he's planning
+
+258
+00:17:29,120 --> 00:17:35,440
+to do a second part soon. So he's still
+
+259
+00:17:32,880 --> 00:17:38,160
+in exploration mode.
+
+260
+00:17:35,440 --> 00:17:40,400
+and Ben which is our intern has done
+
+261
+00:17:38,160 --> 00:17:42,480
+some comparation between hip allocators
+
+262
+00:17:40,400 --> 00:17:45,280
+in CISK.
+
+263
+00:17:42,480 --> 00:17:48,240
+Um this turn outs to be a pretty
+
+264
+00:17:45,280 --> 00:17:50,559
+important topic because
+
+265
+00:17:48,240 --> 00:17:52,799
+uh depending on which allocator you use
+
+266
+00:17:50,559 --> 00:17:55,039
+is how much risk you have of having an
+
+267
+00:17:52,799 --> 00:17:59,600
+out of memory situation
+
+268
+00:17:55,039 --> 00:18:01,600
+which would be a live issue. Uh but he
+
+269
+00:17:59,600 --> 00:18:04,400
+will be talking about this in a separate
+
+270
+00:18:01,600 --> 00:18:08,160
+uh presentation later in the call. So I
+
+271
+00:18:04,400 --> 00:18:12,160
+will leave the details to him
+
+272
+00:18:08,160 --> 00:18:16,280
+and that's it from my side. Um
+
+273
+00:18:12,160 --> 00:18:16,280
+you know if there's any question
+
+274
+00:18:18,160 --> 00:18:25,360
+I see how do we add to the dashboard? Uh
+
+275
+00:18:21,679 --> 00:18:27,600
+I will share later in the um in the chat
+
+276
+00:18:25,360 --> 00:18:31,039
+the link of the repo. Uh it's very easy.
+
+277
+00:18:27,600 --> 00:18:34,080
+is basically adding some branch in a
+
+278
+00:18:31,039 --> 00:18:37,679
+JSON file in a repo and simply running
+
+279
+00:18:34,080 --> 00:18:41,600
+the CI so I can coordinate with you and
+
+280
+00:18:37,679 --> 00:18:45,919
+we can uh we can add never minding the
+
+281
+00:18:41,600 --> 00:18:47,679
+execution windows completeness um runs
+
+282
+00:18:45,919 --> 00:18:50,679
+and the same applies for everyone of
+
+283
+00:18:47,679 --> 00:18:50,679
+course
+
+284
+00:18:50,880 --> 00:18:56,840
+okay there's no any other questions
+
+285
+00:18:53,840 --> 00:18:56,840
+ions.
+
+286
+00:18:57,679 --> 00:19:03,799
+Maybe project number three can give
+
+287
+00:19:00,799 --> 00:19:03,799
+updates
+
+288
+00:19:09,440 --> 00:19:14,880
+thing is marshing. Yeah.
+
+289
+00:19:12,400 --> 00:19:18,559
+So hi everyone
+
+290
+00:19:14,880 --> 00:19:21,120
+uh update on project 3 uh which is CKVM
+
+291
+00:19:18,559 --> 00:19:24,080
+guest API standardization.
+
+292
+00:19:21,120 --> 00:19:26,160
+Today we are doing a recap on uh the
+
+293
+00:19:24,080 --> 00:19:30,880
+standards that are accepted and that are
+
+294
+00:19:26,160 --> 00:19:33,880
+in review uh and discuss two uh vendor
+
+295
+00:19:30,880 --> 00:19:33,880
+results.
+
+296
+00:19:35,200 --> 00:19:41,200
+Uh so we now have accepted standards.
+
+297
+00:19:38,799 --> 00:19:42,720
+They cover ISA, input, output, crypto
+
+298
+00:19:41,200 --> 00:19:45,200
+accelerators,
+
+299
+00:19:42,720 --> 00:19:48,880
+termination, memory ownership, safety
+
+300
+00:19:45,200 --> 00:19:51,919
+traps, and accepted since the last call,
+
+301
+00:19:48,880 --> 00:19:54,880
+the static library, and Tinker script.
+
+302
+00:19:51,919 --> 00:19:57,600
+Um, two standards are open for your
+
+303
+00:19:54,880 --> 00:20:00,320
+review at the Amber ones at the bottom
+
+304
+00:19:57,600 --> 00:20:03,679
+of the page. Loading and accelerated
+
+305
+00:20:00,320 --> 00:20:06,480
+memory operations. I'll go deeper on an
+
+306
+00:20:03,679 --> 00:20:11,039
+elf loading now because uh it changed
+
+307
+00:20:06,480 --> 00:20:13,120
+the most since it was u announced on the
+
+308
+00:20:11,039 --> 00:20:16,240
+last call.
+
+309
+00:20:13,120 --> 00:20:19,520
+Uh this standard defines one precise
+
+310
+00:20:16,240 --> 00:20:23,520
+deterministic way to turn a guest elf
+
+311
+00:20:19,520 --> 00:20:25,039
+into the initial machine state. Um how
+
+312
+00:20:23,520 --> 00:20:28,400
+to validate the header, load the
+
+313
+00:20:25,039 --> 00:20:31,600
+segments and check the entry point. The
+
+314
+00:20:28,400 --> 00:20:34,720
+big change since the last time is what
+
+315
+00:20:31,600 --> 00:20:37,520
+an executable segment actually means.
+
+316
+00:20:34,720 --> 00:20:40,799
+The executable and readable flags were
+
+317
+00:20:37,520 --> 00:20:43,120
+left open to the interpretation. The API
+
+318
+00:20:40,799 --> 00:20:46,320
+document for risk 5 and in general
+
+319
+00:20:43,120 --> 00:20:50,320
+doesn't say what these flags imply in
+
+320
+00:20:46,320 --> 00:20:54,480
+practice and we nail that down. Um there
+
+321
+00:20:50,320 --> 00:20:58,320
+are two clear options how to interpret
+
+322
+00:20:54,480 --> 00:21:02,799
+uh readable and executable flags.
+
+323
+00:20:58,320 --> 00:21:05,360
+um execute flag execute only means that
+
+324
+00:21:02,799 --> 00:21:08,880
+segments holds instructions and nothing
+
+325
+00:21:05,360 --> 00:21:12,799
+else. If the program tries to read it is
+
+326
+00:21:08,880 --> 00:21:15,520
+as data that is an abnormal termination
+
+327
+00:21:12,799 --> 00:21:19,200
+and the second interpretation is execute
+
+328
+00:21:15,520 --> 00:21:23,679
+and read which is uh that bytes can be
+
+329
+00:21:19,200 --> 00:21:26,720
+both run and read and uh a load returns
+
+330
+00:21:23,679 --> 00:21:30,000
+the real bytes. here read only data can
+
+331
+00:21:26,720 --> 00:21:32,080
+safely sit next to the code.
+
+332
+00:21:30,000 --> 00:21:36,000
+Um [clears throat]
+
+333
+00:21:32,080 --> 00:21:40,240
+ZKVMs can support only one of those. So
+
+334
+00:21:36,000 --> 00:21:43,919
+uh that's an inherent property of a KVM
+
+335
+00:21:40,240 --> 00:21:47,840
+and our recommendation is to accept uh
+
+336
+00:21:43,919 --> 00:21:50,320
+the latter execute and and read because
+
+337
+00:21:47,840 --> 00:21:54,400
+no tool chain can promise you a clean
+
+338
+00:21:50,320 --> 00:21:58,159
+instruction only code section and a
+
+339
+00:21:54,400 --> 00:22:01,280
+stray jump table can always slip in um
+
+340
+00:21:58,159 --> 00:22:04,480
+to the executable segment.
+
+341
+00:22:01,280 --> 00:22:09,039
+um that didn't happen when we compiled
+
+342
+00:22:04,480 --> 00:22:12,799
+RAT and uh other programs which are uh
+
+343
+00:22:09,039 --> 00:22:15,520
+which can execute successfully on ZISK
+
+344
+00:22:12,799 --> 00:22:18,960
+um and ZISK implements the the first
+
+345
+00:22:15,520 --> 00:22:23,200
+interpretation in which case uh the the
+
+346
+00:22:18,960 --> 00:22:25,919
+executable segment cannot be read um so
+
+347
+00:22:23,200 --> 00:22:27,679
+uh that didn't happen but in general the
+
+348
+00:22:25,919 --> 00:22:30,799
+compilers
+
+349
+00:22:27,679 --> 00:22:33,919
+um uh there there is no such guarantee
+
+350
+00:22:30,799 --> 00:22:37,360
+that uh compiler emits text section
+
+351
+00:22:33,919 --> 00:22:39,840
+without data incorporated in it. So
+
+352
+00:22:37,360 --> 00:22:42,799
+there are flags to control it but in
+
+353
+00:22:39,840 --> 00:22:48,080
+general um
+
+354
+00:22:42,799 --> 00:22:53,200
+it it's it's it's discouraged to u to
+
+355
+00:22:48,080 --> 00:22:57,400
+have a zkm that is that cannot read um
+
+356
+00:22:53,200 --> 00:22:57,400
+the executable segment.
+
+357
+00:22:57,919 --> 00:23:06,799
+Um now the two results first output the
+
+358
+00:23:03,600 --> 00:23:09,919
+iOS standard says that public output can
+
+359
+00:23:06,799 --> 00:23:12,480
+be of arbitrary length. You can call
+
+360
+00:23:09,919 --> 00:23:14,880
+write output as many times as you want
+
+361
+00:23:12,480 --> 00:23:17,039
+and the bytes uh will just be
+
+362
+00:23:14,880 --> 00:23:18,559
+concatenated.
+
+363
+00:23:17,039 --> 00:23:21,840
+Um
+
+364
+00:23:18,559 --> 00:23:24,720
+I implemented that on disk in this PR.
+
+365
+00:23:21,840 --> 00:23:28,240
+Um as the byes are written to write
+
+366
+00:23:24,720 --> 00:23:31,200
+output they are hashed on the fly into a
+
+367
+00:23:28,240 --> 00:23:33,360
+running digest and only that digest is
+
+368
+00:23:31,200 --> 00:23:35,760
+committed to the proof. The output byes
+
+369
+00:23:33,360 --> 00:23:40,080
+travel alongside the proof so the
+
+370
+00:23:35,760 --> 00:23:43,679
+verifier can rehash them and check that
+
+371
+00:23:40,080 --> 00:23:48,000
+um they match the committed digest.
+
+372
+00:23:43,679 --> 00:23:50,640
+Um so uh
+
+373
+00:23:48,000 --> 00:23:54,159
+the takeaway is on the right. Today only
+
+374
+00:23:50,640 --> 00:23:57,200
+SP1 and ZISK support support standard
+
+375
+00:23:54,159 --> 00:24:01,559
+compliant arbitrary length outputs.
+
+376
+00:23:57,200 --> 00:24:01,559
+Other ZKVMs don't.
+
+377
+00:24:01,600 --> 00:24:09,200
+Uh second result um
+
+378
+00:24:06,559 --> 00:24:11,520
+is that the standard gives the whole
+
+379
+00:24:09,200 --> 00:24:14,480
+heap to the application.
+
+380
+00:24:11,520 --> 00:24:16,320
+um that has a consequence that uh vendor
+
+381
+00:24:14,480 --> 00:24:19,279
+can miss.
+
+382
+00:24:16,320 --> 00:24:22,000
+Um the pre-ompiles in your static
+
+383
+00:24:19,279 --> 00:24:25,520
+library must not allocate in the guest
+
+384
+00:24:22,000 --> 00:24:28,799
+heap. Um as on the top bar that's a
+
+385
+00:24:25,520 --> 00:24:30,559
+collision to fix uh shown on the bottom
+
+386
+00:24:28,799 --> 00:24:33,200
+bar.
+
+387
+00:24:30,559 --> 00:24:36,720
+Uh a separate isolated scratch scratch
+
+388
+00:24:33,200 --> 00:24:39,039
+region is needed to implement dynamic
+
+389
+00:24:36,720 --> 00:24:41,360
+allocation for pre-ompiles
+
+390
+00:24:39,039 --> 00:24:42,960
+on disk. That's a small small bump
+
+391
+00:24:41,360 --> 00:24:46,400
+allocator
+
+392
+00:24:42,960 --> 00:24:49,039
+um reset on every call to a pre-ompile.
+
+393
+00:24:46,400 --> 00:24:53,640
+Uh other vendors should check whether
+
+394
+00:24:49,039 --> 00:24:53,640
+the same collision affects them.
+
+395
+00:24:53,840 --> 00:25:00,080
+Uh last a direction that we want to flag
+
+396
+00:24:56,880 --> 00:25:02,320
+and it may become a standard.
+
+397
+00:25:00,080 --> 00:25:05,679
+Ethereum guests should be built with a
+
+398
+00:25:02,320 --> 00:25:08,080
+stock on unmodified tool chains. The
+
+399
+00:25:05,679 --> 00:25:10,720
+reason is trust. A modified compiler
+
+400
+00:25:08,080 --> 00:25:13,679
+grows at the com the trusted computing
+
+401
+00:25:10,720 --> 00:25:16,320
+base and even small patch to the
+
+402
+00:25:13,679 --> 00:25:19,120
+compiler puts the correctness of all the
+
+403
+00:25:16,320 --> 00:25:21,039
+emitted code in question.
+
+404
+00:25:19,120 --> 00:25:24,240
+Uh yes, a modified compiler could
+
+405
+00:25:21,039 --> 00:25:27,520
+produce better code tuned for a ZKVM.
+
+406
+00:25:24,240 --> 00:25:30,480
+Um we give that up on the purpose. A
+
+407
+00:25:27,520 --> 00:25:34,960
+ZKVM can absorb those cost differences
+
+408
+00:25:30,480 --> 00:25:38,159
+and correctness matters more than speed.
+
+409
+00:25:34,960 --> 00:25:40,799
+Um so uh two standards are open for
+
+410
+00:25:38,159 --> 00:25:42,320
+review. Loading and accelerated memory
+
+411
+00:25:40,799 --> 00:25:44,880
+operations.
+
+412
+00:25:42,320 --> 00:25:48,480
+Uh please comment them and as always if
+
+413
+00:25:44,880 --> 00:25:52,400
+you if any engineering help is needed it
+
+414
+00:25:48,480 --> 00:25:56,320
+foundation is happy uh to support uh
+
+415
+00:25:52,400 --> 00:25:59,320
+ZKVM vendors. That's it. Thank you. Any
+
+416
+00:25:56,320 --> 00:25:59,320
+questions?
+
+417
+00:26:09,440 --> 00:26:15,440
+I don't see any questions for Marin. So
+
+418
+00:26:12,400 --> 00:26:20,760
+maybe we can move for project number
+
+419
+00:26:15,440 --> 00:26:20,760
+four. I know Franchesco is here.
+
+420
+00:26:26,960 --> 00:26:31,320
+Hello. Um
+
+421
+00:26:41,360 --> 00:26:45,760
+um
+
+422
+00:26:43,840 --> 00:26:46,799
+>> we can see. Yes.
+
+423
+00:26:45,760 --> 00:26:50,559
+>> Cool.
+
+424
+00:26:46,799 --> 00:26:54,159
+>> Yeah. So um a pretty quick update um but
+
+425
+00:26:50,559 --> 00:26:58,799
+I'm going to focus on the uh the sync
+
+426
+00:26:54,159 --> 00:27:01,679
+protocol. So um essentially when a node
+
+427
+00:26:58,799 --> 00:27:04,640
+joins the network um there's a
+
+428
+00:27:01,679 --> 00:27:07,360
+requirement to validate payloads from
+
+429
+00:27:04,640 --> 00:27:11,840
+the weak subjectivity checkpoint up to
+
+430
+00:27:07,360 --> 00:27:17,760
+the head of the chain. Um and this can
+
+431
+00:27:11,840 --> 00:27:22,320
+be up to 113,000 slots based on um the
+
+432
+00:27:17,760 --> 00:27:26,240
+uh the electra um reference period. So
+
+433
+00:27:22,320 --> 00:27:30,960
+ultimately this um this accumulates up
+
+434
+00:27:26,240 --> 00:27:34,480
+to uh 26.9 GB uh just in terms of proof
+
+435
+00:27:30,960 --> 00:27:40,320
+content um based on a one proof per
+
+436
+00:27:34,480 --> 00:27:45,679
+payload policy. Um but for EIP825
+
+437
+00:27:40,320 --> 00:27:48,400
+um we intend to do K of N. Um so
+
+438
+00:27:45,679 --> 00:27:51,039
+ultimately the the implications is
+
+439
+00:27:48,400 --> 00:27:54,240
+there's going to be a lot of proofs that
+
+440
+00:27:51,039 --> 00:27:56,640
+need to be synced. Um there's a few
+
+441
+00:27:54,240 --> 00:28:01,360
+questions here because we do intend to
+
+442
+00:27:56,640 --> 00:28:02,799
+have an E um for optional proof. So, you
+
+443
+00:28:01,360 --> 00:28:06,480
+know, because we're re-executing
+
+444
+00:28:02,799 --> 00:28:08,640
+payloads in any case, um the the
+
+445
+00:28:06,480 --> 00:28:13,919
+requirement for
+
+446
+00:28:08,640 --> 00:28:16,000
+kind of full range sync and um
+
+447
+00:28:13,919 --> 00:28:18,720
+uh validity from the proofs themselves
+
+448
+00:28:16,000 --> 00:28:22,880
+isn't isn't critical, but certainly for
+
+449
+00:28:18,720 --> 00:28:25,279
+mandatory proofs, it will be. Um so,
+
+450
+00:28:22,880 --> 00:28:28,240
+essentially, we're exploring ways in
+
+451
+00:28:25,279 --> 00:28:32,000
+which we could uh we could address this
+
+452
+00:28:28,240 --> 00:28:34,240
+problem. Um and one potential approach
+
+453
+00:28:32,000 --> 00:28:36,799
+is to use recursive exeu ex execution
+
+454
+00:28:34,240 --> 00:28:40,399
+proofs. Uh so essentially what that
+
+455
+00:28:36,799 --> 00:28:43,360
+entails is to um take the execution
+
+456
+00:28:40,399 --> 00:28:46,320
+proof as we currently have it and um
+
+457
+00:28:43,360 --> 00:28:49,279
+build a guest program on top of that
+
+458
+00:28:46,320 --> 00:28:52,640
+which does recursion and adds the
+
+459
+00:28:49,279 --> 00:28:54,720
+execution proof to some um data
+
+460
+00:28:52,640 --> 00:28:56,559
+structure. So there's a few open
+
+461
+00:28:54,720 --> 00:29:00,399
+questions here around what data
+
+462
+00:28:56,559 --> 00:29:02,159
+structures may make sense. So um I
+
+463
+00:29:00,399 --> 00:29:06,559
+suppose the the simplest solution is to
+
+464
+00:29:02,159 --> 00:29:10,399
+use an SSC based um Merkel tree. So for
+
+465
+00:29:06,559 --> 00:29:14,720
+each new slot you would add an execution
+
+466
+00:29:10,399 --> 00:29:17,360
+proof um to the Merkel tree at the index
+
+467
+00:29:14,720 --> 00:29:20,320
+uh you know based on on on that slot
+
+468
+00:29:17,360 --> 00:29:23,760
+essentially. So that that's one idea. Um
+
+469
+00:29:20,320 --> 00:29:26,559
+there's also the potential to use an MMR
+
+470
+00:29:23,760 --> 00:29:29,120
+um which is an appendone data structure
+
+471
+00:29:26,559 --> 00:29:31,840
+um which would arguably be a little bit
+
+472
+00:29:29,120 --> 00:29:35,200
+more efficient but um in the context of
+
+473
+00:29:31,840 --> 00:29:38,000
+kind of payload proving at large um it
+
+474
+00:29:35,200 --> 00:29:41,440
+it it wouldn't account for for a huge
+
+475
+00:29:38,000 --> 00:29:44,960
+relative cost saving. Um
+
+476
+00:29:41,440 --> 00:29:48,000
+so if we had either the the Merkel route
+
+477
+00:29:44,960 --> 00:29:52,960
+or the MMR um we would essentially be
+
+478
+00:29:48,000 --> 00:29:55,679
+able to validate the full prefix um the
+
+479
+00:29:52,960 --> 00:29:58,720
+full chain prefix from the head block
+
+480
+00:29:55,679 --> 00:30:01,440
+which we're uh trying to sync to all the
+
+481
+00:29:58,720 --> 00:30:03,679
+way back to the the week um subjectivity
+
+482
+00:30:01,440 --> 00:30:06,559
+period uh checkpoint sorry and
+
+483
+00:30:03,679 --> 00:30:08,399
+potentially even before that. Um, now
+
+484
+00:30:06,559 --> 00:30:11,039
+there's there are some open questions if
+
+485
+00:30:08,399 --> 00:30:14,480
+if we actually want to prove the full
+
+486
+00:30:11,039 --> 00:30:17,520
+prefix or if there's some kind of trust
+
+487
+00:30:14,480 --> 00:30:20,480
+basis. So we only prove from the the
+
+488
+00:30:17,520 --> 00:30:24,195
+weak subjectivity checkpoint um to the
+
+489
+00:30:20,480 --> 00:30:25,440
+head. Uh these are some open questions.
+
+490
+00:30:24,195 --> 00:30:29,120
+[clears throat]
+
+491
+00:30:25,440 --> 00:30:32,640
+>> What's nice about this as well is um it
+
+492
+00:30:29,120 --> 00:30:34,559
+simplifies consensus clients. So um
+
+493
+00:30:32,640 --> 00:30:38,559
+currently a lot of the complexity in the
+
+494
+00:30:34,559 --> 00:30:41,840
+consensus client is around um the fact
+
+495
+00:30:38,559 --> 00:30:44,320
+that we have to sync the full uh kind of
+
+496
+00:30:41,840 --> 00:30:46,559
+proof prefix
+
+497
+00:30:44,320 --> 00:30:50,640
+um to ensure that the chain prefix is is
+
+498
+00:30:46,559 --> 00:30:52,720
+valid uh which is um pretty complex. I
+
+499
+00:30:50,640 --> 00:30:55,840
+mean it sounds simple in practi in in
+
+500
+00:30:52,720 --> 00:30:57,520
+theory but in in practice um the the the
+
+501
+00:30:55,840 --> 00:30:59,440
+request response protocol is is quite
+
+502
+00:30:57,520 --> 00:31:03,200
+fiddly. So ideally we would just have
+
+503
+00:30:59,440 --> 00:31:05,840
+gossip and um then based on on those
+
+504
+00:31:03,200 --> 00:31:09,679
+gossip proofs we're able to authenticate
+
+505
+00:31:05,840 --> 00:31:12,880
+the full chain prefix. Um
+
+506
+00:31:09,679 --> 00:31:17,360
+so uh so that's the the general uh
+
+507
+00:31:12,880 --> 00:31:20,480
+direction and idea. Um in regards to um
+
+508
+00:31:17,360 --> 00:31:22,240
+progress, um I guess the next step would
+
+509
+00:31:20,480 --> 00:31:25,279
+be kind of specking this out and and
+
+510
+00:31:22,240 --> 00:31:27,039
+doing an experiment to evaluate
+
+511
+00:31:25,279 --> 00:31:29,360
+uh the feasibility because there there
+
+512
+00:31:27,039 --> 00:31:32,480
+certainly are some open questions around
+
+513
+00:31:29,360 --> 00:31:35,760
+um performance and complexity because
+
+514
+00:31:32,480 --> 00:31:38,080
+what this entails is um introduce either
+
+515
+00:31:35,760 --> 00:31:40,799
+introducing a new guest which sits on
+
+516
+00:31:38,080 --> 00:31:44,559
+top of the pre-existing execution proof
+
+517
+00:31:40,799 --> 00:31:47,200
+or modifying the current guest and you
+
+518
+00:31:44,559 --> 00:31:50,240
+adding this um this this data structure
+
+519
+00:31:47,200 --> 00:31:53,279
+which allows us to do uh like chain
+
+520
+00:31:50,240 --> 00:31:56,880
+prefix authentication. So I'm hoping to
+
+521
+00:31:53,279 --> 00:31:59,279
+do that in the in the coming days um and
+
+522
+00:31:56,880 --> 00:32:01,519
+uh yeah potentially uh push forwards on
+
+523
+00:31:59,279 --> 00:32:05,440
+a proof of concept implementation so we
+
+524
+00:32:01,519 --> 00:32:08,480
+have a a basis to um to reason about the
+
+525
+00:32:05,440 --> 00:32:12,000
+feasibility of this this approach. Um,
+
+526
+00:32:08,480 --> 00:32:14,240
+in theory it my my opinion is it's it's
+
+527
+00:32:12,000 --> 00:32:18,559
+viable and and a very nice property to
+
+528
+00:32:14,240 --> 00:32:20,159
+have. Um, but you know the the devil's
+
+529
+00:32:18,559 --> 00:32:23,120
+in the details when when we actually get
+
+530
+00:32:20,159 --> 00:32:24,720
+round to implementing this. Um, I'm sure
+
+531
+00:32:23,120 --> 00:32:27,919
+there will be some rough edges that
+
+532
+00:32:24,720 --> 00:32:30,159
+surface. uh but nonetheless I I I think
+
+533
+00:32:27,919 --> 00:32:33,039
+it's uh justified to do a spike in this
+
+534
+00:32:30,159 --> 00:32:36,000
+direction to to see if we can um provide
+
+535
+00:32:33,039 --> 00:32:38,799
+this property uh for for uh optional
+
+536
+00:32:36,000 --> 00:32:43,440
+proofs from from day one essentially. So
+
+537
+00:32:38,799 --> 00:32:46,320
+um if we are able to make this practical
+
+538
+00:32:43,440 --> 00:32:48,559
+um that would be great because uh for
+
+539
+00:32:46,320 --> 00:32:51,679
+client consensus client implementations
+
+540
+00:32:48,559 --> 00:32:55,760
+they wouldn't have to um worry about the
+
+541
+00:32:51,679 --> 00:32:59,039
+uh the the request response stuff and in
+
+542
+00:32:55,760 --> 00:33:03,120
+addition to that um reasoning about
+
+543
+00:32:59,039 --> 00:33:06,640
+whether the block of interest is is
+
+544
+00:33:03,120 --> 00:33:09,039
+valid um is is much simpler because uh
+
+545
+00:33:06,640 --> 00:33:13,360
+the proof itself a test of validity of
+
+546
+00:33:09,039 --> 00:33:16,799
+all um ancestors essentially. So you you
+
+547
+00:33:13,360 --> 00:33:18,880
+don't need separate proofs. So that's um
+
+548
+00:33:16,799 --> 00:33:23,360
+essentially the the the the main update.
+
+549
+00:33:18,880 --> 00:33:25,519
+Um as I say the kind of specification is
+
+550
+00:33:23,360 --> 00:33:27,200
+is um the next step and then
+
+551
+00:33:25,519 --> 00:33:29,039
+subsequently a proof of concept
+
+552
+00:33:27,200 --> 00:33:33,960
+implementation.
+
+553
+00:33:29,039 --> 00:33:33,960
+Uh yeah short update from me this week.
+
+554
+00:33:35,039 --> 00:33:42,880
+>> Thanks Franchesco. Uh I don't see any
+
+555
+00:33:37,919 --> 00:33:45,279
+questions regarding your presentation.
+
+556
+00:33:42,880 --> 00:33:47,760
+So maybe we can move to project number
+
+557
+00:33:45,279 --> 00:33:51,640
+five which is proper infrastructure. I
+
+558
+00:33:47,760 --> 00:33:51,640
+don't know if Han is here.
+
+559
+00:33:52,240 --> 00:33:59,600
+>> Hello. Can you see my screen?
+
+560
+00:33:56,240 --> 00:34:02,159
+>> Uh it's saying that it's sharing but I
+
+561
+00:33:59,600 --> 00:34:05,880
+don't see anything yet.
+
+562
+00:34:02,159 --> 00:34:05,880
+Let's wait a second.
+
+563
+00:34:12,079 --> 00:34:17,440
+Yes, now I can see your screen.
+
+564
+00:34:15,359 --> 00:34:22,960
+>> I'll give an update to project number
+
+565
+00:34:17,440 --> 00:34:27,040
+five. Uh so we have done a a scalability
+
+566
+00:34:22,960 --> 00:34:29,919
+check on the EF cluster.
+
+567
+00:34:27,040 --> 00:34:32,720
+uh we benchmark on 500 minute blocks
+
+568
+00:34:29,919 --> 00:34:36,560
+with disk uh with different number of
+
+569
+00:34:32,720 --> 00:34:40,320
+GPUs and overall it scales pretty nice
+
+570
+00:34:36,560 --> 00:34:44,399
+except that from two GPU to four GPUs
+
+571
+00:34:40,320 --> 00:34:46,639
+uh we see it is CPU bounded but from
+
+572
+00:34:44,399 --> 00:34:49,200
+single machine to full machine it scales
+
+573
+00:34:46,639 --> 00:34:51,520
+almost linearly especially on the big
+
+574
+00:34:49,200 --> 00:34:53,919
+blocks
+
+575
+00:34:51,520 --> 00:34:56,159
+and you can find uh more details in this
+
+576
+00:34:53,919 --> 00:34:56,159
+note
+
+577
+00:34:56,960 --> 00:35:03,920
+And we also run some benchmarks on
+
+578
+00:35:00,800 --> 00:35:05,920
+manate blocks and the EST 6 million
+
+579
+00:35:03,920 --> 00:35:09,119
+blocks
+
+580
+00:35:05,920 --> 00:35:11,440
+with the cast is freaks and risk and you
+
+581
+00:35:09,119 --> 00:35:13,839
+can find a result here. But eventually
+
+582
+00:35:11,440 --> 00:35:16,720
+we will want to uh integrate the
+
+583
+00:35:13,839 --> 00:35:19,680
+benchmark result into other tools for
+
+584
+00:35:16,720 --> 00:35:24,320
+example the EV gas fit. So it can be
+
+585
+00:35:19,680 --> 00:35:28,320
+used as the input as like repricing
+
+586
+00:35:24,320 --> 00:35:31,839
+and during the rung of the EST 6 million
+
+587
+00:35:28,320 --> 00:35:34,880
+blocks we still see many blocks that
+
+588
+00:35:31,839 --> 00:35:37,119
+makes the prover to be out of memory cra
+
+589
+00:35:34,880 --> 00:35:39,520
+memory killed. So we will have to figure
+
+590
+00:35:37,119 --> 00:35:41,040
+out investigate
+
+591
+00:35:39,520 --> 00:35:44,560
+why
+
+592
+00:35:41,040 --> 00:35:48,480
+with the cluster the the block still
+
+593
+00:35:44,560 --> 00:35:53,119
+makes the approver out of memory killed
+
+594
+00:35:48,480 --> 00:35:56,880
+and a new release of ZK boost is kit in
+
+595
+00:35:53,119 --> 00:35:59,680
+this version it adapts to the spec
+
+596
+00:35:56,880 --> 00:36:02,240
+compatible input
+
+597
+00:35:59,680 --> 00:36:04,400
+but it requires some API changes
+
+598
+00:36:02,240 --> 00:36:05,920
+especially the proof request and the
+
+599
+00:36:04,400 --> 00:36:09,839
+verification API.
+
+600
+00:36:05,920 --> 00:36:12,560
+Now it requires some an additional gen
+
+601
+00:36:09,839 --> 00:36:14,800
+config as the in the body which will be
+
+602
+00:36:12,560 --> 00:36:17,680
+used as the public input of the proving
+
+603
+00:36:14,800 --> 00:36:20,640
+and verifying
+
+604
+00:36:17,680 --> 00:36:22,480
+and also the proof proof type enum is
+
+605
+00:36:20,640 --> 00:36:25,839
+also updated.
+
+606
+00:36:22,480 --> 00:36:28,480
+So next I will try to make a request to
+
+607
+00:36:25,839 --> 00:36:31,599
+consensus layer at the optional proof
+
+608
+00:36:28,480 --> 00:36:34,560
+branch to adapt to the new API and also
+
+609
+00:36:31,599 --> 00:36:39,079
+to the package
+
+610
+00:36:34,560 --> 00:36:39,079
+and that's the update. Thank you.
+
+611
+00:36:41,359 --> 00:36:48,000
+Thanks Han. Uh Franchesco asks if there
+
+612
+00:36:44,960 --> 00:36:52,119
+is any stats on CPU saturation over time
+
+613
+00:36:48,000 --> 00:36:52,119
+the block is proven
+
+614
+00:36:53,280 --> 00:37:01,119
+>> and the mostly is observed from the GPU
+
+615
+00:36:56,400 --> 00:37:03,359
+idling because the memory is for the for
+
+616
+00:37:01,119 --> 00:37:08,079
+the me uh for the average blocks the
+
+617
+00:37:03,359 --> 00:37:10,800
+memory is roughly sufficient but the CP
+
+618
+00:37:08,079 --> 00:37:14,160
+GPU is most idling when scaling from two
+
+619
+00:37:10,800 --> 00:37:16,880
+to four GPUs. But from the CPU stats,
+
+620
+00:37:14,160 --> 00:37:21,280
+it's usually not
+
+621
+00:37:16,880 --> 00:37:24,160
+well even it's like one CPU to one GPU.
+
+622
+00:37:21,280 --> 00:37:26,480
+That that's how I couldn't
+
+623
+00:37:24,160 --> 00:37:29,280
+uh that that part I couldn't find a
+
+624
+00:37:26,480 --> 00:37:32,560
+strong evidence from the CPU stat. But
+
+625
+00:37:29,280 --> 00:37:35,040
+from the GPU stats, it seems that the
+
+626
+00:37:32,560 --> 00:37:38,040
+GPU is idling much more from two to
+
+627
+00:37:35,040 --> 00:37:38,040
+four.
+
+628
+00:37:40,320 --> 00:37:45,599
+>> Cool. Thanks. Yeah, I think also with
+
+629
+00:37:42,720 --> 00:37:47,359
+time as we start using more and more DF
+
+630
+00:37:45,599 --> 00:37:49,760
+cluster
+
+631
+00:37:47,359 --> 00:37:52,000
+um we can have better metrics and start
+
+632
+00:37:49,760 --> 00:37:54,880
+understanding better all these all these
+
+633
+00:37:52,000 --> 00:37:58,160
+things. I think your exploration has
+
+634
+00:37:54,880 --> 00:38:00,400
+been great. Um
+
+635
+00:37:58,160 --> 00:38:03,200
+so if there's no other question we can
+
+636
+00:38:00,400 --> 00:38:09,000
+move to project number seven which is
+
+637
+00:38:03,200 --> 00:38:09,000
+security. Uh I know Cody is here.
+
+638
+00:38:10,960 --> 00:38:16,160
+I can see your screen.
+
+639
+00:38:13,200 --> 00:38:17,280
+>> You said you can. Yeah,
+
+640
+00:38:16,160 --> 00:38:19,920
+>> I can. I can.
+
+641
+00:38:17,280 --> 00:38:24,880
+>> Yeah. Yeah. Good. [clears throat] Um
+
+642
+00:38:19,920 --> 00:38:28,400
+cool. So yeah. Um on the risk five
+
+643
+00:38:24,880 --> 00:38:31,760
+compliance testing project, I upgraded
+
+644
+00:38:28,400 --> 00:38:34,320
+the test suite to this major version um
+
+645
+00:38:31,760 --> 00:38:37,119
+4.0 now and that found some more bugs
+
+646
+00:38:34,320 --> 00:38:42,240
+and those have been reported
+
+647
+00:38:37,119 --> 00:38:44,640
+um on the formal uh verification of risk
+
+648
+00:38:42,240 --> 00:38:46,480
+5 compliance. I've mentioned in in
+
+649
+00:38:44,640 --> 00:38:50,640
+previous calls that I'm working on this
+
+650
+00:38:46,480 --> 00:38:53,760
+for ZISK following um some work by
+
+651
+00:38:50,640 --> 00:38:55,680
+Nethermind and other teams on um on
+
+652
+00:38:53,760 --> 00:38:58,079
+other ZKVMs.
+
+653
+00:38:55,680 --> 00:39:01,760
+And yeah, I mean I had some good um
+
+654
+00:38:58,079 --> 00:39:03,839
+progress early on with AI uh and now
+
+655
+00:39:01,760 --> 00:39:05,520
+sort of the gap between you know it's
+
+656
+00:39:03,839 --> 00:39:08,400
+it's clearly working because it's
+
+657
+00:39:05,520 --> 00:39:10,320
+finding bugs and I think this is
+
+658
+00:39:08,400 --> 00:39:13,440
+something we can rely on is is very
+
+659
+00:39:10,320 --> 00:39:15,599
+large. So I'm working to close that. Um
+
+660
+00:39:13,440 --> 00:39:17,920
+it's sort of technical but I wrote this
+
+661
+00:39:15,599 --> 00:39:21,200
+issue or I mean I I had AI generate an
+
+662
+00:39:17,920 --> 00:39:22,400
+issue um summarizing the past month of
+
+663
+00:39:21,200 --> 00:39:26,320
+pull requests for those who are
+
+664
+00:39:22,400 --> 00:39:31,280
+interested but you know for a flavor uh
+
+665
+00:39:26,320 --> 00:39:33,280
+there's like kind of trusted um you know
+
+666
+00:39:31,280 --> 00:39:37,280
+connections between verified components
+
+667
+00:39:33,280 --> 00:39:40,960
+and I'm working to sort of um to to make
+
+668
+00:39:37,280 --> 00:39:43,040
+those untrusted and proven and also you
+
+669
+00:39:40,960 --> 00:39:46,720
+know you have a model say of a ZISK
+
+670
+00:39:43,040 --> 00:39:50,000
+trace but um we you know in the past we
+
+671
+00:39:46,720 --> 00:39:51,920
+we had never instantiated such a trace
+
+672
+00:39:50,000 --> 00:39:53,839
+um from real data so it's not clear that
+
+673
+00:39:51,920 --> 00:39:55,680
+that model models reality these are the
+
+674
+00:39:53,839 --> 00:39:58,079
+kind of things that you have to deal
+
+675
+00:39:55,680 --> 00:40:00,640
+with um and I also recently met with
+
+676
+00:39:58,079 --> 00:40:03,599
+Hector of ZISK who's ramping up to um
+
+677
+00:40:00,640 --> 00:40:05,359
+work on this with me to review from ZISK
+
+678
+00:40:03,599 --> 00:40:07,520
+expertise standpoint and contribute to
+
+679
+00:40:05,359 --> 00:40:11,119
+the effort
+
+680
+00:40:07,520 --> 00:40:15,599
+um we have a fuzzing project uh through
+
+681
+00:40:11,119 --> 00:40:18,480
+a grant and that has finished. Um, and
+
+682
+00:40:15,599 --> 00:40:20,960
+uh, some final campaign runs are
+
+683
+00:40:18,480 --> 00:40:23,440
+happening. Um, and so I won't frontr run
+
+684
+00:40:20,960 --> 00:40:24,880
+the the grantees too much, but we have
+
+685
+00:40:23,440 --> 00:40:29,200
+uh, we'll have some nice infrastructure
+
+686
+00:40:24,880 --> 00:40:31,839
+built for fuzzing on array and um, with
+
+687
+00:40:29,200 --> 00:40:34,880
+a few different um, options for program
+
+688
+00:40:31,839 --> 00:40:36,960
+generation, a good initial seed corpus
+
+689
+00:40:34,880 --> 00:40:39,119
+and yeah, in the next call I plan to
+
+690
+00:40:36,960 --> 00:40:42,800
+present that bit more or at least point
+
+691
+00:40:39,119 --> 00:40:44,400
+to a blog post. Um there was a big
+
+692
+00:40:42,800 --> 00:40:46,480
+innovation worth mentioning from a
+
+693
+00:40:44,400 --> 00:40:49,839
+security standpoint this past month. the
+
+694
+00:40:46,480 --> 00:40:51,920
+flock proving system um was released and
+
+695
+00:40:49,839 --> 00:40:54,720
+there's some promise there to maybe
+
+696
+00:40:51,920 --> 00:40:58,319
+remove our uh dependence on algebraic
+
+697
+00:40:54,720 --> 00:40:59,839
+hashing which would be nice um but you
+
+698
+00:40:58,319 --> 00:41:03,599
+know more engineering work is needed to
+
+699
+00:40:59,839 --> 00:41:05,839
+validate that um is viable um like a lot
+
+700
+00:41:03,599 --> 00:41:08,720
+more but it's interesting to note that
+
+701
+00:41:05,839 --> 00:41:10,480
+arlib had some innovation or some uh
+
+702
+00:41:08,720 --> 00:41:13,680
+improvements
+
+703
+00:41:10,480 --> 00:41:16,880
+in the meantime uh that could help with
+
+704
+00:41:13,680 --> 00:41:20,000
+flock uh formalization So there's a sum
+
+705
+00:41:16,880 --> 00:41:21,440
+check result flock uses sum checks and
+
+706
+00:41:20,000 --> 00:41:25,119
+there's also this ring switching
+
+707
+00:41:21,440 --> 00:41:26,720
+formalism which uh has been brought in
+
+708
+00:41:25,119 --> 00:41:29,680
+and both of those would be useful for
+
+709
+00:41:26,720 --> 00:41:32,400
+flock. So sort of advocating for arlib
+
+710
+00:41:29,680 --> 00:41:36,000
+as a a general place for um the building
+
+711
+00:41:32,400 --> 00:41:39,359
+blocks of of snark formal verification
+
+712
+00:41:36,000 --> 00:41:42,319
+work. And finally um we have a special
+
+713
+00:41:39,359 --> 00:41:46,240
+guest in the project seven uh
+
+714
+00:41:42,319 --> 00:41:49,280
+presentation today um uh Tao who
+
+715
+00:41:46,240 --> 00:41:51,920
+presented earlier will uh has been
+
+716
+00:41:49,280 --> 00:41:55,760
+working on an EVM spec in this language
+
+717
+00:41:51,920 --> 00:41:58,000
+called sale. um sale is uh is behind the
+
+718
+00:41:55,760 --> 00:42:00,560
+risk five formal verification efforts
+
+719
+00:41:58,000 --> 00:42:02,960
+because the risk five community has been
+
+720
+00:42:00,560 --> 00:42:05,839
+building uh an executable formal
+
+721
+00:42:02,960 --> 00:42:09,520
+specification in in sale and we've been
+
+722
+00:42:05,839 --> 00:42:13,599
+using it to um to build uh lean
+
+723
+00:42:09,520 --> 00:42:16,000
+specifications using this backend um I
+
+724
+00:42:13,599 --> 00:42:17,839
+expect this backend to be um there more
+
+725
+00:42:16,000 --> 00:42:19,520
+and more meaning we can use lean or be
+
+726
+00:42:17,839 --> 00:42:22,960
+in use more and more meaning we can use
+
+727
+00:42:19,520 --> 00:42:25,599
+lean to make proofs uh about risk
+
+728
+00:42:22,960 --> 00:42:28,160
+compliance. We'd like to do the same for
+
+729
+00:42:25,599 --> 00:42:32,319
+EVM implementation. And so a first step
+
+730
+00:42:28,160 --> 00:42:34,720
+would be to build an EVM uh sale spec
+
+731
+00:42:32,319 --> 00:42:37,200
+and uh since the last call to has done
+
+732
+00:42:34,720 --> 00:42:39,200
+this um he's made use of this sale to
+
+733
+00:42:37,200 --> 00:42:40,720
+see compilation which I'm also using
+
+734
+00:42:39,200 --> 00:42:42,800
+actually on my first slide because when
+
+735
+00:42:40,720 --> 00:42:44,319
+I do differential testing of the
+
+736
+00:42:42,800 --> 00:42:47,200
+compliance
+
+737
+00:42:44,319 --> 00:42:49,040
+um risk five compliance I'm I'm using
+
+738
+00:42:47,200 --> 00:42:54,000
+the golden model it's called which is
+
+739
+00:42:49,040 --> 00:42:57,200
+the C uh um translation of sale and
+
+740
+00:42:54,000 --> 00:42:59,200
+actually last I heard all of the tests
+
+741
+00:42:57,200 --> 00:43:03,359
+we're passing in in a matter of weeks
+
+742
+00:42:59,200 --> 00:43:06,480
+which I am very excited about. Um and my
+
+743
+00:43:03,359 --> 00:43:08,800
+dream is that with this specification
+
+744
+00:43:06,480 --> 00:43:10,800
+um we can eventually achieve feature
+
+745
+00:43:08,800 --> 00:43:12,800
+parody with Python where I mean by
+
+746
+00:43:10,800 --> 00:43:15,280
+feature I mean like the usability
+
+747
+00:43:12,800 --> 00:43:17,920
+features of the Python specs that allow
+
+748
+00:43:15,280 --> 00:43:20,160
+them to be a a very very valuable
+
+749
+00:43:17,920 --> 00:43:23,040
+resource for collaboration of client
+
+750
+00:43:20,160 --> 00:43:26,000
+teams. So if we can do everything um
+
+751
+00:43:23,040 --> 00:43:29,280
+that the Python specs can do um you know
+
+752
+00:43:26,000 --> 00:43:32,000
+have the same or better ergonomics um
+
+753
+00:43:29,280 --> 00:43:33,839
+you know for filling tests and and so on
+
+754
+00:43:32,000 --> 00:43:36,400
+then eventually all of the expertise
+
+755
+00:43:33,839 --> 00:43:39,280
+that the client the core devs bring um
+
+756
+00:43:36,400 --> 00:43:41,520
+to the Python specs as they develop um
+
+757
+00:43:39,280 --> 00:43:44,000
+their clients can filter in instead
+
+758
+00:43:41,520 --> 00:43:46,079
+directly to a single formal
+
+759
+00:43:44,000 --> 00:43:48,720
+specification which we can use for
+
+760
+00:43:46,079 --> 00:43:51,680
+formal verification. So we avoid this
+
+761
+00:43:48,720 --> 00:43:53,920
+bifurcation um that could happen if
+
+762
+00:43:51,680 --> 00:43:57,200
+we're not u yeah if we don't pursue this
+
+763
+00:43:53,920 --> 00:43:59,920
+sale direction. So with that I'll invite
+
+764
+00:43:57,200 --> 00:44:03,400
+um Tao to give a a little overview of
+
+765
+00:43:59,920 --> 00:44:03,400
+this project.
+
+766
+00:44:08,480 --> 00:44:12,880
+Trying to stop sharing.
+
+767
+00:44:11,200 --> 00:44:15,119
+Can somebody evict me? Okay, cool.
+
+768
+00:44:12,880 --> 00:44:20,560
+>> Y can you see my screen?
+
+769
+00:44:15,119 --> 00:44:24,400
+>> I can. Yeah. Cool. Um, so yeah, uh, I
+
+770
+00:44:20,560 --> 00:44:26,400
+will, so yeah, essentially what sale
+
+771
+00:44:24,400 --> 00:44:29,440
+intends to be is the formal
+
+772
+00:44:26,400 --> 00:44:31,760
+specification of the EVM. As, uh, Cody
+
+773
+00:44:29,440 --> 00:44:35,040
+mentioned, we leverage um, sale, which
+
+774
+00:44:31,760 --> 00:44:38,960
+is a very good, um, language for, uh,
+
+775
+00:44:35,040 --> 00:44:41,520
+defining ISAs, which the EVM is. Um, in
+
+776
+00:44:38,960 --> 00:44:44,400
+terms of how it's structured, we
+
+777
+00:44:41,520 --> 00:44:48,079
+essentially have EVM core. So this um
+
+778
+00:44:44,400 --> 00:44:51,839
+encapsulates op codes, gas frames and
+
+779
+00:44:48,079 --> 00:44:53,920
+other um kind of EVM centric uh
+
+780
+00:44:51,839 --> 00:44:56,319
+components. And then we have a kernel
+
+781
+00:44:53,920 --> 00:44:59,040
+interface. And the kernel interface is
+
+782
+00:44:56,319 --> 00:45:02,400
+essentially um what we use to interact
+
+783
+00:44:59,040 --> 00:45:05,839
+with the host. Uh so to fetch balances,
+
+784
+00:45:02,400 --> 00:45:09,200
+to fetch nons, um to set slots, to to
+
+785
+00:45:05,839 --> 00:45:12,160
+get storage slots, and um there's a few
+
+786
+00:45:09,200 --> 00:45:16,240
+other components as well. Um what's nice
+
+787
+00:45:12,160 --> 00:45:18,319
+about this is it's um it's featurerich
+
+788
+00:45:16,240 --> 00:45:20,960
+and it has a lot of utility in regards
+
+789
+00:45:18,319 --> 00:45:24,720
+to its integration. So it's very easy to
+
+790
+00:45:20,960 --> 00:45:27,359
+extract um to various backends uh lean
+
+791
+00:45:24,720 --> 00:45:31,119
+which is which Cody mentioned. Um
+
+792
+00:45:27,359 --> 00:45:34,000
+there's also uh which is a symbolic
+
+793
+00:45:31,119 --> 00:45:37,040
+execution engine combined with Iris
+
+794
+00:45:34,000 --> 00:45:40,880
+which allows us to essentially um prove
+
+795
+00:45:37,040 --> 00:45:43,040
+compliance of compiled binaries with the
+
+796
+00:45:40,880 --> 00:45:46,319
+specification. So for example we can
+
+797
+00:45:43,040 --> 00:45:48,640
+compile down to risk 5 um and then we
+
+798
+00:45:46,319 --> 00:45:51,200
+can prove that that risk 5 code is
+
+799
+00:45:48,640 --> 00:45:53,839
+compliant with the specification. Um so
+
+800
+00:45:51,200 --> 00:45:56,560
+there's ideas about uh you know kind of
+
+801
+00:45:53,839 --> 00:46:00,720
+proving um proving some of these guest
+
+802
+00:45:56,560 --> 00:46:03,760
+programs uh using this stack. Um we can
+
+803
+00:46:00,720 --> 00:46:06,800
+compile to see and risk five itself and
+
+804
+00:46:03,760 --> 00:46:09,680
+also to to rock as well. Um so just to
+
+805
+00:46:06,800 --> 00:46:11,839
+give an overview of um some of the the
+
+806
+00:46:09,680 --> 00:46:15,440
+the features
+
+807
+00:46:11,839 --> 00:46:16,960
+can you guys see the sale?
+
+808
+00:46:15,440 --> 00:46:18,079
+Sure if my screen is updated.
+
+809
+00:46:16,960 --> 00:46:19,839
+>> Yes.
+
+810
+00:46:18,079 --> 00:46:21,760
+>> Yeah. Okay cool. So yeah, this is just
+
+811
+00:46:19,839 --> 00:46:26,400
+an overview of uh like the sale
+
+812
+00:46:21,760 --> 00:46:29,839
+ecosystem. So um there's a lot of formal
+
+813
+00:46:26,400 --> 00:46:31,920
+specifications of different targets um
+
+814
+00:46:29,839 --> 00:46:34,960
+in sale which is super useful because it
+
+815
+00:46:31,920 --> 00:46:37,760
+means that we can do binary analysis on
+
+816
+00:46:34,960 --> 00:46:40,319
+binaries defined in various different um
+
+817
+00:46:37,760 --> 00:46:43,359
+ISAs including risk 5 which is of
+
+818
+00:46:40,319 --> 00:46:45,599
+primary significance for us. Um and you
+
+819
+00:46:43,359 --> 00:46:47,200
+know you can you can also extract to
+
+820
+00:46:45,599 --> 00:46:51,040
+various different uh proof assistants
+
+821
+00:46:47,200 --> 00:46:53,280
+and backends. Um so maybe we can dive
+
+822
+00:46:51,040 --> 00:46:56,240
+dive [clears throat] into the code. Um
+
+823
+00:46:53,280 --> 00:46:58,319
+so as I mentioned we've got the the EVM,
+
+824
+00:46:56,240 --> 00:47:00,960
+we've got the host and we've got some
+
+825
+00:46:58,319 --> 00:47:06,240
+kind of libraries which encapsulate
+
+826
+00:47:00,960 --> 00:47:09,359
+things like uh RLP and um and uh
+
+827
+00:47:06,240 --> 00:47:12,480
+the MPT etc. So maybe I can just give a
+
+828
+00:47:09,359 --> 00:47:15,200
+a quick example of um quick overview of
+
+829
+00:47:12,480 --> 00:47:18,000
+how the uh EVM op codes are structured.
+
+830
+00:47:15,200 --> 00:47:20,720
+So essentially define an abstract syntax
+
+831
+00:47:18,000 --> 00:47:23,599
+tree and this encapsulates um all of the
+
+832
+00:47:20,720 --> 00:47:28,560
+operations that we have uh inside of the
+
+833
+00:47:23,599 --> 00:47:31,760
+the uh the EVM and then we have um an
+
+834
+00:47:28,560 --> 00:47:33,280
+execute function uh which takes an
+
+835
+00:47:31,760 --> 00:47:35,119
+operation
+
+836
+00:47:33,280 --> 00:47:38,000
+um and essentially defines its
+
+837
+00:47:35,119 --> 00:47:41,680
+semantics. So in this instance uh for
+
+838
+00:47:38,000 --> 00:47:44,079
+add we charge some gas um which is very
+
+839
+00:47:41,680 --> 00:47:45,920
+low. This is defined in the in the
+
+840
+00:47:44,079 --> 00:47:48,640
+specification.
+
+841
+00:47:45,920 --> 00:47:51,839
+We pop uh two words off the stack and
+
+842
+00:47:48,640 --> 00:47:54,000
+then um we use an alu add so an
+
+843
+00:47:51,839 --> 00:47:56,160
+algebraic uh logic unit to do an
+
+844
+00:47:54,000 --> 00:48:00,400
+addition and then we push the resultant
+
+845
+00:47:56,160 --> 00:48:02,240
+word back onto the stack. Um so it's you
+
+846
+00:48:00,400 --> 00:48:06,000
+know the idea is that it should be
+
+847
+00:48:02,240 --> 00:48:10,400
+legible, maintainable and extensible.
+
+848
+00:48:06,000 --> 00:48:13,440
+Um so we have 100% client uh compliance
+
+849
+00:48:10,400 --> 00:48:18,240
+with the east tests. Um I'm currently
+
+850
+00:48:13,440 --> 00:48:20,560
+doing a bit of a refactor to um to align
+
+851
+00:48:18,240 --> 00:48:23,839
+the kind of state model more closely
+
+852
+00:48:20,560 --> 00:48:26,240
+with execution specs so that if uh you
+
+853
+00:48:23,839 --> 00:48:29,119
+know this is adopted by by the the spec
+
+854
+00:48:26,240 --> 00:48:31,040
+team um you know they can dive into an
+
+855
+00:48:29,119 --> 00:48:33,839
+environment that looks somewhat
+
+856
+00:48:31,040 --> 00:48:36,480
+familiar. Um
+
+857
+00:48:33,839 --> 00:48:39,760
+so that's kind of where we're at. Um
+
+858
+00:48:36,480 --> 00:48:43,760
+there's also some ambitions of uh you
+
+859
+00:48:39,760 --> 00:48:46,880
+know using this for guest like risk by
+
+860
+00:48:43,760 --> 00:48:48,880
+guest program um verification. So I've
+
+861
+00:48:46,880 --> 00:48:52,160
+I've done a few experiments using isuris
+
+862
+00:48:48,880 --> 00:48:54,319
+and it it looks quite promising. Um and
+
+863
+00:48:52,160 --> 00:48:57,200
+we're hoping to collaborate with the EVM
+
+864
+00:48:54,319 --> 00:48:58,800
+ASM [clears throat] team. Um
+
+865
+00:48:57,200 --> 00:49:00,880
+however in addition to that I think it
+
+866
+00:48:58,800 --> 00:49:02,960
+would be cool if uh the community could
+
+867
+00:49:00,880 --> 00:49:05,839
+also um you know explore potentials here
+
+868
+00:49:02,960 --> 00:49:07,760
+and and maybe uh you know come up with
+
+869
+00:49:05,839 --> 00:49:10,160
+your own ideas and and and seeing how we
+
+870
+00:49:07,760 --> 00:49:12,319
+can leverage this tool to um to harden
+
+871
+00:49:10,160 --> 00:49:14,800
+the security argument uh for some of
+
+872
+00:49:12,319 --> 00:49:18,760
+these guest programs.
+
+873
+00:49:14,800 --> 00:49:18,760
+>> Yeah, that's all for me.
+
+874
+00:49:20,079 --> 00:49:26,559
+>> Nice. Thanks uh Kobe and Franchesco for
+
+875
+00:49:22,800 --> 00:49:29,119
+the presentations. Um very exciting new
+
+876
+00:49:26,559 --> 00:49:30,960
+tools uh that we can consider for for
+
+877
+00:49:29,119 --> 00:49:33,920
+stuff.
+
+878
+00:49:30,960 --> 00:49:37,960
+Um looking if there's anyone with
+
+879
+00:49:33,920 --> 00:49:37,960
+questions regarding this.
+
+880
+00:49:38,400 --> 00:49:46,319
+Don't think so. So maybe we can switch
+
+881
+00:49:42,800 --> 00:49:50,079
+to Ben. Uh he's going to present his
+
+882
+00:49:46,319 --> 00:49:51,599
+work on CIS allocators.
+
+883
+00:49:50,079 --> 00:49:54,640
+I don't know if Ben is here.
+
+884
+00:49:51,599 --> 00:49:55,680
+>> Yeah. Right. Uh I hope you can see my
+
+885
+00:49:54,640 --> 00:49:56,720
+screen.
+
+886
+00:49:55,680 --> 00:49:59,280
+>> Yeah, I can.
+
+887
+00:49:56,720 --> 00:50:02,079
+>> Okay, cool. So, I'll first do like a
+
+888
+00:49:59,280 --> 00:50:04,720
+short uh wrap-up for for the internship
+
+889
+00:50:02,079 --> 00:50:07,760
+and then then continue to the analyst
+
+890
+00:50:04,720 --> 00:50:10,319
+for the allocators. So, my my plan was
+
+891
+00:50:07,760 --> 00:50:12,960
+to look into
+
+892
+00:50:10,319 --> 00:50:15,520
+uh optimizing ZKVMs but treat them more
+
+893
+00:50:12,960 --> 00:50:18,079
+as a black box and instead
+
+894
+00:50:15,520 --> 00:50:19,520
+uh trying to make some changes in the
+
+895
+00:50:18,079 --> 00:50:22,640
+guest program so that they are more
+
+896
+00:50:19,520 --> 00:50:25,839
+suitable. So I fixed on specific pair
+
+897
+00:50:22,640 --> 00:50:29,119
+which was a Ephrax and Zisk and then I'm
+
+898
+00:50:25,839 --> 00:50:30,960
+planning to hopefully uh make some
+
+899
+00:50:29,119 --> 00:50:34,640
+generalizations and how this can be
+
+900
+00:50:30,960 --> 00:50:36,400
+extended to other other combinations. So
+
+901
+00:50:34,640 --> 00:50:38,640
+the method that I used for this was
+
+902
+00:50:36,400 --> 00:50:42,319
+simply comparing the the proving cost
+
+903
+00:50:38,640 --> 00:50:46,400
+and for this zisk was very helpful and
+
+904
+00:50:42,319 --> 00:50:48,880
+what I got was uh about 42%
+
+905
+00:50:46,400 --> 00:50:52,160
+of combined speed up for all all of the
+
+906
+00:50:48,880 --> 00:50:55,280
+changes plus some other side quests that
+
+907
+00:50:52,160 --> 00:50:58,480
+I worked on. So what I noticed that uh
+
+908
+00:50:55,280 --> 00:51:00,480
+worked was really making sure that
+
+909
+00:50:58,480 --> 00:51:02,800
+applying all of the hash pre-o compiles
+
+910
+00:51:00,480 --> 00:51:04,480
+works correctly and uh all of the
+
+911
+00:51:02,800 --> 00:51:06,640
+instances
+
+912
+00:51:04,480 --> 00:51:10,319
+are are are
+
+913
+00:51:06,640 --> 00:51:14,319
+calling that. Uh this was one of the one
+
+914
+00:51:10,319 --> 00:51:16,960
+of the biggest speed up and uh then also
+
+915
+00:51:14,319 --> 00:51:20,319
+making sure that we are using only the
+
+916
+00:51:16,960 --> 00:51:24,480
+things that are necessary. So things
+
+917
+00:51:20,319 --> 00:51:27,760
+like parallelism and locks are adding
+
+918
+00:51:24,480 --> 00:51:30,319
+just overheads uh to the guest programs
+
+919
+00:51:27,760 --> 00:51:33,040
+which is completely unnecessary.
+
+920
+00:51:30,319 --> 00:51:35,520
+And finally also being more cautious
+
+921
+00:51:33,040 --> 00:51:40,480
+about how we handle memory, how we store
+
+922
+00:51:35,520 --> 00:51:43,760
+types and uh if we do not allocate
+
+923
+00:51:40,480 --> 00:51:46,319
+uh unreasonably. The last one which I
+
+924
+00:51:43,760 --> 00:51:50,000
+didn't count to the combined combined
+
+925
+00:51:46,319 --> 00:51:52,400
+speed up is applying some ZKVM specific
+
+926
+00:51:50,000 --> 00:51:54,640
+instructions. So as uh Ignashio
+
+927
+00:51:52,400 --> 00:51:58,319
+mentioned uh there has been already some
+
+928
+00:51:54,640 --> 00:52:01,040
+effort for comparing the 256
+
+929
+00:51:58,319 --> 00:52:04,400
+arithmetic and ZISK I also need to do
+
+930
+00:52:01,040 --> 00:52:08,000
+some some more measurements on this.
+
+931
+00:52:04,400 --> 00:52:12,000
+And uh as for uh the other things that I
+
+932
+00:52:08,000 --> 00:52:16,559
+worked on uh was standardizing the
+
+933
+00:52:12,000 --> 00:52:19,920
+serialization for for Ephre which makes
+
+934
+00:52:16,559 --> 00:52:23,119
+it much closer to the specifications
+
+935
+00:52:19,920 --> 00:52:27,280
+and additionally looking into a
+
+936
+00:52:23,119 --> 00:52:30,319
+relatively new paper for uh how compiler
+
+937
+00:52:27,280 --> 00:52:33,760
+optimizations affect the performance on
+
+938
+00:52:30,319 --> 00:52:36,559
+ZKVMs. So th this turned out to be quite
+
+939
+00:52:33,760 --> 00:52:39,920
+important and for a change that doesn't
+
+940
+00:52:36,559 --> 00:52:43,440
+require uh any edits in the s source
+
+941
+00:52:39,920 --> 00:52:47,839
+code this was possible to uh speed up
+
+942
+00:52:43,440 --> 00:52:49,760
+the mainet pooling by like 10% 10 and a
+
+943
+00:52:47,839 --> 00:52:52,720
+half%
+
+944
+00:52:49,760 --> 00:52:55,280
+and uh yeah there is also write up on
+
+945
+00:52:52,720 --> 00:52:56,800
+the previous one and then the stuff that
+
+946
+00:52:55,280 --> 00:52:59,599
+I want to present in the second half of
+
+947
+00:52:56,800 --> 00:53:01,520
+the presentation is the comparison for
+
+948
+00:52:59,599 --> 00:53:04,880
+the allocators that are available in
+
+949
+00:53:01,520 --> 00:53:08,480
+disk. Uh I will share the presentation
+
+950
+00:53:04,880 --> 00:53:11,520
+so that you can uh find the links.
+
+951
+00:53:08,480 --> 00:53:14,480
+So uh I tested it on the mainet blocks
+
+952
+00:53:11,520 --> 00:53:17,599
+and also EST fixtures and I believe the
+
+953
+00:53:14,480 --> 00:53:21,119
+EST results are more interesting here.
+
+954
+00:53:17,599 --> 00:53:24,480
+So what we have here is uh there are
+
+955
+00:53:21,119 --> 00:53:26,720
+brewing costs on the y-axis and then
+
+956
+00:53:24,480 --> 00:53:28,400
+here you can see different different
+
+957
+00:53:26,720 --> 00:53:33,119
+types of allocators. So there is bump
+
+958
+00:53:28,400 --> 00:53:37,440
+balok talc and tfs and we can already
+
+959
+00:53:33,119 --> 00:53:40,319
+see the first instance for om on some of
+
+960
+00:53:37,440 --> 00:53:42,800
+the just few selected tests and also the
+
+961
+00:53:40,319 --> 00:53:44,720
+second thing to notice is that uh for
+
+962
+00:53:42,800 --> 00:53:48,079
+almost all of the all of the tests that
+
+963
+00:53:44,720 --> 00:53:50,480
+I run is that bum is naturally the the
+
+964
+00:53:48,079 --> 00:53:53,599
+most efficient because it doesn't free
+
+965
+00:53:50,480 --> 00:53:56,559
+and then all of the other allocators are
+
+966
+00:53:53,599 --> 00:54:00,880
+arranged more or less in in this in this
+
+967
+00:53:56,559 --> 00:54:03,280
+order. Um then we can also evaluate what
+
+968
+00:54:00,880 --> 00:54:06,319
+is the what is the highest address that
+
+969
+00:54:03,280 --> 00:54:08,000
+is touched by the memory. Uh
+
+970
+00:54:06,319 --> 00:54:11,839
+unsurprisingly
+
+971
+00:54:08,000 --> 00:54:13,839
+bump is uh consuming much more of the
+
+972
+00:54:11,839 --> 00:54:15,680
+memory. Here we can see that this one
+
+973
+00:54:13,839 --> 00:54:19,040
+that is touching the the threshold is
+
+974
+00:54:15,680 --> 00:54:22,240
+the one that OM and then there are two
+
+975
+00:54:19,040 --> 00:54:26,240
+other tests that are dangerously close.
+
+976
+00:54:22,240 --> 00:54:28,400
+Uh as for the the usage for for all of
+
+977
+00:54:26,240 --> 00:54:31,200
+the other allocators
+
+978
+00:54:28,400 --> 00:54:34,480
+uh they are having more or less the same
+
+979
+00:54:31,200 --> 00:54:36,960
+performance on what is what is the the
+
+980
+00:54:34,480 --> 00:54:41,520
+highest highest memory address that they
+
+981
+00:54:36,960 --> 00:54:43,839
+touch. Uh yeah. And then when we push
+
+982
+00:54:41,520 --> 00:54:48,240
+this further, we can notice that two of
+
+983
+00:54:43,839 --> 00:54:52,000
+these tests that are close for for 200
+
+984
+00:54:48,240 --> 00:54:57,119
+million uh gas limits uh these are the
+
+985
+00:54:52,000 --> 00:55:00,400
+the ones that uh fail. So uh considering
+
+986
+00:54:57,119 --> 00:55:02,720
+higher gas limits uh that there can be
+
+987
+00:55:00,400 --> 00:55:05,440
+more more problems. And one thing that
+
+988
+00:55:02,720 --> 00:55:07,359
+we can tackle this problem is that uh we
+
+989
+00:55:05,440 --> 00:55:10,240
+can increase the memory that's giving to
+
+990
+00:55:07,359 --> 00:55:12,480
+the bump allocator from half around half
+
+991
+00:55:10,240 --> 00:55:14,400
+gigabyte which is currently to one and a
+
+992
+00:55:12,480 --> 00:55:16,720
+half. So this is the this is the blue
+
+993
+00:55:14,400 --> 00:55:21,359
+column that we have here and these are
+
+994
+00:55:16,720 --> 00:55:25,280
+again uh the the proving costs on on the
+
+995
+00:55:21,359 --> 00:55:27,760
+tests and once we increase the memory
+
+996
+00:55:25,280 --> 00:55:31,040
+for the bum allocator we can see that we
+
+997
+00:55:27,760 --> 00:55:34,000
+bypass the problem and also that for the
+
+998
+00:55:31,040 --> 00:55:36,960
+DL malo and the increase bump the the
+
+999
+00:55:34,000 --> 00:55:41,440
+proving costs are are more or less
+
+1000
+00:55:36,960 --> 00:55:44,079
+similar. Um but then looking again at
+
+1001
+00:55:41,440 --> 00:55:47,359
+the at the highest memory address
+
+1002
+00:55:44,079 --> 00:55:52,000
+touched uh we can see that uh there is
+
+1003
+00:55:47,359 --> 00:55:54,559
+again uh big difference. So um yeah I'm
+
+1004
+00:55:52,000 --> 00:55:56,559
+not sure uh how how far in the guest
+
+1005
+00:55:54,559 --> 00:55:59,040
+limit are we targeting for for the
+
+1006
+00:55:56,559 --> 00:56:02,880
+upcoming protocol changes but definitely
+
+1007
+00:55:59,040 --> 00:56:05,440
+like if there is only one one one block
+
+1008
+00:56:02,880 --> 00:56:07,359
+uh that results in failed proving uh
+
+1009
+00:56:05,440 --> 00:56:10,400
+that this can be used as a attack
+
+1010
+00:56:07,359 --> 00:56:12,400
+vector. So uh even though we are able to
+
+1011
+00:56:10,400 --> 00:56:15,920
+to bypass the problem by increasing
+
+1012
+00:56:12,400 --> 00:56:18,640
+memory, I I think it's uh important uh
+
+1013
+00:56:15,920 --> 00:56:21,040
+to consider
+
+1014
+00:56:18,640 --> 00:56:23,920
+uh using some more sophisticated
+
+1015
+00:56:21,040 --> 00:56:26,319
+allocator like the aloc uh for the for
+
+1016
+00:56:23,920 --> 00:56:27,839
+the safety reasons.
+
+1017
+00:56:26,319 --> 00:56:30,319
+So
+
+1018
+00:56:27,839 --> 00:56:33,520
+yeah, that was uh all that I want to
+
+1019
+00:56:30,319 --> 00:56:37,520
+cover. More information is on on the on
+
+1020
+00:56:33,520 --> 00:56:41,200
+the write up and yeah thanks for all the
+
+1021
+00:56:37,520 --> 00:56:43,520
+support in the ZKVA team and Ignatio. Uh
+
+1022
+00:56:41,200 --> 00:56:46,640
+this was a really nice experience for me
+
+1023
+00:56:43,520 --> 00:56:50,880
+and I would like to continue also on
+
+1024
+00:56:46,640 --> 00:56:53,040
+working uh in the sub proving bit in a
+
+1025
+00:56:50,880 --> 00:56:57,240
+bit slower pace during the rest of the
+
+1026
+00:56:53,040 --> 00:56:57,240
+summer. Thanks.
+
+1027
+00:56:57,680 --> 00:57:02,559
+>> Thanks Ben. Yeah, it has been a pleasure
+
+1028
+00:57:00,079 --> 00:57:04,960
+working with you and honestly you have
+
+1029
+00:57:02,559 --> 00:57:06,000
+been doing amazing work. So yeah, thanks
+
+1030
+00:57:04,960 --> 00:57:08,640
+a lot.
+
+1031
+00:57:06,000 --> 00:57:10,720
+>> Thank you.
+
+1032
+00:57:08,640 --> 00:57:12,799
+>> Um
+
+1033
+00:57:10,720 --> 00:57:14,640
+yeah, Marshian mentioned that he's not
+
+1034
+00:57:12,799 --> 00:57:18,720
+sure that CGVMs can provide more than
+
+1035
+00:57:14,640 --> 00:57:21,440
+one gigabytes of memory. I I think uh
+
+1036
+00:57:18,720 --> 00:57:23,440
+apart from this question, I share the
+
+1037
+00:57:21,440 --> 00:57:27,280
+conclusion that using the bump allocator
+
+1038
+00:57:23,440 --> 00:57:29,920
+sounds like a really bad idea and it can
+
+1039
+00:57:27,280 --> 00:57:32,799
+backfire in so many ways depending on
+
+1040
+00:57:29,920 --> 00:57:35,520
+implementation of the guest program that
+
+1041
+00:57:32,799 --> 00:57:38,480
+maybe the safest op option is just not
+
+1042
+00:57:35,520 --> 00:57:41,119
+recommending using this at all. Uh
+
+1043
+00:57:38,480 --> 00:57:43,440
+because yeah uh
+
+1044
+00:57:41,119 --> 00:57:46,000
+unless we can like formally prove how
+
+1045
+00:57:43,440 --> 00:57:48,480
+much how much is the maximum memory the
+
+1046
+00:57:46,000 --> 00:57:50,720
+guest program is
+
+1047
+00:57:48,480 --> 00:57:54,160
+uh
+
+1048
+00:57:50,720 --> 00:57:57,680
+can potentially use. It sounds like a
+
+1049
+00:57:54,160 --> 00:57:59,920
+really tight um
+
+1050
+00:57:57,680 --> 00:58:03,760
+situation to be in using a bump
+
+1051
+00:57:59,920 --> 00:58:06,559
+allocation with low uh maximum memory.
+
+1052
+00:58:03,760 --> 00:58:10,559
+if we if we can't standardize like a big
+
+1053
+00:58:06,559 --> 00:58:13,040
+memory limit for all CGVMs.
+
+1054
+00:58:10,559 --> 00:58:14,559
+So yeah, I don't know if you have any
+
+1055
+00:58:13,040 --> 00:58:18,559
+further comments.
+
+1056
+00:58:14,559 --> 00:58:22,000
+>> Yeah, for for the for the comment
+
+1057
+00:58:18,559 --> 00:58:24,160
+uh there is a there is a fork uh that I
+
+1058
+00:58:22,000 --> 00:58:25,839
+used for profiling. I think that the one
+
+1059
+00:58:24,160 --> 00:58:28,880
+and a half gigabytes was the was the
+
+1060
+00:58:25,839 --> 00:58:31,440
+maximum that I was able to set
+
+1061
+00:58:28,880 --> 00:58:33,280
+uh due to the due to the word sizes that
+
+1062
+00:58:31,440 --> 00:58:36,240
+were on the disk. Maybe in the new
+
+1063
+00:58:33,280 --> 00:58:39,280
+version it's it is different.
+
+1064
+00:58:36,240 --> 00:58:42,880
+Uh yeah,
+
+1065
+00:58:39,280 --> 00:58:46,240
+but to me yeah uh using uh some more
+
+1066
+00:58:42,880 --> 00:58:49,040
+sophisticated approach is definitely
+
+1067
+00:58:46,240 --> 00:58:52,079
+the way to to assure the safety here
+
+1068
+00:58:49,040 --> 00:58:55,599
+because even for all of the tests we are
+
+1069
+00:58:52,079 --> 00:58:59,040
+not sure if there is some some test case
+
+1070
+00:58:55,599 --> 00:59:00,559
+that we are not covering and uh yeah
+
+1071
+00:58:59,040 --> 00:59:04,559
+having this would be a problem because
+
+1072
+00:59:00,559 --> 00:59:06,720
+this could stall proving for for for the
+
+1073
+00:59:04,559 --> 00:59:06,720
+server.
+
+1074
+00:59:08,640 --> 00:59:15,359
+Cool. Yeah, makes sense to me.
+
+1075
+00:59:12,319 --> 00:59:17,440
+Uh yeah, thanks for sharing the slides
+
+1076
+00:59:15,359 --> 00:59:19,599
+because I think people will find there
+
+1077
+00:59:17,440 --> 00:59:23,119
+all your work that you have been doing
+
+1078
+00:59:19,599 --> 00:59:26,720
+plus this extra exploration.
+
+1079
+00:59:23,119 --> 00:59:30,240
+Um Franchesco also shared his slides. So
+
+1080
+00:59:26,720 --> 00:59:34,480
+I think that's all for today.
+
+1081
+00:59:30,240 --> 00:59:38,599
+Um, thanks everyone for joining and
+
+1082
+00:59:34,480 --> 00:59:38,599
+yeah, see you next time.
+
+1083
+00:59:38,799 --> 00:59:42,680
+Thanks guys. See you around.
+

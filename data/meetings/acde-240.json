@@ -1,0 +1,228 @@
+{
+  "slug": "acde-240",
+  "series": "ACDE",
+  "number": 240,
+  "title": "All Core Devs Execution #240",
+  "subtitle": "执行层核心开发者会议",
+  "kicker": "ALL CORE DEVS · EXECUTION",
+  "date": "2026-07-02",
+  "dateLabel": "2026 年 7 月 2 日",
+  "topic": "执行层协议进展",
+  "translationStatus": "reviewed",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/all-core-devs-execution-240-july-02-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/all-core-devs-execution-240-july-02-2026_en.srt",
+    "zh": "../../media/subtitles/zh/all-core-devs-execution-240-july-02-2026_zh.srt"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 14,
+      "decisions": 8,
+      "actionItems": 3
+    },
+    "sections": [
+      {
+        "title": "分叉状态与时间表",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "当前首要任务是完成 Glamsterdam DevNet 7 规范；目标在下周（7 月 7 日当周）启动。",
+            "seek": 374
+          },
+          {
+            "text": "DevNet 7 不再加入新的 EL EIP；会后更新规范；如果客户端创建分支，目标是赶在 ACDT 前完成。",
+            "seek": 944
+          },
+          {
+            "text": "重定价数值（EIP-8038、EIP-2780）在 DevNet 7 中按稳定参数处理；最终确认等待完整基准测试结果，并在下次 ACDE 前完成。",
+            "seek": 1784
+          }
+        ]
+      },
+      {
+        "title": "Glamsterdam DevNet 7 待处理事项",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "EIP-8038：读取 slot DB 前需要增加一次 pre-access 检查；EIP 或 EIP-7928 需要相应行为规范变更；PR #11854 已提交。",
+            "seek": 436
+          },
+          {
+            "text": "EIP-8037 / EIP-2780 intrinsic gas：Dragan 的 PR #11844 取代 PR #11778 和 #3045；各客户端需在 ACDT 前审核 Discord 讨论串。",
+            "seek": 704
+          },
+          {
+            "text": "Felix 为存款合约加入的 disable-deposits 功能（sys-asm PR #49）获准纳入 DevNet 7；immutable-only 方案被否决。",
+            "seek": 1730
+          },
+          {
+            "text": "DevNet 7 的 ePBS deadline 设为 3 秒 attestation、6 秒 payload、9 秒 PTC；将向 consensus-specs 提交 PR，并在周一 ACDT 最终确认。",
+            "seek": 2444
+          }
+        ]
+      },
+      {
+        "title": "Hegota EIP 提案",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "EIP-8250（Key Nonces）：通过 VUBS 系统合约中以 nullifier 为键的 nonce 对实现多通道 nonce 系统，使无信任私密交易发送者成为可能。",
+            "seek": 2742
+          },
+          {
+            "text": "EIP-8272（Recent Routes）：在 VUBS 中提供标准化的每区块 Merkle root 缓冲系统合约；为 ZK 隐私证明提供 FOCIL 纳入保证。",
+            "seek": 3330
+          },
+          {
+            "text": "EIP-7862（Delayed State Root）：区块头携带 pre-state root 而不是 post-state root；降低 builder/prover 在数千个候选区块上的哈希负载。",
+            "seek": 3770
+          },
+          {
+            "text": "EIP-8146（BAL Sidecars）：BAL 与 execution payload 分开 gossip；EL 可在交易到达前预取数据，从而提高扩展能力。",
+            "seek": 3925
+          },
+          {
+            "text": "EIP-8298（SETCODEFROM opcode）：将现有链上合约的 code hash 复制到当前地址；相比 CREATE2 或代理，可降低重复部署成本。",
+            "seek": 4264
+          }
+        ]
+      },
+      {
+        "title": "组织事项",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Hegota EIP 提案截止日期设为 2026 年 8 月 6 日（5 周，并考虑 ACDC 的时间偏移）。",
+            "seek": 2663
+          },
+          {
+            "text": "Pooja：Meta EIP-7773 已不同步；确认 EIP-7610 已纳入 Glamsterdam（SFI）；EIP-8282 合并前需要修复 HTML；所有 Glamsterdam EIP 作者都应将草案推进到 Review 状态。",
+            "seek": 4546
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "Felix 为 ePBS builder 存款合约加入的 disable-deposits 功能（sys-asm PR #49）获准纳入 DevNet 7（EIP-7732）。",
+            "seek": 1638,
+            "link": {
+              "label": "EIP-7732",
+              "href": "https://eips.ethereum.org/EIPS/eip-7732"
+            }
+          },
+          {
+            "text": "DevNet 7 的 ePBS slot deadline：attestation = 3 秒、payload = 6 秒、PTC = 9 秒；将在 ACDT 确认（EIP-7732）。",
+            "seek": 2352,
+            "link": {
+              "label": "EIP-7732",
+              "href": "https://eips.ethereum.org/EIPS/eip-7732"
+            }
+          },
+          {
+            "text": "Hegota EIP 提案截止日期设为 2026 年 8 月 6 日。",
+            "seek": 2571
+          },
+          {
+            "text": "EIP-8250 以 Proposed 状态纳入 Hegota。",
+            "seek": 4407,
+            "status": "Proposed",
+            "link": {
+              "label": "EIP-8250",
+              "href": "https://eips.ethereum.org/EIPS/eip-8250"
+            }
+          },
+          {
+            "text": "EIP-8272 以 Proposed 状态纳入 Hegota。",
+            "seek": 4407,
+            "status": "Proposed",
+            "link": {
+              "label": "EIP-8272",
+              "href": "https://eips.ethereum.org/EIPS/eip-8272"
+            }
+          },
+          {
+            "text": "EIP-7862 以 Proposed 状态纳入 Hegota。",
+            "seek": 4407,
+            "status": "Proposed",
+            "link": {
+              "label": "EIP-7862",
+              "href": "https://eips.ethereum.org/EIPS/eip-7862"
+            }
+          },
+          {
+            "text": "EIP-8146 以 Proposed 状态纳入 Hegota。",
+            "seek": 4407,
+            "status": "Proposed",
+            "link": {
+              "label": "EIP-8146",
+              "href": "https://eips.ethereum.org/EIPS/eip-8146"
+            }
+          },
+          {
+            "text": "EIP-8298 以 Proposed 状态纳入 Hegota。",
+            "seek": 4407,
+            "status": "Proposed",
+            "link": {
+              "label": "EIP-8298",
+              "href": "https://eips.ethereum.org/EIPS/eip-8298"
+            }
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "所有 EL 客户端团队",
+            "text": "在 ACDT 前审核 Dragan 的 EIP-2780 intrinsic gas PR #11844，并在 Discord 讨论串发表意见。",
+            "seek": 612
+          },
+          {
+            "owner": "Justin Traglia / Potuz",
+            "text": "为 3 秒/6 秒/9 秒 ePBS deadline 提交 consensus-specs PR；在周一 ACDT 最终确认。",
+            "seek": 2376
+          },
+          {
+            "owner": "Cayman（EIP-8282 作者）",
+            "text": "修复 EIP-8282 的 HTML 问题，以便其 PR 合并并继续提交 Meta EIP PR。",
+            "seek": 4564
+          }
+        ]
+      },
+      {
+        "title": "目标日期",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "合并全部 DevNet 7 规范 PR",
+            "date": "2026 年 7 月 4 日当周结束前",
+            "seek": 892
+          },
+          {
+            "text": "Glamsterdam DevNet 7 启动；取决于包含 EIP-7688 和 deadline 变更的 Alpha 12 发布",
+            "date": "2026 年 7 月 7 日当周（约 7 月 9 日周三）",
+            "seek": 2382
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "slug": "acdc-182",
+  "series": "ACDC",
+  "number": 182,
+  "title": "All Core Devs Consensus #182",
+  "subtitle": "共识层核心开发者会议",
+  "kicker": "ALL CORE DEVS · CONSENSUS",
+  "date": "2026-07-09",
+  "dateLabel": "2026 年 7 月 9 日",
+  "topic": "共识层协议进展",
+  "translationStatus": "reviewed",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/all-core-devs-consensus-182-july-09-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/all-core-devs-consensus-182-july-09-2026_en.srt",
+    "zh": "../../media/subtitles/zh/all-core-devs-consensus-182-july-09-2026_zh.srt"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 10,
+      "decisions": 4,
+      "actionItems": 3
+    },
+    "sections": [
+      {
+        "title": "分叉状态与时间表",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Glamsterdam DevNet 6 的参与率约为 80%；正在调查 Nethermind 对 storage-read 回退行为的分歧。",
+            "seek": 849
+          },
+          {
+            "text": "DevNet 7 目标为下周初；Prysm、Nimbus 和 Lodestar 已通过测试，Teku 正在更新分支（当天结束前），Grandine 预计几天内准备好。",
+            "seek": 989
+          },
+          {
+            "text": "同意将 Tony 的区块访问列表变更（EIP-7928）纳入 DevNet 7；EL 测试版本将在当天结束前打标签。",
+            "seek": 1319
+          },
+          {
+            "text": "面向 Gloas 应用测试的公共/Mekong 风格 DevNet 目标为 8 月初；重定价是提出该网络的主要原因。",
+            "seek": 2392
+          },
+          {
+            "text": "Hegota 非头条 EIP 的提案窗口将于 8 月 6 日关闭；流程与 ACDE 上宣布的流程相同。",
+            "seek": 3658
+          }
+        ]
+      },
+      {
+        "title": "ePBS 更新",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Produce Block v4 将移除有状态流程中的 blinded execution payload；该方案增加复杂度而性能收益很小，且已获得批准。",
+            "seek": 1521
+          },
+          {
+            "text": "Beacon API PR #625（带有每个 builder 认证/配置的 ProduceBlock v4 POST）急需质押池、builder、DVT 服务商和 VC 工具团队反馈。",
+            "seek": 1898
+          },
+          {
+            "text": "ePBS circuit breaker：Teku 和 Lodestar 已实现感知 builder index 的封禁/解封逻辑；Prysm 计划在本地构建前增加受信任 builder 回退，以防止 P2P 出价中的女巫攻击；后续将发布文档。",
+            "seek": 2651
+          }
+        ]
+      },
+      {
+        "title": "EIP-8282 Builder 合约",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "EIP-8282 builder 存款/退出合约已定稿，等待审计；分叉前禁用 builder 退出队列，分叉后重新启用；EIP 文本需要更新，以反映 CREATE2 部署方式。",
+            "seek": 1664
+          }
+        ]
+      },
+      {
+        "title": "文档",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "EIP 维护工作：已有 PR 将 Glamsterdam EIP 从 draft 移至 review；需要澄清 EIP-7723 移除 DFI 的时间，以及仅核心 EIP 的分阶段范围（PR #11006、#11853）。",
+            "seek": 3702
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "Tony 的区块访问列表 EIP 变更纳入 DevNet 7，不推迟到 DevNet 8。",
+            "seek": 740,
+            "link": {
+              "label": "EIP-7928",
+              "href": "https://eips.ethereum.org/EIPS/eip-7928"
+            }
+          },
+          {
+            "text": "确认 DevNet 7 将包含 progressive containers。",
+            "seek": 820
+          },
+          {
+            "text": "从 Produce Block v4 有状态流程中移除 blinded execution payload；PR 将进行整理并合并。",
+            "seek": 993
+          },
+          {
+            "text": "面向 Gloas 应用测试的公共 DevNet 目标为 8 月初。",
+            "seek": 1989
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "spencer / 测试团队",
+            "text": "在当天结束前为包含 Tony 区块访问列表变更的 EL 测试打标签并发布版本。",
+            "seek": 777
+          },
+          {
+            "owner": "质押池（Lido、Rocket Pool）、builder、DVT 服务商、VC 工具团队",
+            "text": "紧急为 Beacon API PR #625（ProduceBlock v4 认证配置）提供反馈。",
+            "seek": 1699
+          },
+          {
+            "owner": "Cayman Nava",
+            "text": "更新 EIP-8282 文本，以反映 CREATE2 部署方式。",
+            "seek": 1212
+          }
+        ]
+      },
+      {
+        "title": "目标日期",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "Glamsterdam DevNet 7 启动",
+            "date": "2026 年 7 月 14 日当周初",
+            "seek": 804
+          },
+          {
+            "text": "公共 Gloas 社区 DevNet",
+            "date": "2026 年 8 月初",
+            "seek": 1989
+          },
+          {
+            "text": "Hegota 非头条 EIP 提交截止日期",
+            "date": "2026 年 8 月 6 日",
+            "seek": 3030
+          }
+        ]
+      }
+    ]
+  }
+}

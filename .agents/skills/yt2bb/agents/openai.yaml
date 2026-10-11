@@ -1,0 +1,4 @@
+interface:
+  display_name: "yt2bb - GPT Subtitles and Bilibili"
+  short_description: "Translate video captions, publish, and integrate into EthLens"
+  default_prompt: "Use $yt2bb to process this meeting into an original video and GPT-reviewed Chinese SRT, then complete any requested Bilibili publication and EthLens integration."

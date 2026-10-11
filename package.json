@@ -1,0 +1,12 @@
+{
+  "name": "ethlens-bilingual-calls",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server/server.mjs",
+    "check": "node --check public/assets/js/meeting.js && node --check public/assets/js/archive.js && node --check server/server.mjs && node --check scripts/check-meetings.mjs",
+    "check:meetings": "node scripts/check-meetings.mjs",
+    "integrate:meeting": "python3 .agents/skills/yt2bb/scripts/integrate_meeting.py"
+  }
+}

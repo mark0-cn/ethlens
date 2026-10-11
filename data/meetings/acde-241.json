@@ -1,0 +1,170 @@
+{
+  "slug": "acde-241",
+  "series": "ACDE",
+  "number": 241,
+  "title": "All Core Devs Execution #241",
+  "subtitle": "执行层核心开发者会议",
+  "kicker": "ALL CORE DEVS · EXECUTION",
+  "date": "2026-07-16",
+  "dateLabel": "2026 年 7 月 16 日",
+  "agendaUrl": "https://github.com/ethereum/pm/issues/2157",
+  "topic": "Glamsterdam DevNet 更新",
+  "translationStatus": "reviewed",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/all-core-devs-execution-acde-241-july-16-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      },
+      {
+        "provider": "bilibili",
+        "label": "B 站",
+        "available": true,
+        "bvid": "BV1BDKv62ELm",
+        "page": 1
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/all-core-devs-execution-acde-241-july-16-2026_en.srt",
+    "zh": "../../media/subtitles/zh/all-core-devs-execution-acde-241-july-16-2026_zh.srt"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 11,
+      "decisions": 2,
+      "actionItems": 2
+    },
+    "sections": [
+      {
+        "title": "分叉状态与时间表",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Glamsterdam DevNet 7 已于周二启动并完成 Gloas 分叉；当前参与率约为 80%–90%，Grandine 与 Erigon 仍在接入。",
+            "seek": 295
+          },
+          {
+            "text": "重定价基准仍以 DevNet 6 的结果为目标；DevNet 7 的基准数据尚未准备完成。",
+            "seek": 431
+          },
+          {
+            "text": "团队计划在进入测试网前运行 DevNet 8；最终重定价参数和少量 EIP 清理仍待完成。",
+            "seek": 444
+          },
+          {
+            "text": "DevNet 7 被指定为应用开发者在 Sepolia/Hoodi 之前使用的短期公共测试环境，并已提供 faucet。",
+            "seek": 827
+          }
+        ]
+      },
+      {
+        "title": "Hegota EIP 提案",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Hegota 非头条 EIP 的提交截止日期是 2026 年 8 月 6 日；提案需要向 Meta EIP-8081 提交 PR，并可在随后一次 ACDE 上介绍。",
+            "seek": 1097,
+            "link": {
+              "label": "EIP-8081",
+              "href": "https://eips.ethereum.org/EIPS/eip-8081"
+            }
+          },
+          {
+            "text": "FOCIL 已确认为 Hegota 头条 EIP；原生账户抽象被列为非头条 CFI 项，等待各实现团队进一步收敛。",
+            "seek": 1128
+          },
+          {
+            "text": "Carlos 缺席；EIP-8268（区块访问列表中的存储路由）已进入 PFI，介绍推迟到下一次 ACDE。",
+            "seek": 1200,
+            "link": {
+              "label": "EIP-8268",
+              "href": "https://eips.ethereum.org/EIPS/eip-8268"
+            }
+          }
+        ]
+      },
+      {
+        "title": "组织事项",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Ethereum 吉祥物加赛投票正在 ETH Magicians 上进行，候选为火烈鸟和北极熊；社区成员被鼓励参与投票。",
+            "seek": 907
+          },
+          {
+            "text": "仍有 7 个 Glamsterdam EIP 等待提升到 Review 状态，相关作者需要审核并批准尚未关闭的 PR。",
+            "seek": 1281
+          },
+          {
+            "text": "Glamsterdam EIP 尚未统一推进到 SFI；Pooja 将先与测试团队确认四项测试里程碑是否全部满足。",
+            "seek": 1312
+          }
+        ]
+      },
+      {
+        "title": "REST SSZ",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Marius 缺席并提出 Engine 端口仍暴露非 Engine 方法的问题；客户端团队需要确认仍在使用的方法，以及 Pectra 后是否可以移除 ETH1 存款路径。",
+            "seek": 1004
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "Glamsterdam DevNet 7 被确定为面向应用开发者的短期公共测试网，不再单独建立类似 Mekong 的网络。",
+            "seek": 827
+          },
+          {
+            "text": "EIP-8268 已以 Proposed 状态纳入 Hegota。",
+            "seek": 1200,
+            "status": "Proposed",
+            "link": {
+              "label": "EIP-8268",
+              "href": "https://eips.ethereum.org/EIPS/eip-8268"
+            }
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "共识层客户端团队",
+            "text": "审核 Engine 端口暴露的非 Engine 方法，确认哪些仍然需要，并判断是否可以停用 ETH1 存款路径。",
+            "seek": 1004
+          },
+          {
+            "owner": "Pooja Ranjan / 测试团队",
+            "text": "在将 Glamsterdam EIP 推进到 SFI 前，确认四项 SFI 里程碑条件均已满足。",
+            "seek": 1427
+          }
+        ]
+      },
+      {
+        "title": "目标日期",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "Hegota 非头条 EIP 提交截止日期",
+            "date": "2026 年 8 月 6 日",
+            "seek": 1097
+          }
+        ]
+      }
+    ]
+  }
+}

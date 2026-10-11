@@ -1,0 +1,2468 @@
+1
+00:01:34,560 --> 00:01:37,880
+Hello guys.
+
+2
+00:01:38,320 --> 00:01:43,479
+>> Good morning.
+
+3
+00:01:40,320 --> 00:01:43,479
+>> Good morning.
+
+4
+00:01:49,439 --> 00:01:57,079
+Yeah, let's wait for I know four more
+
+5
+00:01:52,960 --> 00:01:57,079
+minutes and get started.
+
+6
+00:03:07,760 --> 00:03:11,000
+There we go.
+
+7
+00:04:28,800 --> 00:04:34,080
+I think we can go ahead and get started.
+
+8
+00:04:32,000 --> 00:04:38,080
+So, welcome everyone to the uh fast
+
+9
+00:04:34,080 --> 00:04:40,639
+confirmation rule breakout number 10.
+
+10
+00:04:38,080 --> 00:04:45,840
+Here is the agenda.
+
+11
+00:04:40,639 --> 00:04:49,840
+Yeah, it's likely to be a short call and
+
+12
+00:04:45,840 --> 00:04:52,240
+uh we will start with client updates.
+
+13
+00:04:49,840 --> 00:04:57,560
+Um,
+
+14
+00:04:52,240 --> 00:04:57,560
+let's Yeah, let's start with Grandine.
+
+15
+00:04:58,880 --> 00:05:06,720
+>> Hello. So, um, there's really no much um
+
+16
+00:05:01,520 --> 00:05:08,479
+update uh since the last um call, but I
+
+17
+00:05:06,720 --> 00:05:11,280
+already pinged um Thomas on the group
+
+18
+00:05:08,479 --> 00:05:13,039
+for review on the PR itself. So,
+
+19
+00:05:11,280 --> 00:05:17,240
+hopefully
+
+20
+00:05:13,039 --> 00:05:17,240
+very soon we'll get a review.
+
+21
+00:05:20,000 --> 00:05:28,320
+Cool. Um thank you. And uh to confirm uh
+
+22
+00:05:24,560 --> 00:05:31,880
+you pass all the um reference tests that
+
+23
+00:05:28,320 --> 00:05:31,880
+we have so far
+
+24
+00:05:32,720 --> 00:05:39,280
+for the FCL test. Yes. But um the
+
+25
+00:05:36,400 --> 00:05:42,000
+general tests I think grin is not
+
+26
+00:05:39,280 --> 00:05:45,280
+passing all the test for the spec test.
+
+27
+00:05:42,000 --> 00:05:48,960
+But for FCR specific tests, yes.
+
+28
+00:05:45,280 --> 00:05:51,120
+>> Okay, cool. Um, all right.
+
+29
+00:05:48,960 --> 00:05:55,440
+Thank you. Yeah, that's great. Looking
+
+30
+00:05:51,120 --> 00:06:01,240
+forward to reviews from from you team.
+
+31
+00:05:55,440 --> 00:06:01,240
+Um, next um Lost Star
+
+32
+00:06:05,520 --> 00:06:10,720
+will release the fast confirmation to
+
+33
+00:06:08,319 --> 00:06:13,759
+our public release.
+
+34
+00:06:10,720 --> 00:06:17,039
+144.0 zero
+
+35
+00:06:13,759 --> 00:06:20,000
+and during our testing we found some
+
+36
+00:06:17,039 --> 00:06:23,759
+performance edge cases around the EO
+
+37
+00:06:20,000 --> 00:06:26,800
+boundary and there were few research
+
+38
+00:06:23,759 --> 00:06:30,720
+around the EPO boundary. So we released
+
+39
+00:06:26,800 --> 00:06:32,880
+it to the public uh but with some
+
+40
+00:06:30,720 --> 00:06:35,759
+uh banner or kind of a notice that
+
+41
+00:06:32,880 --> 00:06:39,600
+there's an experimental feature. So uh
+
+42
+00:06:35,759 --> 00:06:41,440
+big companies don't rely on ben on this
+
+43
+00:06:39,600 --> 00:06:46,319
+feature yet
+
+44
+00:06:41,440 --> 00:06:48,479
+and uh in addition I found one fix for
+
+45
+00:06:46,319 --> 00:06:51,039
+performance related to this epoch
+
+46
+00:06:48,479 --> 00:06:53,440
+boundary edge case
+
+47
+00:06:51,039 --> 00:06:56,240
+and this fix is working and deployed on
+
+48
+00:06:53,440 --> 00:07:00,080
+our feature group for like four days now
+
+49
+00:06:56,240 --> 00:07:02,560
+I deployed on Friday and it feels like
+
+50
+00:07:00,080 --> 00:07:04,319
+everything is more smoother and there's
+
+51
+00:07:02,560 --> 00:07:07,199
+no reset afterward.
+
+52
+00:07:04,319 --> 00:07:09,520
+since I deployed this fix. So we will be
+
+53
+00:07:07,199 --> 00:07:11,360
+testing this fix further and then uh
+
+54
+00:07:09,520 --> 00:07:13,840
+releasing this fix now or in upcoming
+
+55
+00:07:11,360 --> 00:07:16,000
+release.
+
+56
+00:07:13,840 --> 00:07:18,639
+>> Yeah. Awesome. Yeah, that sounds great.
+
+57
+00:07:16,000 --> 00:07:20,720
+Um
+
+58
+00:07:18,639 --> 00:07:22,400
+maybe you want to share more on the
+
+59
+00:07:20,720 --> 00:07:26,400
+Yeah, sorry.
+
+60
+00:07:22,400 --> 00:07:28,880
+Yeah, I I did some analysis on one of
+
+61
+00:07:26,400 --> 00:07:31,759
+the reset cases
+
+62
+00:07:28,880 --> 00:07:34,240
+uh and I shared with you. If you think
+
+63
+00:07:31,759 --> 00:07:36,400
+like it's good enough case study for
+
+64
+00:07:34,240 --> 00:07:40,280
+anyone to share then I can share with
+
+65
+00:07:36,400 --> 00:07:40,280
+everyone in our telegram.
+
+66
+00:07:40,400 --> 00:07:48,080
+>> Uh cool. Yeah, I think makes sense to
+
+67
+00:07:43,120 --> 00:07:50,080
+share it. Uh and uh yeah
+
+68
+00:07:48,080 --> 00:07:52,639
+do you want to share more detail on what
+
+69
+00:07:50,080 --> 00:07:55,639
+was the um issue that could cause resets
+
+70
+00:07:52,639 --> 00:07:55,639
+before?
+
+71
+00:07:55,919 --> 00:08:01,919
+So uh like the first observation that I
+
+72
+00:07:58,800 --> 00:08:07,759
+had and first like impression that I had
+
+73
+00:08:01,919 --> 00:08:11,039
+was that uh because our safety threshold
+
+74
+00:08:07,759 --> 00:08:15,840
+is like keep increasing with every slot
+
+75
+00:08:11,039 --> 00:08:20,319
+uh let's say we we had a slot
+
+76
+00:08:15,840 --> 00:08:23,520
+28 uh on index 28 which was confirmed
+
+77
+00:08:20,319 --> 00:08:28,240
+uh fast confirmed but when the head
+
+78
+00:08:23,520 --> 00:08:30,879
+moved onto the slot 31
+
+79
+00:08:28,240 --> 00:08:34,399
+uh the required
+
+80
+00:08:30,879 --> 00:08:38,880
+support for reconfirming all the slots
+
+81
+00:08:34,399 --> 00:08:42,159
+were higher but the force were not
+
+82
+00:08:38,880 --> 00:08:45,040
+received enough for the last few slots.
+
+83
+00:08:42,159 --> 00:08:48,000
+So when we crossed the EPO boundary we
+
+84
+00:08:45,040 --> 00:08:51,120
+went back to reconfirm all the blocks
+
+85
+00:08:48,000 --> 00:08:53,839
+and during this we had to reset and fall
+
+86
+00:08:51,120 --> 00:08:55,360
+back to some other like lower blocks to
+
+87
+00:08:53,839 --> 00:08:57,760
+confirm
+
+88
+00:08:55,360 --> 00:09:00,720
+And so far my analic first impression
+
+89
+00:08:57,760 --> 00:09:03,279
+was that this is a performance edge case
+
+90
+00:09:00,720 --> 00:09:05,360
+on the EPOP boundary and FCR was taking
+
+91
+00:09:03,279 --> 00:09:07,839
+too much time. But later while digging
+
+92
+00:09:05,360 --> 00:09:11,279
+into further
+
+93
+00:09:07,839 --> 00:09:17,680
+uh gossip sub channels and other I found
+
+94
+00:09:11,279 --> 00:09:19,839
+out that this particular node had uh low
+
+95
+00:09:17,680 --> 00:09:21,839
+like low rece
+
+96
+00:09:19,839 --> 00:09:24,320
+compared to the other nodes.
+
+97
+00:09:21,839 --> 00:09:28,080
+It did not receive enough rows for the
+
+98
+00:09:24,320 --> 00:09:30,959
+block 29 and block 13 and that was one
+
+99
+00:09:28,080 --> 00:09:36,640
+of our reason that uh it had to reset
+
+100
+00:09:30,959 --> 00:09:38,959
+and fall back um to some lower block.
+
+101
+00:09:36,640 --> 00:09:42,839
+This this analysis is in one of our
+
+102
+00:09:38,959 --> 00:09:42,839
+document that I will share.
+
+103
+00:09:43,279 --> 00:09:51,839
+>> Yes. Great. Um so so it was about the
+
+104
+00:09:48,640 --> 00:09:55,600
+node did not receive enough attestations
+
+105
+00:09:51,839 --> 00:09:59,040
+in one in the last or one of the
+
+106
+00:09:55,600 --> 00:10:02,080
+um last slots of an ebook. Right.
+
+107
+00:09:59,040 --> 00:10:05,519
+>> Yeah. It was uh slot 30 and slot 29
+
+108
+00:10:02,080 --> 00:10:08,959
+which received very low.
+
+109
+00:10:05,519 --> 00:10:11,519
+>> Got it. Um and you said that this was
+
+110
+00:10:08,959 --> 00:10:14,320
+just with one node an issue with one
+
+111
+00:10:11,519 --> 00:10:15,920
+node and not the others. you have
+
+112
+00:10:14,320 --> 00:10:20,000
+observed
+
+113
+00:10:15,920 --> 00:10:22,480
+>> yeah like I observed other nodes having
+
+114
+00:10:20,000 --> 00:10:24,160
+the reset on different times but not in
+
+115
+00:10:22,480 --> 00:10:27,600
+this particular case where I was doing
+
+116
+00:10:24,160 --> 00:10:30,480
+the uh research but on this particular
+
+117
+00:10:27,600 --> 00:10:33,600
+time scale or time window I checked
+
+118
+00:10:30,480 --> 00:10:36,800
+other NS and they had different and
+
+119
+00:10:33,600 --> 00:10:41,360
+higher attestations uh received compared
+
+120
+00:10:36,800 --> 00:10:43,920
+to the particular which I sit waiting so
+
+121
+00:10:41,360 --> 00:10:46,880
+this like my analysis was that this This
+
+122
+00:10:43,920 --> 00:10:49,120
+was a network effect that we did not
+
+123
+00:10:46,880 --> 00:10:51,600
+receive enough support for this
+
+124
+00:10:49,120 --> 00:10:53,760
+particular chain which was moving with
+
+125
+00:10:51,600 --> 00:10:57,440
+the head and that's why it has to fall
+
+126
+00:10:53,760 --> 00:11:00,240
+back or reset and go back to the
+
+127
+00:10:57,440 --> 00:11:03,600
+finalize and then started confirming the
+
+128
+00:11:00,240 --> 00:11:07,600
+finalize uh after the let's say it was
+
+129
+00:11:03,600 --> 00:11:11,760
+slot 25 or 24. So it fall back around
+
+130
+00:11:07,600 --> 00:11:13,440
+four or three blocks.
+
+131
+00:11:11,760 --> 00:11:17,680
+>> Yeah, I see.
+
+132
+00:11:13,440 --> 00:11:21,120
+Uh and uh one another related question
+
+133
+00:11:17,680 --> 00:11:23,680
+um so is it like because something
+
+134
+00:11:21,120 --> 00:11:25,360
+happens with the nodes that you observe
+
+135
+00:11:23,680 --> 00:11:28,720
+I mean like you you've mentioned that
+
+136
+00:11:25,360 --> 00:11:32,640
+you you saw also resets on other nodes
+
+137
+00:11:28,720 --> 00:11:35,120
+as well but at a different time. Um uh
+
+138
+00:11:32,640 --> 00:11:38,399
+so the question is basically is it like
+
+139
+00:11:35,120 --> 00:11:41,680
+a general problem with the network that
+
+140
+00:11:38,399 --> 00:11:45,360
+happened at that epoch or those epochs
+
+141
+00:11:41,680 --> 00:11:48,880
+or is it just like with the nodes you
+
+142
+00:11:45,360 --> 00:11:51,680
+you run and you you look at
+
+143
+00:11:48,880 --> 00:11:54,160
+so one common uh effect for all the
+
+144
+00:11:51,680 --> 00:11:57,519
+nodes were that most of such incidents
+
+145
+00:11:54,160 --> 00:12:02,160
+happen around the epoch boundary
+
+146
+00:11:57,519 --> 00:12:05,200
+and uh and again it's not uh
+
+147
+00:12:02,160 --> 00:12:07,120
+it's not the issue with the uh specs but
+
+148
+00:12:05,200 --> 00:12:10,560
+it's just the case that on the epop
+
+149
+00:12:07,120 --> 00:12:14,560
+boundary we go and reconform all the
+
+150
+00:12:10,560 --> 00:12:17,600
+blocks from the last checkpoint.
+
+151
+00:12:14,560 --> 00:12:21,000
+I I think it's uh
+
+152
+00:12:17,600 --> 00:12:21,000
+I would say
+
+153
+00:12:21,040 --> 00:12:26,480
+based on this poor performance I I would
+
+154
+00:12:23,279 --> 00:12:29,600
+say still like a very
+
+155
+00:12:26,480 --> 00:12:32,320
+closed or very narrow edge case where
+
+156
+00:12:29,600 --> 00:12:35,440
+you actually have a very low traffic or
+
+157
+00:12:32,320 --> 00:12:39,519
+some problem with the network.
+
+158
+00:12:35,440 --> 00:12:41,360
+But I I cannot uh like
+
+159
+00:12:39,519 --> 00:12:44,399
+conclude that this is something related
+
+160
+00:12:41,360 --> 00:12:48,240
+to the FCR. If you have a low test then
+
+161
+00:12:44,399 --> 00:12:51,519
+definitely we will see this effect.
+
+162
+00:12:48,240 --> 00:12:53,440
+>> Yeah. Yeah. And yeah this this is what
+
+163
+00:12:51,519 --> 00:12:57,680
+I'm trying to understand whether it's
+
+164
+00:12:53,440 --> 00:13:00,160
+like a common problem for the main net.
+
+165
+00:12:57,680 --> 00:13:05,040
+I mean like uh or whether it's a problem
+
+166
+00:13:00,160 --> 00:13:07,920
+with the the nodes that you run uh
+
+167
+00:13:05,040 --> 00:13:10,000
+or you know like other clients. Yeah, it
+
+168
+00:13:07,920 --> 00:13:13,920
+would be good to hear from other clients
+
+169
+00:13:10,000 --> 00:13:15,600
+if if they observed anything like that.
+
+170
+00:13:13,920 --> 00:13:19,760
+Um
+
+171
+00:13:15,600 --> 00:13:22,000
+>> so within our server stack I think uh it
+
+172
+00:13:19,760 --> 00:13:25,760
+was just those two particular nodes
+
+173
+00:13:22,000 --> 00:13:30,240
+which was uh having more resets.
+
+174
+00:13:25,760 --> 00:13:32,880
+Uh but uh yeah other than that like
+
+175
+00:13:30,240 --> 00:13:38,120
+since I deployed this fix from Friday I
+
+176
+00:13:32,880 --> 00:13:38,120
+never seen a single reset on the mainet.
+
+177
+00:13:38,320 --> 00:13:42,560
+>> Okay cool.
+
+178
+00:13:40,560 --> 00:13:44,560
+Great. So I think yeah
+
+179
+00:13:42,560 --> 00:13:47,680
+>> there's one other one other observation
+
+180
+00:13:44,560 --> 00:13:52,480
+I would like to share is the FCR
+
+181
+00:13:47,680 --> 00:13:52,800
+behavior during the note syncing.
+
+182
+00:13:52,480 --> 00:13:55,200
+>> Okay.
+
+183
+00:13:52,800 --> 00:13:58,240
+>> So maybe this is something we should
+
+184
+00:13:55,200 --> 00:14:01,040
+also like uh think as on other clients
+
+185
+00:13:58,240 --> 00:14:03,600
+as well. So on one of my node which was
+
+186
+00:14:01,040 --> 00:14:06,800
+sinking and taking too much time and it
+
+187
+00:14:03,600 --> 00:14:11,199
+was like out of memory uh for some
+
+188
+00:14:06,800 --> 00:14:14,480
+reason I saw node reset count increase
+
+189
+00:14:11,199 --> 00:14:16,959
+uh 250 plus.
+
+190
+00:14:14,480 --> 00:14:19,519
+>> Oh yeah I see.
+
+191
+00:14:16,959 --> 00:14:21,920
+>> So like 250 plus was like a very weird
+
+192
+00:14:19,519 --> 00:14:24,399
+number like very high number. So and
+
+193
+00:14:21,920 --> 00:14:27,279
+this keep happening like uh several
+
+194
+00:14:24,399 --> 00:14:29,279
+times because not started sinking and
+
+195
+00:14:27,279 --> 00:14:31,680
+then it crashed and then it started
+
+196
+00:14:29,279 --> 00:14:34,639
+sinking again and then it crashed. So my
+
+197
+00:14:31,680 --> 00:14:36,720
+graph was like kind of a jigsaw where it
+
+198
+00:14:34,639 --> 00:14:38,959
+was going up and down up and down and it
+
+199
+00:14:36,720 --> 00:14:40,959
+was going up till 250.
+
+200
+00:14:38,959 --> 00:14:44,560
+So during this thinking process I was
+
+201
+00:14:40,959 --> 00:14:47,920
+thinking that we might like fine tune
+
+202
+00:14:44,560 --> 00:14:51,199
+this like this particular edge case that
+
+203
+00:14:47,920 --> 00:14:53,519
+>> we should not trigger the FCR
+
+204
+00:14:51,199 --> 00:14:56,399
+during the sinking.
+
+205
+00:14:53,519 --> 00:14:59,839
+>> Yeah I think it makes sense to not uh
+
+206
+00:14:56,399 --> 00:15:02,639
+trigger the FCR unless a node is like
+
+207
+00:14:59,839 --> 00:15:05,279
+fully caught up with the head.
+
+208
+00:15:02,639 --> 00:15:08,639
+>> Yes. And yeah and then just start from
+
+209
+00:15:05,279 --> 00:15:13,839
+you know from the closest uh restart
+
+210
+00:15:08,639 --> 00:15:16,880
+point after after the sync is finished.
+
+211
+00:15:13,839 --> 00:15:19,120
+>> I working on this one.
+
+212
+00:15:16,880 --> 00:15:21,600
+>> Yeah great. Um I think it makes sense.
+
+213
+00:15:19,120 --> 00:15:25,760
+We had a discussion with um Nimbus team
+
+214
+00:15:21,600 --> 00:15:28,560
+as well about this um like
+
+215
+00:15:25,760 --> 00:15:31,680
+and yeah come to agreement that makes
+
+216
+00:15:28,560 --> 00:15:35,079
+sense to enable FCR only after node is
+
+217
+00:15:31,680 --> 00:15:35,079
+fully synced
+
+218
+00:15:36,959 --> 00:15:42,800
+and
+
+219
+00:15:38,560 --> 00:15:45,199
+related to um to the issue with the
+
+220
+00:15:42,800 --> 00:15:48,160
+participation
+
+221
+00:15:45,199 --> 00:15:52,079
+um I think we yeah I think we we should
+
+222
+00:15:48,160 --> 00:15:54,160
+just ask in the chat the telegram group
+
+223
+00:15:52,079 --> 00:15:58,320
+if if
+
+224
+00:15:54,160 --> 00:16:01,920
+anyone else observed the same
+
+225
+00:15:58,320 --> 00:16:03,839
+I mean like other clients
+
+226
+00:16:01,920 --> 00:16:06,480
+okay
+
+227
+00:16:03,839 --> 00:16:07,839
+>> sure I I post some question I also share
+
+228
+00:16:06,480 --> 00:16:11,920
+my analysis
+
+229
+00:16:07,839 --> 00:16:14,160
+>> yeah yeah yeah great yeah that's awesome
+
+230
+00:16:11,920 --> 00:16:16,320
+anything else Nazar
+
+231
+00:16:14,160 --> 00:16:19,360
+>> no that's all for myself
+
+232
+00:16:16,320 --> 00:16:22,959
+>> yeah thanks for for the great update
+
+233
+00:16:19,360 --> 00:16:26,399
+looking forward for for you to release
+
+234
+00:16:22,959 --> 00:16:28,000
+those um fixes.
+
+235
+00:16:26,399 --> 00:16:33,399
+>> Okay,
+
+236
+00:16:28,000 --> 00:16:33,399
+>> cool. Any other client updates?
+
+237
+00:16:40,639 --> 00:16:48,399
+Um yeah, I have some Terren basically
+
+238
+00:16:44,399 --> 00:16:51,600
+posted it in the um in the call issue
+
+239
+00:16:48,399 --> 00:16:53,199
+and uh yeah they are blocked by they're
+
+240
+00:16:51,600 --> 00:16:55,040
+passing the spec test. They have a
+
+241
+00:16:53,199 --> 00:16:58,480
+limitation but they're blocked by human
+
+242
+00:16:55,040 --> 00:17:00,399
+review at this moment.
+
+243
+00:16:58,480 --> 00:17:05,919
+So
+
+244
+00:17:00,399 --> 00:17:08,480
+um also from from from Lighthouse uh
+
+245
+00:17:05,919 --> 00:17:11,120
+um there was a regression that uh we
+
+246
+00:17:08,480 --> 00:17:14,640
+mentioned in the previous call. It seems
+
+247
+00:17:11,120 --> 00:17:18,079
+they have uh resolved this the problem,
+
+248
+00:17:14,640 --> 00:17:22,319
+found the issue and have a fix for this
+
+249
+00:17:18,079 --> 00:17:25,600
+and they do mainet runs
+
+250
+00:17:22,319 --> 00:17:29,600
+to to check and and as far as I'm
+
+251
+00:17:25,600 --> 00:17:31,520
+concerned they don't observe the resets
+
+252
+00:17:29,600 --> 00:17:36,160
+anymore
+
+253
+00:17:31,520 --> 00:17:38,799
+um on their nodes which is great. Um
+
+254
+00:17:36,160 --> 00:17:45,600
+also looking forward for them to to get
+
+255
+00:17:38,799 --> 00:17:47,840
+it released. Um and uh from Teu um they
+
+256
+00:17:45,600 --> 00:17:50,160
+um they are starting their
+
+257
+00:17:47,840 --> 00:17:53,280
+implementation as well the production
+
+258
+00:17:50,160 --> 00:17:56,160
+ready implementation.
+
+259
+00:17:53,280 --> 00:17:58,240
+So that's
+
+260
+00:17:56,160 --> 00:18:01,240
+I think that's all for for the client
+
+261
+00:17:58,240 --> 00:18:01,240
+updates.
+
+262
+00:18:05,760 --> 00:18:10,720
+Barnabas uh what what do you exactly
+
+263
+00:18:08,240 --> 00:18:13,600
+mean
+
+264
+00:18:10,720 --> 00:18:16,880
+>> like how can we like if I would want to
+
+265
+00:18:13,600 --> 00:18:19,120
+roll this out on Amsterdam whatever like
+
+266
+00:18:16,880 --> 00:18:21,200
+six let's say that the clients has
+
+267
+00:18:19,120 --> 00:18:25,640
+support for that how could we verify
+
+268
+00:18:21,200 --> 00:18:25,640
+that their implementation's good
+
+269
+00:18:26,880 --> 00:18:32,240
+>> you mean like that they support the FCR
+
+270
+00:18:29,520 --> 00:18:35,280
+Yeah.
+
+271
+00:18:32,240 --> 00:18:37,360
+>> Or that the FCR is actually u making
+
+272
+00:18:35,280 --> 00:18:38,960
+some progress
+
+273
+00:18:37,360 --> 00:18:41,200
+like on the chain.
+
+274
+00:18:38,960 --> 00:18:43,679
+>> Yeah. So like I want to verify it on
+
+275
+00:18:41,200 --> 00:18:46,240
+chain that it's making progress so that
+
+276
+00:18:43,679 --> 00:18:49,919
+I can
+
+277
+00:18:46,240 --> 00:18:55,280
+>> ah yeah there is yeah one thing that you
+
+278
+00:18:49,919 --> 00:18:57,679
+can observe is the event stream.
+
+279
+00:18:55,280 --> 00:19:01,120
+The pass confirmation event is on the
+
+280
+00:18:57,679 --> 00:19:03,679
+event stream for a beacon node. If FCR
+
+281
+00:19:01,120 --> 00:19:05,679
+is enabled, it should
+
+282
+00:19:03,679 --> 00:19:08,679
+uh basically produce an output every
+
+283
+00:19:05,679 --> 00:19:08,679
+slot.
+
+284
+00:19:09,600 --> 00:19:14,160
+>> Okay.
+
+285
+00:19:12,240 --> 00:19:17,360
+Should probably then add this feature to
+
+286
+00:19:14,160 --> 00:19:21,440
+Dora to be able to visualize it.
+
+287
+00:19:17,360 --> 00:19:22,960
+>> Yeah. Um and uh also
+
+288
+00:19:21,440 --> 00:19:26,240
+uh
+
+289
+00:19:22,960 --> 00:19:29,360
+from what I know is Sam is running um
+
+290
+00:19:26,240 --> 00:19:33,760
+this Lighthouse or maybe other clients
+
+291
+00:19:29,360 --> 00:19:36,080
+as well and uh yeah you can ask Sam
+
+292
+00:19:33,760 --> 00:19:38,480
+about it.
+
+293
+00:19:36,080 --> 00:19:42,360
+>> Does any of the clients support FC on
+
+294
+00:19:38,480 --> 00:19:42,360
+top of latest gloss?
+
+295
+00:19:49,360 --> 00:19:56,600
+That's a good question. I don't know the
+
+296
+00:19:53,600 --> 00:19:56,600
+answer.
+
+297
+00:19:58,720 --> 00:20:04,799
+>> Sorry, what was the question?
+
+298
+00:20:02,240 --> 00:20:09,160
+>> The question was whether FCR on top of
+
+299
+00:20:04,799 --> 00:20:09,160
+glass is something that you guys have
+
+300
+00:20:10,240 --> 00:20:17,120
+>> in Lordar. I I merged one PR the morning
+
+301
+00:20:14,960 --> 00:20:19,760
+which was making
+
+302
+00:20:17,120 --> 00:20:22,400
+our spec test for the FCR compatible
+
+303
+00:20:19,760 --> 00:20:26,280
+with the go
+
+304
+00:20:22,400 --> 00:20:26,280
+hopefully there's no problem
+
+305
+00:20:30,960 --> 00:20:34,640
+are you in the fast confirmation rule
+
+306
+00:20:33,280 --> 00:20:36,720
+telegram group
+
+307
+00:20:34,640 --> 00:20:38,799
+>> no
+
+308
+00:20:36,720 --> 00:20:40,240
+>> maybe I should add you there do you want
+
+309
+00:20:38,799 --> 00:20:42,960
+to
+
+310
+00:20:40,240 --> 00:20:45,440
+>> feel free to me. But uh yeah, I'm not
+
+311
+00:20:42,960 --> 00:20:49,679
+really interested in
+
+312
+00:20:45,440 --> 00:20:51,919
+uh the like the implementation details.
+
+313
+00:20:49,679 --> 00:20:54,559
+I'm mostly just interested in whether we
+
+314
+00:20:51,919 --> 00:20:57,440
+should be able to test this or not. And
+
+315
+00:20:54,559 --> 00:21:00,240
+like if if we subscribe to the event
+
+316
+00:20:57,440 --> 00:21:01,840
+stream and we visualize it somehow, uh
+
+317
+00:21:00,240 --> 00:21:05,880
+what kind of application would be able
+
+318
+00:21:01,840 --> 00:21:05,880
+to use this like right away?
+
+319
+00:21:07,360 --> 00:21:13,840
+>> I see. Okay. And yeah, the event stream
+
+320
+00:21:10,480 --> 00:21:17,360
+is for a beacon node. And uh basically
+
+321
+00:21:13,840 --> 00:21:20,480
+uh the safe block is
+
+322
+00:21:17,360 --> 00:21:22,880
+is is uh now yeah, if the pass
+
+323
+00:21:20,480 --> 00:21:24,960
+confirmation is enabled, the save block
+
+324
+00:21:22,880 --> 00:21:27,360
+will point to the most recent confirmed
+
+325
+00:21:24,960 --> 00:21:30,320
+execution payload.
+
+326
+00:21:27,360 --> 00:21:33,520
+That's the other uh part. This is where
+
+327
+00:21:30,320 --> 00:21:37,200
+like this is where
+
+328
+00:21:33,520 --> 00:21:39,520
+blockchain data consumers basically can
+
+329
+00:21:37,200 --> 00:21:42,760
+um use it. This how they can use it in
+
+330
+00:21:39,520 --> 00:21:42,760
+their applications.
+
+331
+00:21:45,919 --> 00:21:50,159
+Yeah, it's fully merged. Yeah, it's in
+
+332
+00:21:48,080 --> 00:21:53,120
+the consensus packs.
+
+333
+00:21:50,159 --> 00:21:55,280
+Um and uh another thing I wanted to
+
+334
+00:21:53,120 --> 00:21:58,240
+mention is that
+
+335
+00:21:55,280 --> 00:22:01,600
+um some clients like Nimbus enabled the
+
+336
+00:21:58,240 --> 00:22:04,000
+FCR by default. Um other clients uh as
+
+337
+00:22:01,600 --> 00:22:06,400
+far as I know use a feature flag. So we
+
+338
+00:22:04,000 --> 00:22:09,120
+have to pass the feature flag to enable
+
+339
+00:22:06,400 --> 00:22:11,280
+FCR.
+
+340
+00:22:09,120 --> 00:22:14,000
+>> Did anything break by enabling this?
+
+341
+00:22:11,280 --> 00:22:16,640
+This is just a new event stream, right?
+
+342
+00:22:14,000 --> 00:22:19,600
+So what the
+
+343
+00:22:16,640 --> 00:22:21,679
+>> Yeah. So you yeah it's an event stream
+
+344
+00:22:19,600 --> 00:22:26,240
+uh the event in the event stream and uh
+
+345
+00:22:21,679 --> 00:22:30,080
+the safe block hash uh in the
+
+346
+00:22:26,240 --> 00:22:32,720
+choice updated engine API uh will will
+
+347
+00:22:30,080 --> 00:22:35,039
+point to a most recent block like more
+
+348
+00:22:32,720 --> 00:22:37,760
+recent block than it is pointing now
+
+349
+00:22:35,039 --> 00:22:41,880
+because now it's justified with FCR it
+
+350
+00:22:37,760 --> 00:22:41,880
+will be past confirmed block.
+
+351
+00:22:45,840 --> 00:22:50,159
+Yeah, it's it's it's definitely worth
+
+352
+00:22:47,679 --> 00:22:54,400
+trying on on gloss because uh in gloss
+
+353
+00:22:50,159 --> 00:22:56,720
+we uh we have a payload um the payload
+
+354
+00:22:54,400 --> 00:22:59,280
+uh before gloss the payload from from
+
+355
+00:22:56,720 --> 00:23:02,559
+the previous slot could be confirmed but
+
+356
+00:22:59,280 --> 00:23:05,520
+uh since gloss uh the payload of the
+
+357
+00:23:02,559 --> 00:23:07,840
+previous uh slot will not be able to get
+
+358
+00:23:05,520 --> 00:23:09,919
+confirmed. So we will confirm the
+
+359
+00:23:07,840 --> 00:23:12,919
+payload of the slot before the previous
+
+360
+00:23:09,919 --> 00:23:12,919
+one.
+
+361
+00:23:23,200 --> 00:23:29,440
+All right. Um guys, yeah, let's let's
+
+362
+00:23:26,799 --> 00:23:32,320
+probably um
+
+363
+00:23:29,440 --> 00:23:34,320
+um discuss this in Discord after the
+
+364
+00:23:32,320 --> 00:23:38,240
+call. I mean like sharing branches and
+
+365
+00:23:34,320 --> 00:23:41,120
+all this stuff. Will it work
+
+366
+00:23:38,240 --> 00:23:44,000
+for you all?
+
+367
+00:23:41,120 --> 00:23:44,000
+It's awesome.
+
+368
+00:23:45,200 --> 00:23:52,559
+Do you have any do we want to ship this
+
+369
+00:23:47,679 --> 00:23:54,240
+before on HCL or what's the
+
+370
+00:23:52,559 --> 00:23:55,039
+>> what's what's the expectation here?
+
+371
+00:23:54,240 --> 00:23:57,679
+Yeah.
+
+372
+00:23:55,039 --> 00:24:01,200
+>> Yeah. The expectation is as soon as it's
+
+373
+00:23:57,679 --> 00:24:02,799
+ready. Um it's it's fully compatible.
+
+374
+00:24:01,200 --> 00:24:05,440
+It's actually compatible with all
+
+375
+00:24:02,799 --> 00:24:08,400
+previous forex. Um so and it should be
+
+376
+00:24:05,440 --> 00:24:11,279
+compatible with gloss as but it yeah
+
+377
+00:24:08,400 --> 00:24:17,320
+it's a good point. We must test these in
+
+378
+00:24:11,279 --> 00:24:17,320
+gloss nets that would be very valuable.
+
+379
+00:24:19,279 --> 00:24:23,760
+>> Yeah. I mean usually how we go with
+
+380
+00:24:21,440 --> 00:24:25,919
+testing is uh if you want something in
+
+381
+00:24:23,760 --> 00:24:28,000
+like we could get keep on that. So
+
+382
+00:24:25,919 --> 00:24:30,559
+that's why I'm I'm asking if because
+
+383
+00:24:28,000 --> 00:24:34,000
+right now the the current scope of uh
+
+384
+00:24:30,559 --> 00:24:35,679
+gloss is already pretty big. Uh so if
+
+385
+00:24:34,000 --> 00:24:37,840
+we're going to be pushing for FCR
+
+386
+00:24:35,679 --> 00:24:40,320
+implementation also on top of gloss in
+
+387
+00:24:37,840 --> 00:24:43,520
+order for it to be pitting
+
+388
+00:24:40,320 --> 00:24:45,279
+gloss around the time uh we do the main
+
+389
+00:24:43,520 --> 00:24:48,559
+network then I think it would be very
+
+390
+00:24:45,279 --> 00:24:52,480
+good to start testing it on net.
+
+391
+00:24:48,559 --> 00:24:53,679
+Uh so it's it's not uh related to pause.
+
+392
+00:24:52,480 --> 00:24:56,320
+It's not like tied to
+
+393
+00:24:53,679 --> 00:24:59,440
+>> I know I know I know I know I know there
+
+394
+00:24:56,320 --> 00:25:02,080
+there's no like consensus related issues
+
+395
+00:24:59,440 --> 00:25:04,640
+or anything like that but like it would
+
+396
+00:25:02,080 --> 00:25:07,039
+be nice to know the current scope of the
+
+397
+00:25:04,640 --> 00:25:10,600
+fork uh even if it's not a a breaking
+
+398
+00:25:07,039 --> 00:25:10,600
+change for anyone.
+
+399
+00:25:11,440 --> 00:25:16,400
+>> Yeah I see. So that the client teams can
+
+400
+00:25:14,240 --> 00:25:18,880
+also like uh make sure that they
+
+401
+00:25:16,400 --> 00:25:21,039
+allocate certain amount of resources for
+
+402
+00:25:18,880 --> 00:25:24,559
+such features especially if they
+
+403
+00:25:21,039 --> 00:25:27,360
+expected to ship this before gloss.
+
+404
+00:25:24,559 --> 00:25:29,679
+>> Yeah. Yeah. I think yeah actually
+
+405
+00:25:27,360 --> 00:25:32,559
+allocation time allocation was one of
+
+406
+00:25:29,679 --> 00:25:36,000
+the main issues for FCR implementations.
+
+407
+00:25:32,559 --> 00:25:38,000
+Yeah. I think it's kind of in parallel.
+
+408
+00:25:36,000 --> 00:25:39,679
+>> Yeah. Sure. Uh but if you know you have
+
+409
+00:25:38,000 --> 00:25:41,600
+a team of five and and everybody's
+
+410
+00:25:39,679 --> 00:25:43,520
+working on gloss and nobody's putting
+
+411
+00:25:41,600 --> 00:25:45,679
+them into FCR because they don't assume
+
+412
+00:25:43,520 --> 00:25:51,000
+that they need to ship it before gloss
+
+413
+00:25:45,679 --> 00:25:51,000
+then it it just won't be done
+
+414
+00:25:51,039 --> 00:25:57,480
+right.
+
+415
+00:25:52,799 --> 00:25:57,480
+That's totally true.
+
+416
+00:25:58,240 --> 00:26:07,760
+>> Bulma did you have a I saw a hand up you
+
+417
+00:26:02,480 --> 00:26:10,320
+want to ask? You know, I wanted to um
+
+418
+00:26:07,760 --> 00:26:13,840
+ask about like is there like a specific
+
+419
+00:26:10,320 --> 00:26:18,240
+timeline for when PR should be reviewed
+
+420
+00:26:13,840 --> 00:26:19,840
+and then so that clients can start um
+
+421
+00:26:18,240 --> 00:26:22,240
+each pandos can start testing or
+
+422
+00:26:19,840 --> 00:26:24,080
+something. That's
+
+423
+00:26:22,240 --> 00:26:26,240
+more of my question.
+
+424
+00:26:24,080 --> 00:26:27,679
+>> I see. Yeah. Uh you mean like the test
+
+425
+00:26:26,240 --> 00:26:29,360
+the comparison test between the
+
+426
+00:26:27,679 --> 00:26:30,480
+implementations?
+
+427
+00:26:29,360 --> 00:26:32,960
+>> Yeah.
+
+428
+00:26:30,480 --> 00:26:36,080
+>> Yeah. Yeah. I was asking Sam about this
+
+429
+00:26:32,960 --> 00:26:40,720
+and he said that they basically can do
+
+430
+00:26:36,080 --> 00:26:44,080
+uh one more or even yeah more test
+
+431
+00:26:40,720 --> 00:26:46,080
+testing on that. But yeah, I would I
+
+432
+00:26:44,080 --> 00:26:50,159
+think that we need to wait for
+
+433
+00:26:46,080 --> 00:26:53,760
+Lighthouse and Lostar to get
+
+434
+00:26:50,159 --> 00:26:59,520
+um all the things released.
+
+435
+00:26:53,760 --> 00:27:02,559
+Uh and then yeah after that if if you're
+
+436
+00:26:59,520 --> 00:27:04,960
+um I don't know how much time we expect
+
+437
+00:27:02,559 --> 00:27:07,919
+this to happen
+
+438
+00:27:04,960 --> 00:27:10,159
+like but
+
+439
+00:27:07,919 --> 00:27:12,240
+if if if you if if your team can
+
+440
+00:27:10,159 --> 00:27:15,120
+allocate resources as soon as possible
+
+441
+00:27:12,240 --> 00:27:18,000
+that'd be great but maybe in a couple of
+
+442
+00:27:15,120 --> 00:27:21,520
+weeks um so we can coordinate on the
+
+443
+00:27:18,000 --> 00:27:26,279
+next next call uh next FCR breakout call
+
+444
+00:27:21,520 --> 00:27:26,279
+just coordinate this uh testing.
+
+445
+00:27:28,480 --> 00:27:34,000
+>> Okay. I'll try to like see if they can
+
+446
+00:27:31,279 --> 00:27:36,080
+review because I don't want us to test
+
+447
+00:27:34,000 --> 00:27:38,640
+and then there is a review then I make a
+
+448
+00:27:36,080 --> 00:27:40,720
+change and then after the change there's
+
+449
+00:27:38,640 --> 00:27:42,720
+no longer we no longer testing it which
+
+450
+00:27:40,720 --> 00:27:44,880
+we don't know if something broke or
+
+451
+00:27:42,720 --> 00:27:48,480
+something is missing.
+
+452
+00:27:44,880 --> 00:27:52,400
+>> Yeah, I see. Yeah, makes sense. I I also
+
+453
+00:27:48,480 --> 00:27:55,679
+think that uh for this testing we could
+
+454
+00:27:52,400 --> 00:27:59,480
+use a a branch not not if even if it's
+
+455
+00:27:55,679 --> 00:27:59,480
+not merged into master.
+
+456
+00:28:05,840 --> 00:28:08,840
+All right.
+
+457
+00:28:09,279 --> 00:28:12,279
+Um
+
+458
+00:28:13,039 --> 00:28:21,919
+I think it's all for the client updates.
+
+459
+00:28:17,200 --> 00:28:23,840
+No, please let me know. Um,
+
+460
+00:28:21,919 --> 00:28:29,039
+and yeah, let's move to the spec and
+
+461
+00:28:23,840 --> 00:28:32,480
+testing updates. Here we have a
+
+462
+00:28:29,039 --> 00:28:37,440
+um there are no spec related things. Uh
+
+463
+00:28:32,480 --> 00:28:40,720
+there is only this PR with a bunch of uh
+
+464
+00:28:37,440 --> 00:28:43,440
+new tests. It's it's been merged. Uh
+
+465
+00:28:40,720 --> 00:28:48,720
+there are tests for some edge cases and
+
+466
+00:28:43,440 --> 00:28:52,399
+uh with this PR like the manual test uh
+
+467
+00:28:48,720 --> 00:28:54,320
+suit is for FCR uh can be considered as
+
+468
+00:28:52,399 --> 00:28:56,880
+ready.
+
+469
+00:28:54,320 --> 00:29:04,000
+So we covered all the cases that we have
+
+470
+00:28:56,880 --> 00:29:08,480
+uh plan two. Um also I tried to I tried
+
+471
+00:29:04,000 --> 00:29:11,200
+uh yeah a few calls ago um there was a
+
+472
+00:29:08,480 --> 00:29:14,320
+discussion about whether we should have
+
+473
+00:29:11,200 --> 00:29:17,279
+a mainet um a test with mainet
+
+474
+00:29:14,320 --> 00:29:19,279
+configuration. I tried to generate to to
+
+475
+00:29:17,279 --> 00:29:22,320
+basically generate test vectors with
+
+476
+00:29:19,279 --> 00:29:25,120
+mainet configuration for some some of
+
+477
+00:29:22,320 --> 00:29:27,200
+the tests and it took a lot of time. uh
+
+478
+00:29:25,120 --> 00:29:30,480
+it was like about three hours for just
+
+479
+00:29:27,200 --> 00:29:33,520
+one test uh which runs for you know for
+
+480
+00:29:30,480 --> 00:29:39,919
+maybe five or six epochs. So I think
+
+481
+00:29:33,520 --> 00:29:44,159
+it's a big issue for test generation and
+
+482
+00:29:39,919 --> 00:29:47,279
+um yeah it would require faster
+
+483
+00:29:44,159 --> 00:29:49,520
+um spec to actually produce those test
+
+484
+00:29:47,279 --> 00:29:55,399
+vectors but I think we are pretty much
+
+485
+00:29:49,520 --> 00:29:55,399
+fine with the minimal u preset.
+
+486
+00:29:56,080 --> 00:30:05,000
+All right um that's all for spec and
+
+487
+00:30:00,240 --> 00:30:05,000
+tests. any uh questions here?
+
+488
+00:30:10,399 --> 00:30:18,080
+Okay. Um then metrics and APIs. Uh there
+
+489
+00:30:13,679 --> 00:30:21,559
+is a metric PR that was merged. Um which
+
+490
+00:30:18,080 --> 00:30:21,559
+is also great.
+
+491
+00:30:21,679 --> 00:30:27,760
+Um yeah, just wanted to share that this
+
+492
+00:30:24,559 --> 00:30:29,600
+PR has been merged and yeah it would be
+
+493
+00:30:27,760 --> 00:30:34,320
+great to see the those metrics
+
+494
+00:30:29,600 --> 00:30:37,679
+implemented across all clients. Um
+
+495
+00:30:34,320 --> 00:30:41,559
+so we can do more
+
+496
+00:30:37,679 --> 00:30:41,559
+comparison after
+
+497
+00:30:41,600 --> 00:30:45,880
+after releases on the mainet.
+
+498
+00:30:48,080 --> 00:30:52,520
+Okay. Um
+
+499
+00:30:53,120 --> 00:30:58,840
+and yeah, now to the research updates.
+
+500
+00:31:02,559 --> 00:31:10,159
+Yeah. Um so we
+
+501
+00:31:07,120 --> 00:31:12,960
+finished reviewing the proofs. Um the
+
+502
+00:31:10,159 --> 00:31:15,360
+algorithm they all check out. But while
+
+503
+00:31:12,960 --> 00:31:18,240
+reviewing the proofs, we noticed that
+
+504
+00:31:15,360 --> 00:31:20,960
+the pseudo code in the paper has some
+
+505
+00:31:18,240 --> 00:31:24,000
+difference from the algorithm as
+
+506
+00:31:20,960 --> 00:31:26,240
+specified by the Python specs.
+
+507
+00:31:24,000 --> 00:31:29,600
+And so we just need to add an appendix
+
+508
+00:31:26,240 --> 00:31:32,720
+to the paper explaining that the what
+
+509
+00:31:29,600 --> 00:31:35,919
+these differences are and
+
+510
+00:31:32,720 --> 00:31:38,880
+showing that um that don't affect the
+
+511
+00:31:35,919 --> 00:31:42,600
+correctness of the protocol. Uh
+
+512
+00:31:38,880 --> 00:31:42,600
+shouldn't be too long.
+
+513
+00:31:43,279 --> 00:31:49,279
+Great. So is this basically one thing um
+
+514
+00:31:46,960 --> 00:31:53,000
+left before
+
+515
+00:31:49,279 --> 00:31:53,000
+releasing the paper?
+
+516
+00:31:53,279 --> 00:31:57,919
+>> Sorry.
+
+517
+00:31:54,960 --> 00:31:59,840
+>> Yeah. Is is this just the only one thing
+
+518
+00:31:57,919 --> 00:32:03,440
+uh that you have mentioned now? Is this
+
+519
+00:31:59,840 --> 00:32:05,440
+the the only one left over before we can
+
+520
+00:32:03,440 --> 00:32:08,960
+publish the paper?
+
+521
+00:32:05,440 --> 00:32:12,559
+Yeah, this seems to be the only one
+
+522
+00:32:08,960 --> 00:32:14,880
+thing that this left over.
+
+523
+00:32:12,559 --> 00:32:17,919
+>> Yeah,
+
+524
+00:32:14,880 --> 00:32:18,480
+that sounds great. Thanks, Roberto.
+
+525
+00:32:17,919 --> 00:32:22,159
+No worries.
+
+526
+00:32:18,480 --> 00:32:23,760
+>> Um, on the research
+
+527
+00:32:22,159 --> 00:32:27,360
+topic,
+
+528
+00:32:23,760 --> 00:32:31,360
+uh, I would like us to think about, uh,
+
+529
+00:32:27,360 --> 00:32:34,799
+the late block improvement
+
+530
+00:32:31,360 --> 00:32:38,960
+that we did not introduce because of
+
+531
+00:32:34,799 --> 00:32:42,640
+some proof work um was not was kind of
+
+532
+00:32:38,960 --> 00:32:44,960
+hard and difficult to come up with a
+
+533
+00:32:42,640 --> 00:32:48,159
+proof to the um the proposed solution
+
+534
+00:32:44,960 --> 00:32:52,080
+that we had before. Uh so why why I'm
+
+535
+00:32:48,159 --> 00:32:54,720
+like I think it's valuable because uh
+
+536
+00:32:52,080 --> 00:32:58,480
+with this uh proposed solution to
+
+537
+00:32:54,720 --> 00:33:03,200
+recover from late blocks we observed
+
+538
+00:32:58,480 --> 00:33:04,880
+like one or one and a half%
+
+539
+00:33:03,200 --> 00:33:08,000
+um
+
+540
+00:33:04,880 --> 00:33:10,399
+performance increase.
+
+541
+00:33:08,000 --> 00:33:12,960
+This this was observed on the te on the
+
+542
+00:33:10,399 --> 00:33:16,640
+prototype in tech
+
+543
+00:33:12,960 --> 00:33:19,200
+and comparing to other clients tech
+
+544
+00:33:16,640 --> 00:33:21,679
+confirms
+
+545
+00:33:19,200 --> 00:33:23,760
+like one slot confirmation in tech
+
+546
+00:33:21,679 --> 00:33:26,880
+happens
+
+547
+00:33:23,760 --> 00:33:28,399
+um more frequent than comparing to other
+
+548
+00:33:26,880 --> 00:33:30,640
+clients that do not have this
+
+549
+00:33:28,399 --> 00:33:32,320
+implementation uh sorry this
+
+550
+00:33:30,640 --> 00:33:34,880
+optimization because this optimization
+
+551
+00:33:32,320 --> 00:33:37,039
+is not in the spec basically.
+
+552
+00:33:34,880 --> 00:33:40,880
+So we should think about whether we want
+
+553
+00:33:37,039 --> 00:33:44,480
+to put some efforts into that. This is
+
+554
+00:33:40,880 --> 00:33:46,799
+not only a paperwork, not only a proof
+
+555
+00:33:44,480 --> 00:33:50,000
+work but also will be a spec work and
+
+556
+00:33:46,799 --> 00:33:52,399
+tests and uh client implementations work
+
+557
+00:33:50,000 --> 00:33:54,720
+as well. But this change should be
+
+558
+00:33:52,399 --> 00:33:58,760
+relatively minor
+
+559
+00:33:54,720 --> 00:33:58,760
+at least it seems. So
+
+560
+00:34:00,799 --> 00:34:06,159
+>> yeah, I mean from a proof side of things
+
+561
+00:34:03,600 --> 00:34:09,520
+I think it would be
+
+562
+00:34:06,159 --> 00:34:13,359
+quite time consuming to
+
+563
+00:34:09,520 --> 00:34:15,040
+prove that this change is correct.
+
+564
+00:34:13,359 --> 00:34:18,040
+>> Uh
+
+565
+00:34:15,040 --> 00:34:18,040
+yeah.
+
+566
+00:34:19,280 --> 00:34:24,079
+>> Yeah.
+
+567
+00:34:21,040 --> 00:34:27,119
+So and then then you know that would to
+
+568
+00:34:24,079 --> 00:34:29,839
+time it will take time from other
+
+569
+00:34:27,119 --> 00:34:32,960
+dedicated time to
+
+570
+00:34:29,839 --> 00:34:37,280
+uh work on future folks like on the
+
+571
+00:34:32,960 --> 00:34:39,679
+couple consensus for example. So
+
+572
+00:34:37,280 --> 00:34:42,320
+that is my concern
+
+573
+00:34:39,679 --> 00:34:45,919
+you know in terms of yeah
+
+574
+00:34:42,320 --> 00:34:49,040
+whether this is worth it.
+
+575
+00:34:45,919 --> 00:34:51,440
+>> Yeah I see. Yeah. Bulma.
+
+576
+00:34:49,040 --> 00:34:54,320
+>> Yes. I wanted to ask is there like um a
+
+577
+00:34:51,440 --> 00:34:56,079
+particular link to get the details of
+
+578
+00:34:54,320 --> 00:34:58,800
+this optimization?
+
+579
+00:34:56,079 --> 00:35:05,680
+So I'm not sure I truly understand.
+
+580
+00:34:58,800 --> 00:35:08,000
+>> Yeah. Uh sure. Um I'll try to find
+
+581
+00:35:05,680 --> 00:35:11,359
+Yeah. I'll try to find a place in the
+
+582
+00:35:08,000 --> 00:35:15,480
+code in TU and share it in the chat in
+
+583
+00:35:11,359 --> 00:35:15,480
+the group in the Telegram group.
+
+584
+00:35:16,240 --> 00:35:20,800
+Yeah, Roberto makes sense. Uh I I I
+
+585
+00:35:18,400 --> 00:35:23,040
+think yeah we should first uh on the
+
+586
+00:35:20,800 --> 00:35:24,640
+research side think about uh whether we
+
+587
+00:35:23,040 --> 00:35:27,040
+want this change and how much time it
+
+588
+00:35:24,640 --> 00:35:29,520
+will take to to get this done on the
+
+589
+00:35:27,040 --> 00:35:32,160
+proof side and then decide basically
+
+590
+00:35:29,520 --> 00:35:33,200
+whether it makes sense to
+
+591
+00:35:32,160 --> 00:35:34,960
+to make it into
+
+592
+00:35:33,200 --> 00:35:37,680
+>> what is the improvement what is the
+
+593
+00:35:34,960 --> 00:35:40,560
+improvement that we we get with this
+
+594
+00:35:37,680 --> 00:35:46,040
+change in terms of performance
+
+595
+00:35:40,560 --> 00:35:46,040
+>> it's about 1.5 one one.5%
+
+596
+00:35:46,480 --> 00:35:49,200
+>> more blocks confirmed in one slot. You
+
+597
+00:35:48,720 --> 00:35:51,920
+mean?
+
+598
+00:35:49,200 --> 00:35:54,800
+>> Yes. Yes. Yeah. I think it's pretty
+
+599
+00:35:51,920 --> 00:35:57,359
+valuable.
+
+600
+00:35:54,800 --> 00:36:00,560
+>> Yeah. Know I mean Yeah. I mean I I think
+
+601
+00:35:57,359 --> 00:36:04,320
+like the spec change from motor would
+
+602
+00:36:00,560 --> 00:36:06,400
+wouldn't be massive.
+
+603
+00:36:04,320 --> 00:36:09,400
+Yeah.
+
+604
+00:36:06,400 --> 00:36:09,400
+>> Yeah.
+
+605
+00:36:09,520 --> 00:36:16,079
+>> Doesn't seems massive.
+
+606
+00:36:13,040 --> 00:36:21,240
+>> All right. I'll I'll post more about uh
+
+607
+00:36:16,079 --> 00:36:21,240
+this uh improvement in the group.
+
+608
+00:36:23,920 --> 00:36:28,240
+All right.
+
+609
+00:36:25,920 --> 00:36:32,200
+Are there anything
+
+610
+00:36:28,240 --> 00:36:32,200
+we want to discuss today?
+
+611
+00:36:40,880 --> 00:36:45,040
+>> Great. Thank you so much, guys. Um,
+
+612
+00:36:43,599 --> 00:36:48,079
+great progress
+
+613
+00:36:45,040 --> 00:36:49,599
+>> and it seems like all the things are
+
+614
+00:36:48,079 --> 00:36:54,599
+converging
+
+615
+00:36:49,599 --> 00:36:54,599
+and yeah, see you in a couple of weeks.
+
+616
+00:36:55,920 --> 00:36:58,800
+Bye.
+
+617
+00:36:56,240 --> 00:36:58,800
+>> Bye.
+

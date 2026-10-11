@@ -1,0 +1,1656 @@
+1
+00:00:07,860 --> 00:00:09,880
+[music]
+
+2
+00:00:10,000 --> 00:00:13,000
+Heat.
+
+3
+00:00:15,065 --> 00:00:17,085
+[music]
+
+4
+00:00:22,270 --> 00:00:24,290
+[music]
+
+5
+00:00:26,560 --> 00:00:29,560
+Heat.
+
+6
+00:00:30,130 --> 00:00:32,150
+[music]
+
+7
+00:00:37,335 --> 00:00:39,355
+>> [music]
+
+8
+00:00:43,230 --> 00:00:45,250
+[music]
+
+9
+00:00:55,360 --> 00:00:58,360
+>> Hello.
+
+10
+00:00:59,920 --> 00:01:03,120
+Good morning, SAS.
+
+11
+00:03:05,360 --> 00:03:10,159
+Good morning everyone. A few more
+
+12
+00:03:07,280 --> 00:03:13,680
+minutes before we get started.
+
+13
+00:03:10,159 --> 00:03:15,120
+And uh PK uh Barnabas is going to be a
+
+14
+00:03:13,680 --> 00:03:17,440
+couple minutes late. Would you want to
+
+15
+00:03:15,120 --> 00:03:20,840
+give the DevNet status update or just
+
+16
+00:03:17,440 --> 00:03:20,840
+wait for him?
+
+17
+00:03:22,159 --> 00:03:28,840
+Let's wait for him, I guess.
+
+18
+00:03:25,120 --> 00:03:28,840
+Works right.
+
+19
+00:04:01,280 --> 00:04:06,920
+Good morning everyone. Just wait a few
+
+20
+00:04:03,680 --> 00:04:06,920
+more minutes.
+
+21
+00:04:30,720 --> 00:04:35,080
+Hey Sam, you're unmuted.
+
+22
+00:05:04,080 --> 00:05:09,680
+Uh just one or two more minutes. We're
+
+23
+00:05:06,560 --> 00:05:13,560
+waiting for um Barnabas to join. He's
+
+24
+00:05:09,680 --> 00:05:13,560
+running a couple minutes late.
+
+25
+00:05:32,160 --> 00:05:35,160
+something.
+
+26
+00:05:51,360 --> 00:05:54,360
+Uh
+
+27
+00:06:05,039 --> 00:06:08,440
+>> Sam, your mic
+
+28
+00:06:09,280 --> 00:06:12,600
+in the call.
+
+29
+00:06:20,800 --> 00:06:25,160
+We'll start after Sam mutes.
+
+30
+00:06:35,280 --> 00:06:40,240
+>> Hello guys.
+
+31
+00:06:38,400 --> 00:06:44,000
+>> Can you mute Sam? I don't know who has
+
+32
+00:06:40,240 --> 00:06:47,319
+access. Oh yeah.
+
+33
+00:06:44,000 --> 00:06:47,319
+Should be good.
+
+34
+00:06:48,400 --> 00:06:54,199
+Can you guys hear me?
+
+35
+00:06:50,240 --> 00:06:54,199
+>> Yeah, we can hear you just fine.
+
+36
+00:06:55,199 --> 00:07:00,840
+>> Okay, great. Thank you. Um, let's get
+
+37
+00:06:57,840 --> 00:07:00,840
+started.
+
+38
+00:07:00,960 --> 00:07:05,440
+Uh, all right. Welcome everyone to
+
+39
+00:07:02,880 --> 00:07:07,680
+ACDT86.
+
+40
+00:07:05,440 --> 00:07:10,400
+Um, Baronus is here. Would you like to
+
+41
+00:07:07,680 --> 00:07:15,039
+give some DevNet status updates?
+
+42
+00:07:10,400 --> 00:07:18,160
+>> Yeah, sure. Uh so lram six uh had some
+
+43
+00:07:15,039 --> 00:07:21,759
+issues with u bezo.
+
+44
+00:07:18,160 --> 00:07:23,840
+Uh I have since recovered most of the
+
+45
+00:07:21,759 --> 00:07:27,599
+bezel nodes. Uh but we still have a few
+
+46
+00:07:23,840 --> 00:07:32,400
+nodes that are uh not happy. Uh teuon is
+
+47
+00:07:27,599 --> 00:07:34,160
+one of them and u lostar g is another.
+
+48
+00:07:32,400 --> 00:07:37,120
+Uh
+
+49
+00:07:34,160 --> 00:07:38,960
+mainly the issue for bezu was uh that it
+
+50
+00:07:37,120 --> 00:07:41,840
+was stuck in a weird case. So it
+
+51
+00:07:38,960 --> 00:07:43,599
+required us to resync the databases. Uh
+
+52
+00:07:41,840 --> 00:07:46,400
+maybe someone from Bazu can also give us
+
+53
+00:07:43,599 --> 00:07:48,639
+an update on uh what they have fixed uh
+
+54
+00:07:46,400 --> 00:07:52,560
+throughout the weekend.
+
+55
+00:07:48,639 --> 00:07:55,280
+Yes. So we we did the fix because uh
+
+56
+00:07:52,560 --> 00:07:59,199
+Prism was sending multiple new payload
+
+57
+00:07:55,280 --> 00:08:01,840
+without FC. So uh I tried to do a fix
+
+58
+00:07:59,199 --> 00:08:06,240
+because this new behavior was adding
+
+59
+00:08:01,840 --> 00:08:08,800
+some latency uh in Bizu. uh but uh I had
+
+60
+00:08:06,240 --> 00:08:11,199
+some news recently from Prism. So it
+
+61
+00:08:08,800 --> 00:08:13,199
+seems that they will uh revert this
+
+62
+00:08:11,199 --> 00:08:16,479
+modification and we will go back to
+
+63
+00:08:13,199 --> 00:08:19,680
+receive FC after new payload. So so
+
+64
+00:08:16,479 --> 00:08:23,680
+maybe we'll need uh to revert the last
+
+65
+00:08:19,680 --> 00:08:26,720
+uh fix I did and uh I hope we will go
+
+66
+00:08:23,680 --> 00:08:29,440
+back to something more stable,
+
+67
+00:08:26,720 --> 00:08:32,640
+>> right? But like this morning uh we had
+
+68
+00:08:29,440 --> 00:08:36,159
+uh I think all all nodes offline. Uh was
+
+69
+00:08:32,640 --> 00:08:39,200
+it all related to the same thing?
+
+70
+00:08:36,159 --> 00:08:41,360
+>> I think yes, but we need to maybe revert
+
+71
+00:08:39,200 --> 00:08:44,560
+and test with uh because I have really
+
+72
+00:08:41,360 --> 00:08:47,040
+some doubt about this fix. Uh I think it
+
+73
+00:08:44,560 --> 00:08:49,680
+could be the reason of the issue you
+
+74
+00:08:47,040 --> 00:08:52,640
+had. So I think it will be better just
+
+75
+00:08:49,680 --> 00:08:56,000
+to revert this fix and uh go back to
+
+76
+00:08:52,640 --> 00:08:58,560
+something that I trust more. And if we
+
+77
+00:08:56,000 --> 00:09:01,040
+still have issues like that, I think uh
+
+78
+00:08:58,560 --> 00:09:04,080
+we will investigate more. But for the
+
+79
+00:09:01,040 --> 00:09:08,839
+moment I really think it could be uh uh
+
+80
+00:09:04,080 --> 00:09:08,839
+because of the last fix I did. Yeah.
+
+81
+00:09:09,600 --> 00:09:15,920
+So I will propose a PR to revert and uh
+
+82
+00:09:12,320 --> 00:09:18,920
+and we will see.
+
+83
+00:09:15,920 --> 00:09:18,920
+>> Okay.
+
+84
+00:09:20,720 --> 00:09:27,640
+>> Uh any other client uh notice anything
+
+85
+00:09:23,600 --> 00:09:27,640
+weird happening on the net?
+
+86
+00:09:29,600 --> 00:09:34,720
+Mario also is asking uh whether you
+
+87
+00:09:32,480 --> 00:09:38,399
+would be able to share some of the
+
+88
+00:09:34,720 --> 00:09:41,720
+issues uh if it's if it was specated or
+
+89
+00:09:38,399 --> 00:09:41,720
+something else.
+
+90
+00:09:56,959 --> 00:10:01,600
+I'm sorry that was a question for Karim.
+
+91
+00:09:59,519 --> 00:10:03,200
+Um just wanted to know if this is spec
+
+92
+00:10:01,600 --> 00:10:06,000
+related issue or was something in the
+
+93
+00:10:03,200 --> 00:10:06,880
+sinking of the node or or some other
+
+94
+00:10:06,000 --> 00:10:10,000
+detail.
+
+95
+00:10:06,880 --> 00:10:12,880
+>> It was for me. Okay. Sorry. Uh no no
+
+96
+00:10:10,000 --> 00:10:14,720
+it's uh it's for for the moment I don't
+
+97
+00:10:12,880 --> 00:10:18,399
+think it's spec related issue. I think
+
+98
+00:10:14,720 --> 00:10:21,120
+it's more uh because we are trying to to
+
+99
+00:10:18,399 --> 00:10:25,600
+match the the prism behavior and I think
+
+100
+00:10:21,120 --> 00:10:27,360
+we are creating state inconsistency uh
+
+101
+00:10:25,600 --> 00:10:28,720
+and it's why we have this issue. I don't
+
+102
+00:10:27,360 --> 00:10:32,839
+think for the moment it's related to the
+
+103
+00:10:28,720 --> 00:10:32,839
+spec, but uh we'll see.
+
+104
+00:10:37,279 --> 00:10:42,959
+>> Yeah, I'm a little bit surprised that
+
+105
+00:10:40,160 --> 00:10:45,839
+this caused issues with Besso because
+
+106
+00:10:42,959 --> 00:10:47,760
+this is our behavior has been like that
+
+107
+00:10:45,839 --> 00:10:50,399
+for months and it's already released on
+
+108
+00:10:47,760 --> 00:10:55,120
+mainet. So, and even the fix that I
+
+109
+00:10:50,399 --> 00:10:57,519
+pushed is only for glass and it's not uh
+
+110
+00:10:55,120 --> 00:11:01,040
+and it's not for pulu. So, if this is
+
+111
+00:10:57,519 --> 00:11:06,200
+affecting bessu even on mainet uh I'll
+
+112
+00:11:01,040 --> 00:11:06,200
+have to also change our fulu behavior.
+
+113
+00:11:07,920 --> 00:11:12,480
+>> Yeah, we need to check but I don't think
+
+114
+00:11:09,920 --> 00:11:15,120
+we we saw that before. I think we only
+
+115
+00:11:12,480 --> 00:11:16,560
+saw that on the recent dev nets.
+
+116
+00:11:15,120 --> 00:11:19,200
+>> Yeah, but it's it's surprising. I mean,
+
+117
+00:11:16,560 --> 00:11:21,120
+this is several months ago. Uh I I I did
+
+118
+00:11:19,200 --> 00:11:23,120
+move to sending FCU on the background
+
+119
+00:11:21,120 --> 00:11:26,000
+and then I even removed it completely
+
+120
+00:11:23,120 --> 00:11:29,240
+from in its sync. Uh and it was several
+
+121
+00:11:26,000 --> 00:11:29,240
+months ago.
+
+122
+00:11:32,959 --> 00:11:39,920
+Yeah. Honestly, I don't know now because
+
+123
+00:11:34,959 --> 00:11:42,079
+uh we are testing a lot Nimbus uh prism.
+
+124
+00:11:39,920 --> 00:11:43,760
+I don't know if we did some test
+
+125
+00:11:42,079 --> 00:11:46,800
+recently.
+
+126
+00:11:43,760 --> 00:11:48,640
+Uh but yeah, we can we can also check on
+
+127
+00:11:46,800 --> 00:11:51,519
+my net to see if we have the same issue.
+
+128
+00:11:48,640 --> 00:11:54,560
+But uh yeah, I didn't notice that.
+
+129
+00:11:51,519 --> 00:11:58,480
+>> Maybe just to add something. So this is
+
+130
+00:11:54,560 --> 00:12:01,760
+related uh to uh a new syncing node. So
+
+131
+00:11:58,480 --> 00:12:04,160
+if the node is already in sync, uh we
+
+132
+00:12:01,760 --> 00:12:06,639
+shouldn't see the issue. So it is
+
+133
+00:12:04,160 --> 00:12:08,560
+>> not really. So any node that starts, it
+
+134
+00:12:06,639 --> 00:12:11,040
+doesn't matter if it's on a checkpoint
+
+135
+00:12:08,560 --> 00:12:13,440
+sync, we're going to hit this path of
+
+136
+00:12:11,040 --> 00:12:17,600
+sending batches.
+
+137
+00:12:13,440 --> 00:12:21,120
+So okay let's say I um I I I have been
+
+138
+00:12:17,600 --> 00:12:24,959
+running on node right and I upgrade my
+
+139
+00:12:21,120 --> 00:12:27,440
+let's say my best basu version I restart
+
+140
+00:12:24,959 --> 00:12:30,480
+um so I have like let's say maybe five
+
+141
+00:12:27,440 --> 00:12:32,079
+10 whatever nodes to recover then once I
+
+142
+00:12:30,480 --> 00:12:34,639
+recover
+
+143
+00:12:32,079 --> 00:12:37,279
+I should receive for each new payload an
+
+144
+00:12:34,639 --> 00:12:40,240
+FCU right
+
+145
+00:12:37,279 --> 00:12:44,079
+like when the node is in sync
+
+146
+00:12:40,240 --> 00:12:46,880
+>> yeah but that if the CL client has been
+
+147
+00:12:44,079 --> 00:12:49,360
+running continuously then that's what's
+
+148
+00:12:46,880 --> 00:12:52,079
+going to happen but if the CL client is
+
+149
+00:12:49,360 --> 00:12:53,519
+restarted again the same so if the CL
+
+150
+00:12:52,079 --> 00:12:56,639
+client is restarted then you're going to
+
+151
+00:12:53,519 --> 00:12:59,440
+hit this path where we send you a a
+
+152
+00:12:56,639 --> 00:13:01,519
+batch without a single FCU
+
+153
+00:12:59,440 --> 00:13:03,839
+>> I think it depend it depend also
+
+154
+00:13:01,519 --> 00:13:06,720
+regarding the size of the batch so if
+
+155
+00:13:03,839 --> 00:13:09,839
+it's only a batch of two three blocks I
+
+156
+00:13:06,720 --> 00:13:12,079
+don't think you will see any issue uh it
+
+157
+00:13:09,839 --> 00:13:15,880
+should be at least 64
+
+158
+00:13:12,079 --> 00:13:15,880
+64. Yeah.
+
+159
+00:13:17,839 --> 00:13:21,600
+>> Yeah. We need we need to double check.
+
+160
+00:13:19,600 --> 00:13:24,959
+Yeah. We need to double check when that
+
+161
+00:13:21,600 --> 00:13:29,399
+happens. Uh and if there is anything to
+
+162
+00:13:24,959 --> 00:13:29,399
+to fix on mainet as well.
+
+163
+00:13:37,360 --> 00:13:42,839
+Any other updates for net 6?
+
+164
+00:13:47,680 --> 00:13:54,360
+Have there been any sorry loar death
+
+165
+00:13:51,360 --> 00:13:54,360
+starings?
+
+166
+00:13:55,360 --> 00:14:02,399
+>> Yeah, it's been so loadar one is still
+
+167
+00:13:58,800 --> 00:14:04,000
+running the death star uh death star
+
+168
+00:14:02,399 --> 00:14:06,639
+image.
+
+169
+00:14:04,000 --> 00:14:09,360
+>> Awesome. And I see that those are missed
+
+170
+00:14:06,639 --> 00:14:11,279
+like orphaned which is the uh expected
+
+171
+00:14:09,360 --> 00:14:13,920
+behavior. Correct.
+
+172
+00:14:11,279 --> 00:14:16,480
+>> Yeah, that's correct. And uh we also
+
+173
+00:14:13,920 --> 00:14:18,560
+know that some clients didn't fully
+
+174
+00:14:16,480 --> 00:14:20,320
+implement for choice yet and they would
+
+175
+00:14:18,560 --> 00:14:23,519
+have some issues building on top of
+
+176
+00:14:20,320 --> 00:14:25,440
+these blocks. Uh I think Nimbus is
+
+177
+00:14:23,519 --> 00:14:27,600
+currently still having some issues uh
+
+178
+00:14:25,440 --> 00:14:29,920
+regarding these.
+
+179
+00:14:27,600 --> 00:14:32,639
+>> Got it. Okay. Sorry, what were you going
+
+180
+00:14:29,920 --> 00:14:34,720
+to say before I cut you all?
+
+181
+00:14:32,639 --> 00:14:37,680
+>> Yeah. So that that was my next point
+
+182
+00:14:34,720 --> 00:14:40,800
+that uh the the Nimbus for choice uh
+
+183
+00:14:37,680 --> 00:14:44,000
+issues. Uh I think uh they're working on
+
+184
+00:14:40,800 --> 00:14:45,600
+it now. Uh
+
+185
+00:14:44,000 --> 00:14:49,000
+maybe someone from the Nimus team can
+
+186
+00:14:45,600 --> 00:14:49,000
+give us an update.
+
+187
+00:14:49,519 --> 00:14:54,959
+>> Sure. Yeah, we're working on it. We know
+
+188
+00:14:52,399 --> 00:14:59,600
+the issue. Uh we know the cause. We know
+
+189
+00:14:54,959 --> 00:15:01,199
+broadly speaking the fix. Um, I say we I
+
+190
+00:14:59,600 --> 00:15:04,000
+not going to be writing the PR for this,
+
+191
+00:15:01,199 --> 00:15:09,760
+so I I can't promise any specific
+
+192
+00:15:04,000 --> 00:15:12,320
+timeline, but uh I guess Caleb is is
+
+193
+00:15:09,760 --> 00:15:14,720
+likely will. And uh I don't if he's in
+
+194
+00:15:12,320 --> 00:15:20,040
+this car or not, but
+
+195
+00:15:14,720 --> 00:15:20,040
+anyway, it's it's tractable.
+
+196
+00:15:22,000 --> 00:15:27,279
+>> We still have a bunch of nodes that are
+
+197
+00:15:23,839 --> 00:15:29,920
+self building only. Uh so I can I can
+
+198
+00:15:27,279 --> 00:15:32,880
+see a few now. It's it's mainly Nimbus
+
+199
+00:15:29,920 --> 00:15:34,720
+uh pairs that are self-proposing uh
+
+200
+00:15:32,880 --> 00:15:38,480
+blocks and they're not using the remote
+
+201
+00:15:34,720 --> 00:15:40,160
+builder. So it would be nice to nice to
+
+202
+00:15:38,480 --> 00:15:42,320
+get a chain where we use only the
+
+203
+00:15:40,160 --> 00:15:45,680
+builders uh
+
+204
+00:15:42,320 --> 00:15:48,800
+here and there.
+
+205
+00:15:45,680 --> 00:15:53,120
+So one comment about that and I don't is
+
+206
+00:15:48,800 --> 00:15:57,040
+um Nimbus is uh currently using the same
+
+207
+00:15:53,120 --> 00:15:59,440
+like 10 odd percent um
+
+208
+00:15:57,040 --> 00:16:03,600
+maybe it's higher but but 10 odd percent
+
+209
+00:15:59,440 --> 00:16:08,320
+sort of uh local block uh value boost
+
+210
+00:16:03,600 --> 00:16:12,320
+that that we do for the builder API and
+
+211
+00:16:08,320 --> 00:16:16,079
+so I don't know what the how valuable
+
+212
+00:16:12,320 --> 00:16:18,560
+the external builder blocks are here.
+
+213
+00:16:16,079 --> 00:16:21,880
+But, uh, right, that's going to mask
+
+214
+00:16:18,560 --> 00:16:21,880
+things potentially.
+
+215
+00:16:23,040 --> 00:16:31,880
+>> So, it's 0.15 E for external and close
+
+216
+00:16:27,759 --> 00:16:31,880
+to zero E for local.
+
+217
+00:16:35,440 --> 00:16:39,600
+Okay.
+
+218
+00:16:37,199 --> 00:16:42,000
+Sure. So, anyway, a solvable problem if
+
+219
+00:16:39,600 --> 00:16:44,720
+if that is the issue, then then that can
+
+220
+00:16:42,000 --> 00:16:46,800
+be resolved clearly. But yeah, we will
+
+221
+00:16:44,720 --> 00:16:48,880
+we'll look at that. The odd thing is
+
+222
+00:16:46,800 --> 00:16:52,639
+that some of the Nimbus nodes definitely
+
+223
+00:16:48,880 --> 00:16:55,440
+do uh have use external block building
+
+224
+00:16:52,639 --> 00:16:59,759
+sometimes like it's it's not completely
+
+225
+00:16:55,440 --> 00:17:03,040
+absent. So I I can't speak to the exact
+
+226
+00:16:59,759 --> 00:17:08,520
+details of why or why not right now, but
+
+227
+00:17:03,040 --> 00:17:08,520
+um it's there's some nuance here.
+
+228
+00:17:13,601 --> 00:17:18,120
+>> [clears throat]
+
+229
+00:17:13,919 --> 00:17:18,120
+>> Okay. Yeah, something to look into.
+
+230
+00:17:19,360 --> 00:17:23,280
+>> Um, what do you mean Barnabas that we
+
+231
+00:17:21,439 --> 00:17:26,720
+seem to be flip-flopping a bit like
+
+232
+00:17:23,280 --> 00:17:29,120
+between self built and [clears throat]
+
+233
+00:17:26,720 --> 00:17:32,720
+>> Yeah. Yeah. So like for example, Ningus
+
+234
+00:17:29,120 --> 00:17:35,600
+F1 uh it has managed to build a few
+
+235
+00:17:32,720 --> 00:17:38,400
+blocks. Uh like three hours ago it
+
+236
+00:17:35,600 --> 00:17:40,960
+managed to build three different blocks
+
+237
+00:17:38,400 --> 00:17:44,080
+but self building is like pretty much
+
+238
+00:17:40,960 --> 00:17:46,080
+every other block is self-built. So like
+
+239
+00:17:44,080 --> 00:17:52,960
+every hour it seems to be able to do one
+
+240
+00:17:46,080 --> 00:17:55,280
+or two uh builder u builder blocks.
+
+241
+00:17:52,960 --> 00:17:58,480
+So that's why it's a bit uh that's why
+
+242
+00:17:55,280 --> 00:17:58,480
+it's a bit weird.
+
+243
+00:17:59,760 --> 00:18:07,799
+Okay, let's look into this.
+
+244
+00:18:03,840 --> 00:18:07,799
+Uh, anything else for Devos6?
+
+245
+00:18:12,240 --> 00:18:18,640
+>> We now have every single client on on
+
+246
+00:18:14,720 --> 00:18:20,880
+board. So, that's very good news.
+
+247
+00:18:18,640 --> 00:18:23,919
+>> Awesome.
+
+248
+00:18:20,880 --> 00:18:26,080
+Okay. Uh, maybe good to now is a good
+
+249
+00:18:23,919 --> 00:18:28,080
+time to discuss plans for DevNet 7. Are
+
+250
+00:18:26,080 --> 00:18:31,440
+we still planning to launch that this
+
+251
+00:18:28,080 --> 00:18:34,000
+week if the spec updates come out and
+
+252
+00:18:31,440 --> 00:18:38,760
+clients are updated?
+
+253
+00:18:34,000 --> 00:18:38,760
+>> Yeah, I would target Wednesday.
+
+254
+00:18:39,440 --> 00:18:42,480
+>> Okay.
+
+255
+00:18:39,760 --> 00:18:44,400
+>> Not sure how re reasonable that is. Uh
+
+256
+00:18:42,480 --> 00:18:46,160
+that's partially because of personal
+
+257
+00:18:44,400 --> 00:18:49,120
+reasons as well. I will be off for two
+
+258
+00:18:46,160 --> 00:18:50,559
+and a half weeks after that. Uh so
+
+259
+00:18:49,120 --> 00:18:53,440
+that's why I would push for the
+
+260
+00:18:50,559 --> 00:18:55,840
+Wednesday. In case that's not doable, uh
+
+261
+00:18:53,440 --> 00:18:58,400
+maybe we can take a look at launching on
+
+262
+00:18:55,840 --> 00:18:59,840
+Thursday or uh
+
+263
+00:18:58,400 --> 00:19:02,960
+>> what are the breaking changes that we
+
+264
+00:18:59,840 --> 00:19:06,880
+need to push?
+
+265
+00:19:02,960 --> 00:19:08,080
+>> I mean that's the biggest one. Yeah,
+
+266
+00:19:06,880 --> 00:19:11,280
+>> stable containers.
+
+267
+00:19:08,080 --> 00:19:14,160
+>> Anything else?
+
+268
+00:19:11,280 --> 00:19:16,880
+>> Uh there are there is one thing on the
+
+269
+00:19:14,160 --> 00:19:20,200
+eel with the stipend. I think we will
+
+270
+00:19:16,880 --> 00:19:20,200
+get to that.
+
+271
+00:19:22,160 --> 00:19:25,600
+Yeah, I think there's like on the CL I
+
+272
+00:19:24,240 --> 00:19:27,360
+think there's like five breaking
+
+273
+00:19:25,600 --> 00:19:30,919
+changes, but they're fairly simple
+
+274
+00:19:27,360 --> 00:19:30,919
+compared to 7688.
+
+275
+00:19:33,840 --> 00:19:38,080
+>> Spencer,
+
+276
+00:19:35,440 --> 00:19:41,120
+>> I guess I'd ask uh do we want this Devet
+
+277
+00:19:38,080 --> 00:19:43,120
+to kind of be the final DevNet? Um
+
+278
+00:19:41,120 --> 00:19:45,840
+because I think for the EL there's
+
+279
+00:19:43,120 --> 00:19:48,880
+changes for 2780
+
+280
+00:19:45,840 --> 00:19:53,280
+um 8037 I think block access lists and
+
+281
+00:19:48,880 --> 00:19:56,280
+then also the 8282 with the uh new bike
+
+282
+00:19:53,280 --> 00:19:56,280
+codes.
+
+283
+00:19:59,440 --> 00:20:05,200
+>> I would like for this to be the last
+
+284
+00:20:02,400 --> 00:20:08,400
+what do others think?
+
+285
+00:20:05,200 --> 00:20:11,120
+>> Yeah, species for sure. Uh I I would do
+
+286
+00:20:08,400 --> 00:20:14,120
+a mild uh spec freeze after the
+
+287
+00:20:11,120 --> 00:20:14,120
+launches.
+
+288
+00:20:18,559 --> 00:20:25,360
+Um just a quick note there. I think we
+
+289
+00:20:22,000 --> 00:20:27,520
+still might need to make changes to the
+
+290
+00:20:25,360 --> 00:20:34,240
+prices for
+
+291
+00:20:27,520 --> 00:20:37,840
+um 8038 20 and 2780. So I mean as I
+
+292
+00:20:34,240 --> 00:20:39,760
+explained the last ACD the numbers are I
+
+293
+00:20:37,840 --> 00:20:43,120
+would say stable but there could be
+
+294
+00:20:39,760 --> 00:20:45,600
+something we find during testing that
+
+295
+00:20:43,120 --> 00:20:49,120
+points that the numbers need to change.
+
+296
+00:20:45,600 --> 00:20:52,240
+Um but again those should be very small
+
+297
+00:20:49,120 --> 00:20:58,440
+like I just constant changes not really
+
+298
+00:20:52,240 --> 00:20:58,440
+spec like not design big design changes.
+
+299
+00:20:59,440 --> 00:21:05,039
+I think singles like single parameter
+
+300
+00:21:02,159 --> 00:21:08,240
+changes should be fine. Uh but like
+
+301
+00:21:05,039 --> 00:21:10,640
+adding a new method to AD37 or changing
+
+302
+00:21:08,240 --> 00:21:12,799
+the whole structure of AD37.
+
+303
+00:21:10,640 --> 00:21:14,720
+>> No no it would be mostly
+
+304
+00:21:12,799 --> 00:21:17,840
+>> yeah it would be mostly just changing
+
+305
+00:21:14,720 --> 00:21:19,360
+parameters like uh the gas cost for
+
+306
+00:21:17,840 --> 00:21:21,200
+account write or something like that
+
+307
+00:21:19,360 --> 00:21:23,120
+needs to be higher for some reason. So
+
+308
+00:21:21,200 --> 00:21:25,760
+that that that that would be the change
+
+309
+00:21:23,120 --> 00:21:28,559
+type of change.
+
+310
+00:21:25,760 --> 00:21:32,360
+I think that's fine to have a dev notate
+
+311
+00:21:28,559 --> 00:21:32,360
+for those kind of changes.
+
+312
+00:21:35,280 --> 00:21:39,440
+>> Yeah, I wouldn't be surprised if there
+
+313
+00:21:37,360 --> 00:21:45,240
+were a consensus layer specification
+
+314
+00:21:39,440 --> 00:21:45,240
+issue as well. Might required date.
+
+315
+00:21:47,440 --> 00:21:55,200
+>> Um, yeah. And also I have a question for
+
+316
+00:21:50,480 --> 00:21:58,880
+mostly like the Spencer and Mario. So uh
+
+317
+00:21:55,200 --> 00:22:01,760
+we found that uh the current spat test
+
+318
+00:21:58,880 --> 00:22:03,760
+is diverse from the
+
+319
+00:22:01,760 --> 00:22:07,280
+EIP2780
+
+320
+00:22:03,760 --> 00:22:10,159
+because uh in the spare test it use the
+
+321
+00:22:07,280 --> 00:22:13,840
+transaction based course as input for
+
+322
+00:22:10,159 --> 00:22:16,799
+the flow uh flow gas calculation. But if
+
+323
+00:22:13,840 --> 00:22:20,080
+the EIP you but the EIP say we should
+
+324
+00:22:16,799 --> 00:22:25,280
+use some of of the regular guess
+
+325
+00:22:20,080 --> 00:22:28,080
+parameter as input. So um I can share
+
+326
+00:22:25,280 --> 00:22:30,720
+the link and uh I guess it's like only
+
+327
+00:22:28,080 --> 00:22:33,039
+the issue of the status and would nice
+
+328
+00:22:30,720 --> 00:22:37,960
+to
+
+329
+00:22:33,039 --> 00:22:37,960
+uh to fix it for the demia 7.
+
+330
+00:22:38,400 --> 00:22:42,720
+>> Yeah. No thanks uh thanks for flagging
+
+331
+00:22:40,320 --> 00:22:44,240
+that. Um I think I think it is an issue
+
+332
+00:22:42,720 --> 00:22:46,240
+on our end. So we can uh we can
+
+333
+00:22:44,240 --> 00:22:48,000
+prioritize that for [clears throat] for
+
+334
+00:22:46,240 --> 00:22:49,840
+DevNet 7. I think I was planning to take
+
+335
+00:22:48,000 --> 00:22:52,840
+a look after the call.
+
+336
+00:22:49,840 --> 00:22:52,840
+>> Yeah.
+
+337
+00:22:57,200 --> 00:23:02,960
+>> Cool. Okay. Uh Barnabas, anything else
+
+338
+00:23:00,480 --> 00:23:06,440
+you'd like to mention about Clamster
+
+339
+00:23:02,960 --> 00:23:06,440
+DevNet 7?
+
+340
+00:23:08,559 --> 00:23:13,039
+Well, we definitely going to need the
+
+341
+00:23:10,080 --> 00:23:16,000
+alpha 12 release on the CL side and the
+
+342
+00:23:13,039 --> 00:23:18,960
+new spec test on the E side for the
+
+343
+00:23:16,000 --> 00:23:20,720
+changes that we agree on today.
+
+344
+00:23:18,960 --> 00:23:23,679
+>> Yeah.
+
+345
+00:23:20,720 --> 00:23:25,760
+Okay. I guess that's a good time to uh
+
+346
+00:23:23,679 --> 00:23:27,600
+talk about those. Uh on the CL side, we
+
+347
+00:23:25,760 --> 00:23:30,080
+do intend to make a release today or
+
+348
+00:23:27,600 --> 00:23:32,240
+tomorrow as soon as we merge all the PRs
+
+349
+00:23:30,080 --> 00:23:35,200
+and perform
+
+350
+00:23:32,240 --> 00:23:39,679
+some tests, hopefully running the
+
+351
+00:23:35,200 --> 00:23:39,679
+reference test on a client beforehand.
+
+352
+00:23:40,480 --> 00:23:47,360
+Uh Mario or Spencer, are you expecting
+
+353
+00:23:44,320 --> 00:23:50,240
+to make a release today or tomorrow?
+
+354
+00:23:47,360 --> 00:23:54,080
+Yeah, I think so. Um the only remaining
+
+355
+00:23:50,240 --> 00:23:56,400
+questions I have two open um EAP changes
+
+356
+00:23:54,080 --> 00:23:58,000
+that I was hoping we can discuss today.
+
+357
+00:23:56,400 --> 00:23:59,919
+I think they're in the E breakout
+
+358
+00:23:58,000 --> 00:24:02,080
+agenda. So we can discuss them there. So
+
+359
+00:23:59,919 --> 00:24:05,120
+once we the those are finalized, we can
+
+360
+00:24:02,080 --> 00:24:06,640
+start implementing the changes. And I
+
+361
+00:24:05,120 --> 00:24:08,799
+don't think we have to write new tests
+
+362
+00:24:06,640 --> 00:24:11,279
+but uh just make the spec changes and we
+
+363
+00:24:08,799 --> 00:24:15,200
+should be able to release I think by the
+
+364
+00:24:11,279 --> 00:24:18,320
+latest on Wednesday I would say. Yeah.
+
+365
+00:24:15,200 --> 00:24:20,960
+>> Okay. Great. Yeah. Same pretty much the
+
+366
+00:24:18,320 --> 00:24:23,360
+same time timeline for us as well.
+
+367
+00:24:20,960 --> 00:24:27,000
+Hopefully today or tomorrow if something
+
+368
+00:24:23,360 --> 00:24:27,000
+goes wrong Wednesday.
+
+369
+00:24:34,400 --> 00:24:40,880
+Uh any questions or concerns about this
+
+370
+00:24:37,600 --> 00:24:45,080
+back before the breakout calls or any
+
+371
+00:24:40,880 --> 00:24:45,080
+other topics we'd like to discuss.
+
+372
+00:24:58,400 --> 00:25:03,120
+Okay. Uh, Barnabas, could you help us by
+
+373
+00:25:00,640 --> 00:25:05,039
+creating the breakout
+
+374
+00:25:03,120 --> 00:25:07,840
+uh groups?
+
+375
+00:25:05,039 --> 00:25:10,400
+>> Yes, sir.
+
+376
+00:25:07,840 --> 00:25:13,279
+>> All right. While he does that, reminder
+
+377
+00:25:10,400 --> 00:25:15,279
+that the SSC engine API breakout call
+
+378
+00:25:13,279 --> 00:25:18,440
+will be this Friday. Please attend if
+
+379
+00:25:15,279 --> 00:25:18,440
+you can.
+
+380
+00:25:23,679 --> 00:25:29,120
+It should be open.
+
+381
+00:25:26,720 --> 00:25:31,840
+Thank you, Barnabas. Uh, I'll be in the
+
+382
+00:25:29,120 --> 00:25:35,520
+CL breakout call. Uh, bye everyone else.
+
+383
+00:25:31,840 --> 00:25:37,279
+Talk to you guys next week.
+
+384
+00:25:35,520 --> 00:25:41,480
+>> Puja, do you know how we could do the
+
+385
+00:25:37,279 --> 00:25:41,480
+recording for these breakout channels?
+
+386
+00:25:42,559 --> 00:25:47,200
+>> We can definitely make use of OBS. Do
+
+387
+00:25:45,200 --> 00:25:50,000
+you want to
+
+388
+00:25:47,200 --> 00:25:52,320
+do it right now?
+
+389
+00:25:50,000 --> 00:25:54,799
+>> Uh, yes. So, it would be nice to have
+
+390
+00:25:52,320 --> 00:25:57,799
+the recording of these as well in the in
+
+391
+00:25:54,799 --> 00:25:57,799
+forecast.
+
+392
+00:25:59,840 --> 00:26:05,039
+>> Yeah, same for the CL. I'll join the CL
+
+393
+00:26:02,720 --> 00:26:08,799
+and try to figure it out.
+
+394
+00:26:05,039 --> 00:26:12,159
+>> Yeah. Um I I'm not sure. I think Mark
+
+395
+00:26:08,799 --> 00:26:14,400
+Wven is there in the um he may still
+
+396
+00:26:12,159 --> 00:26:17,120
+have access to record it. Let me quickly
+
+397
+00:26:14,400 --> 00:26:19,120
+coordinate with him and get back on it.
+
+398
+00:26:17,120 --> 00:26:20,640
+>> Okay. Thank you. Yeah, we're gonna we're
+
+399
+00:26:19,120 --> 00:26:23,279
+gonna one one of us is going to record
+
+400
+00:26:20,640 --> 00:26:25,279
+the C session and then uh if Mark can
+
+401
+00:26:23,279 --> 00:26:26,080
+record the session then that that should
+
+402
+00:26:25,279 --> 00:26:30,440
+be good.
+
+403
+00:26:26,080 --> 00:26:30,440
+>> Yeah, let me ask him. Cool.
+
+404
+00:26:39,120 --> 00:26:44,960
+>> Does anyone have issues turning into a
+
+405
+00:26:41,440 --> 00:26:48,159
+breakout room? Please let me know.
+
+406
+00:26:44,960 --> 00:26:50,400
+Um, Barnabas, if you could maybe guide
+
+407
+00:26:48,159 --> 00:26:52,720
+me there. You You want me to record the
+
+408
+00:26:50,400 --> 00:26:54,400
+EL1 or CL1?
+
+409
+00:26:52,720 --> 00:26:58,360
+>> The E1, please.
+
+410
+00:26:54,400 --> 00:26:58,360
+>> Okay. Good.
+
+411
+00:27:09,919 --> 00:27:12,919
+Heat. Heat.
+
+412
+00:27:22,103 --> 00:27:24,123
+[music]
+
+413
+00:27:30,559 --> 00:27:33,559
+Heat. Heat.
+
+414
+00:27:42,409 --> 00:27:44,429
+[music]
+

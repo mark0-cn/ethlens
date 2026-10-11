@@ -1,0 +1,140 @@
+{
+  "slug": "acdt-86",
+  "series": "ACDT",
+  "number": 86,
+  "title": "All Core Devs Testing #86",
+  "subtitle": "测试层核心开发者会议",
+  "kicker": "ALL CORE DEVS · TESTING",
+  "date": "2026-07-06",
+  "dateLabel": "2026 年 7 月 6 日",
+  "topic": "客户端测试与协议验证",
+  "translationStatus": "reviewed",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/all-core-devs-testing-086-july-06-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/all-core-devs-testing-086-july-06-2026_en.srt",
+    "zh": "../../media/subtitles/zh/all-core-devs-testing-086-july-06-2026_zh.srt"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 9,
+      "decisions": 2,
+      "actionItems": 2
+    },
+    "sections": [
+      {
+        "title": "测试进展",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Glamsterdam DevNet 6 出现 Besu 不稳定问题；多数节点已恢复，部分 Teku/Erigon 节点仍有异常。",
+            "seek": 541
+          },
+          {
+            "text": "Prysm 在没有 FCU 的情况下发送多个 new payload，导致 Besu 状态不一致；Prysm 将回退该行为，Besu 的修复也可能回退。",
+            "seek": 587
+          },
+          {
+            "text": "Nimbus fork-choice 问题已定位，已知修复正在推进；Nimbus 节点目前自行构建区块，而未使用远程 builder。",
+            "seek": 993
+          },
+          {
+            "text": "所有客户端现已接入 DevNet 6。",
+            "seek": 1196
+          }
+        ]
+      },
+      {
+        "title": "分叉状态与时间表",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Glamsterdam DevNet 7 目标为周三；预计包含 EL 规范变更（EIP-2780、EIP-8037、EIP-8282）以及 CL 破坏性变更（stable containers 和另外约 5 项）。",
+            "seek": 1204
+          },
+          {
+            "text": "DevNet 7 计划作为最后一个 DevNet；启动后进入温和的规范冻结期。",
+            "seek": 1315
+          },
+          {
+            "text": "DevNet 7 启动前需要发布 CL alpha-12 和更新后的 EL execution-specs；目标为当天或周三。",
+            "seek": 1492
+          }
+        ]
+      },
+      {
+        "title": "组织事项",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "SSZ Engine API 专题会议安排在本周五。",
+            "seek": 1619
+          },
+          {
+            "text": "专题分会的结论将整理后分享到 R&D 服务器。",
+            "seek": 1638
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "Glamsterdam DevNet 7 将作为最后一个 DevNet；启动后实行温和的规范冻结。",
+            "seek": 1207
+          },
+          {
+            "text": "冻结后可接受仅涉及参数的小幅规范变更（例如 EIP-8038/EIP-2780 的 gas 成本调整）；不接受结构性变更。",
+            "seek": 1259
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "Besu（Karim）",
+            "text": "回退针对 Prysm FCU 行为的 Besu 修复；如果问题持续，再重新调查。",
+            "seek": 483
+          },
+          {
+            "owner": "EL 团队（Spencer、Mario）",
+            "text": "在 EL 专题分会解决剩余 EL 规范变更（EIP-2780 floor gas 输入、EIP-8037、EIP-8282）；在周三前发布更新后的 execution-specs。",
+            "seek": 1307
+          }
+        ]
+      },
+      {
+        "title": "目标日期",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "Glamsterdam DevNet 7 启动",
+            "date": "2026 年 7 月 9 日（周三）",
+            "seek": 1114
+          },
+          {
+            "text": "SSZ Engine API 专题会议",
+            "date": "本周五",
+            "seek": 1515
+          }
+        ]
+      }
+    ]
+  }
+}

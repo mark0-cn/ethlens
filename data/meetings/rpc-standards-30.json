@@ -1,0 +1,104 @@
+{
+  "slug": "rpc-standards-30",
+  "series": "RPC",
+  "number": 30,
+  "title": "RPC Standards #30",
+  "subtitle": "RPC 标准专题会议",
+  "kicker": "RPC STANDARDS",
+  "date": "2026-07-13",
+  "dateLabel": "2026 年 7 月 13 日",
+  "topic": "RPC 标准进展",
+  "translationStatus": "reviewed",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/rpc-standards-030-july-13-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/rpc-standards-030-july-13-2026_en.srt",
+    "zh": "../../media/subtitles/zh/rpc-standards-030-july-13-2026_zh.srt"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 4,
+      "decisions": 2,
+      "actionItems": 2
+    },
+    "sections": [
+      {
+        "title": "调试执行见证",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "调试执行见证规范中的 keys 字段保留为可选字段，使 ZK 证明器能够在 guest 侧优化，同时不强制客户端保留原像。",
+            "seek": 407
+          }
+        ]
+      },
+      {
+        "title": "发布流程",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "当前版本为 1.0 beta 7；还有 3 个待处理 PR，需要 Felix 合并后才能发布新版本；Kira 拥有发布权限。",
+            "seek": 902
+          }
+        ]
+      },
+      {
+        "title": "组织事项",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Felix 因参加线下活动缺席；议程中的 3 个 PR 和错误码讨论需等待他返回，因此暂时受阻。",
+            "seek": 606
+          },
+          {
+            "text": "Geth 测试失败需要将 Hive 链升级到 Osaka；已有草稿 PR，等待 Felix 审核。",
+            "seek": 682
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "调试执行见证规范中的 keys 字段保留为可选字段，不予删除。",
+            "seek": 447
+          },
+          {
+            "text": "待 3 个未合并 PR 合入后，继续推进 1.0 版本发布。",
+            "seek": 923
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "Tullio（Erigon）",
+            "text": "在调试见证议题中留言，主张将 keys 字段保留为可选。",
+            "seek": 458
+          },
+          {
+            "owner": "Chase Wright",
+            "text": "更新调试执行见证规范，将 keys 字段改为可选。",
+            "seek": 560
+          }
+        ]
+      }
+    ]
+  }
+}

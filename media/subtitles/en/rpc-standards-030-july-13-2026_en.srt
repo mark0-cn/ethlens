@@ -1,0 +1,948 @@
+1
+00:01:59,760 --> 00:02:01,880
+Mhm.
+
+2
+00:06:00,880 --> 00:06:06,280
+>> So, I don't I don't know if Bulma or
+
+3
+00:06:03,640 --> 00:06:08,080
+Felix are going to be joining.
+
+4
+00:06:06,280 --> 00:06:11,080
+Um
+
+5
+00:06:08,080 --> 00:06:15,560
+there's like
+
+6
+00:06:11,080 --> 00:06:20,880
+three items on the agenda and three
+
+7
+00:06:15,560 --> 00:06:23,200
+PRs that would need Felix to merge.
+
+8
+00:06:20,880 --> 00:06:26,960
+Um
+
+9
+00:06:23,200 --> 00:06:28,680
+but if he's not here, then
+
+10
+00:06:26,960 --> 00:06:29,919
+I don't know.
+
+11
+00:06:28,680 --> 00:06:32,000
+Uh
+
+12
+00:06:29,919 --> 00:06:34,040
+does anyone have anything that's
+
+13
+00:06:32,000 --> 00:06:35,320
+not on the agenda or want to talk about
+
+14
+00:06:34,040 --> 00:06:38,640
+one of these
+
+15
+00:06:35,320 --> 00:06:38,640
+three discussion items?
+
+16
+00:06:41,720 --> 00:06:45,560
+>> Okay, yeah. I can say something about
+
+17
+00:06:44,400 --> 00:06:47,360
+the
+
+18
+00:06:45,560 --> 00:06:50,480
+the bug witness
+
+19
+00:06:47,360 --> 00:06:51,160
+uh draft spec that you've seen.
+
+20
+00:06:50,480 --> 00:06:52,400
+>> Yes.
+
+21
+00:06:51,160 --> 00:06:53,680
+>> Yeah,
+
+22
+00:06:52,400 --> 00:06:56,280
+uh
+
+23
+00:06:53,680 --> 00:06:58,440
+I'm going to advocate for
+
+24
+00:06:56,280 --> 00:07:00,360
+keeping the
+
+25
+00:06:58,440 --> 00:07:03,000
+the keys field.
+
+26
+00:07:00,360 --> 00:07:06,160
+Uh I mean, not dropping it entirely, at
+
+27
+00:07:03,000 --> 00:07:10,280
+least keeping it as optional
+
+28
+00:07:06,160 --> 00:07:12,280
+because uh it gives a chance
+
+29
+00:07:10,280 --> 00:07:13,480
+to the provers
+
+30
+00:07:12,280 --> 00:07:16,600
+to
+
+31
+00:07:13,480 --> 00:07:18,960
+optimize uh
+
+32
+00:07:16,600 --> 00:07:22,040
+even more on the guest side.
+
+33
+00:07:18,960 --> 00:07:25,200
+And so, yeah. Uh I would
+
+34
+00:07:22,040 --> 00:07:27,919
+like to to have it at least as an
+
+35
+00:07:25,200 --> 00:07:30,840
+optional field.
+
+36
+00:07:27,919 --> 00:07:32,960
+>> Okay. So, okay, keep keep keys field
+
+37
+00:07:30,840 --> 00:07:35,640
+optional. All right.
+
+38
+00:07:32,960 --> 00:07:36,880
+>> Okay, yeah. I can write a comment on the
+
+39
+00:07:35,640 --> 00:07:38,040
+issue as well
+
+40
+00:07:36,880 --> 00:07:39,680
+if you prefer.
+
+41
+00:07:38,040 --> 00:07:41,960
+>> Yeah, yeah, sure. I'm going to be
+
+42
+00:07:39,680 --> 00:07:43,960
+completely honest. I don't I don't
+
+43
+00:07:41,960 --> 00:07:46,080
+really have strong opinions either way
+
+44
+00:07:43,960 --> 00:07:50,080
+because I'm not involved in the ZK
+
+45
+00:07:46,080 --> 00:07:53,080
+stuff, but I mean it makes sense to me.
+
+46
+00:07:50,080 --> 00:07:54,840
+>> Yeah, yeah. And because otherwise you
+
+47
+00:07:53,080 --> 00:07:57,400
+you must access
+
+48
+00:07:54,840 --> 00:07:58,120
+the the pre-state by
+
+49
+00:07:57,400 --> 00:08:00,760
+uh
+
+50
+00:07:58,120 --> 00:08:04,760
+hashing the
+
+51
+00:08:00,760 --> 00:08:09,160
+the plain key and and it
+
+52
+00:08:04,760 --> 00:08:11,240
+must happen on the ZK VM side, so it
+
+53
+00:08:09,160 --> 00:08:11,800
+basically costs
+
+54
+00:08:11,240 --> 00:08:16,720
+uh [sighs]
+
+55
+00:08:11,800 --> 00:08:20,600
+cycles on the ZK VM, whilst you can
+
+56
+00:08:16,720 --> 00:08:21,800
+avoid this if you pass to the guest
+
+57
+00:08:20,600 --> 00:08:22,360
+the
+
+58
+00:08:21,800 --> 00:08:25,400
+uh
+
+59
+00:08:22,360 --> 00:08:26,880
+pre-ha- pre-images, basically. So, yeah.
+
+60
+00:08:25,400 --> 00:08:29,120
+I I wrote a
+
+61
+00:08:26,880 --> 00:08:29,480
+comment in the issue.
+
+62
+00:08:29,120 --> 00:08:31,760
+>> Okay.
+
+63
+00:08:29,480 --> 00:08:32,880
+>> But, of course, there are
+
+64
+00:08:31,760 --> 00:08:37,560
+then
+
+65
+00:08:32,880 --> 00:08:39,680
+uh I mean pros and cons because for the
+
+66
+00:08:37,560 --> 00:08:40,730
+on the client side, maybe some client it
+
+67
+00:08:39,680 --> 00:08:41,039
+doesn't
+
+68
+00:08:40,730 --> 00:08:44,880
+>> [sighs]
+
+69
+00:08:41,039 --> 00:08:46,120
+>> want to keep the pre-images, and so it's
+
+70
+00:08:44,880 --> 00:08:47,240
+a
+
+71
+00:08:46,120 --> 00:08:51,160
+uh
+
+72
+00:08:47,240 --> 00:08:53,400
+I mean, it's a balance, of course. It's
+
+73
+00:08:51,160 --> 00:08:55,839
+it's not straightforward, in my opinion.
+
+74
+00:08:53,400 --> 00:08:57,200
+>> Yeah, that makes sense. And I mean, if
+
+75
+00:08:55,839 --> 00:09:00,240
+it is uh
+
+76
+00:08:57,200 --> 00:09:02,240
+if it is a balancing act, then uh I
+
+77
+00:09:00,240 --> 00:09:03,640
+guess it would make sense to just have
+
+78
+00:09:02,240 --> 00:09:06,600
+it be optional, then. Yeah?
+
+79
+00:09:03,640 --> 00:09:09,600
+>> Yeah, exactly. Exactly. At least to not
+
+80
+00:09:06,600 --> 00:09:11,360
+not close the doors to guests to
+
+81
+00:09:09,600 --> 00:09:14,040
+optimize, but
+
+82
+00:09:11,360 --> 00:09:16,760
+at the same time not enforce the client
+
+83
+00:09:14,040 --> 00:09:18,600
+to keep the pre-images.
+
+84
+00:09:16,760 --> 00:09:20,920
+>> Okay. Yeah, that makes sense. If you if
+
+85
+00:09:18,600 --> 00:09:23,560
+you can leave a comment on it, then I'll
+
+86
+00:09:20,920 --> 00:09:24,880
+I'll update the the spec to reflect
+
+87
+00:09:23,560 --> 00:09:26,800
+that.
+
+88
+00:09:24,880 --> 00:09:27,320
+I mean, it's all in draft anyway, so
+
+89
+00:09:26,800 --> 00:09:29,440
+it's fine.
+
+90
+00:09:27,320 --> 00:09:32,400
+>> Okay, I'll do. Thanks.
+
+91
+00:09:29,440 --> 00:09:34,880
+>> Yeah, sounds good.
+
+92
+00:09:32,400 --> 00:09:34,880
+Hi, Bolu.
+
+93
+00:09:35,000 --> 00:09:41,600
+>> Sorry I joined late.
+
+94
+00:09:38,280 --> 00:09:43,160
+My internet went down for a while.
+
+95
+00:09:41,600 --> 00:09:45,760
+>> That's all right.
+
+96
+00:09:43,160 --> 00:09:45,760
+So,
+
+97
+00:09:45,920 --> 00:09:50,200
+the we were talking about the debug
+
+98
+00:09:48,120 --> 00:09:53,160
+execution witness. It seems there's
+
+99
+00:09:50,200 --> 00:09:55,840
+desire for the keys field to remain and
+
+100
+00:09:53,160 --> 00:09:57,880
+and become an optional field.
+
+101
+00:09:55,840 --> 00:10:01,120
+Um so,
+
+102
+00:09:57,880 --> 00:10:02,960
+Julia's going to um
+
+103
+00:10:01,120 --> 00:10:05,881
+add a comment to that and then I'll I'll
+
+104
+00:10:02,960 --> 00:10:06,560
+update the spec for that.
+
+105
+00:10:05,881 --> 00:10:09,640
+>> [clears throat]
+
+106
+00:10:06,560 --> 00:10:13,240
+>> Unfortunately, Felix is not here. I
+
+107
+00:10:09,640 --> 00:10:14,560
+think he is busy at an offsite or
+
+108
+00:10:13,240 --> 00:10:17,120
+something.
+
+109
+00:10:14,560 --> 00:10:19,080
+Um so, I don't think we can make too
+
+110
+00:10:17,120 --> 00:10:20,440
+much progress on getting things merged,
+
+111
+00:10:19,080 --> 00:10:24,080
+but I can
+
+112
+00:10:20,440 --> 00:10:26,560
+ping him offline and and see if he'll
+
+113
+00:10:24,080 --> 00:10:28,200
+he'll do it when he has a chance.
+
+114
+00:10:26,560 --> 00:10:30,040
+Um
+
+115
+00:10:28,200 --> 00:10:32,920
+And I don't I don't know if we have
+
+116
+00:10:30,040 --> 00:10:34,480
+anything else
+
+117
+00:10:32,920 --> 00:10:37,720
+uh
+
+118
+00:10:34,480 --> 00:10:37,720
+truly discuss.
+
+119
+00:10:37,880 --> 00:10:43,600
+>> Um just we only just have few um items
+
+120
+00:10:41,680 --> 00:10:45,320
+on the agenda also.
+
+121
+00:10:43,600 --> 00:10:47,640
+>> Yeah.
+
+122
+00:10:45,320 --> 00:10:49,120
+>> Uh they actually like me to Felix to
+
+123
+00:10:47,640 --> 00:10:51,640
+look at them.
+
+124
+00:10:49,120 --> 00:10:51,640
+>> Yeah.
+
+125
+00:10:54,920 --> 00:10:59,560
+I mean,
+
+126
+00:10:55,960 --> 00:11:02,440
+they're almost all my my stuff anyways.
+
+127
+00:10:59,560 --> 00:11:04,000
+Okay, but Felix.
+
+128
+00:11:02,440 --> 00:11:05,720
+Um
+
+129
+00:11:04,000 --> 00:11:08,800
+cuz yeah, I mean, we we agreed on the
+
+130
+00:11:05,720 --> 00:11:10,960
+previous call the PRs to merge like we
+
+131
+00:11:08,800 --> 00:11:13,600
+agreed on the previous call that they
+
+132
+00:11:10,960 --> 00:11:16,080
+could be merged. So,
+
+133
+00:11:13,600 --> 00:11:17,160
+I don't think we need to rediscuss it.
+
+134
+00:11:16,080 --> 00:11:21,400
+Uh
+
+135
+00:11:17,160 --> 00:11:22,680
+And then the only other thing is
+
+136
+00:11:21,400 --> 00:11:25,760
+uh
+
+137
+00:11:22,680 --> 00:11:29,320
+test are failing. One test is failing
+
+138
+00:11:25,760 --> 00:11:32,240
+for geth because of a geth change.
+
+139
+00:11:29,320 --> 00:11:35,840
+And that change requires hive chain to
+
+140
+00:11:32,240 --> 00:11:40,160
+be upgraded to Osaka.
+
+141
+00:11:35,840 --> 00:11:45,720
+And I have a poorly vibe coded PR into
+
+142
+00:11:40,160 --> 00:11:47,280
+Hive to bump the chain up to Osaka.
+
+143
+00:11:45,720 --> 00:11:49,640
+Um
+
+144
+00:11:47,280 --> 00:11:51,800
+and there's really not much to talk
+
+145
+00:11:49,640 --> 00:11:54,360
+about there unless someone is more
+
+146
+00:11:51,800 --> 00:11:56,440
+familiar with
+
+147
+00:11:54,360 --> 00:11:59,600
+that task of upgrading the Hive chain
+
+148
+00:11:56,440 --> 00:12:00,160
+than I am, which is probably Felix.
+
+149
+00:11:59,600 --> 00:12:03,760
+Uh
+
+150
+00:12:00,160 --> 00:12:03,760
+so, I got to bug him.
+
+151
+00:12:07,760 --> 00:12:12,400
+I don't know if there's much else to
+
+152
+00:12:09,680 --> 00:12:12,400
+talk about.
+
+153
+00:12:14,240 --> 00:12:19,320
+>> So, I don't really think there is
+
+154
+00:12:15,720 --> 00:12:21,680
+anything much to talk about apart from
+
+155
+00:12:19,320 --> 00:12:24,520
+this PR that needs to be merged and then
+
+156
+00:12:21,680 --> 00:12:30,080
+the ones that need to be reviewed.
+
+157
+00:12:24,520 --> 00:12:30,080
+Which Felix has um should do.
+
+158
+00:12:32,400 --> 00:12:36,040
+Apart from that, nothing else.
+
+159
+00:12:36,400 --> 00:12:40,960
+>> Yeah, I really want to get the testing
+
+160
+00:12:39,000 --> 00:12:43,560
+commit block stuff pushed because that
+
+161
+00:12:40,960 --> 00:12:45,200
+will fix some other errors in Nether
+
+162
+00:12:43,560 --> 00:12:48,680
+minds
+
+163
+00:12:45,200 --> 00:12:49,920
+because of the gas limit issue.
+
+164
+00:12:48,680 --> 00:12:50,560
+Um
+
+165
+00:12:49,920 --> 00:12:52,880
+so, I just really
+
+166
+00:12:50,560 --> 00:12:55,520
+>> What What What about light clients? I
+
+167
+00:12:52,880 --> 00:12:58,600
+think he has
+
+168
+00:12:55,520 --> 00:13:01,240
+the set of merging rights to this.
+
+169
+00:12:58,600 --> 00:13:05,080
+>> Uh yeah, he might. I can
+
+170
+00:13:01,240 --> 00:13:05,080
+I can ping him. I don't know.
+
+171
+00:13:05,880 --> 00:13:12,440
+E- Either way, it'll be all right.
+
+172
+00:13:09,280 --> 00:13:12,440
+I got to get these merged.
+
+173
+00:13:29,280 --> 00:13:33,160
+I mean unless unless anybody has
+
+174
+00:13:30,960 --> 00:13:35,600
+anything else I don't
+
+175
+00:13:33,160 --> 00:13:39,400
+to talk about or like we can
+
+176
+00:13:35,600 --> 00:13:39,400
+we can call this meeting short.
+
+177
+00:13:45,280 --> 00:13:48,320
+>> Nothing for me.
+
+178
+00:13:50,960 --> 00:13:53,960
+>> Is there
+
+179
+00:13:51,320 --> 00:13:56,360
+>> What about the the the error code um
+
+180
+00:13:53,960 --> 00:14:03,480
+discussion?
+
+181
+00:13:56,360 --> 00:14:05,760
+>> Yeah, I I I don't know. Um Cena is
+
+182
+00:14:03,480 --> 00:14:08,320
+I don't know if Cena is working on that
+
+183
+00:14:05,760 --> 00:14:10,600
+particular aspect right now.
+
+184
+00:14:08,320 --> 00:14:10,600
+Um
+
+185
+00:14:10,640 --> 00:14:13,720
+So that's another
+
+186
+00:14:12,160 --> 00:14:16,640
+conversation.
+
+187
+00:14:13,720 --> 00:14:19,160
+>> The last update from
+
+188
+00:14:16,640 --> 00:14:22,000
+uh Felix was that he's working with Cena
+
+189
+00:14:19,160 --> 00:14:24,240
+on that and um they would get back after
+
+190
+00:14:22,000 --> 00:14:28,600
+more discussions.
+
+191
+00:14:24,240 --> 00:14:28,600
+And we need uh Felix and Cena here.
+
+192
+00:14:28,880 --> 00:14:30,960
+>> Yeah.
+
+193
+00:14:29,839 --> 00:14:33,880
+Uh
+
+194
+00:14:30,960 --> 00:14:33,880
+>> Okay, thank you.
+
+195
+00:14:37,600 --> 00:14:43,040
+>> Is uh what about the the release
+
+196
+00:14:40,520 --> 00:14:45,440
+pipeline stuff? Does anyone have any
+
+197
+00:14:43,040 --> 00:14:47,160
+updates on that?
+
+198
+00:14:45,440 --> 00:14:48,720
+>> I think it should be
+
+199
+00:14:47,160 --> 00:14:50,560
+um clear.
+
+200
+00:14:48,720 --> 00:14:51,640
+I think.
+
+201
+00:14:50,560 --> 00:14:53,640
+>> Yeah.
+
+202
+00:14:51,640 --> 00:14:55,680
+>> We talked about doing one release like
+
+203
+00:14:53,640 --> 00:14:56,880
+one official one.
+
+204
+00:14:55,680 --> 00:15:00,480
+So.
+
+205
+00:14:56,880 --> 00:15:03,560
+>> Yeah, I mean we're on 1.0 beta 7. I'm
+
+206
+00:15:00,480 --> 00:15:07,200
+just not entirely sure
+
+207
+00:15:03,560 --> 00:15:07,200
+what's left.
+
+208
+00:15:07,280 --> 00:15:12,760
+>> Yeah, that was a comment you made on oh
+
+209
+00:15:09,880 --> 00:15:14,920
+during that call. You wanted one PR to
+
+210
+00:15:12,760 --> 00:15:16,520
+go in or something.
+
+211
+00:15:14,920 --> 00:15:19,000
+I can't recall the exact PR but there
+
+212
+00:15:16,520 --> 00:15:21,600
+was a PR you made and you wanted it to
+
+213
+00:15:19,000 --> 00:15:23,320
+go in then we can now cut
+
+214
+00:15:21,600 --> 00:15:27,040
+a release
+
+215
+00:15:23,320 --> 00:15:28,480
+with that PR in. So, I'm not
+
+216
+00:15:27,040 --> 00:15:29,160
+I need to like go back and figure it
+
+217
+00:15:28,480 --> 00:15:30,600
+out.
+
+218
+00:15:29,160 --> 00:15:32,400
+>> That might make sense. So, if we can get
+
+219
+00:15:30,600 --> 00:15:34,640
+these three PRs merged, maybe we just
+
+220
+00:15:32,400 --> 00:15:37,160
+move forward with the release.
+
+221
+00:15:34,640 --> 00:15:37,160
+>> Okay.
+
+222
+00:15:37,240 --> 00:15:43,200
+I think maybe you can ping Kira for
+
+223
+00:15:39,440 --> 00:15:46,480
+that. She should have
+
+224
+00:15:43,200 --> 00:15:46,480
+the rights to do that.
+
+225
+00:15:47,000 --> 00:15:50,200
+>> Yeah. All right.
+
+226
+00:15:52,120 --> 00:15:56,160
+>> Um I think that's all. We don't have any
+
+227
+00:15:54,680 --> 00:15:58,040
+other thing unless someone else has
+
+228
+00:15:56,160 --> 00:16:00,760
+something else to discuss. Then we can
+
+229
+00:15:58,040 --> 00:16:00,760
+call it a day.
+
+230
+00:16:09,680 --> 00:16:12,880
+>> Silence is golden.
+
+231
+00:16:19,280 --> 00:16:23,760
+>> Okay. I guess that's it.
+
+232
+00:16:22,000 --> 00:16:25,440
+Thank you everyone for joining. Sorry
+
+233
+00:16:23,760 --> 00:16:27,400
+for joining late.
+
+234
+00:16:25,440 --> 00:16:27,960
+>> All right. Bye everyone. You too.
+
+235
+00:16:27,400 --> 00:16:29,280
+>> Bye guys.
+
+236
+00:16:27,960 --> 00:16:31,720
+>> Bye everyone.
+
+237
+00:16:29,280 --> 00:16:31,720
+>> Bye-bye.
+

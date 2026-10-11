@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ethereum 协议会议中英对照阅读器" />
+    <title>EthLens · 会议详情</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body data-page="detail">
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="EthLens 首页">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="brand-name">EthLens</span>
+          <span class="brand-context">协议会议</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="主要导航">
+          <a class="nav-link active" href="/">会议</a>
+          <a class="nav-link" href="https://eips.ethereum.org/" target="_blank" rel="noreferrer">EIP</a>
+        </nav>
+
+        <div class="header-actions">
+          <span class="translation-health">
+            <span class="health-dot" aria-hidden="true"></span>
+            <span id="translation-health-label">译文已校对</span>
+          </span>
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="切换浅色模式" title="切换主题">
+            <i data-lucide="sun" aria-hidden="true"></i>
+          </button>
+          <button class="icon-button mobile-menu-button" id="mobile-menu" type="button" aria-label="打开导航" title="导航">
+            <i data-lucide="menu" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="meeting">
+      <section class="meeting-heading" aria-labelledby="meeting-title">
+        <div class="meeting-heading-main">
+          <a class="back-link" href="/">
+            <i data-lucide="arrow-left" aria-hidden="true"></i>
+            所有会议
+          </a>
+          <div class="meeting-kicker" id="meeting-kicker">ALL CORE DEVS · EXECUTION</div>
+          <h1 id="meeting-title">会议详情</h1>
+          <p class="meeting-subtitle" id="meeting-subtitle">正在读取会议资料</p>
+        </div>
+
+        <div class="meeting-meta" aria-label="会议信息">
+          <span><i data-lucide="calendar-days" aria-hidden="true"></i><span id="meeting-date">--</span></span>
+          <span><i data-lucide="radio" aria-hidden="true"></i>录播</span>
+          <a id="meeting-agenda" href="#" target="_blank" rel="noreferrer" hidden>
+            <i data-lucide="pin" aria-hidden="true"></i>议程
+          </a>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="会议视频与字幕">
+        <article class="video-panel">
+          <div class="video-stage">
+            <video id="meeting-video" controls playsinline preload="metadata" aria-label="会议本地视频播放器"></video>
+            <iframe id="meeting-frame" title="B 站会议视频播放器" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen hidden></iframe>
+            <div class="video-loading" id="video-loading">
+              <span class="loader" aria-hidden="true"></span>
+              正在读取会议视频
+            </div>
+            <div class="video-error" id="video-error" hidden>
+              <i data-lucide="file-warning" aria-hidden="true"></i>
+              <div>
+                <strong id="video-error-title">视频读取失败</strong>
+                <span id="video-error-message">请切换视频源或确认资源仍然可用。</span>
+                <a id="video-open-external" href="#" target="_blank" rel="noreferrer" hidden>在 B 站打开</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-footer">
+            <div>
+              <span class="section-label">当前议题</span>
+              <strong id="current-topic">--</strong>
+            </div>
+            <div class="video-footer-actions">
+              <div class="video-source-control" id="video-source-control" role="group" aria-label="视频源" hidden></div>
+              <div class="video-time">
+                <span id="display-time">00:00:00</span>
+                <span class="time-divider">/</span>
+                <span id="video-duration">--:--</span>
+              </div>
+            </div>
+          </div>
+          <div class="video-sync-status" id="video-sync-status" role="status" hidden></div>
+        </article>
+
+        <aside class="transcript-panel" aria-labelledby="transcript-title">
+          <div class="transcript-header">
+            <div>
+              <span class="section-label">同步阅读</span>
+              <h2 id="transcript-title">Transcript</h2>
+            </div>
+
+            <div class="language-segment" role="group" aria-label="字幕显示语言">
+              <button type="button" data-language="bilingual" class="active" aria-pressed="true">中英</button>
+              <button type="button" data-language="zh" aria-pressed="false">中文</button>
+              <button type="button" data-language="en" aria-pressed="false">EN</button>
+            </div>
+          </div>
+
+          <div class="transcript-tools">
+            <label class="search-field" for="transcript-search">
+              <i data-lucide="search" aria-hidden="true"></i>
+              <input id="transcript-search" type="search" autocomplete="off" placeholder="搜索发言、EIP 或术语" />
+              <span class="search-count" id="search-count" aria-live="polite"></span>
+            </label>
+
+            <label class="follow-control">
+              <input id="follow-playback" type="checkbox" checked />
+              <span class="switch-track" aria-hidden="true"><span></span></span>
+              跟随播放
+            </label>
+          </div>
+
+          <div class="transcript-list" id="transcript-list" tabindex="0" aria-label="中英对照字幕"></div>
+
+          <button class="return-live" id="return-live" type="button" hidden>
+            <i data-lucide="locate-fixed" aria-hidden="true"></i>
+            回到当前字幕
+          </button>
+        </aside>
+      </section>
+
+      <section class="meeting-summary" id="meeting-summary" aria-labelledby="summary-title" hidden>
+        <button class="summary-toggle" id="summary-toggle" type="button" aria-expanded="false" aria-controls="summary-content">
+          <span class="summary-heading">
+            <span class="summary-title" id="summary-title">Summary</span>
+            <span class="summary-stats" id="summary-stats"></span>
+            <span class="summary-badge" id="summary-badge" hidden></span>
+          </span>
+          <i class="summary-chevron" data-lucide="chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="summary-content" id="summary-content" hidden></div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="/assets/js/meeting.js"></script>
+  </body>
+</html>

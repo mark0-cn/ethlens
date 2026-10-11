@@ -1,0 +1,166 @@
+{
+  "slug": "pq-interop-46",
+  "series": "PQ",
+  "number": 46,
+  "title": "PQ Interop #46",
+  "subtitle": "后量子互操作专题会议",
+  "kicker": "PQ INTEROP",
+  "date": "2026-07-01",
+  "dateLabel": "2026 年 7 月 1 日",
+  "topic": "后量子互操作进展",
+  "translationStatus": "reviewed",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/pq-interop-046-july-01-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/pq-interop-046-july-01-2026_en.srt",
+    "zh": "../../media/subtitles/zh/pq-interop-046-july-01-2026_zh.srt"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 13,
+      "decisions": 2,
+      "actionItems": 2
+    },
+    "sections": [
+      {
+        "title": "DevNet 状态",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "6 客户端公共 DevNet（32 个节点，运行 12 小时）实现了稳定 justification；由于各客户端递归聚合策略不同，最终性中断最长达 45 分钟。",
+            "seek": 2950
+          },
+          {
+            "text": "由 12 个 Ethlambda 和 12 个 Ream 组成的 24 验证者 DevNet 最终确定至 90,000 个 slot；观察到约 30 个 slot 的最终性延迟。",
+            "seek": 1607
+          },
+          {
+            "text": "已发现 Ream ARM 兼容性问题以及 Zeam/Lantern 的 Ziglip P2P 互操作 bug；修复已应用，DevNet 正在重启。",
+            "seek": 2995
+          }
+        ]
+      },
+      {
+        "title": "聚合提案",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Zeam 提议两级聚合：Level 1 仅聚合原始 XMSS（用于 safe-target 计算）；Level 2 辅助 proposer；从提案流水线中移除 Type 1 递归聚合。",
+            "seek": 1070
+          },
+          {
+            "text": "Zeam 提案将 slot interval 从 5 个增加到 8 个（每个 0.8 秒，共 6.4 秒）；其中 4 个 interval 留给区块构建和 Type 2 聚合。",
+            "seek": 1290
+          },
+          {
+            "text": "Ethlambda 文档：前两项优化仅涉及客户端；第三项会改变 SignedBlock 格式，如采用则需要更新规范；在 3 个 attestation 下实现了 200 毫秒发布。",
+            "seek": 2836
+          }
+        ]
+      },
+      {
+        "title": "快速最终性",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Anshal 提议隐式投票传播：为区块 B 投票的验证者也隐式为祖先 A 投票；修改 process_attestations，将票计入祖先 target，以减少最终性中断。",
+            "seek": 2141
+          },
+          {
+            "text": "内存权衡：累积隐式投票随可 justification 的 slot 数（上界约为 O(sqrt)）乘以验证者数量增长；还需评估对区块大小的影响。",
+            "seek": 2268
+          }
+        ]
+      },
+      {
+        "title": "密码学：二进制域",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "新论文“Flock”（Starkware 与 Benedict Bunz/Espresso）：二进制域证明系统可证明约 600 次 Blake3 哈希/秒，较 Poseidon 慢约 2 倍；可能成为完全替代 Poseidon 的候选方案。",
+            "seek": 2587
+          },
+          {
+            "text": "Thomas 正在 Binius64 仓库研究 XMSS 电路吞吐量；Emil 正在开发 LeanVM-b（使用二进制域和 Blake3 的 LeanVM）。",
+            "seek": 2698
+          }
+        ]
+      },
+      {
+        "title": "客户端更新",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Lantern：提前构建区块的优化（在前一个 slot 的最后一个 interval 构建）已加入公共镜像；shadow simulator 镜像与 Camille 的 Lean shadow fuzzer 兼容。",
+            "seek": 1675
+          },
+          {
+            "text": "Ethlambda：重做历史剪枝（state diff，加上每 1,000 个区块生成 snapshot）；P2P 已移植到 Rust；关闭提案证明计算以降低延迟。",
+            "seek": 1741
+          },
+          {
+            "text": "Gean：修复可配置 attestation committee 数量导致的拒绝 bug；规范已同步到 Lean 规范 head，包括 attestation source 和投票过滤变更。",
+            "seek": 1833
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "规范保持稳定，不加入新功能；仅进行 bug 修复和性能改进，为 DevNet 5 做准备。",
+            "seek": 2463
+          },
+          {
+            "text": "继续运行长期多客户端 DevNet（目标持续一周以上），并在未来几周测试 Zeam 和 Ethlambda 聚合优化。",
+            "seek": 3037
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "Eric（kolby 的团队）",
+            "text": "调查并更新 Hive；当前因规范版本过旧而失败。",
+            "seek": 3083
+          },
+          {
+            "owner": "Ream 团队",
+            "text": "确认是否有可供多客户端 DevNet 使用的官方 Ream ARM 兼容镜像。",
+            "seek": 3010
+          }
+        ]
+      },
+      {
+        "title": "目标日期",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "Zeam：使用 16 至 32 节点网络和 Camille 可视化工具进行 shadow sim 分析，并在下次会议展示",
+            "seek": 1573
+          },
+          {
+            "text": "Zeam 两级聚合提案：在下次会议前完成测试并分享结果",
+            "seek": 2819
+          }
+        ]
+      }
+    ]
+  }
+}

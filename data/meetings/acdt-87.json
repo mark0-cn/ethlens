@@ -1,0 +1,156 @@
+{
+  "slug": "acdt-87",
+  "series": "ACDT",
+  "number": 87,
+  "title": "All Core Devs Testing #87",
+  "subtitle": "测试层核心开发者会议",
+  "kicker": "ALL CORE DEVS · TESTING",
+  "date": "2026-07-13",
+  "dateLabel": "2026 年 7 月 13 日",
+  "topic": "客户端测试与协议验证",
+  "translationStatus": "reviewed",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/all-core-devs-testing-087-july-13-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/all-core-devs-testing-087-july-13-2026_en.srt",
+    "zh": "../../media/subtitles/zh/all-core-devs-testing-087-july-13-2026_zh.srt"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 11,
+      "decisions": 3,
+      "actionItems": 1
+    },
+    "sections": [
+      {
+        "title": "分叉状态与时间表",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Glamsterdam DevNet 6 正在运行，整体参与率约为 80% 以上。",
+            "seek": 537
+          },
+          {
+            "text": "Lodestar/Erigon 和 Lodestar/Besu 节点在分叉后卡住；Lodestar/Besu 重启后已恢复。",
+            "seek": 587
+          },
+          {
+            "text": "DevNet 7 即将启动，时间为会议结束后或当天结束前；网络包含 50 万个已退出验证者、0x02 凭证，并手动部署 EIP-8282 合约。",
+            "seek": 937
+          },
+          {
+            "text": "经共识同意，DevNet 7 的 gas limit 从 200M 提高到 300M。",
+            "seek": 964
+          }
+        ]
+      },
+      {
+        "title": "测试进展",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "EL 测试（7.2 版）：Nethermind、Geth 和 ethrex 已通过大部分测试；Besu 约有 40 项失败（与重定价有关）；Reth 分支预计次日上午准备好。",
+            "seek": 704
+          },
+          {
+            "text": "Geth 的 41 项 consume/engine 测试失败源于错误消息不匹配，并非真实功能失败。",
+            "seek": 847
+          },
+          {
+            "text": "CL 测试（alpha.12）：Nimbus、Lodestar、Prysm 和 Lighthouse 均已通过；Grandine 状态未知。",
+            "seek": 879
+          }
+        ]
+      },
+      {
+        "title": "EL 专题会：EIP-8037 修复",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "EIP-8037 存在缺陷：floor cost 只在交易层应用、未在区块层应用，因此可构造出大小最高约为预期上限 8 倍的区块。",
+            "seek": 1427
+          },
+          {
+            "text": "修复已合入规范 7.2 版并纳入 DevNet 7；仅影响 2 至 3 项测试。",
+            "seek": 1501
+          }
+        ]
+      },
+      {
+        "title": "EL 专题会：EIP 清理",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "提议将 EIP-8037 中的“regular gas”改名为“execution gas”，以便向前兼容；仅修改规范文本，不改变共识。",
+            "seek": 1787
+          },
+          {
+            "text": "提议合并 EIP-8037 的日志成本：移除单独的日志传输成本，将其并入基础成本和带值传输成本；净值不变，目标为 DevNet 8。",
+            "seek": 1942
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "DevNet 7 的 gas limit 设为 300M。",
+            "seek": 1117
+          },
+          {
+            "text": "EIP-8037 的区块层 floor-cost 修复纳入 DevNet 7；该修复已包含在规范 7.2 版中。",
+            "seek": 1501,
+            "link": {
+              "label": "EIP-8037",
+              "href": "https://eips.ethereum.org/EIPS/eip-8037"
+            }
+          },
+          {
+            "text": "EIP 术语清理（execution gas 改名、日志成本合并）将在 DevNet 8 推进；不改变共识规则（EIP-8037）。",
+            "seek": 2053,
+            "link": {
+              "label": "EIP-8037",
+              "href": "https://eips.ethereum.org/EIPS/eip-8037"
+            }
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "Maria Silva",
+            "text": "为 DevNet 8 起草 EIP 清理 PR，包括 execution gas 改名和日志成本合并。",
+            "seek": 1787
+          }
+        ]
+      },
+      {
+        "title": "目标日期",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "DevNet 7 启动",
+            "date": "2026 年 7 月 13 日当天结束前或 7 月 14 日上午",
+            "seek": 947
+          }
+        ]
+      }
+    ]
+  }
+}

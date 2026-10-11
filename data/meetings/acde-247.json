@@ -1,0 +1,239 @@
+{
+  "slug": "acde-247",
+  "series": "ACDE",
+  "number": 247,
+  "title": "All Core Devs Execution #247",
+  "subtitle": "执行层核心开发者会议",
+  "kicker": "ALL CORE DEVS · EXECUTION",
+  "date": "2026-10-08",
+  "dateLabel": "2026 年 10 月 8 日",
+  "agendaUrl": "https://github.com/ethereum/pm/issues/2234",
+  "topic": "Glamsterdam 测试网升级与 Hegotá 范围界定",
+  "translationStatus": "reviewed",
+  "source": {
+    "forkcastUrl": "https://forkcast.org/calls/acde/247/",
+    "sync": {
+      "transcriptStartTime": "00:17:08",
+      "videoStartTime": "00:02:32"
+    },
+    "youtubeUrl": "https://www.youtube.com/watch?v=0ZGRqRYac1k"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 17,
+      "decisions": 5,
+      "actionItems": 2
+    },
+    "sourceUrl": "https://forkcast.org/calls/acde/247/",
+    "transcriptToVideoOffsetSeconds": -876,
+    "sections": [
+      {
+        "title": "分叉状态与时间表",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Glamsterdam 已在 Sepolia 成功分叉，过程平稳；分叉后 gas 上限提升至 2 亿。",
+            "seek": 168,
+            "sourceTimestamp": "00:17:24"
+          },
+          {
+            "text": "Sepolia 的 ePBS 构建者参与度低：仅有 4–5 个活跃构建者（Titan、Nico，其他尚未确定），大型参与者尚未加入。",
+            "seek": 250,
+            "sourceTimestamp": "00:18:46"
+          },
+          {
+            "text": "Hoodi 分叉定于 10 月 26 日周一 UTC 17:42；客户端需在 10 月 16 日前发布版本，提前十天通知运营者。",
+            "seek": 428,
+            "sourceTimestamp": "00:21:44"
+          },
+          {
+            "text": "已确认 Hoodi 和主网的 gas 上限调整都在分叉 epoch 生效。",
+            "seek": 937,
+            "sourceTimestamp": "00:30:13"
+          },
+          {
+            "text": "主网影子分叉意外激活了 Gloas，现用于大区块和大型 BAL 测试；基准测试影子分叉将在下周重新启动。",
+            "seek": 962,
+            "sourceTimestamp": "00:30:38"
+          }
+        ]
+      },
+      {
+        "title": "Hegotá EIP 提案",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Ben Adams 提议将 EIP-7907（合约大小计费）列入 PFI；EIP-7954 增大合约上限但未加入计费，带来了 DoS 风险，决定推迟至下次会议。",
+            "seek": 2665,
+            "sourceTimestamp": "00:59:01"
+          },
+          {
+            "text": "EIP-5920（PAY 操作码）转为 CFI，复杂度中等，获得广泛支持。",
+            "seek": 2904,
+            "sourceTimestamp": "01:03:00"
+          },
+          {
+            "text": "EIP-8151（根据账户代码限制 ecRecover）与 EIP-8298（SETCODEFROM）一同转为 CFI，作为 EOA 的后量子迁移路径。",
+            "seek": 3133,
+            "sourceTimestamp": "01:06:49"
+          },
+          {
+            "text": "EIP-8360（TCREATE 操作码）与 EIP-4758（停用 SELFDESTRUCT）一同转为 CFI，修复 Glamsterdam 引入的问题。",
+            "seek": 3167,
+            "sourceTimestamp": "01:07:23"
+          },
+          {
+            "text": "EIP-7709（从存储读取 BLOCKHASH）转为 CFI；Nethermind 将评级提升至 A，认为它有利于基于 BAL 的轻客户端。",
+            "seek": 3472,
+            "sourceTimestamp": "01:12:28"
+          },
+          {
+            "text": "EIP-8077（eth/xx 交易池网络）转为 CFI，前提是继续深入分析手续费和 frame 等字段。",
+            "seek": 3843,
+            "sourceTimestamp": "01:18:39"
+          },
+          {
+            "text": "EIP-7666（用 EVM 实现 identity 预编译）转为 DFI；Jochem 提出 gas 定价边界情况和规范问题后，共识转向暂缓纳入。",
+            "seek": 4347,
+            "sourceTimestamp": "01:27:03"
+          },
+          {
+            "text": "EIP-8355（ML-DSA 预编译）转为 DFI；格密码方案缺乏共识，且存在 zkEVM 成本顾虑，更倾向基于哈希的方案。",
+            "seek": 4766,
+            "sourceTimestamp": "01:34:02"
+          },
+          {
+            "text": "EIP-8116（替换累计收据字段）转为 CFI，优先级较低，排在 CFI 列表末尾。",
+            "seek": 4894,
+            "sourceTimestamp": "01:36:10"
+          },
+          {
+            "text": "EIP-8374（回滚时保留 warm 访问集合）转为 DFI；支持力度较弱，涉及分叉边界的深层改动，不值得增加复杂度。",
+            "seek": 5155,
+            "sourceTimestamp": "01:40:31"
+          }
+        ]
+      },
+      {
+        "title": "复杂度评估与工具",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Danceratopz 展示了用 LLM 回顾评估 EIP 复杂度的工作；仅现有的 14 个 CFI/SFI 提案，就已使 Hegotá 成为评估记录中最复杂的升级，尚未加入其他 PFI。",
+            "seek": 1153,
+            "sourceTimestamp": "00:33:49"
+          },
+          {
+            "text": "Łukasz Rozmej：Nethermind 已有 150 多个 Hegotá PR；瓶颈在协调和测试，而非实现，建议改进工具，并让 EIP 推动者更深入参与。",
+            "seek": 1944,
+            "sourceTimestamp": "00:47:00"
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "Hoodi 分叉定于 2026 年 10 月 26 日周一 UTC 17:42，客户端需在 10 月 16 日前发布版本。",
+            "seek": 428,
+            "sourceTimestamp": "00:21:44"
+          },
+          {
+            "text": "Hoodi 和主网的 gas 上限调整在分叉 epoch 生效。",
+            "seek": 937,
+            "sourceTimestamp": "00:30:13"
+          },
+          {
+            "text": "EIP-7907（合约大小计费）加入 PFI 列表，决定推迟至下次会议。",
+            "seek": 2691,
+            "sourceTimestamp": "00:59:27",
+            "status": "PFI"
+          },
+          {
+            "text": "Hegotá 的 CFI 提案：EIP-5920（PAY）、EIP-8151（ecRecover）、EIP-8298（SETCODEFROM）、EIP-8360（TCREATE）、EIP-4758（停用 SELFDESTRUCT）、EIP-7709（从存储读取 BLOCKHASH）、EIP-8077（eth/xx 网络）、EIP-8116（替换累计收据字段）。",
+            "seek": 2904,
+            "sourceTimestamp": "01:03:00",
+            "status": "CFI"
+          },
+          {
+            "text": "Hegotá 的 DFI 提案：EIP-7666（用 EVM 实现 identity 预编译）、EIP-8355（ML-DSA 预编译）、EIP-8374（回滚时保留 warm 访问集合）。",
+            "seek": 4347,
+            "sourceTimestamp": "01:27:03",
+            "status": "DFI"
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "text": "扩展 EIP-8077，除 sender 和 nonce 外，分析纳入手续费及 frame 字段，以支持交易池筛选。",
+            "seek": 3843,
+            "sourceTimestamp": "01:18:39",
+            "owner": "Csaba (EIP-8077 champion)"
+          },
+          {
+            "text": "审核 Glamsterdam 生态准备情况检查清单 PR（#2266），用于收集企业在 Sepolia 测试中的反馈。",
+            "seek": 5191,
+            "sourceTimestamp": "01:41:07",
+            "owner": "EL client teams"
+          }
+        ]
+      },
+      {
+        "title": "目标日期",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "Hoodi 的 Glamsterdam 分叉",
+            "seek": 428,
+            "sourceTimestamp": "00:21:44",
+            "date": "2026 年 10 月 26 日 UTC 17:42"
+          },
+          {
+            "text": "Hoodi 分叉所需客户端版本发布截止",
+            "seek": 496,
+            "sourceTimestamp": "00:22:52",
+            "date": "2026 年 10 月 16 日（周五）"
+          }
+        ]
+      }
+    ]
+  },
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/all-core-devs-execution-acde-247-october-8-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      },
+      {
+        "provider": "bilibili",
+        "label": "B 站",
+        "bvid": "BV1Nfpj67ELe",
+        "url": "https://www.bilibili.com/video/BV1Nfpj67ELe/",
+        "page": 1,
+        "available": true
+      }
+    ]
+  },
+  "publication": {
+    "bilibili": {
+      "bvid": "BV1Nfpj67ELe",
+      "url": "https://www.bilibili.com/video/BV1Nfpj67ELe/",
+      "status": "published"
+    }
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/all-core-devs-execution-acde-247-october-8-2026_en.srt",
+    "zh": "../../media/subtitles/zh/all-core-devs-execution-acde-247-october-8-2026_zh.srt"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "slug": "fast-confirmation-rule-10",
+  "series": "FCR",
+  "number": 10,
+  "title": "Fast Confirmation Rule #10",
+  "subtitle": "快速确认规则专题会议",
+  "kicker": "FAST CONFIRMATION RULE",
+  "date": "2026-07-07",
+  "dateLabel": "2026 年 7 月 7 日",
+  "topic": "Fast Confirmation Rule",
+  "translationStatus": "reviewed",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/fast-confirmation-rule-010-july-07-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/fast-confirmation-rule-010-july-07-2026_en.srt",
+    "zh": "../../media/subtitles/zh/fast-confirmation-rule-010-july-07-2026_zh.srt"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 13,
+      "decisions": 1,
+      "actionItems": 2
+    },
+    "sections": [
+      {
+        "title": "客户端更新",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Grandine：FCR 专项测试已通过；PR 等待 Thomas 审查。",
+            "seek": 300
+          },
+          {
+            "text": "Lodestar：FCR 已随 v1.44.0 发布（实验性 flag）；周五部署了 epoch 边界重置修复，此后没有再发生重置。",
+            "seek": 365
+          },
+          {
+            "text": "Lighthouse：上次会议提到的回归问题已解决；修复进行中，主网运行没有发生重置。",
+            "seek": 1002
+          },
+          {
+            "text": "Teku：正在推进可用于生产的 FCR 实现；Prysm 因等待人工审查而受阻。",
+            "seek": 1064
+          }
+        ]
+      },
+      {
+        "title": "FCR 行为与 Gloas",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "决定：FCR 不应在节点同步期间触发；只有在完全追上 head 后才激活。",
+            "seek": 867
+          },
+          {
+            "text": "Gloas 上的 FCR：由于 Gloas 的时间安排变化，确认使用前两个 slot 的 payload，而不是前一个 slot。",
+            "seek": 1175
+          },
+          {
+            "text": "部分客户端（例如 Nimbus）默认启用 FCR；其他客户端需要 feature flag。",
+            "seek": 1330
+          },
+          {
+            "text": "Barnabas：FCR 应在 Gloas DevNet 7 上测试；计划使用 Dora 展示 FCR 事件流。",
+            "seek": 1432
+          }
+        ]
+      },
+      {
+        "title": "规范与测试",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "FCR 手动测试套件完成；所有计划用例均已覆盖（PR 已合并）。",
+            "seek": 1701
+          },
+          {
+            "text": "主网配置测试向量生成每个测试约需 3 小时；已认为最小 preset 足够。",
+            "seek": 1742
+          },
+          {
+            "text": "FCR 指标 PR 已合并；鼓励各团队在所有客户端中实现。",
+            "seek": 1810
+          }
+        ]
+      },
+      {
+        "title": "研究更新",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "证明审查已完成；需要在论文附录中处理伪代码与 Python 规范的差异，这是发布前的最后一个阻塞项。",
+            "seek": 1862
+          },
+          {
+            "text": "延迟区块恢复优化（单 slot 确认数增加约 1% 至 1.5%，已在 Teku 中完成原型）正在考虑；证明工作成本高，且可能与 Casper 研究冲突。",
+            "seek": 1943
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "FCR 不得在节点同步期间触发；节点完全与 head 同步后才可激活（已与 Nimbus 和 Lodestar 达成一致）。",
+            "seek": 867
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "Nazar Hussain（Lodestar）",
+            "text": "在 FCR Telegram 群组分享 epoch 边界重置分析和修复细节。",
+            "seek": 466
+          },
+          {
+            "owner": "Mikhail Kalinin",
+            "text": "在 FCR Telegram 群组分享 Teku 延迟区块优化的代码参考。",
+            "seek": 2105
+          }
+        ]
+      },
+      {
+        "title": "目标日期",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "跨客户端 FCR 兼容性测试将在下一次 FCR 专题会议协调",
+            "date": "约两周后",
+            "seek": 1633
+          },
+          {
+            "text": "FCR 论文发布，等待附录澄清伪代码与 Python 规范的差异",
+            "seek": 1913
+          }
+        ]
+      }
+    ]
+  }
+}

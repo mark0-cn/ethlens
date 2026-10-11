@@ -1,0 +1,150 @@
+{
+  "slug": "pq-interop-47",
+  "series": "PQ",
+  "number": 47,
+  "title": "PQ Interop #47",
+  "subtitle": "后量子互操作专题会议",
+  "kicker": "PQ INTEROP",
+  "date": "2026-07-08",
+  "dateLabel": "2026 年 7 月 8 日",
+  "topic": "后量子互操作进展",
+  "translationStatus": "reviewed",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/pq-interop-047-july-08-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/pq-interop-047-july-08-2026_en.srt",
+    "zh": "../../media/subtitles/zh/pq-interop-047-july-08-2026_zh.srt"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 12,
+      "decisions": 1,
+      "actionItems": 1
+    },
+    "sections": [
+      {
+        "title": "客户端更新",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Zeam：新镜像已发布；规范修复待处理；预计今天或明天发布新镜像。",
+            "seek": 393
+          },
+          {
+            "text": "Ream：3 项 Ethlambda 优化均已实现，并在 DevNet 上与 Ethlambda 运行；状态稳定，head 和 finalization 延迟较低。",
+            "seek": 432
+          },
+          {
+            "text": "Lantern：正在重构；此前跟踪了过时的 Lean 规范提交，现已更新；镜像缓存 bug 已修复（此前优化没有生效）。",
+            "seek": 557
+          },
+          {
+            "text": "Ethlambda：Grafana 指标已公开；区块构建修复已合并；签名聚合优化已实现；已通过全部 Hive 规范测试。",
+            "seek": 646
+          },
+          {
+            "text": "Grandine：正在实现 Ethlambda 的 option 1 和 option 2 优化；Lean 规范修复进行中；新镜像和 shadow 镜像即将发布。",
+            "seek": 735
+          }
+        ]
+      },
+      {
+        "title": "测试进展",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "最终性不稳定仍然存在：尽管进行了优化，仍会出现 30 至 45 分钟以上没有最终性的时段；根因是硬件限制和聚合结果延迟。",
+            "seek": 1176
+          },
+          {
+            "text": "Anchal 提出加法式 justification workaround（累积投票范围），以减少最终性延迟；代价是在长时间不最终时占用大量内存。",
+            "seek": 1284
+          },
+          {
+            "text": "Hetzner 将价格提高一倍并拒绝额外服务器申请；各团队正在探索其他 DevNet 托管方案。",
+            "seek": 1083
+          }
+        ]
+      },
+      {
+        "title": "密码学",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "LeanVM 二进制域：使用二进制域后，每秒可完成 500 次以上 XMSS 聚合。",
+            "seek": 889
+          },
+          {
+            "text": "正在推进基于 BN254 电路的方案，以便与二进制域方案比较。",
+            "seek": 916
+          }
+        ]
+      },
+      {
+        "title": "文档",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "SSZ 规范已从 Lean 规范中提取到独立仓库；正在由共识规范团队（Justin Traglia）审查，之后将转移到官方 Ethereum GitHub 组织。",
+            "seek": 816
+          }
+        ]
+      },
+      {
+        "title": "组织事项",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "下周因出行不召开会议；改为异步同步；下一次会议在两周后。",
+            "seek": 1427
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "PQ Interop 下周跳过一次会议，两周后恢复。",
+            "seek": 1427
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "所有 Lean 客户端团队",
+            "text": "各团队就优化事项进行异步同步；下一次同步会议在两周后。",
+            "seek": 1407
+          }
+        ]
+      },
+      {
+        "title": "目标日期",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "Zeam 发布包含规范修复的新镜像",
+            "date": "今天或明天一早",
+            "seek": 408
+          }
+        ]
+      }
+    ]
+  }
+}

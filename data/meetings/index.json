@@ -1,0 +1,188 @@
+[
+  {
+    "slug": "acde-247",
+    "series": "ACDE",
+    "number": 247,
+    "title": "All Core Devs Execution #247",
+    "subtitle": "执行层核心开发者会议",
+    "date": "2026-10-08",
+    "dateLabel": "2026 年 10 月 8 日",
+    "agendaUrl": "https://github.com/ethereum/pm/issues/2234",
+    "translationStatus": "reviewed",
+    "manifest": "data/meetings/acde-247.json",
+    "videoProviders": [
+      "local",
+      "bilibili"
+    ]
+  },
+  {
+    "slug": "acde-241",
+    "series": "ACDE",
+    "number": 241,
+    "title": "All Core Devs Execution #241",
+    "subtitle": "执行层核心开发者会议",
+    "date": "2026-07-16",
+    "dateLabel": "2026 年 7 月 16 日",
+    "agendaUrl": "https://github.com/ethereum/pm/issues/2157",
+    "manifest": "data/meetings/acde-241.json",
+    "translationStatus": "reviewed",
+    "videoProviders": [
+      "local",
+      "bilibili"
+    ]
+  },
+  {
+    "slug": "acdt-87",
+    "series": "ACDT",
+    "number": 87,
+    "title": "All Core Devs Testing #87",
+    "subtitle": "测试层核心开发者会议",
+    "date": "2026-07-13",
+    "dateLabel": "2026 年 7 月 13 日",
+    "manifest": "data/meetings/acdt-87.json",
+    "translationStatus": "reviewed",
+    "videoProviders": [
+      "local"
+    ]
+  },
+  {
+    "slug": "rpc-standards-30",
+    "series": "RPC",
+    "number": 30,
+    "title": "RPC Standards #30",
+    "subtitle": "RPC 标准专题会议",
+    "date": "2026-07-13",
+    "dateLabel": "2026 年 7 月 13 日",
+    "manifest": "data/meetings/rpc-standards-30.json",
+    "translationStatus": "reviewed",
+    "videoProviders": [
+      "local"
+    ]
+  },
+  {
+    "slug": "ssz-engine-api-2",
+    "series": "SSZ",
+    "number": 2,
+    "title": "SSZ Engine API #2",
+    "subtitle": "SSZ Engine API 专题会议",
+    "date": "2026-07-10",
+    "dateLabel": "2026 年 7 月 10 日",
+    "manifest": "data/meetings/ssz-engine-api-2.json",
+    "translationStatus": "reviewed",
+    "videoProviders": [
+      "local"
+    ]
+  },
+  {
+    "slug": "acdc-182",
+    "series": "ACDC",
+    "number": 182,
+    "title": "All Core Devs Consensus #182",
+    "subtitle": "共识层核心开发者会议",
+    "date": "2026-07-09",
+    "dateLabel": "2026 年 7 月 9 日",
+    "manifest": "data/meetings/acdc-182.json",
+    "translationStatus": "reviewed",
+    "videoProviders": [
+      "local"
+    ]
+  },
+  {
+    "slug": "pq-interop-47",
+    "series": "PQ",
+    "number": 47,
+    "title": "PQ Interop #47",
+    "subtitle": "后量子互操作专题会议",
+    "date": "2026-07-08",
+    "dateLabel": "2026 年 7 月 8 日",
+    "manifest": "data/meetings/pq-interop-47.json",
+    "translationStatus": "reviewed",
+    "videoProviders": [
+      "local"
+    ]
+  },
+  {
+    "slug": "l1-zkevm-breakout-6",
+    "series": "L1",
+    "number": 6,
+    "title": "L1 zkEVM Breakout #6",
+    "subtitle": "L1 zkEVM 专题会议",
+    "date": "2026-07-08",
+    "dateLabel": "2026 年 7 月 8 日",
+    "manifest": "data/meetings/l1-zkevm-breakout-6.json",
+    "translationStatus": "reviewed",
+    "videoProviders": [
+      "local"
+    ]
+  },
+  {
+    "slug": "fast-confirmation-rule-10",
+    "series": "FCR",
+    "number": 10,
+    "title": "Fast Confirmation Rule #10",
+    "subtitle": "快速确认规则专题会议",
+    "date": "2026-07-07",
+    "dateLabel": "2026 年 7 月 7 日",
+    "manifest": "data/meetings/fast-confirmation-rule-10.json",
+    "translationStatus": "reviewed",
+    "videoProviders": [
+      "local"
+    ]
+  },
+  {
+    "slug": "acdt-86",
+    "series": "ACDT",
+    "number": 86,
+    "title": "All Core Devs Testing #86",
+    "subtitle": "测试层核心开发者会议",
+    "date": "2026-07-06",
+    "dateLabel": "2026 年 7 月 6 日",
+    "manifest": "data/meetings/acdt-86.json",
+    "translationStatus": "reviewed",
+    "videoProviders": [
+      "local"
+    ]
+  },
+  {
+    "slug": "acde-240",
+    "series": "ACDE",
+    "number": 240,
+    "title": "All Core Devs Execution #240",
+    "subtitle": "执行层核心开发者会议",
+    "date": "2026-07-02",
+    "dateLabel": "2026 年 7 月 2 日",
+    "manifest": "data/meetings/acde-240.json",
+    "translationStatus": "reviewed",
+    "videoProviders": [
+      "local"
+    ]
+  },
+  {
+    "slug": "pq-interop-46",
+    "series": "PQ",
+    "number": 46,
+    "title": "PQ Interop #46",
+    "subtitle": "后量子互操作专题会议",
+    "date": "2026-07-01",
+    "dateLabel": "2026 年 7 月 1 日",
+    "manifest": "data/meetings/pq-interop-46.json",
+    "translationStatus": "reviewed",
+    "videoProviders": [
+      "local"
+    ]
+  },
+  {
+    "slug": "p2p-networking-3",
+    "series": "P2P",
+    "number": 3,
+    "title": "P2P Networking #3",
+    "subtitle": "P2P 网络专题会议",
+    "date": "2026-07-01",
+    "dateLabel": "2026 年 7 月 1 日",
+    "manifest": "data/meetings/p2p-networking-3.json",
+    "translationStatus": "reviewed",
+    "videoProviders": [
+      "local"
+    ]
+  }
+]
