@@ -46,19 +46,13 @@ ethforkcast/
 - `.agents/skills/yt2bb` 是独立 [yt2bb 仓库](https://github.com/mark0-cn/yt2bb) 的 Git 子模块；EthLens 提交固定所使用的 skill 版本。
 - 根目录不再创建会议名称文件夹。
 
-## 当前媒体
+## 会议与媒体
 
-本地已整理 13 组会议资料：
+会议列表以 [会议注册表](data/meetings/index.json) 为准。首页读取注册表，按日期和会议系列展示已收录会议；每场会议的视频来源、字幕路径和 Summary 保存在 [会议配置](data/meetings/) 中。新增会议按下文流程登记，README 只说明目录和使用方式。
 
-- 13 个 MP4；
-- 13 份英文 SRT；
-- 13 份中文 SRT。
+每场会议的 MP4、英文 SRT 和中文 SRT 使用相同的基础文件名，字幕增加 `_en` 或 `_zh` 后缀，分别保存在 `media/videos/`、`media/subtitles/en/` 和 `media/subtitles/zh/`。
 
-三类文件使用相同的基础文件名，字幕仅增加 `_en` 或 `_zh` 后缀。`data/meetings/index.json` 已注册这 13 组媒体，首页会按日期和会议系列展示全部会议。
-
-ACDE #247（2026 年 10 月 8 日）已接入完整视频、1,710 条中英字幕、Forkcast Summary，以及 B 站来源 `BV1Nfpj67ELe`。会议页面为 `/meetings/acde-247`。
-
-Git 仓库包含网页源码、13 场会议配置、中英 SRT 和封面。下载的 MP4 不纳入 Git，保留在本地 `media/videos/`；新克隆的项目可以阅读字幕和 Summary，ACDE #241、#247 可以切换到 B 站来源播放。其余会议需要先补齐对应 MP4。
+Git 仓库保存网页源码、会议配置、中英 SRT 和封面。下载的 MP4 保留在本地 `media/videos/`。新克隆的项目可以阅读已收录的字幕和 Summary；会议配置中启用了 B 站来源的，可以切换到 B 站播放。使用本地播放器前需补齐对应 MP4。
 
 项目内的 `yt2bb` 基于 [Agents365-ai/yt2bb](https://github.com/Agents365-ai/yt2bb) 扩展，保留其 [MIT 许可](https://github.com/mark0-cn/yt2bb/blob/main/LICENSE)。扩展版本也可以从 [mark0-cn/yt2bb](https://github.com/mark0-cn/yt2bb) 单独安装。skill 版本由 Git 子模块的提交引用锁定，不再使用 `skills-lock.json` 管理。
 
