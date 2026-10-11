@@ -1,0 +1,3 @@
+[submodule ".agents/skills/yt2bb"]
+	path = .agents/skills/yt2bb
+	url = https://github.com/mark0-cn/yt2bb.git

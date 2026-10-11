@@ -7,7 +7,7 @@ EthLens 是一个本地优先的 Ethereum 协议会议中英对照阅读器。�
 ```text
 ethforkcast/
 ├── .agents/
-│   └── skills/yt2bb/                 # 下载、GPT 字幕、B 站投稿与项目接入 skill
+│   └── skills/yt2bb/                 # yt2bb Git 子模块
 ├── data/
 │   ├── downloads/
 │   │   ├── forkcast-july-2026.archive # 已处理的 7 月视频 ID
@@ -33,7 +33,7 @@ ethforkcast/
 ├── server/
 │   └── server.mjs                     # 本地静态与媒体服务器
 ├── package.json
-├── skills-lock.json
+├── .gitmodules                       # skill 仓库地址与子模块路径
 └── README.md
 ```
 
@@ -43,7 +43,7 @@ ethforkcast/
 - `data` 只保存结构化会议数据和下载历史，不保存视频或字幕。
 - `media` 只保存视频和字幕，并按文件类型、字幕语言分类。
 - `server` 保存运行入口，`scripts` 保存离线校验工具。
-- `.agents/skills/yt2bb` 保存已安装的下载处理 skill；`skills-lock.json` 保留在根目录供 skill 管理器使用。
+- `.agents/skills/yt2bb` 是独立 [yt2bb 仓库](https://github.com/mark0-cn/yt2bb) 的 Git 子模块；EthLens 提交固定所使用的 skill 版本。
 - 根目录不再创建会议名称文件夹。
 
 ## 当前媒体
@@ -60,14 +60,14 @@ ACDE #247（2026 年 10 月 8 日）已接入完整视频、1,710 条中英字�
 
 Git 仓库包含网页源码、13 场会议配置、中英 SRT 和封面。下载的 MP4 不纳入 Git，保留在本地 `media/videos/`；新克隆的项目可以阅读字幕和 Summary，ACDE #241、#247 可以切换到 B 站来源播放。其余会议需要先补齐对应 MP4。
 
-项目内的 `yt2bb` 基于 [Agents365-ai/yt2bb](https://github.com/Agents365-ai/yt2bb) 扩展，保留其 [MIT 许可](.agents/skills/yt2bb/LICENSE)。扩展版本也可以从 [mark0-cn/yt2bb](https://github.com/mark0-cn/yt2bb) 单独安装。`skills-lock.json` 记录最初的上游安装信息；当前使用的扩展版本以 `.agents/skills/yt2bb` 中的代码为准。
+项目内的 `yt2bb` 基于 [Agents365-ai/yt2bb](https://github.com/Agents365-ai/yt2bb) 扩展，保留其 [MIT 许可](https://github.com/mark0-cn/yt2bb/blob/main/LICENSE)。扩展版本也可以从 [mark0-cn/yt2bb](https://github.com/mark0-cn/yt2bb) 单独安装。skill 版本由 Git 子模块的提交引用锁定，不再使用 `skills-lock.json` 管理。
 
 ## 运行
 
 需要 Node.js 18 或更新版本。网页没有第三方 npm 依赖。
 
 ```bash
-git clone https://github.com/mark0-cn/ethlens.git
+git clone --recurse-submodules https://github.com/mark0-cn/ethlens.git
 cd ethlens
 npm start
 ```
@@ -88,6 +88,30 @@ http://127.0.0.1:4173/meetings/acde-247
 
 服务器支持 HTTP byte ranges，因此 MP4 可以直接拖动进度，不需要先完整载入。
 
+## 管理 skill 子模块
+
+已经克隆过 EthLens 的用户，先拉取主项目，再初始化固定版本的 skill：
+
+```bash
+git pull --ff-only
+git submodule update --init --recursive
+```
+
+主项目拉取新提交后，也执行 `git submodule update --init --recursive`，使本地 skill 与项目记录的版本一致。
+
+确认要升级到独立 skill 仓库的最新版本时：
+
+```bash
+git submodule update --remote .agents/skills/yt2bb
+npm run check
+npm run check:meetings
+git add .agents/skills/yt2bb
+git commit -m "Update yt2bb skill"
+git push --recurse-submodules=check
+```
+
+若修改 skill 本身，先在子模块目录中切换到 `main` 分支，再提交并推送到 `mark0-cn/yt2bb`，最后在 EthLens 提交新的子模块引用。初始化后的子模块通常处于 detached HEAD，不要直接在该状态下开发。`git push --recurse-submodules=check` 会检查引用的 skill 提交是否已存在于远程。
+
 ## 新增会议
 
 已完成下载和 GPT 审校的文件可以通过 skill 中的接入脚本登记，无需手动复制和修改注册表：
@@ -106,7 +130,7 @@ npm run integrate:meeting -- \
 
 核对计划后去掉 `--dry-run` 执行。元数据字段参见下文；至少提供 `slug`、`series`、`number`、`title`、`subtitle`、`date`、`translationStatus`。脚本需要 Python 3，会校验字幕条数、序号和时间戳，拒绝覆盖内容不同的现有媒体，并按 slug 去重。重复执行相同导入不会重复登记或改写媒体。
 
-B 站投稿仍由 [.agents/skills/yt2bb/references/bilibili.md](.agents/skills/yt2bb/references/bilibili.md) 的流程完成，接入脚本只记录已验证的 BV ID。审核中的投稿使用 `--bilibili-status pending_review`，通过审核后再改为 `published`，启用 B 站播放器；无需重新投稿。
+B 站投稿仍由 [yt2bb 的 B 站流程](https://github.com/mark0-cn/yt2bb/blob/main/references/bilibili.md) 完成，接入脚本只记录已验证的 BV ID。审核中的投稿使用 `--bilibili-status pending_review`，通过审核后再改为 `published`，启用 B 站播放器；无需重新投稿。
 
 ### 1. 整理媒体
 
