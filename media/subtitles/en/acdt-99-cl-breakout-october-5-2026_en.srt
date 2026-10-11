@@ -1,0 +1,1975 @@
+1
+00:00:39,200 --> 00:00:46,320
+All right. Welcome to CL breakout. The
+
+2
+00:00:42,640 --> 00:00:49,520
+first agenda we have is produce block 54
+
+3
+00:00:46,320 --> 00:00:51,840
+with bid pick on API.
+
+4
+00:00:49,520 --> 00:00:54,000
+There's a link to the PR is look on the
+
+5
+00:00:51,840 --> 00:00:57,199
+call.
+
+6
+00:00:54,000 --> 00:00:59,760
+>> Yeah, I'm here.
+
+7
+00:00:57,199 --> 00:01:02,480
+Yep, the floor is yours.
+
+8
+00:00:59,760 --> 00:01:05,040
+Thank you. Um, does anyone need
+
+9
+00:01:02,480 --> 00:01:07,200
+introducing to this endpoint or do you
+
+10
+00:01:05,040 --> 00:01:09,600
+want me to
+
+11
+00:01:07,200 --> 00:01:11,920
+if anybody is unfamiliar with it? Uh,
+
+12
+00:01:09,600 --> 00:01:15,760
+let me know. Otherwise, let's just jump
+
+13
+00:01:11,920 --> 00:01:17,840
+into the trade-offs. Um,
+
+14
+00:01:15,760 --> 00:01:22,479
+one of the concerns that has been raised
+
+15
+00:01:17,840 --> 00:01:26,560
+regarding this endpoint is that it could
+
+16
+00:01:22,479 --> 00:01:29,680
+um be sub-optimal for the network under
+
+17
+00:01:26,560 --> 00:01:32,680
+um bad network conditions like reorgs or
+
+18
+00:01:29,680 --> 00:01:32,680
+nonfality.
+
+19
+00:01:32,720 --> 00:01:39,240
+So that's that's probably the only
+
+20
+00:01:34,400 --> 00:01:39,240
+concern that I've heard. Um otherwise
+
+21
+00:01:39,920 --> 00:01:44,040
+um is there any other concern?
+
+22
+00:01:50,640 --> 00:01:55,600
+Okay. Um guess not. So has anyone looked
+
+23
+00:01:55,280 --> 00:01:58,079
+into
+
+24
+00:01:55,600 --> 00:01:59,920
+>> No. Yeah. So actually let's try to go
+
+25
+00:01:58,079 --> 00:02:01,680
+about this the other way around. I
+
+26
+00:01:59,920 --> 00:02:03,759
+didn't even know about this and I just
+
+27
+00:02:01,680 --> 00:02:06,000
+looking at this and it looks like the VC
+
+28
+00:02:03,759 --> 00:02:07,520
+asking directly to contacting directly
+
+29
+00:02:06,000 --> 00:02:08,399
+to builders.
+
+30
+00:02:07,520 --> 00:02:10,720
+>> Uh that's right.
+
+31
+00:02:08,399 --> 00:02:12,560
+>> Which my first impression is that this
+
+32
+00:02:10,720 --> 00:02:15,520
+is absolutely crazy.
+
+33
+00:02:12,560 --> 00:02:17,520
+>> So instead of like yeah I would have
+
+34
+00:02:15,520 --> 00:02:20,720
+liked to know about this before and I
+
+35
+00:02:17,520 --> 00:02:22,480
+know it's my mistake. Uh but I'm pretty
+
+36
+00:02:20,720 --> 00:02:24,640
+sure that most people don't know about
+
+37
+00:02:22,480 --> 00:02:27,040
+this.
+
+38
+00:02:24,640 --> 00:02:28,640
+>> I have been uh trying to raise awareness
+
+39
+00:02:27,040 --> 00:02:29,920
+of this. It's been open for two months
+
+40
+00:02:28,640 --> 00:02:33,519
+and I've been mentioning it on these
+
+41
+00:02:29,920 --> 00:02:35,519
+calls and on the discord but uh okay so
+
+42
+00:02:33,519 --> 00:02:37,680
+let me just give a quick intro. Uh the
+
+43
+00:02:35,519 --> 00:02:40,560
+idea is indeed that the validator client
+
+44
+00:02:37,680 --> 00:02:43,200
+would contact builders and then it would
+
+45
+00:02:40,560 --> 00:02:45,599
+pick a bid and it would supply a bit to
+
+46
+00:02:43,200 --> 00:02:48,080
+the connected beacon nodes and those
+
+47
+00:02:45,599 --> 00:02:50,319
+beacon nodes would then
+
+48
+00:02:48,080 --> 00:02:52,560
+use that bit in their block that they're
+
+49
+00:02:50,319 --> 00:02:55,840
+producing.
+
+50
+00:02:52,560 --> 00:02:58,879
+>> Yeah. just like two days, one hour, a
+
+51
+00:02:55,840 --> 00:03:02,080
+few hours before a pork in Sapoleia and
+
+52
+00:02:58,879 --> 00:03:07,319
+a few weeks before main network.
+
+53
+00:03:02,080 --> 00:03:07,319
+This seems like a huge change for me.
+
+54
+00:03:08,959 --> 00:03:14,000
+>> Yeah, I I don't think anybody thinks
+
+55
+00:03:11,760 --> 00:03:15,599
+well
+
+56
+00:03:14,000 --> 00:03:17,680
+it doesn't seem that necessary for
+
+57
+00:03:15,599 --> 00:03:20,879
+Sapodia. That's why I haven't pushed for
+
+58
+00:03:17,680 --> 00:03:25,400
+it earlier. I've always imagined it
+
+59
+00:03:20,879 --> 00:03:25,400
+would be useful starting with Rudy.
+
+60
+00:03:27,680 --> 00:03:35,280
+I have been testing this endpoint for a
+
+61
+00:03:30,560 --> 00:03:37,840
+few weeks on uh DevNet 8 as well. C can
+
+62
+00:03:35,280 --> 00:03:39,680
+you go back to the reason why we want to
+
+63
+00:03:37,840 --> 00:03:42,080
+do this?
+
+64
+00:03:39,680 --> 00:03:44,720
+Seems like your question, your first
+
+65
+00:03:42,080 --> 00:03:48,799
+question you asked the answer should be
+
+66
+00:03:44,720 --> 00:03:52,480
+yes because I don't get why is this
+
+67
+00:03:48,799 --> 00:03:54,319
+required at the moment.
+
+68
+00:03:52,480 --> 00:03:56,879
+Uh I think it's useful when you have a
+
+69
+00:03:54,319 --> 00:03:59,280
+validator client connected to different
+
+70
+00:03:56,879 --> 00:04:01,439
+CL clients like even five or six
+
+71
+00:03:59,280 --> 00:04:04,720
+different ones.
+
+72
+00:04:01,439 --> 00:04:06,879
+Um that way you don't have to monitor
+
+73
+00:04:04,720 --> 00:04:08,560
+all of those CL clients metrics. You
+
+74
+00:04:06,879 --> 00:04:11,920
+just need to monitor your valid
+
+75
+00:04:08,560 --> 00:04:14,080
+validator client. It makes these node
+
+76
+00:04:11,920 --> 00:04:17,480
+operations easier when you have multiple
+
+77
+00:04:14,080 --> 00:04:17,480
+clients involved.
+
+78
+00:04:20,799 --> 00:04:25,759
+So it seems like the VC should be in
+
+79
+00:04:23,360 --> 00:04:28,560
+charge of selecting
+
+80
+00:04:25,759 --> 00:04:31,520
+the bin because is this is where the
+
+81
+00:04:28,560 --> 00:04:34,800
+logic of selecting the most valuable
+
+82
+00:04:31,520 --> 00:04:37,520
+thing resides. So when you have multiple
+
+83
+00:04:34,800 --> 00:04:39,840
+nodes you the VC wants to know about all
+
+84
+00:04:37,520 --> 00:04:44,320
+the beads around and select the one that
+
+85
+00:04:39,840 --> 00:04:46,240
+likes and submit that one uh along with
+
+86
+00:04:44,320 --> 00:04:47,919
+the block production request. Is that
+
+87
+00:04:46,240 --> 00:04:49,280
+the reason?
+
+88
+00:04:47,919 --> 00:04:50,479
+>> Yeah, that's that's basically how it
+
+89
+00:04:49,280 --> 00:04:52,560
+would work.
+
+90
+00:04:50,479 --> 00:04:55,600
+>> But why can't you have just one beacon
+
+91
+00:04:52,560 --> 00:04:57,280
+node connect? So I mean today the beacon
+
+92
+00:04:55,600 --> 00:05:00,080
+is the one that requires why don't you
+
+93
+00:04:57,280 --> 00:05:03,120
+just make one of the nodes contact the
+
+94
+00:05:00,080 --> 00:05:05,280
+builder on all of the other nodes to not
+
+95
+00:05:03,120 --> 00:05:07,280
+do that.
+
+96
+00:05:05,280 --> 00:05:09,840
+>> Well because if that one node goes
+
+97
+00:05:07,280 --> 00:05:10,800
+offline then you're losing access to
+
+98
+00:05:09,840 --> 00:05:13,600
+bids.
+
+99
+00:05:10,800 --> 00:05:16,160
+>> And isn't it the same if the one VC goes
+
+100
+00:05:13,600 --> 00:05:18,800
+offline? I I I'm I'm a little bit
+
+101
+00:05:16,160 --> 00:05:22,120
+confused. I mean you have one endpoint
+
+102
+00:05:18,800 --> 00:05:22,120
+that calls.
+
+103
+00:05:23,039 --> 00:05:28,240
+>> Yeah, but it's different because you can
+
+104
+00:05:25,039 --> 00:05:30,000
+have a failover for the VC or D.
+
+105
+00:05:28,240 --> 00:05:32,639
+>> Why can't you have a failover for the
+
+106
+00:05:30,000 --> 00:05:35,600
+beacon node then?
+
+107
+00:05:32,639 --> 00:05:37,600
+>> You can but then you have to
+
+108
+00:05:35,600 --> 00:05:40,880
+you you do still have multiple beacon
+
+109
+00:05:37,600 --> 00:05:43,840
+nodes involved.
+
+110
+00:05:40,880 --> 00:05:46,479
+Um, but like I said, you would need to
+
+111
+00:05:43,840 --> 00:05:48,240
+track how all of those beacon nodes are
+
+112
+00:05:46,479 --> 00:05:50,000
+doing this. And [clears throat] all of
+
+113
+00:05:48,240 --> 00:05:53,120
+those beacon nodes would basically be
+
+114
+00:05:50,000 --> 00:05:57,039
+contacting the same builders
+
+115
+00:05:53,120 --> 00:05:58,880
+with the same request. So, it just seems
+
+116
+00:05:57,039 --> 00:06:01,280
+>> I I don't understand.
+
+117
+00:05:58,880 --> 00:06:04,240
+>> You want to avoid many many calls to the
+
+118
+00:06:01,280 --> 00:06:06,560
+beacon node uh to the to the builders,
+
+119
+00:06:04,240 --> 00:06:08,560
+which if you just put it if you put them
+
+120
+00:06:06,560 --> 00:06:11,039
+on only one beacon node, you achieve
+
+121
+00:06:08,560 --> 00:06:14,639
+this. But then you say okay no we cannot
+
+122
+00:06:11,039 --> 00:06:17,759
+we may not do this because that color
+
+123
+00:06:14,639 --> 00:06:19,840
+might fail which is the case for the DC.
+
+124
+00:06:17,759 --> 00:06:21,680
+If you have a single color in the VC,
+
+125
+00:06:19,840 --> 00:06:24,000
+that color might fail and you say,
+
+126
+00:06:21,680 --> 00:06:25,680
+"Okay, you can have a failover." But you
+
+127
+00:06:24,000 --> 00:06:28,400
+can do the same with a single beacon
+
+128
+00:06:25,680 --> 00:06:31,280
+node. You just say one of the nodes is
+
+129
+00:06:28,400 --> 00:06:34,160
+going to be this node that is a prism
+
+130
+00:06:31,280 --> 00:06:36,000
+and if that one fails, you fail to get
+
+131
+00:06:34,160 --> 00:06:37,680
+bits. But okay, so then let's put
+
+132
+00:06:36,000 --> 00:06:39,759
+another prism that is a failover for
+
+133
+00:06:37,680 --> 00:06:42,400
+that prism. And it only acts if that
+
+134
+00:06:39,759 --> 00:06:44,319
+other prism is offline and then now you
+
+135
+00:06:42,400 --> 00:06:47,199
+only get called once. I I don't
+
+136
+00:06:44,319 --> 00:06:48,880
+understand why why this cannot be
+
+137
+00:06:47,199 --> 00:06:52,039
+achieved on the beacon node and yes on
+
+138
+00:06:48,880 --> 00:06:52,039
+the VC
+
+139
+00:06:54,560 --> 00:07:01,240
+>> I'm not sure what you're proposing here
+
+140
+00:06:56,639 --> 00:07:01,240
+in terms of a failover beacon node
+
+141
+00:07:02,080 --> 00:07:06,240
+>> just the usual thing that you have a
+
+142
+00:07:04,319 --> 00:07:08,240
+beacon node and if that beon node is
+
+143
+00:07:06,240 --> 00:07:11,840
+offline then another beacon node takes
+
+144
+00:07:08,240 --> 00:07:13,840
+its place which I assume you are telling
+
+145
+00:07:11,840 --> 00:07:18,440
+me that you have to do any of There any
+
+146
+00:07:13,840 --> 00:07:18,440
+ways this on the VC side?
+
+147
+00:07:19,440 --> 00:07:24,720
+>> Yeah. Um, well, multiode validator
+
+148
+00:07:22,160 --> 00:07:26,560
+clients usually work with all of the
+
+149
+00:07:24,720 --> 00:07:29,440
+beaconos they're connected to. So, they
+
+150
+00:07:26,560 --> 00:07:32,639
+don't work in the failover way. they
+
+151
+00:07:29,440 --> 00:07:34,880
+would ask all of the connected beodes to
+
+152
+00:07:32,639 --> 00:07:37,840
+>> but if you don't have a failover for the
+
+153
+00:07:34,880 --> 00:07:41,520
+validator client then you still have a
+
+154
+00:07:37,840 --> 00:07:44,960
+single point of failure to the calls for
+
+155
+00:07:41,520 --> 00:07:47,680
+the bits which you would have therefore
+
+156
+00:07:44,960 --> 00:07:50,479
+the same single point of failure if you
+
+157
+00:07:47,680 --> 00:07:53,960
+just put one beacon node to calls to
+
+158
+00:07:50,479 --> 00:07:53,960
+call for the bits
+
+159
+00:07:54,720 --> 00:07:59,520
+>> it's better if you have the failover
+
+160
+00:07:56,720 --> 00:07:59,520
+validator client
+
+161
+00:08:02,479 --> 00:08:07,199
+because it's easier to fail over in that
+
+162
+00:08:04,560 --> 00:08:09,599
+case.
+
+163
+00:08:07,199 --> 00:08:11,440
+You can if you have a shared splashing
+
+164
+00:08:09,599 --> 00:08:13,520
+protection database among multiple
+
+165
+00:08:11,440 --> 00:08:15,199
+different validator clients, you can in
+
+166
+00:08:13,520 --> 00:08:18,199
+theory have them running at the same
+
+167
+00:08:15,199 --> 00:08:18,199
+time.
+
+168
+00:08:18,560 --> 00:08:24,400
+But I don't want to get into these
+
+169
+00:08:21,120 --> 00:08:29,520
+details. Let's say um
+
+170
+00:08:24,400 --> 00:08:31,759
+assuming there is a reason that this
+
+171
+00:08:29,520 --> 00:08:35,320
+endpoint is beneficial. Do you have
+
+172
+00:08:31,759 --> 00:08:35,320
+concerns photos?
+
+173
+00:08:35,599 --> 00:08:42,800
+Well, yeah. Changing the validator
+
+174
+00:08:38,479 --> 00:08:44,959
+client to do this is a big change and it
+
+175
+00:08:42,800 --> 00:08:46,720
+makes the validator client more fragile.
+
+176
+00:08:44,959 --> 00:08:48,399
+Therefore, which is something that we
+
+177
+00:08:46,720 --> 00:08:50,640
+want to keep lean, we want to keep
+
+178
+00:08:48,399 --> 00:08:52,320
+small. And actually I want to hear Nico
+
+179
+00:08:50,640 --> 00:08:55,680
+because Nikico implemented this and he
+
+180
+00:08:52,320 --> 00:08:57,519
+has already some concerns.
+
+181
+00:08:55,680 --> 00:08:59,279
+>> Yeah just one thing uh it would be
+
+182
+00:08:57,519 --> 00:09:01,279
+optional. So validator clients don't
+
+183
+00:08:59,279 --> 00:09:04,399
+need to implement this.
+
+184
+00:09:01,279 --> 00:09:06,000
+>> Yeah I mean is the is the beacon that
+
+185
+00:09:04,399 --> 00:09:07,920
+should implement that and validator
+
+186
+00:09:06,000 --> 00:09:10,959
+client will be custom validator clients
+
+187
+00:09:07,920 --> 00:09:11,519
+consuming this API in my understanding.
+
+188
+00:09:10,959 --> 00:09:13,519
+Correct.
+
+189
+00:09:11,519 --> 00:09:18,480
+>> Yes. So the beacon nodes would only need
+
+190
+00:09:13,519 --> 00:09:20,240
+to implement a very small change very
+
+191
+00:09:18,480 --> 00:09:23,279
+small change to the produce block before
+
+192
+00:09:20,240 --> 00:09:25,680
+endpoint which the the change would be
+
+193
+00:09:23,279 --> 00:09:28,160
+that you provide yourself a you provide
+
+194
+00:09:25,680 --> 00:09:30,800
+yourself a bid.
+
+195
+00:09:28,160 --> 00:09:32,399
+>> Yeah. Yeah. Like fixing the bid and we
+
+196
+00:09:30,800 --> 00:09:34,959
+probably need to do the validation of
+
+197
+00:09:32,399 --> 00:09:37,680
+the bid on online in that case. It's
+
+198
+00:09:34,959 --> 00:09:41,600
+just fixed way of saying [snorts]
+
+199
+00:09:37,680 --> 00:09:45,279
+produce this block with this bead.
+
+200
+00:09:41,600 --> 00:09:48,320
+Yes. And the beacon has full um it can
+
+201
+00:09:45,279 --> 00:09:52,040
+refuse to include the bit if it is
+
+202
+00:09:48,320 --> 00:09:52,040
+invalid or anything.
+
+203
+00:09:56,959 --> 00:09:59,920
+>> Well, how are the concerns from Miko?
+
+204
+00:09:58,640 --> 00:10:02,399
+Nico, sorry.
+
+205
+00:09:59,920 --> 00:10:04,640
+>> So, mine are really technical, I guess.
+
+206
+00:10:02,399 --> 00:10:06,640
+Um so the first thing like just from an
+
+207
+00:10:04,640 --> 00:10:09,839
+implementation point of view is that
+
+208
+00:10:06,640 --> 00:10:12,320
+Vero needs the payload attributes to
+
+209
+00:10:09,839 --> 00:10:15,040
+know what bits uh to request from the
+
+210
+00:10:12,320 --> 00:10:17,040
+builder and we currently emit them in
+
+211
+00:10:15,040 --> 00:10:19,760
+the previous slot based on like a
+
+212
+00:10:17,040 --> 00:10:22,399
+prediction right um so it can happen
+
+213
+00:10:19,760 --> 00:10:24,399
+that Vero gets a bit from the builders
+
+214
+00:10:22,399 --> 00:10:27,279
+that are not even compliant with our
+
+215
+00:10:24,399 --> 00:10:29,680
+proposal head um which which we call at
+
+216
+00:10:27,279 --> 00:10:32,000
+the start of the slot. That is one
+
+217
+00:10:29,680 --> 00:10:34,399
+thing. The other problem I see and this
+
+218
+00:10:32,000 --> 00:10:38,079
+is uh also implementation detail that
+
+219
+00:10:34,399 --> 00:10:41,040
+could be optimized is um Vero will call
+
+220
+00:10:38,079 --> 00:10:43,760
+the produce block V4 API later on the
+
+221
+00:10:41,040 --> 00:10:45,839
+slot because it does it after playing
+
+222
+00:10:43,760 --> 00:10:48,320
+the timing game with the builders and
+
+223
+00:10:45,839 --> 00:10:50,959
+users will definitely play timing games
+
+224
+00:10:48,320 --> 00:10:53,279
+at some point I would expect. So it
+
+225
+00:10:50,959 --> 00:10:56,079
+calls the API late in the slot and I'm
+
+226
+00:10:53,279 --> 00:10:58,720
+just not sure um what is the implement
+
+227
+00:10:56,079 --> 00:11:00,800
+um like the problem here because right
+
+228
+00:10:58,720 --> 00:11:02,640
+now on the beacon not side we just
+
+229
+00:11:00,800 --> 00:11:06,079
+assume this is called at the start of
+
+230
+00:11:02,640 --> 00:11:09,760
+the slot at least in loadar we are not
+
+231
+00:11:06,079 --> 00:11:11,920
+optimizing um this to be called late on
+
+232
+00:11:09,760 --> 00:11:15,600
+the slot yet but it could be done it's
+
+233
+00:11:11,920 --> 00:11:17,519
+just a implementation thing
+
+234
+00:11:15,600 --> 00:11:20,800
+um and then I guess the third concern is
+
+235
+00:11:17,519 --> 00:11:23,040
+more implementation which is you
+
+236
+00:11:20,800 --> 00:11:26,240
+basically add I think two or three
+
+237
+00:11:23,040 --> 00:11:29,600
+branches in the produce block API. I
+
+238
+00:11:26,240 --> 00:11:32,399
+don't think it's a big deal. Um that one
+
+239
+00:11:29,600 --> 00:11:35,200
+I mean I have it implemented but just
+
+240
+00:11:32,399 --> 00:11:37,920
+something to consider.
+
+241
+00:11:35,200 --> 00:11:40,240
+Um I guess the other idea I had for how
+
+242
+00:11:37,920 --> 00:11:43,519
+could we do this without duplicating too
+
+243
+00:11:40,240 --> 00:11:46,160
+much. I guess Vero could also just fan
+
+244
+00:11:43,519 --> 00:11:48,000
+out the URLs to different uh beacon
+
+245
+00:11:46,160 --> 00:11:51,360
+nodes.
+
+246
+00:11:48,000 --> 00:11:54,240
+But I guess my main like concern is or
+
+247
+00:11:51,360 --> 00:11:57,360
+like the benefit here is that we ddube
+
+248
+00:11:54,240 --> 00:12:00,000
+requests to the builders mostly.
+
+249
+00:11:57,360 --> 00:12:02,000
+Um and I guess um we make the monitoring
+
+250
+00:12:00,000 --> 00:12:05,040
+easier and the fallback is maybe a bit
+
+251
+00:12:02,000 --> 00:12:07,760
+better as Luka mentioned, but
+
+252
+00:12:05,040 --> 00:12:12,200
+um I'm just not sure how big of a deal
+
+253
+00:12:07,760 --> 00:12:12,200
+that is um to be honest.
+
+254
+00:12:17,120 --> 00:12:25,760
+Wouldn't it be the same if we I mean if
+
+255
+00:12:21,519 --> 00:12:27,200
+I operating this I can just call
+
+256
+00:12:25,760 --> 00:12:31,200
+different builders with different
+
+257
+00:12:27,200 --> 00:12:34,880
+beacons and just put those bits directly
+
+258
+00:12:31,200 --> 00:12:36,639
+on the P2P stack between my my nodes,
+
+259
+00:12:34,880 --> 00:12:40,279
+right? I mean those bits will be
+
+260
+00:12:36,639 --> 00:12:40,279
+accepted over P2P.
+
+261
+00:12:41,839 --> 00:12:46,160
+>> How about the trick? Yeah, the trusted
+
+262
+00:12:44,720 --> 00:12:50,480
+payments. Yeah. So,
+
+263
+00:12:46,160 --> 00:12:52,560
+>> this really only the API. Um,
+
+264
+00:12:50,480 --> 00:12:55,040
+>> I I don't I I personally don't see
+
+265
+00:12:52,560 --> 00:12:58,240
+anything wrong with allowing you to
+
+266
+00:12:55,040 --> 00:12:59,760
+provide your own bit.
+
+267
+00:12:58,240 --> 00:13:02,720
+I mean, I'm sure it's going to enable
+
+268
+00:12:59,760 --> 00:13:05,120
+some off protocol markets that are not
+
+269
+00:13:02,720 --> 00:13:06,639
+going to be desirable, but there's it's
+
+270
+00:13:05,120 --> 00:13:09,360
+not something that we can prevent in any
+
+271
+00:13:06,639 --> 00:13:12,399
+way. I think
+
+272
+00:13:09,360 --> 00:13:14,560
+>> I think the baseline is is good but I'm
+
+273
+00:13:12,399 --> 00:13:19,120
+just having like the technical concerns
+
+274
+00:13:14,560 --> 00:13:24,160
+I mentioned implementation wise
+
+275
+00:13:19,120 --> 00:13:27,440
+>> and uh if the bid is is not accepted by
+
+276
+00:13:24,160 --> 00:13:28,160
+the bigger node everything will fail or
+
+277
+00:13:27,440 --> 00:13:29,440
+do
+
+278
+00:13:28,160 --> 00:13:30,959
+>> yeah but what's the problem I don't
+
+279
+00:13:29,440 --> 00:13:32,639
+understand why that's why is that a
+
+280
+00:13:30,959 --> 00:13:34,800
+problem I mean if you can make that is
+
+281
+00:13:32,639 --> 00:13:35,440
+not compatible with the node I'm just
+
+282
+00:13:34,800 --> 00:13:38,720
+asking
+
+283
+00:13:35,440 --> 00:13:42,959
+>> I'm just asking If the is desirable to
+
+284
+00:13:38,720 --> 00:13:46,079
+have the defaulting to a bid that the
+
+285
+00:13:42,959 --> 00:13:50,320
+bigger nodes wants or is just just a
+
+286
+00:13:46,079 --> 00:13:53,040
+behavior that is is is preferred to not
+
+287
+00:13:50,320 --> 00:13:54,720
+to to [snorts] error out because maybe
+
+288
+00:13:53,040 --> 00:13:57,120
+there is some there are some other
+
+289
+00:13:54,720 --> 00:13:59,920
+failover mechanism.
+
+290
+00:13:57,120 --> 00:14:02,480
+Right now, the idea is that um if the
+
+291
+00:13:59,920 --> 00:14:05,360
+beacon node doesn't like the bit for any
+
+292
+00:14:02,480 --> 00:14:09,199
+reason, it falls back to either a
+
+293
+00:14:05,360 --> 00:14:14,639
+peer-to-peer bit or a local build.
+
+294
+00:14:09,199 --> 00:14:16,399
+>> Okay. So, an actual recovery is is is
+
+295
+00:14:14,639 --> 00:14:18,240
+good or even from your design.
+
+296
+00:14:16,399 --> 00:14:21,360
+>> Yes, that's right. The the bit inclusion
+
+297
+00:14:18,240 --> 00:14:23,920
+is currently referred to as best effort.
+
+298
+00:14:21,360 --> 00:14:27,240
+So, it tries but it's not required to
+
+299
+00:14:23,920 --> 00:14:27,240
+include it.
+
+300
+00:14:29,519 --> 00:14:35,040
+Also there is an use case for this. So
+
+301
+00:14:31,600 --> 00:14:38,560
+if we don't standardize it with such an
+
+302
+00:14:35,040 --> 00:14:41,279
+endpoint that Luka is proposing, we
+
+303
+00:14:38,560 --> 00:14:44,560
+might risk people implementing their
+
+304
+00:14:41,279 --> 00:14:45,760
+custom integrations like a proxy sitted
+
+305
+00:14:44,560 --> 00:14:49,120
+between the vehicle node and the
+
+306
+00:14:45,760 --> 00:14:52,120
+validator client. Uh we could avoid
+
+307
+00:14:49,120 --> 00:14:52,120
+that.
+
+308
+00:14:55,519 --> 00:15:02,639
+Yeah, maybe one more thing. Um, even
+
+309
+00:14:58,000 --> 00:15:05,680
+today people use vouch as a sort of net
+
+310
+00:15:02,639 --> 00:15:07,360
+boost. So I think there are definitely
+
+311
+00:15:05,680 --> 00:15:09,920
+node operators that are used to having
+
+312
+00:15:07,360 --> 00:15:14,279
+their validator clients connect to the
+
+313
+00:15:09,920 --> 00:15:14,279
+others in that way.
+
+314
+00:15:14,480 --> 00:15:21,079
+It's a little different than what I'm
+
+315
+00:15:15,920 --> 00:15:21,079
+proposing here, but also a bit similar.
+
+316
+00:15:21,600 --> 00:15:26,720
+Okay. All right. So it sounds like
+
+317
+00:15:24,720 --> 00:15:30,160
+>> we don't have enough consensus to merge
+
+318
+00:15:26,720 --> 00:15:33,920
+this PRS but it seems it does bring us
+
+319
+00:15:30,160 --> 00:15:37,199
+some benefits. So perhaps the right way
+
+320
+00:15:33,920 --> 00:15:41,360
+to go forward is discussing more on the
+
+321
+00:15:37,199 --> 00:15:44,240
+design whether it be this PR or slightly
+
+322
+00:15:41,360 --> 00:15:46,160
+different version or on the beacon node
+
+323
+00:15:44,240 --> 00:15:48,399
+or whatever
+
+324
+00:15:46,160 --> 00:15:51,399
+and perhaps we can have it on the
+
+325
+00:15:48,399 --> 00:15:51,399
+hoodie.
+
+326
+00:15:53,360 --> 00:15:58,639
+>> Yeah, let me create a thread on this and
+
+327
+00:15:55,759 --> 00:16:01,880
+we can continue there.
+
+328
+00:15:58,639 --> 00:16:01,880
+>> Thank you.
+
+329
+00:16:06,480 --> 00:16:15,600
+The next agenda I want to discuss is
+
+330
+00:16:12,560 --> 00:16:18,880
+these two PRs is when a builder wins the
+
+331
+00:16:15,600 --> 00:16:20,800
+bid and exits and at least one epox is
+
+332
+00:16:18,880 --> 00:16:24,240
+missed.
+
+333
+00:16:20,800 --> 00:16:28,880
+We have two solutions to this problem
+
+334
+00:16:24,240 --> 00:16:31,839
+and 5695 has had support from clients.
+
+335
+00:16:28,880 --> 00:16:34,560
+The reasons are it is a less breaking
+
+336
+00:16:31,839 --> 00:16:36,720
+change and 95594
+
+337
+00:16:34,560 --> 00:16:38,880
+sorry 5694
+
+338
+00:16:36,720 --> 00:16:42,639
+draft the payment to the proposer of the
+
+339
+00:16:38,880 --> 00:16:46,480
+last block before the ML floss gap.
+
+340
+00:16:42,639 --> 00:16:49,519
+So I'll suggest March 5695
+
+341
+00:16:46,480 --> 00:16:52,519
+but I wonder if there is any concerns or
+
+342
+00:16:49,519 --> 00:16:52,519
+comments.
+
+343
+00:17:19,120 --> 00:17:27,880
+what do we need to make a call on this?
+
+344
+00:17:23,120 --> 00:17:27,880
+It's mostly the question I guess, right?
+
+345
+00:17:29,039 --> 00:17:34,880
+We just need more. I just wanted to make
+
+346
+00:17:31,760 --> 00:17:38,559
+sure there is no push back
+
+347
+00:17:34,880 --> 00:17:42,760
+because there was some last time. But if
+
+348
+00:17:38,559 --> 00:17:42,760
+not, we can just marry this in
+
+349
+00:17:46,799 --> 00:17:51,440
+because yeah, if there's no push back
+
+350
+00:17:48,720 --> 00:17:55,720
+against my PR, I would favor that over
+
+351
+00:17:51,440 --> 00:17:55,720
+PUS' PR. But
+
+352
+00:17:57,440 --> 00:18:01,600
+I'm not sure everyone has taken a look
+
+353
+00:17:59,280 --> 00:18:04,720
+and I think it's quite something
+
+354
+00:18:01,600 --> 00:18:06,640
+everyone should at least have looked at
+
+355
+00:18:04,720 --> 00:18:09,840
+or at least more people should have
+
+356
+00:18:06,640 --> 00:18:12,559
+looked at yet. So
+
+357
+00:18:09,840 --> 00:18:15,520
+I'm not sure Buddhis is happy with my PR
+
+358
+00:18:12,559 --> 00:18:16,559
+or neither happy nor unhappy just
+
+359
+00:18:15,520 --> 00:18:19,200
+neutral.
+
+360
+00:18:16,559 --> 00:18:20,880
+>> I'm not but I'm I'll be more unhappy if
+
+361
+00:18:19,200 --> 00:18:23,039
+we don't decide this now. So I think
+
+362
+00:18:20,880 --> 00:18:25,520
+it's fine to merge it. At least I do not
+
+363
+00:18:23,039 --> 00:18:28,160
+know how to attack it today. It might
+
+364
+00:18:25,520 --> 00:18:30,640
+become attackable later, it might
+
+365
+00:18:28,160 --> 00:18:33,520
+constrain the type of request that we
+
+366
+00:18:30,640 --> 00:18:37,200
+need to uh when whenever we add a new
+
+367
+00:18:33,520 --> 00:18:39,200
+request in the future. Uh it might make
+
+368
+00:18:37,200 --> 00:18:41,919
+us think of more edge cases. The other
+
+369
+00:18:39,200 --> 00:18:43,919
+one seems much simpler. But anyways, I
+
+370
+00:18:41,919 --> 00:18:46,960
+would rather just merge anything and
+
+371
+00:18:43,919 --> 00:18:49,360
+just get be done with this problem.
+
+372
+00:18:46,960 --> 00:18:52,240
+I do think it's strictly safer to
+
+373
+00:18:49,360 --> 00:18:54,559
+reorder this as my PR does um
+
+374
+00:18:52,240 --> 00:18:57,559
+considering if we add later more
+
+375
+00:18:54,559 --> 00:18:57,559
+requests.
+
+376
+00:18:59,120 --> 00:19:04,320
+Uh from Lighthouse side, I I haven't
+
+377
+00:19:01,600 --> 00:19:06,400
+looked into it personally. M uh last
+
+378
+00:19:04,320 --> 00:19:09,919
+time I checked, Michael slightly
+
+379
+00:19:06,400 --> 00:19:12,720
+preferred port's PR. I'll uh check with
+
+380
+00:19:09,919 --> 00:19:13,440
+him again today and maybe we can merge
+
+381
+00:19:12,720 --> 00:19:15,760
+it.
+
+382
+00:19:13,440 --> 00:19:18,799
+>> No, no, no. Michael Michael explicitly
+
+383
+00:19:15,760 --> 00:19:20,480
+said the last we heard from Michael
+
+384
+00:19:18,799 --> 00:19:22,240
+explicitly said that he preferred
+
+385
+00:19:20,480 --> 00:19:25,039
+Nikico.
+
+386
+00:19:22,240 --> 00:19:27,679
+>> Okay, then that's good, I guess.
+
+387
+00:19:25,039 --> 00:19:29,120
+>> And I'm fine with merging Nikos. I I I
+
+388
+00:19:27,679 --> 00:19:31,280
+don't know how to attack it. And I
+
+389
+00:19:29,120 --> 00:19:34,160
+really did spend some time in trying to
+
+390
+00:19:31,280 --> 00:19:36,559
+attack it.
+
+391
+00:19:34,160 --> 00:19:38,160
+>> Okay, I'm going to work on merging this
+
+392
+00:19:36,559 --> 00:19:41,280
+um
+
+393
+00:19:38,160 --> 00:19:43,679
+Nikos PR 5695.
+
+394
+00:19:41,280 --> 00:19:46,799
+Thank you all.
+
+395
+00:19:43,679 --> 00:19:49,360
+Um, that's all the agenda we had for
+
+396
+00:19:46,799 --> 00:19:52,880
+today, but Barnabas said in the chat
+
+397
+00:19:49,360 --> 00:19:55,679
+that we have six open PRs to pick on
+
+398
+00:19:52,880 --> 00:19:58,720
+APIs,
+
+399
+00:19:55,679 --> 00:20:02,840
+which are these. So, I wonder if you
+
+400
+00:19:58,720 --> 00:20:02,840
+want to go over these PRs.
+
+401
+00:20:03,440 --> 00:20:08,000
+>> They're all gloss related. So, I think
+
+402
+00:20:05,520 --> 00:20:11,280
+it would be good to hash out as many as
+
+403
+00:20:08,000 --> 00:20:13,840
+we can uh in the next 15 minutes.
+
+404
+00:20:11,280 --> 00:20:17,320
+Yeah, we have some time here so we can
+
+405
+00:20:13,840 --> 00:20:17,320
+go over them.
+
+406
+00:20:22,960 --> 00:20:27,679
+So I mean the current state of all of
+
+407
+00:20:25,039 --> 00:20:30,240
+these is basically I think I already
+
+408
+00:20:27,679 --> 00:20:32,880
+approved all of them and I even have
+
+409
+00:20:30,240 --> 00:20:35,919
+them implemented in Loadar.
+
+410
+00:20:32,880 --> 00:20:39,320
+I just kept them open to get more bugles
+
+411
+00:20:35,919 --> 00:20:39,320
+from other clients.
+
+412
+00:20:39,760 --> 00:20:43,799
+Specwise, they look good.
+
+413
+00:20:45,120 --> 00:20:50,120
+Other clients had time to look into
+
+414
+00:20:46,960 --> 00:20:50,120
+these PRs.
+
+415
+00:20:52,159 --> 00:20:57,600
+Also worth noting, these are trivial.
+
+416
+00:20:54,480 --> 00:20:59,360
+This is uh compared to the other
+
+417
+00:20:57,600 --> 00:21:03,760
+endpoint we discussed with the bit,
+
+418
+00:20:59,360 --> 00:21:03,760
+these are way more trivial.
+
+419
+00:21:30,480 --> 00:21:35,280
+I want in the chest to go take a look
+
+420
+00:21:32,400 --> 00:21:38,679
+into this and
+
+421
+00:21:35,280 --> 00:21:38,679
+leave comments.
+
+422
+00:21:44,000 --> 00:21:50,559
+Can we have Can we have other clients to
+
+423
+00:21:46,240 --> 00:21:52,880
+also have look into this?
+
+424
+00:21:50,559 --> 00:21:56,240
+Yeah, I will get them all. I believe I
+
+425
+00:21:52,880 --> 00:21:58,799
+have only look at the last one which I
+
+426
+00:21:56,240 --> 00:22:03,360
+provide some feedback previously, but
+
+427
+00:21:58,799 --> 00:22:06,159
+the other one I will um report back into
+
+428
+00:22:03,360 --> 00:22:09,919
+the team and take a look.
+
+429
+00:22:06,159 --> 00:22:12,919
+Seems like um nothing harmful at first
+
+430
+00:22:09,919 --> 00:22:12,919
+sight.
+
+431
+00:22:13,200 --> 00:22:16,520
+Thank you, Enrigo.
+
+432
+00:22:31,520 --> 00:22:37,480
+right? Do we have any anything left to
+
+433
+00:22:34,480 --> 00:22:37,480
+discuss?
+
+434
+00:22:38,000 --> 00:22:42,320
+When are you going to have the CL spec
+
+435
+00:22:40,159 --> 00:22:45,280
+release? We're going to need it if we
+
+436
+00:22:42,320 --> 00:22:48,240
+want to merge the change for the
+
+437
+00:22:45,280 --> 00:22:48,240
+ordering.
+
+438
+00:22:48,400 --> 00:22:53,039
+You don't need a spec release for that.
+
+439
+00:22:50,720 --> 00:22:56,320
+It's like applying this change in the
+
+440
+00:22:53,039 --> 00:22:57,760
+client. You still pass all spec tests.
+
+441
+00:22:56,320 --> 00:23:00,320
+>> Oh, the problem is that there's no
+
+442
+00:22:57,760 --> 00:23:01,840
+regression on the on the there's no
+
+443
+00:23:00,320 --> 00:23:04,480
+regression. The regression is only
+
+444
+00:23:01,840 --> 00:23:06,480
+included in your PR, right? Yeah, my
+
+445
+00:23:04,480 --> 00:23:09,679
+test will catch if you don't implement
+
+446
+00:23:06,480 --> 00:23:13,520
+it, but it's green on whatever we are on
+
+447
+00:23:09,679 --> 00:23:15,280
+like beta 2 or something.
+
+448
+00:23:13,520 --> 00:23:17,280
+>> So, we're going to be like forking
+
+449
+00:23:15,280 --> 00:23:20,000
+probably hoodie
+
+450
+00:23:17,280 --> 00:23:21,679
+without without a test that actually
+
+451
+00:23:20,000 --> 00:23:23,520
+covers this change. We're going to
+
+452
+00:23:21,679 --> 00:23:27,200
+actually make a consensus breaking
+
+453
+00:23:23,520 --> 00:23:29,039
+change and we're going to go without uh
+
+454
+00:23:27,200 --> 00:23:33,240
+yeah. Okay. Anyways, I'll I'll open the
+
+455
+00:23:29,039 --> 00:23:33,240
+PR and prison for this now.
+
+456
+00:23:39,840 --> 00:23:45,120
+Yeah, as soon as we can merge this PR um
+
+457
+00:23:42,720 --> 00:23:47,360
+we can discuss to make a release
+
+458
+00:23:45,120 --> 00:23:49,600
+regarding
+
+459
+00:23:47,360 --> 00:23:52,400
+fossil images in other clients. I
+
+460
+00:23:49,600 --> 00:23:56,960
+believe we have loar and teu and that's
+
+461
+00:23:52,400 --> 00:24:00,799
+it. Ligh lighthouse is working on it
+
+462
+00:23:56,960 --> 00:24:04,000
+and yeah that's pretty much it. But what
+
+463
+00:24:00,799 --> 00:24:07,120
+would be the effort to add in that PR?
+
+464
+00:24:04,000 --> 00:24:11,360
+Just a reference test that will break if
+
+465
+00:24:07,120 --> 00:24:15,000
+you don't uh implement that way
+
+466
+00:24:11,360 --> 00:24:15,000
+would be safer.
+
+467
+00:24:15,679 --> 00:24:22,080
+From my understanding, it will only
+
+468
+00:24:18,000 --> 00:24:25,039
+break when the builder that won the last
+
+469
+00:24:22,080 --> 00:24:28,159
+bit
+
+470
+00:24:25,039 --> 00:24:31,120
+um request for exit and we miss at least
+
+471
+00:24:28,159 --> 00:24:34,240
+one epoch.
+
+472
+00:24:31,120 --> 00:24:36,080
+Yeah, maybe I know it's complicated, but
+
+473
+00:24:34,240 --> 00:24:38,640
+I don't know if from from the testing
+
+474
+00:24:36,080 --> 00:24:41,200
+perspective is is a doable test right
+
+475
+00:24:38,640 --> 00:24:44,400
+now with the tooling that we have to
+
+476
+00:24:41,200 --> 00:24:45,600
+recreate the scenario or not.
+
+477
+00:24:44,400 --> 00:24:47,760
+You mean reference test?
+
+478
+00:24:45,600 --> 00:24:48,240
+>> Oh, wait, wait. I have a test. What I
+
+479
+00:24:47,760 --> 00:24:50,480
+was saying
+
+480
+00:24:48,240 --> 00:24:53,520
+>> reference test?
+
+481
+00:24:50,480 --> 00:24:56,400
+>> No, I think maybe that was miso. If you
+
+482
+00:24:53,520 --> 00:24:58,559
+implement this reordering today in your
+
+483
+00:24:56,400 --> 00:25:01,120
+client, you still pass the current beta
+
+484
+00:24:58,559 --> 00:25:03,520
+to vectors
+
+485
+00:25:01,120 --> 00:25:06,159
+because no test covers that. But in my
+
+486
+00:25:03,520 --> 00:25:07,840
+PR, there is a new test that would catch
+
+487
+00:25:06,159 --> 00:25:13,640
+if you don't. Ah,
+
+488
+00:25:07,840 --> 00:25:13,640
+>> okay. Sorry. Sorry. Good. Okay. Good.
+
+489
+00:25:16,480 --> 00:25:21,480
+Okay, cool. Any other questions or
+
+490
+00:25:18,480 --> 00:25:21,480
+comments?
+
+491
+00:25:45,600 --> 00:25:53,480
+It seems we're good. Thank you everyone.
+
+492
+00:25:49,760 --> 00:25:53,480
+Let's go. Ship Zapoleia.
+
+493
+00:26:01,360 --> 00:26:08,520
+>> Yeah. Byebye, guys. Byebye. Thanks a
+
+494
+00:26:05,520 --> 00:26:08,520
+lot.

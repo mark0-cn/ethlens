@@ -1,0 +1,257 @@
+{
+  "slug": "p2p-networking-9",
+  "series": "P2P",
+  "number": 9,
+  "title": "P2P Networking #9",
+  "subtitle": "P2P 网络专题会议",
+  "date": "2026-10-07",
+  "translationStatus": "reviewed",
+  "kicker": "P2P MEETING",
+  "topic": "服务发现、解耦共识与 EIP-8411",
+  "agendaUrl": "https://github.com/ethereum/pm/issues/2262",
+  "source": {
+    "forkcastUrl": "https://forkcast.org/calls/p2p/009/",
+    "sync": {
+      "transcriptStartTime": "00:17:22",
+      "videoStartTime": "00:17:22"
+    },
+    "captions": {
+      "provider": "forkcast",
+      "track": "transcript_corrected.vtt",
+      "url": "https://forkcast.org/artifacts/p2p/2026-10-07_009/transcript_corrected.vtt",
+      "userApproved": true
+    },
+    "chineseTranslation": {
+      "method": "GPT context translation and review",
+      "cueCount": 752,
+      "sourceTimelinePreserved": true,
+      "sourceTimingWarningCount": 300
+    },
+    "youtubeUrl": "https://www.youtube.com/watch?v=Av6VvmP6V_k"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 18,
+      "decisions": 1,
+      "actionItems": 3
+    },
+    "sourceUrl": "https://forkcast.org/calls/p2p/009/",
+    "transcriptToVideoOffsetSeconds": 0.0,
+    "sections": [
+      {
+        "title": "客户端进展",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Lighthouse 正在简化网络栈，开发 EIP-8411 和证明打包的原型。",
+            "sourceTimestamp": "00:18:05",
+            "seek": 1085.0
+          },
+          {
+            "text": "Prysm 已合并部分列支持，并为 Fulu 和 Gloas 默认启用；节点评分与连接机制改造正在主网、Hoodi 节点上持续测试，计划下次会议演示面板。",
+            "sourceTimestamp": "00:19:10",
+            "seek": 1150.0
+          },
+          {
+            "text": "Lodestar 的 P2P 工作将引入 1.3，之后加入部分消息支持；要等 Gloas 主网上线后才启用。",
+            "sourceTimestamp": "00:21:01",
+            "seek": 1261.0
+          },
+          {
+            "text": "Geth 的 Csaba 发布了 blob 池保护机制文章，一半已发布、一半在 PR 中；本周期还加固了稀疏 blob 池。",
+            "sourceTimestamp": "00:22:13",
+            "seek": 1333.0
+          }
+        ]
+      },
+      {
+        "title": "Sepolia 升级后的带宽",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Glamsterdam 升级后的 Sepolia 带宽分析显示，执行载荷在 slot 开始时立即传播，而非等待证明阈值。",
+            "sourceTimestamp": "00:24:00",
+            "seek": 1440.0
+          },
+          {
+            "text": "Lodestar 尚无部分列支持，数据列 sidecar 带宽约为 Prysm 的十倍，例如每个区块约 1 MB 对 120 KB。",
+            "sourceTimestamp": "00:28:30",
+            "seek": 1710.0
+          },
+          {
+            "text": "Lodestar 每条执行载荷消息最多收到 77 个副本，约 150 KB 的消息收到 61 次以上；可能涉及近期已修复的 IDONTWANT bug，仍在调查所用版本。",
+            "sourceTimestamp": "00:30:35",
+            "seek": 1835.0
+          }
+        ]
+      },
+      {
+        "title": "服务发现",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Felix（Geth）介绍，基于主题的服务发现已进入 discv5 规范，替换旧的未实现消息；无需将主题写入 ENR，即可定向寻找节点。",
+            "sourceTimestamp": "00:32:18",
+            "seek": 1938.0
+          },
+          {
+            "text": "规范被认为已定稿；Geth 与 Datahop 的实现仍在开发、尚未合并；支持渐进部署，不要求全网同时升级。",
+            "sourceTimestamp": "00:35:03",
+            "seek": 2103.0
+          },
+          {
+            "text": "每个节点的索引表有上限，存储开销恒定，容量随网络规模增长；后量子 ENR 可能变大，是放弃全网遍历假设的动机之一。",
+            "sourceTimestamp": "00:50:46",
+            "seek": 3046.0
+          }
+        ]
+      },
+      {
+        "title": "解耦共识模拟",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Sukun 用 Shadow 模拟解耦共识：100 个节点，20% 为超级节点，每轮 8 个 slot；每子网 2500 个证明者，当前约 500 个；500 节点的 Cloud Run 模拟安排在明天。",
+            "sourceTimestamp": "00:53:43",
+            "seek": 3223.0
+          },
+          {
+            "text": "模拟三种策略：slot 开始时发布所有 FFG 投票、逐秒分批发布、slot 内分三个委员会；后两种策略显著改善 Goldfish 投票延迟。",
+            "sourceTimestamp": "00:56:23",
+            "seek": 3383.0
+          },
+          {
+            "text": "关键问题：Goldfish 和 FFG mesh 之间缺少跨主题优先级机制；QUIC 流优先级只在同一连接内生效。",
+            "sourceTimestamp": "00:58:48",
+            "seek": 3528.0
+          },
+          {
+            "text": "计划集成 GossipSub 的 IHAVE/IWANT 跟踪器，并尝试让 X-ray 兼容 Shadow 模拟。",
+            "sourceTimestamp": "01:00:49",
+            "seek": 3649.0
+          }
+        ]
+      },
+      {
+        "title": "Hegotá 提案",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "EIP-8411（快速执行载荷广播）处于 Hegotá PFI 阶段；将载荷分为 64 块，传播延迟约降至三分之一；包含在出价中增加分块根的共识变更。",
+            "sourceTimestamp": "01:10:33",
+            "seek": 4233.0
+          },
+          {
+            "text": "Lodestar 的顾虑：缺少主网传播问题的数据，扩大范围可能使 Hegotá 延迟到六月之后；如无明确需求，更倾向推迟到 I 分叉。",
+            "sourceTimestamp": "01:12:28",
+            "seek": 4348.0
+          },
+          {
+            "text": "支持方认为，测试网缺乏真实的构建者、家庭节点和带宽条件；后量子签名与 LeanVM 证明无论如何都需要该机制，分段所需的共识出价变更能解锁未来网络工作。",
+            "sourceTimestamp": "01:13:51",
+            "seek": 4431.0
+          },
+          {
+            "text": "Lighthouse 承诺无论是否纳入 Hegotá，都以向后兼容方式实现 EIP-8411；Daniel 邀请其他客户端加入，指出 Prysm 似乎感兴趣，Vlad（Gattaca）也表示支持。",
+            "sourceTimestamp": "01:43:02",
+            "seek": 6182.0
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "Lighthouse 将以网络向后兼容方式实现 EIP-8411，无论是否纳入 Hegotá 分叉。",
+            "sourceTimestamp": "01:43:20",
+            "seek": 6200.0
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "Lodestar (Matthew Keil / cayman)",
+            "text": "Lodestar 确认 Sepolia 对应版本包含 IDONTWANT 修复，并调查观测到的 60 至 77 个重复执行载荷副本。",
+            "sourceTimestamp": "00:31:41",
+            "seek": 1901.0
+          },
+          {
+            "owner": "Sukun Tarachandani",
+            "text": "为 Shadow 模拟器增加 X-ray 支持，并提交 PR。",
+            "sourceTimestamp": "01:04:09",
+            "seek": 3849.0
+          },
+          {
+            "owner": "Kamil Salakhiev",
+            "text": "在即将召开的 ACDC 会议提出 EIP-8411，协调更多客户端。",
+            "sourceTimestamp": "01:46:33",
+            "seek": 6393.0
+          }
+        ]
+      },
+      {
+        "title": "目标与时间",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "解耦共识的 500 节点 Cloud Run 模拟目标：2026 年 10 月 8 日，即次日。",
+            "sourceTimestamp": "01:00:49",
+            "seek": 3649.0
+          }
+        ]
+      }
+    ]
+  },
+  "publication": {
+    "bilibili": {
+      "subtitleTracksSubmitted": [
+        "中文",
+        "English"
+      ],
+      "submissionVerified": true,
+      "subtitleVariant": {
+        "canonicalCues": 752,
+        "publicationCues": 795,
+        "splitSourceCues": 43,
+        "reason": "Bilibili single-caption length limit",
+        "canonicalTimelinePreserved": true,
+        "publicationInternalTimesInterpolated": true
+      },
+      "bvid": "BV1KLpj62Euf",
+      "url": "https://www.bilibili.com/video/BV1KLpj62Euf/",
+      "status": "published"
+    }
+  },
+  "dateLabel": "2026 年 10 月 7 日",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/p2p-networking-9-october-07-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      },
+      {
+        "provider": "bilibili",
+        "label": "B 站",
+        "bvid": "BV1KLpj62Euf",
+        "url": "https://www.bilibili.com/video/BV1KLpj62Euf/",
+        "page": 1,
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/p2p-networking-9-october-07-2026_en.srt",
+    "zh": "../../media/subtitles/zh/p2p-networking-9-october-07-2026_zh.srt"
+  }
+}

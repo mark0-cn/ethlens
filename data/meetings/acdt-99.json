@@ -1,0 +1,185 @@
+{
+  "slug": "acdt-99",
+  "series": "ACDT",
+  "number": 99,
+  "title": "All Core Devs Testing #99",
+  "subtitle": "全体会议与执行层分组",
+  "date": "2026-10-05",
+  "translationStatus": "reviewed",
+  "kicker": "ACDT MEETING",
+  "topic": "Sepolia Glamsterdam 升级与执行层测试",
+  "agendaUrl": "https://github.com/ethereum/pm/issues/2242",
+  "source": {
+    "forkcastUrl": "https://forkcast.org/calls/acdt/099/",
+    "sync": {
+      "transcriptStartTime": "00:06:57",
+      "videoStartTime": "00:06:57"
+    },
+    "captions": {
+      "provider": "youtube",
+      "track": "en-orig",
+      "kind": "automatic"
+    },
+    "chineseTranslation": {
+      "method": "GPT context translation and review",
+      "cueCount": 596,
+      "sourceTimelinePreserved": true,
+      "sourceTimingWarningCount": 637
+    },
+    "youtubeUrl": "https://www.youtube.com/watch?v=E7Ix7U9lFEw"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 8,
+      "decisions": 2,
+      "actionItems": 2
+    },
+    "sourceUrl": "https://forkcast.org/calls/acdt/099/",
+    "transcriptToVideoOffsetSeconds": 0.0,
+    "sections": [
+      {
+        "title": "分叉状态与日程",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Sepolia 的 Glamsterdam 升级安排在明天 13:53 UTC。",
+            "sourceTimestamp": "00:13:00",
+            "seek": 780.0
+          },
+          {
+            "text": "Sepolia 分叉前不接入构建者；分叉后可立即用普通 Sepolia ETH 存款。",
+            "sourceTimestamp": "00:24:59",
+            "seek": 1499.0
+          }
+        ]
+      },
+      {
+        "title": "客户端进展",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "第一轮影子分叉中，Nethermind（已在 2.1 修复）、Besu（节点连接和空区块）、ethrex（P2P）均有问题；第二轮顺利。",
+            "sourceTimestamp": "00:07:43",
+            "seek": 463.0
+          },
+          {
+            "text": "focil-devnet-0 被意外关闭；重建因超级节点不足而失败，每个节点仅有 100 个验证者；以后将确保足够的超级节点覆盖。",
+            "sourceTimestamp": "00:11:37",
+            "seek": 697.0
+          },
+          {
+            "text": "Prysm 为 Sepolia 发布 v7.2.1，修复构建者 proposer-settings 问题，默认启用部分数据列，并包含两亿 gas 上限。",
+            "sourceTimestamp": "00:13:41",
+            "seek": 821.0
+          },
+          {
+            "text": "Teku 96.9.1 发布版不包含两亿 gas 上限；Teku 使用 develop 分支运行节点以支持该上限。",
+            "sourceTimestamp": "00:20:41",
+            "seek": 1241.0
+          }
+        ]
+      },
+      {
+        "title": "执行层：eth_call 的 gas 上限",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Geth 存在 bug：eth_call 错误地把 gas 限制为单笔交易的 1600 万上限；修复涵盖 eth_call、trace_call、eth_simulate，应该体现在 execution-apis 规范中。",
+            "sourceTimestamp": "00:30:33",
+            "seek": 1833.0
+          },
+          {
+            "text": "达成共识：修复应写入 execution-apis 仓库，而非 EIP 本身。",
+            "sourceTimestamp": "00:32:11",
+            "seek": 1931.0
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "Sepolia 分叉前不接入构建者，分叉前的构建者测试建议使用 Hoodi。",
+            "sourceTimestamp": "00:25:50",
+            "seek": 1550.0
+          },
+          {
+            "text": "eth_call 的 gas 上限修复在 execution-apis 仓库跟踪，而非修改 EIP。",
+            "sourceTimestamp": "00:32:11",
+            "seek": 1931.0
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "Maria Silva / Gary (Geth)",
+            "text": "更新 execution-apis 规范，记录正确的 eth_call gas 上限行为，不套用 1600 万的单笔交易上限。",
+            "sourceTimestamp": "00:32:00",
+            "seek": 1920.0
+          },
+          {
+            "owner": "EIP authors (Glamsterdam)",
+            "text": "Glamsterdam EIP 作者在下次 EIP Editing Office Hour 前提交 PR，将提案移到 Last Call 状态。",
+            "sourceTimestamp": "00:24:06",
+            "seek": 1446.0
+          }
+        ]
+      },
+      {
+        "title": "目标与时间",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "Sepolia 的 Glamsterdam 分叉目标：2026 年 10 月 6 日 13:53 UTC。",
+            "sourceTimestamp": "00:13:00",
+            "seek": 780.0
+          }
+        ]
+      }
+    ]
+  },
+  "publication": {
+    "bilibili": {
+      "subtitleTracksSubmitted": [
+        "中文",
+        "English"
+      ],
+      "submissionVerified": true,
+      "bvid": "BV1Xrpj6ZEjE",
+      "url": "https://www.bilibili.com/video/BV1Xrpj6ZEjE/",
+      "status": "published"
+    }
+  },
+  "dateLabel": "2026 年 10 月 5 日",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/all-core-devs-testing-acdt-99-october-5-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      },
+      {
+        "provider": "bilibili",
+        "label": "B 站",
+        "bvid": "BV1Xrpj6ZEjE",
+        "url": "https://www.bilibili.com/video/BV1Xrpj6ZEjE/",
+        "page": 1,
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/all-core-devs-testing-acdt-99-october-5-2026_en.srt",
+    "zh": "../../media/subtitles/zh/all-core-devs-testing-acdt-99-october-5-2026_zh.srt"
+  }
+}

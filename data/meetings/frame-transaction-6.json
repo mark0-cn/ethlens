@@ -1,0 +1,221 @@
+{
+  "slug": "frame-transaction-6",
+  "series": "AA",
+  "number": 6,
+  "title": "Frame Transaction Breakout #6",
+  "subtitle": "帧交易与账户抽象专题会议",
+  "date": "2026-10-06",
+  "translationStatus": "reviewed",
+  "kicker": "AA MEETING",
+  "topic": "frames-devnet-1 与 FOCIL 合并规划",
+  "agendaUrl": "https://github.com/ethereum/pm/issues/2241",
+  "source": {
+    "forkcastUrl": "https://forkcast.org/calls/aa/006/",
+    "sync": {
+      "transcriptStartTime": "00:13:15",
+      "videoStartTime": "00:13:15"
+    },
+    "captions": {
+      "provider": "youtube",
+      "track": "en-orig",
+      "kind": "automatic"
+    },
+    "chineseTranslation": {
+      "method": "GPT context translation and review",
+      "cueCount": 833,
+      "sourceTimelinePreserved": true,
+      "sourceTimingWarningCount": 887
+    },
+    "youtubeUrl": "https://www.youtube.com/watch?v=r7w0rd_TCxo"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 10,
+      "decisions": 5,
+      "actionItems": 2
+    },
+    "sourceUrl": "https://forkcast.org/calls/aa/006/",
+    "transcriptToVideoOffsetSeconds": 0.0,
+    "sections": [
+      {
+        "title": "分叉状态与日程",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Glamsterdam 已成功部署到 Sepolia。",
+            "sourceTimestamp": "00:13:20",
+            "seek": 800.0
+          },
+          {
+            "text": "提议在 10 月 28 日启动 Hegotá-devnet-0，合并 frames 与 FOCIL 开发网。",
+            "sourceTimestamp": "00:32:47",
+            "seek": 1967.0
+          }
+        ]
+      },
+      {
+        "title": "测试进展",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "EthPandaOps 表示 frames-devnet-0 运行正常；spamoor 每个区块发送约 10 笔帧交易。",
+            "sourceTimestamp": "00:14:18",
+            "seek": 858.0
+          },
+          {
+            "text": "frames-devnet-1 范围包括 EIP-8250（带键 nonce）、EIP-8272（近期根）和 EIP-7906，目标于 10 月 15 日周四启动。",
+            "sourceTimestamp": "00:27:52",
+            "seek": 1672.0
+          },
+          {
+            "text": "为 devnet-1 测试，将验证前缀上限提高到 50 万 gas。",
+            "sourceTimestamp": "00:39:42",
+            "seek": 2382.0
+          }
+        ]
+      },
+      {
+        "title": "Hegotá 提案",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "EIP-8250 通过系统合约实现带键 nonce，被认为是临时拼凑的方案，但 PBT 之前没有更好的替代方案；已确认未来可以迁移。",
+            "sourceTimestamp": "00:18:47",
+            "seek": 1127.0
+          },
+          {
+            "text": "EIP-8141 改动：用 Nick’s method（靓号地址）部署过期验证器，Matt 将在会后合并。",
+            "sourceTimestamp": "00:34:44",
+            "seek": 2084.0
+          },
+          {
+            "text": "EIP-8141 基于 maxFee 的成本上限方案源自 EIP-7999，推迟到 devnet-2；Nethermind 和 Marc 尚未审查。",
+            "sourceTimestamp": "00:34:52",
+            "seek": 2092.0
+          }
+        ]
+      },
+      {
+        "title": "FOCIL 与帧交易策略",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "计划从 frames-devnet-1 进入合并 frames 与 FOCIL 的 Hegotá-devnet-0，合并后停止单独运行两个开发网。",
+            "sourceTimestamp": "00:31:02",
+            "seek": 1862.0
+          },
+          {
+            "text": "FOCIL 已运行在 FOCIL-devnet-1 上，devnet-0 曾崩溃；合并开发网的范围将在周四 ACDE 会议决定。",
+            "sourceTimestamp": "00:45:26",
+            "seek": 2726.0
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "确认 frames-devnet-1 纳入 EIP-8250、EIP-8272 和 EIP-7906，推迟 EIP-8253 与 EIP-7979。",
+            "sourceTimestamp": "00:27:52",
+            "seek": 1672.0
+          },
+          {
+            "text": "frames-devnet-1 的验证前缀上限设为 50 万 gas。",
+            "sourceTimestamp": "00:39:42",
+            "seek": 2382.0
+          },
+          {
+            "text": "Hegotá-devnet-0 启动后，停止单独运行 FOCIL 和 frames 开发网，后续工作统一到 Hegotá 开发网。",
+            "sourceTimestamp": "00:43:00",
+            "seek": 2580.0
+          },
+          {
+            "text": "基于 maxFee 的成本上限不进入 devnet-1；采用 Nick’s method 的过期验证器改动立即推进合并。",
+            "sourceTimestamp": "00:36:14",
+            "seek": 2174.0
+          },
+          {
+            "text": "Daniil 的可变下限验证额度提案尚无结论；lightclient 反对缺少节点通信机制的方案，Daniil 已确认收到反馈。",
+            "sourceTimestamp": "00:52:28",
+            "seek": 3148.0
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "All teams",
+            "text": "在 frames-devnet-1 启动前审查 EIP-8141 帧交易规范的 13 个开放 PR。",
+            "sourceTimestamp": "00:53:44",
+            "seek": 3224.0
+          },
+          {
+            "owner": "Client teams",
+            "text": "审查并回应 Daniil 的 PR：将 MaxVerifyGas 定义为交易池下限，而非硬上限。",
+            "sourceTimestamp": "00:50:44",
+            "seek": 3044.0
+          }
+        ]
+      },
+      {
+        "title": "目标与时间",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "frames-devnet-1 测试版本目标于 10 月 12 日周一发布，客户端镜像周二准备，10 月 15 日周四启动。",
+            "sourceTimestamp": "00:30:17",
+            "seek": 1817.0
+          },
+          {
+            "text": "合并 frames 与 FOCIL 的 Hegotá-devnet-0 目标日期：2026 年 10 月 28 日。",
+            "sourceTimestamp": "00:32:47",
+            "seek": 1967.0
+          }
+        ]
+      }
+    ]
+  },
+  "publication": {
+    "bilibili": {
+      "subtitleTracksSubmitted": [
+        "中文",
+        "English"
+      ],
+      "submissionVerified": true,
+      "bvid": "BV14Gpj6UEQG",
+      "url": "https://www.bilibili.com/video/BV14Gpj6UEQG/",
+      "status": "published"
+    }
+  },
+  "dateLabel": "2026 年 10 月 6 日",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/frame-transaction-breakout-6-oct-6-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      },
+      {
+        "provider": "bilibili",
+        "label": "B 站",
+        "bvid": "BV14Gpj6UEQG",
+        "url": "https://www.bilibili.com/video/BV14Gpj6UEQG/",
+        "page": 1,
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/frame-transaction-breakout-6-oct-6-2026_en.srt",
+    "zh": "../../media/subtitles/zh/frame-transaction-breakout-6-oct-6-2026_zh.srt"
+  }
+}

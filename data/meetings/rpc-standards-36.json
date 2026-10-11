@@ -1,0 +1,164 @@
+{
+  "slug": "rpc-standards-36",
+  "series": "RPC",
+  "number": 36,
+  "title": "RPC Standards #36",
+  "subtitle": "RPC 标准专题会议",
+  "date": "2026-10-05",
+  "translationStatus": "reviewed",
+  "kicker": "RPC MEETING",
+  "topic": "错误码与 Tracing API",
+  "agendaUrl": "https://github.com/ethereum/pm/issues/2258",
+  "source": {
+    "forkcastUrl": "https://forkcast.org/calls/rpc/036/",
+    "sync": {
+      "transcriptStartTime": "00:00:00",
+      "videoStartTime": "00:00:00"
+    },
+    "captions": {
+      "provider": "youtube",
+      "track": "en-orig",
+      "kind": "automatic"
+    },
+    "chineseTranslation": {
+      "method": "GPT context translation and review",
+      "cueCount": 318,
+      "sourceTimelinePreserved": true,
+      "sourceTimingWarningCount": 328
+    },
+    "youtubeUrl": "https://www.youtube.com/watch?v=IMRx4guFBJs"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 6,
+      "decisions": 2,
+      "actionItems": 2
+    },
+    "sourceUrl": "https://forkcast.org/calls/rpc/036/",
+    "transcriptToVideoOffsetSeconds": 0.0,
+    "sections": [
+      {
+        "title": "错误码",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "已解决阻塞项：正错误码使用新的分组目录，负错误码保留旧语义，simulate V1 不变。",
+            "sourceTimestamp": "00:16:28",
+            "seek": 988.0
+          },
+          {
+            "text": "simulate V1 的错误码统一推迟到 simulate V2，V1 不进行破坏兼容性的变更。",
+            "sourceTimestamp": "00:17:37",
+            "seek": 1057.0
+          }
+        ]
+      },
+      {
+        "title": "发布阻塞项",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "元跟踪 issue 自上次会议后没有变化：Go Ethereum 的 PR 已获批准，但仍未合并，另有一个待处理的 Hive PR。",
+            "sourceTimestamp": "00:20:26",
+            "seek": 1226.0
+          }
+        ]
+      },
+      {
+        "title": "Tracing API",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Tracing 规范接近完成，但尚不能合并；Banteg 有一个 Geth 草稿 PR，所有客户端达成一致前不会定稿。",
+            "sourceTimestamp": "00:22:50",
+            "seek": 1370.0
+          },
+          {
+            "text": "Felix 的验证脚本 PR，涉及 execution-apis 和 Hive，已完成约 99%，合并前仍有少量反馈待处理。",
+            "sourceTimestamp": "00:26:49",
+            "seek": 1609.0
+          },
+          {
+            "text": "Nimbus EL 未被纳入 tracing 兼容性跟踪，Chase 将联系 Banteg 跟进。",
+            "sourceTimestamp": "00:29:04",
+            "seek": 1744.0
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "正错误码使用新的分组目录，负错误码保留旧语义；simulate V1 不变。",
+            "sourceTimestamp": "00:17:37",
+            "seek": 1057.0
+          },
+          {
+            "text": "Tracing API 不需要 EIP，已有客户端实现足以作为依据。",
+            "sourceTimestamp": "00:23:34",
+            "seek": 1414.0
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "Simsonraj Easvarasakthi",
+            "text": "提交统一错误码目录的 PR：正值采用新分组，负值保留旧语义。",
+            "sourceTimestamp": "00:19:34",
+            "seek": 1174.0
+          },
+          {
+            "owner": "Chase Wright",
+            "text": "向 Banteg 提出，将 Nimbus EL 纳入 tracing 跟踪。",
+            "sourceTimestamp": "00:29:06",
+            "seek": 1746.0
+          }
+        ]
+      }
+    ]
+  },
+  "publication": {
+    "bilibili": {
+      "subtitleTracksSubmitted": [
+        "中文",
+        "English"
+      ],
+      "submissionVerified": true,
+      "bvid": "BV1oYpj6PE29",
+      "url": "https://www.bilibili.com/video/BV1oYpj6PE29/",
+      "status": "published"
+    }
+  },
+  "dateLabel": "2026 年 10 月 5 日",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/rpc-standards-36-october-05-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      },
+      {
+        "provider": "bilibili",
+        "label": "B 站",
+        "bvid": "BV1oYpj6PE29",
+        "url": "https://www.bilibili.com/video/BV1oYpj6PE29/",
+        "page": 1,
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/rpc-standards-36-october-05-2026_en.srt",
+    "zh": "../../media/subtitles/zh/rpc-standards-36-october-05-2026_zh.srt"
+  }
+}

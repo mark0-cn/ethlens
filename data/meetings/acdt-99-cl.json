@@ -1,0 +1,208 @@
+{
+  "slug": "acdt-99-cl",
+  "series": "ACDT",
+  "number": 99,
+  "title": "All Core Devs Testing #99 · CL Breakout",
+  "subtitle": "共识层分组会议",
+  "date": "2026-10-05",
+  "translationStatus": "reviewed",
+  "kicker": "ACDT MEETING",
+  "topic": "Gloas Beacon API 与构建者付款",
+  "agendaUrl": "https://github.com/ethereum/pm/issues/2242",
+  "source": {
+    "forkcastUrl": "https://forkcast.org/calls/acdt/099/?breakout=cl",
+    "sync": {
+      "transcriptStartTime": "00:00:39",
+      "videoStartTime": "00:00:39"
+    },
+    "captions": {
+      "provider": "youtube",
+      "track": "en-orig",
+      "kind": "automatic"
+    },
+    "chineseTranslation": {
+      "method": "GPT context translation and review",
+      "cueCount": 494,
+      "sourceTimelinePreserved": true,
+      "sourceTimingWarningCount": 499
+    },
+    "breakout": "cl",
+    "parentCall": "acdt-99",
+    "youtubeUrl": "https://www.youtube.com/watch?v=Qi8-oOvANIY"
+  },
+  "summary": {
+    "title": "Summary",
+    "badge": "实验性",
+    "defaultExpanded": false,
+    "counts": {
+      "highlights": 10,
+      "decisions": 2,
+      "actionItems": 2
+    },
+    "sourceUrl": "https://forkcast.org/calls/acdt/099/?breakout=cl",
+    "transcriptToVideoOffsetSeconds": 0.0,
+    "sections": [
+      {
+        "title": "ProduceBlockV4 出价接口",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "提案：验证者客户端直接联系构建者，并通过扩展 ProduceBlockV4，将出价提供给所连接的信标节点。",
+            "sourceTimestamp": "00:01:53",
+            "seek": 113.0
+          },
+          {
+            "text": "顾虑：增加验证者客户端复杂性，可能形成不理想的协议外市场；Nico 指出 payload attributes 时序不匹配，以及 slot 后期调用 API 的问题。",
+            "sourceTimestamp": "00:08:37",
+            "seek": 517.0
+          },
+          {
+            "text": "信标节点拒绝出价时，回退到 P2P 出价或本地构建，仅尽力纳入。",
+            "sourceTimestamp": "00:14:29",
+            "seek": 869.0
+          },
+          {
+            "text": "尚未就合并达成共识；Jihoon 建议继续异步设计讨论，以 Hoodi 为目标。",
+            "sourceTimestamp": "00:15:22",
+            "seek": 922.0
+          }
+        ]
+      },
+      {
+        "title": "ePBS 漏 slot 的付款顺序",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "两个竞争的 PR，consensus-specs #5694 和 #5695，处理构建者赢得出价、退出后又发生漏 slot 时的付款问题。",
+            "sourceTimestamp": "00:16:07",
+            "seek": 967.0
+          },
+          {
+            "text": "Michael（Lighthouse）倾向于 Nico 的 PR #5695，Potuz 也接受；更严格的请求顺序被认为对未来扩展更安全。",
+            "sourceTimestamp": "00:17:53",
+            "seek": 1073.0
+          },
+          {
+            "text": "合并 #5695 会改变共识，但 Nico 指出客户端仍通过当前 beta-2 测试向量，因此不一定需要规范发布；合并后再讨论发布，Potuz 将提交 Prysm PR。",
+            "sourceTimestamp": "00:23:13",
+            "seek": 1393.0
+          }
+        ]
+      },
+      {
+        "title": "Gloas Beacon API",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "有 6 个开放的 Gloas Beacon API PR：#638、#641、#655、#657、#659、#615；Nico 已全部批准，并在 Lodestar 实现。",
+            "sourceTimestamp": "00:20:22",
+            "seek": 1222.0
+          },
+          {
+            "text": "目标在 Sepolia 分叉前合并这些 PR，客户端实现为 Hoodi 做好准备。",
+            "sourceTimestamp": "00:20:44",
+            "seek": 1244.0
+          }
+        ]
+      },
+      {
+        "title": "FOCIL 客户端镜像",
+        "kind": "highlights",
+        "items": [
+          {
+            "text": "Lodestar 和 Teku 已提供 FOCIL 镜像，Lighthouse 正在开发。",
+            "sourceTimestamp": "00:23:47",
+            "seek": 1427.0
+          }
+        ]
+      },
+      {
+        "title": "决策",
+        "kind": "decisions",
+        "items": [
+          {
+            "text": "合并 consensus-specs PR #5695，即 Nico 对请求顺序的调整，处理漏 slot 时的构建者付款。",
+            "sourceTimestamp": "00:19:40",
+            "seek": 1180.0
+          },
+          {
+            "text": "暂不合并 ProduceBlockV4 出价接口，继续异步设计讨论，以 Hoodi 为目标。",
+            "sourceTimestamp": "00:15:22",
+            "seek": 922.0
+          }
+        ]
+      },
+      {
+        "title": "行动项",
+        "kind": "actions",
+        "items": [
+          {
+            "owner": "Luca (Vero)",
+            "text": "Luca 为 ProduceBlockV4 出价设计开启异步讨论线程。",
+            "sourceTimestamp": "00:15:56",
+            "seek": 956.0
+          },
+          {
+            "owner": "All CL teams (Lighthouse, Teku, Prysm)",
+            "text": "在 Sepolia 分叉前审查 6 个 Gloas Beacon API PR，并批准或提出意见。",
+            "sourceTimestamp": "00:21:10",
+            "seek": 1270.0
+          }
+        ]
+      },
+      {
+        "title": "目标与时间",
+        "kind": "targets",
+        "items": [
+          {
+            "text": "在 Sepolia 分叉前合并 Gloas Beacon API PR，实现为 Hoodi 做好准备。",
+            "sourceTimestamp": "00:20:44",
+            "seek": 1244.0
+          },
+          {
+            "text": "consensus-specs #5695 合并后，再讨论共识层规范发布。",
+            "sourceTimestamp": "00:23:13",
+            "seek": 1393.0
+          }
+        ]
+      }
+    ]
+  },
+  "publication": {
+    "bilibili": {
+      "subtitleTracksSubmitted": [
+        "中文",
+        "English"
+      ],
+      "submissionVerified": true,
+      "bvid": "BV13ypj6oEnH",
+      "url": "https://www.bilibili.com/video/BV13ypj6oEnH/",
+      "status": "published"
+    }
+  },
+  "dateLabel": "2026 年 10 月 5 日",
+  "video": {
+    "default": "local",
+    "sources": [
+      {
+        "provider": "local",
+        "label": "本地 MP4",
+        "src": "../../media/videos/acdt-99-cl-breakout-october-5-2026.mp4",
+        "type": "video/mp4",
+        "available": true
+      },
+      {
+        "provider": "bilibili",
+        "label": "B 站",
+        "bvid": "BV13ypj6oEnH",
+        "url": "https://www.bilibili.com/video/BV13ypj6oEnH/",
+        "page": 1,
+        "available": true
+      }
+    ]
+  },
+  "subtitles": {
+    "en": "../../media/subtitles/en/acdt-99-cl-breakout-october-5-2026_en.srt",
+    "zh": "../../media/subtitles/zh/acdt-99-cl-breakout-october-5-2026_zh.srt"
+  }
+}

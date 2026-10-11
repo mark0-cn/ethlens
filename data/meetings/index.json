@@ -16,6 +16,86 @@
     ]
   },
   {
+    "slug": "p2p-networking-9",
+    "series": "P2P",
+    "number": 9,
+    "title": "P2P Networking #9",
+    "subtitle": "P2P 网络专题会议",
+    "date": "2026-10-07",
+    "dateLabel": "2026 年 10 月 7 日",
+    "agendaUrl": "https://github.com/ethereum/pm/issues/2262",
+    "translationStatus": "reviewed",
+    "manifest": "data/meetings/p2p-networking-9.json",
+    "videoProviders": [
+      "local",
+      "bilibili"
+    ]
+  },
+  {
+    "slug": "frame-transaction-6",
+    "series": "AA",
+    "number": 6,
+    "title": "Frame Transaction Breakout #6",
+    "subtitle": "帧交易与账户抽象专题会议",
+    "date": "2026-10-06",
+    "dateLabel": "2026 年 10 月 6 日",
+    "agendaUrl": "https://github.com/ethereum/pm/issues/2241",
+    "translationStatus": "reviewed",
+    "manifest": "data/meetings/frame-transaction-6.json",
+    "videoProviders": [
+      "local",
+      "bilibili"
+    ]
+  },
+  {
+    "slug": "acdt-99",
+    "series": "ACDT",
+    "number": 99,
+    "title": "All Core Devs Testing #99",
+    "subtitle": "全体会议与执行层分组",
+    "date": "2026-10-05",
+    "dateLabel": "2026 年 10 月 5 日",
+    "agendaUrl": "https://github.com/ethereum/pm/issues/2242",
+    "translationStatus": "reviewed",
+    "manifest": "data/meetings/acdt-99.json",
+    "videoProviders": [
+      "local",
+      "bilibili"
+    ]
+  },
+  {
+    "slug": "acdt-99-cl",
+    "series": "ACDT",
+    "number": 99,
+    "title": "All Core Devs Testing #99 · CL Breakout",
+    "subtitle": "共识层分组会议",
+    "date": "2026-10-05",
+    "dateLabel": "2026 年 10 月 5 日",
+    "agendaUrl": "https://github.com/ethereum/pm/issues/2242",
+    "translationStatus": "reviewed",
+    "manifest": "data/meetings/acdt-99-cl.json",
+    "videoProviders": [
+      "local",
+      "bilibili"
+    ]
+  },
+  {
+    "slug": "rpc-standards-36",
+    "series": "RPC",
+    "number": 36,
+    "title": "RPC Standards #36",
+    "subtitle": "RPC 标准专题会议",
+    "date": "2026-10-05",
+    "dateLabel": "2026 年 10 月 5 日",
+    "agendaUrl": "https://github.com/ethereum/pm/issues/2258",
+    "translationStatus": "reviewed",
+    "manifest": "data/meetings/rpc-standards-36.json",
+    "videoProviders": [
+      "local",
+      "bilibili"
+    ]
+  },
+  {
     "slug": "acde-241",
     "series": "ACDE",
     "number": 241,

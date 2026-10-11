@@ -1,0 +1,3331 @@
+1
+00:10:45,120 --> 00:10:49,360
+Hello.
+
+2
+00:10:47,680 --> 00:10:52,079
+>> Hey everyone.
+
+3
+00:10:49,360 --> 00:10:54,959
+>> Hello guys.
+
+4
+00:10:52,079 --> 00:10:59,880
+>> We'll get started a couple minutes uh
+
+5
+00:10:54,959 --> 00:10:59,880
+past the from now.
+
+6
+00:13:16,000 --> 00:13:20,079
+Okay, we can kick this thing off. Might
+
+7
+00:13:17,839 --> 00:13:23,680
+be a smaller meeting today. Also, thanks
+
+8
+00:13:20,079 --> 00:13:25,680
+to a successful deployment of uh
+
+9
+00:13:23,680 --> 00:13:27,920
+Glamsterdam to Sapoleia. Congrats
+
+10
+00:13:25,680 --> 00:13:32,800
+everybody for that.
+
+11
+00:13:27,920 --> 00:13:34,959
+Uh today is uh October the 6, 2026.
+
+12
+00:13:32,800 --> 00:13:39,920
+Welcome to frame transaction breakout
+
+13
+00:13:34,959 --> 00:13:44,120
+number six. Um we can get uh I'll post
+
+14
+00:13:39,920 --> 00:13:44,120
+the agenda again, but
+
+15
+00:13:44,320 --> 00:13:49,279
+we've got sort of the usual template for
+
+16
+00:13:46,639 --> 00:13:52,560
+today. So uh first is an opportunity for
+
+17
+00:13:49,279 --> 00:13:54,560
+any uh spec changes or test release
+
+18
+00:13:52,560 --> 00:13:56,320
+announcements. I don't think that's the
+
+19
+00:13:54,560 --> 00:13:59,760
+case since we've just kicked off uh
+
+20
+00:13:56,320 --> 00:14:03,279
+frames devet zero. So maybe we'll first
+
+21
+00:13:59,760 --> 00:14:05,519
+um speak to how that's going and then
+
+22
+00:14:03,279 --> 00:14:07,440
+we'll tackle the rest of the the agenda
+
+23
+00:14:05,519 --> 00:14:10,560
+from there.
+
+24
+00:14:07,440 --> 00:14:12,720
+I think uh Barnabas is the only Panda
+
+25
+00:14:10,560 --> 00:14:16,079
+we've got in the room with us. Are you
+
+26
+00:14:12,720 --> 00:14:18,399
+able to tell us how frames DevNet Zero
+
+27
+00:14:16,079 --> 00:14:22,839
+is going
+
+28
+00:14:18,399 --> 00:14:22,839
+or might that be a Stephen concern?
+
+29
+00:14:23,040 --> 00:14:29,920
+>> Uh looking at it, it looks 100% to me.
+
+30
+00:14:26,800 --> 00:14:31,814
+So, all good.
+
+31
+00:14:29,920 --> 00:14:34,000
+>> Awesome.
+
+32
+00:14:31,814 --> 00:14:37,760
+[clears throat] Thanks. Um,
+
+33
+00:14:34,000 --> 00:14:40,480
+would anybody um has any other client
+
+34
+00:14:37,760 --> 00:14:42,320
+teams been watching the network? Would
+
+35
+00:14:40,480 --> 00:14:45,320
+you like to comment on uh how that's
+
+36
+00:14:42,320 --> 00:14:45,320
+going?
+
+37
+00:14:54,079 --> 00:14:58,639
+Are we doing anything interesting on
+
+38
+00:14:56,240 --> 00:15:01,880
+that that network yet or keeping it
+
+39
+00:14:58,639 --> 00:15:01,880
+pretty vanilla?
+
+40
+00:15:11,279 --> 00:15:19,760
+So we have a spammer instance up that is
+
+41
+00:15:15,440 --> 00:15:22,240
+sending frame transactions. Uh
+
+42
+00:15:19,760 --> 00:15:26,320
+I don't think we're sending that many.
+
+43
+00:15:22,240 --> 00:15:29,760
+Let check. It's sending about 10 per uh
+
+44
+00:15:26,320 --> 00:15:30,959
+each block. So if you check on Dora, you
+
+45
+00:15:29,760 --> 00:15:32,800
+can see that we have about 10
+
+46
+00:15:30,959 --> 00:15:35,040
+transactions every single block. And
+
+47
+00:15:32,800 --> 00:15:38,360
+each of those transactions are frame
+
+48
+00:15:35,040 --> 00:15:38,360
+type transactions.
+
+49
+00:15:40,959 --> 00:15:47,040
+>> Okay, cool. Sounds like no news is good
+
+50
+00:15:43,680 --> 00:15:50,240
+news then in that regard.
+
+51
+00:15:47,040 --> 00:15:52,320
+Um, is is there anything
+
+52
+00:15:50,240 --> 00:15:54,720
+further that we want to get out of
+
+53
+00:15:52,320 --> 00:15:58,880
+frames devet zero
+
+54
+00:15:54,720 --> 00:16:01,440
+or are we content just to let this run?
+
+55
+00:15:58,880 --> 00:16:04,639
+I think we can just let this run till uh
+
+56
+00:16:01,440 --> 00:16:06,800
+people are comfortable to move on to
+
+57
+00:16:04,639 --> 00:16:09,759
+uh
+
+58
+00:16:06,800 --> 00:16:15,800
+like I I'm not sure how
+
+59
+00:16:09,759 --> 00:16:15,800
+how feature proof frames are on on this
+
+60
+00:16:16,160 --> 00:16:19,040
+>> okay
+
+61
+00:16:16,560 --> 00:16:20,720
+>> in different client races otherwise I
+
+62
+00:16:19,040 --> 00:16:24,000
+would propose to increase the scope
+
+63
+00:16:20,720 --> 00:16:27,199
+already uh with a couple of more EIPs in
+
+64
+00:16:24,000 --> 00:16:30,560
+the future upcoming net
+
+65
+00:16:27,199 --> 00:16:33,440
+>> right so That's the next um conversation
+
+66
+00:16:30,560 --> 00:16:36,880
+on the agenda. The the one question I'll
+
+67
+00:16:33,440 --> 00:16:39,199
+pose first is um are there any other
+
+68
+00:16:36,880 --> 00:16:44,240
+client teams that are approaching
+
+69
+00:16:39,199 --> 00:16:47,279
+readiness to to join um DevNet Zero? And
+
+70
+00:16:44,240 --> 00:16:51,240
+um would adding more features now uh
+
+71
+00:16:47,279 --> 00:16:51,240
+throw a wrench in your plans?
+
+72
+00:17:00,959 --> 00:17:03,920
+I'm not sure what sort of client
+
+73
+00:17:02,399 --> 00:17:06,000
+representation we have here. It might
+
+74
+00:17:03,920 --> 00:17:08,160
+just be GE and Netherm on the call. Am I
+
+75
+00:17:06,000 --> 00:17:09,679
+wrong?
+
+76
+00:17:08,160 --> 00:17:12,880
+>> I honestly don't think we should be
+
+77
+00:17:09,679 --> 00:17:16,400
+waiting on client uh clients to
+
+78
+00:17:12,880 --> 00:17:18,720
+implement the net zero scope. If we have
+
+79
+00:17:16,400 --> 00:17:20,959
+three stable clients then that's good
+
+80
+00:17:18,720 --> 00:17:23,439
+enough to move on to the next uh scope
+
+81
+00:17:20,959 --> 00:17:26,079
+increase and just keep pushing forward
+
+82
+00:17:23,439 --> 00:17:28,640
+and then once we have the merge then can
+
+83
+00:17:26,079 --> 00:17:31,840
+wait a bit more uh for client
+
+84
+00:17:28,640 --> 00:17:33,840
+implementations but we shouldn't hold
+
+85
+00:17:31,840 --> 00:17:36,559
+the nets back just because we don't have
+
+86
+00:17:33,840 --> 00:17:38,880
+enough uh the net
+
+87
+00:17:36,559 --> 00:17:42,240
+>> sure
+
+88
+00:17:38,880 --> 00:17:43,760
+>> yeah like Matt is saying uh I think keep
+
+89
+00:17:42,240 --> 00:17:46,080
+pushing
+
+90
+00:17:43,760 --> 00:17:47,600
+>> so let's maybe dial on like what uh
+
+91
+00:17:46,080 --> 00:17:49,679
+scope increase we want in the future
+
+92
+00:17:47,600 --> 00:17:51,200
+definitely. Uh
+
+93
+00:17:49,679 --> 00:17:54,480
+>> yeah, sounds good. So, we'll move on to
+
+94
+00:17:51,200 --> 00:17:56,480
+that um that next conversation. Um I've
+
+95
+00:17:54,480 --> 00:17:58,960
+gotten
+
+96
+00:17:56,480 --> 00:18:00,640
+uh notes from
+
+97
+00:17:58,960 --> 00:18:03,600
+EtherX
+
+98
+00:18:00,640 --> 00:18:06,720
+uh
+
+99
+00:18:03,600 --> 00:18:12,480
+and Nethermine both advocating for
+
+100
+00:18:06,720 --> 00:18:17,760
+adding 8250 and 8272 to DevNet 1. Uh
+
+101
+00:18:12,480 --> 00:18:20,640
+Matt also suggested considering 7906.
+
+102
+00:18:17,760 --> 00:18:26,520
+Um so
+
+103
+00:18:20,640 --> 00:18:26,520
+let's start with 8250 and uh 8272.
+
+104
+00:18:27,120 --> 00:18:33,840
+Um are there any
+
+105
+00:18:30,559 --> 00:18:35,840
+hesitations, any concerns about or any
+
+106
+00:18:33,840 --> 00:18:38,840
+objections to to adding those to DevNet
+
+107
+00:18:35,840 --> 00:18:38,840
+one?
+
+108
+00:18:38,960 --> 00:18:44,000
+It's not an objection, but I really
+
+109
+00:18:41,280 --> 00:18:48,400
+don't like 8250
+
+110
+00:18:44,000 --> 00:18:51,520
+from a like protocol design perspective.
+
+111
+00:18:48,400 --> 00:18:53,760
+I haven't come up with really like a
+
+112
+00:18:51,520 --> 00:18:56,559
+great alternative solution. Like I
+
+113
+00:18:53,760 --> 00:18:59,200
+understand why we are adding a
+
+114
+00:18:56,559 --> 00:19:03,760
+pre-ompile that keeps track of nonsense
+
+115
+00:18:59,200 --> 00:19:06,080
+for users, but to me it it it's very
+
+116
+00:19:03,760 --> 00:19:08,880
+ugly. And
+
+117
+00:19:06,080 --> 00:19:11,200
+also like when we change the tree
+
+118
+00:19:08,880 --> 00:19:12,400
+structure in the future,
+
+119
+00:19:11,200 --> 00:19:14,240
+you know what? How are we going to
+
+120
+00:19:12,400 --> 00:19:15,440
+migrate that? Are we going to migrate
+
+121
+00:19:14,240 --> 00:19:17,360
+it? Is it going to continue just living
+
+122
+00:19:15,440 --> 00:19:20,000
+in this contract? Like I just don't know
+
+123
+00:19:17,360 --> 00:19:22,400
+all the implications of
+
+124
+00:19:20,000 --> 00:19:24,160
+making this decision, running with that
+
+125
+00:19:22,400 --> 00:19:26,320
+decision, and then how it can impact us
+
+126
+00:19:24,160 --> 00:19:30,039
+in the future, you know, with other
+
+127
+00:19:26,320 --> 00:19:30,039
+things that we want to do.
+
+128
+00:19:37,039 --> 00:19:41,200
+Um,
+
+129
+00:19:38,559 --> 00:19:44,559
+is like what you don't like is that it's
+
+130
+00:19:41,200 --> 00:19:45,919
+part of the transaction envelope or
+
+131
+00:19:44,559 --> 00:19:47,120
+>> because like
+
+132
+00:19:45,919 --> 00:19:48,720
+>> I don't like that it's a it's a
+
+133
+00:19:47,120 --> 00:19:51,600
+pre-ompile
+
+134
+00:19:48,720 --> 00:19:56,799
+like we're now kind of combining
+
+135
+00:19:51,600 --> 00:20:01,280
+the user state with the, you know,
+
+136
+00:19:56,799 --> 00:20:05,200
+important validation state for the
+
+137
+00:20:01,280 --> 00:20:05,200
+um, you know, for the user.
+
+138
+00:20:06,640 --> 00:20:11,200
+Um yeah so right now it will live in a
+
+139
+00:20:08,880 --> 00:20:14,799
+in a system contract. I think the plan
+
+140
+00:20:11,200 --> 00:20:19,919
+would be you know when uh we move to PBT
+
+141
+00:20:14,799 --> 00:20:22,960
+it will be to move it to a branch uh
+
+142
+00:20:19,919 --> 00:20:25,200
+that is like dedicated to kidnies.
+
+143
+00:20:22,960 --> 00:20:27,760
+Um, and we've already talked to like
+
+144
+00:20:25,200 --> 00:20:31,360
+Carlos and Maria about sort of like how
+
+145
+00:20:27,760 --> 00:20:34,320
+that migration will go and you know
+
+146
+00:20:31,360 --> 00:20:36,080
+based on like past usage but also like
+
+147
+00:20:34,320 --> 00:20:39,520
+projections like it doesn't feel like
+
+148
+00:20:36,080 --> 00:20:42,400
+it's a it will be like a ton of um work
+
+149
+00:20:39,520 --> 00:20:45,200
+to actually migrate this. So yeah, they
+
+150
+00:20:42,400 --> 00:20:47,360
+have thought through it. I don't think
+
+151
+00:20:45,200 --> 00:20:51,520
+there is like a better alternative. At
+
+152
+00:20:47,360 --> 00:20:53,760
+least I haven't really seen any. Um,
+
+153
+00:20:51,520 --> 00:20:56,559
+and yeah, I don't know. It feels like,
+
+154
+00:20:53,760 --> 00:20:58,240
+you know, it's been implemented by by
+
+155
+00:20:56,559 --> 00:21:00,960
+EtherX and Nethermind already, and they
+
+156
+00:20:58,240 --> 00:21:02,400
+haven't found like major issues.
+
+157
+00:21:00,960 --> 00:21:04,960
+>> I mean, you could implement lots of
+
+158
+00:21:02,400 --> 00:21:06,799
+things that aren't great. That's not
+
+159
+00:21:04,960 --> 00:21:09,919
+really a
+
+160
+00:21:06,799 --> 00:21:13,039
+a point to me that means that this is a
+
+161
+00:21:09,919 --> 00:21:15,679
+good thing to do. Um, the alternative is
+
+162
+00:21:13,039 --> 00:21:19,679
+to wait for PBT
+
+163
+00:21:15,679 --> 00:21:22,000
+and to do it right. I'm not saying that
+
+164
+00:21:19,679 --> 00:21:24,480
+we need to do that, but this is like why
+
+165
+00:21:22,000 --> 00:21:26,799
+I felt very on the edge about this E
+
+166
+00:21:24,480 --> 00:21:28,720
+from the beginning. Like this is not the
+
+167
+00:21:26,799 --> 00:21:32,799
+right solution. This is the hacky
+
+168
+00:21:28,720 --> 00:21:35,600
+solution to make it work for this fork.
+
+169
+00:21:32,799 --> 00:21:37,440
+No, I mean the solution is like the one
+
+170
+00:21:35,600 --> 00:21:40,240
+you need if you want like multiple
+
+171
+00:21:37,440 --> 00:21:42,080
+transactions per sender like the the
+
+172
+00:21:40,240 --> 00:21:43,679
+like where it lives whether it's like a
+
+173
+00:21:42,080 --> 00:21:45,840
+in a system contract or like in a
+
+174
+00:21:43,679 --> 00:21:47,039
+specific PVt branch is different. But
+
+175
+00:21:45,840 --> 00:21:50,400
+like the solution is not going to
+
+176
+00:21:47,039 --> 00:21:52,159
+change. It's like you you need different
+
+177
+00:21:50,400 --> 00:21:55,679
+solutions. I'm not Yeah, I'm not talking
+
+178
+00:21:52,159 --> 00:21:57,520
+about like needing the 2D knots. Like we
+
+179
+00:21:55,679 --> 00:21:59,280
+do need 2D knots. The question is like
+
+180
+00:21:57,520 --> 00:22:02,559
+how do you implement it? And I think
+
+181
+00:21:59,280 --> 00:22:04,960
+that like 8250 is a hacky implementation
+
+182
+00:22:02,559 --> 00:22:06,159
+and we probably need to do it because
+
+183
+00:22:04,960 --> 00:22:07,600
+there's not really an alternative
+
+184
+00:22:06,159 --> 00:22:10,640
+because the only alternatives that we
+
+185
+00:22:07,600 --> 00:22:13,520
+have is to wait for PBT or you know some
+
+186
+00:22:10,640 --> 00:22:16,240
+kind of like tree change cuz our tree
+
+187
+00:22:13,520 --> 00:22:19,280
+just does not support what we need to
+
+188
+00:22:16,240 --> 00:22:21,120
+support for the 2D.
+
+189
+00:22:19,280 --> 00:22:22,960
+>> Yeah, exactly. But then you know it's
+
+190
+00:22:21,120 --> 00:22:25,280
+it's also about like the sort of like
+
+191
+00:22:22,960 --> 00:22:27,840
+endgame result of what you want is like
+
+192
+00:22:25,280 --> 00:22:30,559
+if you want like private transactions in
+
+193
+00:22:27,840 --> 00:22:32,799
+in Hegota then you need to ship
+
+194
+00:22:30,559 --> 00:22:36,159
+something with the tree we have and you
+
+195
+00:22:32,799 --> 00:22:40,159
+can sort of like condition EIP and and
+
+196
+00:22:36,159 --> 00:22:42,559
+like userf facing changes on future EIPs
+
+197
+00:22:40,159 --> 00:22:44,559
+and tree changes whether they happen or
+
+198
+00:22:42,559 --> 00:22:46,159
+not. I feel like that's a bit of a risky
+
+199
+00:22:44,559 --> 00:22:47,280
+approach as well.
+
+200
+00:22:46,159 --> 00:22:49,919
+>> I'm just saying that's an approach that
+
+201
+00:22:47,280 --> 00:22:52,000
+we generally have taken in the past.
+
+202
+00:22:49,919 --> 00:22:54,400
+Like there's lots of things we've wanted
+
+203
+00:22:52,000 --> 00:22:57,039
+to do that we just haven't been able to
+
+204
+00:22:54,400 --> 00:23:00,039
+because we are kind of waiting for tree
+
+205
+00:22:57,039 --> 00:23:00,039
+changes.
+
+206
+00:23:01,280 --> 00:23:07,360
+>> So but we can do it right like it's uh
+
+207
+00:23:04,640 --> 00:23:08,960
+it's yes it's a system contract and and
+
+208
+00:23:07,360 --> 00:23:10,559
+people don't usually like system
+
+209
+00:23:08,960 --> 00:23:12,960
+contracts that that I sort of like
+
+210
+00:23:10,559 --> 00:23:15,280
+understand but it's not that it's not
+
+211
+00:23:12,960 --> 00:23:16,320
+like we don't have any way to do it at
+
+212
+00:23:15,280 --> 00:23:17,760
+all. It's
+
+213
+00:23:16,320 --> 00:23:20,159
+>> Yeah. I mean, we always have a way to do
+
+214
+00:23:17,760 --> 00:23:21,919
+stuff. Like, I'm not saying that we
+
+215
+00:23:20,159 --> 00:23:24,720
+can't. The AB250 doesn't work. I'm
+
+216
+00:23:21,919 --> 00:23:28,080
+saying it's hacky
+
+217
+00:23:24,720 --> 00:23:31,280
+>> because the system contract.
+
+218
+00:23:28,080 --> 00:23:34,400
+>> I mean, it's using user state storage
+
+219
+00:23:31,280 --> 00:23:36,960
+inside of a contract for protocol and
+
+220
+00:23:34,400 --> 00:23:40,159
+variant about whether or not the user's
+
+221
+00:23:36,960 --> 00:23:42,640
+transaction is unique. That's not
+
+222
+00:23:40,159 --> 00:23:45,200
+>> an ideal design. I'm not saying like we
+
+223
+00:23:42,640 --> 00:23:47,039
+shouldn't do this. I'm just pointing out
+
+224
+00:23:45,200 --> 00:23:49,840
+my concern why I don't necessarily like
+
+225
+00:23:47,039 --> 00:23:52,640
+this EIP very much, but I think in
+
+226
+00:23:49,840 --> 00:23:54,720
+general most people support it and so we
+
+227
+00:23:52,640 --> 00:23:57,039
+should probably move forward with it. I
+
+228
+00:23:54,720 --> 00:23:58,799
+wanted to raise this in case anyone else
+
+229
+00:23:57,039 --> 00:24:01,280
+in case anyone else agrees or in case
+
+230
+00:23:58,799 --> 00:24:03,360
+anyone else has an idea to improve it.
+
+231
+00:24:01,280 --> 00:24:05,039
+>> I'm not going to block it,
+
+232
+00:24:03,360 --> 00:24:08,000
+>> but I just wanted to like be clear like
+
+233
+00:24:05,039 --> 00:24:08,880
+this is something I'm not a fan of.
+
+234
+00:24:08,000 --> 00:24:10,640
+And
+
+235
+00:24:08,880 --> 00:24:13,039
+>> the alternative is to not have private
+
+236
+00:24:10,640 --> 00:24:15,360
+transactions in Hagota and wait for PBT,
+
+237
+00:24:13,039 --> 00:24:17,440
+which doesn't seem like a great
+
+238
+00:24:15,360 --> 00:24:20,960
+decision, but it's really the only
+
+239
+00:24:17,440 --> 00:24:22,880
+alternative I think that we have.
+
+240
+00:24:20,960 --> 00:24:24,320
+>> Yeah, I agree. I agree. But the
+
+241
+00:24:22,880 --> 00:24:25,840
+alternative, I mean, of course, like if
+
+242
+00:24:24,320 --> 00:24:29,600
+someone sort of like comes up with like
+
+243
+00:24:25,840 --> 00:24:33,440
+a better way to do this, then that would
+
+244
+00:24:29,600 --> 00:24:36,000
+be great. Uh but uh
+
+245
+00:24:33,440 --> 00:24:38,799
+and yes a a migration will be possible
+
+246
+00:24:36,000 --> 00:24:43,440
+with uh with PBT. I've talked to Carlos
+
+247
+00:24:38,799 --> 00:24:45,200
+and Maria about it and it is
+
+248
+00:24:43,440 --> 00:24:48,520
+and probably wouldn't be like that much
+
+249
+00:24:45,200 --> 00:24:48,520
+data anyways.
+
+250
+00:24:50,640 --> 00:24:54,880
+So yeah, I mean unless anyone else has
+
+251
+00:24:52,640 --> 00:24:56,799
+thoughts, I feel like we should just
+
+252
+00:24:54,880 --> 00:24:58,880
+move forward with it.
+
+253
+00:24:56,799 --> 00:25:01,039
+I'm happy to keep thinking if it can be
+
+254
+00:24:58,880 --> 00:25:03,440
+improved, but like I have thought about
+
+255
+00:25:01,039 --> 00:25:05,360
+it a bit in the past and there's not a
+
+256
+00:25:03,440 --> 00:25:07,279
+lot of other options. So, I think it's
+
+257
+00:25:05,360 --> 00:25:10,320
+kind of the best worst thing we can do
+
+258
+00:25:07,279 --> 00:25:13,919
+right now.
+
+259
+00:25:10,320 --> 00:25:16,400
+>> Okay. Uh it sounds like that's a good uh
+
+260
+00:25:13,919 --> 00:25:17,840
+place to wrap it up given
+
+261
+00:25:16,400 --> 00:25:21,440
+uh that we believe there's a migration
+
+262
+00:25:17,840 --> 00:25:23,120
+path when a tree change occurs.
+
+263
+00:25:21,440 --> 00:25:25,200
+Um
+
+264
+00:25:23,120 --> 00:25:27,919
+okay. So
+
+265
+00:25:25,200 --> 00:25:32,600
+uh 8250
+
+266
+00:25:27,919 --> 00:25:32,600
+and uh 8272
+
+267
+00:25:32,880 --> 00:25:37,679
+um
+
+268
+00:25:35,120 --> 00:25:41,440
+being uh recent roots.
+
+269
+00:25:37,679 --> 00:25:43,200
+I heard no objections to including those
+
+270
+00:25:41,440 --> 00:25:47,120
+two in
+
+271
+00:25:43,200 --> 00:25:49,279
+uh the next DevNet. Um
+
+272
+00:25:47,120 --> 00:25:51,360
+I'll I'll uh pause there to make sure
+
+273
+00:25:49,279 --> 00:25:54,159
+that's the case. Were there any comments
+
+274
+00:25:51,360 --> 00:25:58,000
+on recent routes?
+
+275
+00:25:54,159 --> 00:26:00,960
+Gone once, gone twice. Okay, it will be
+
+276
+00:25:58,000 --> 00:26:03,600
+included. Then um
+
+277
+00:26:00,960 --> 00:26:08,000
+the the next question then becomes, do
+
+278
+00:26:03,600 --> 00:26:11,000
+you also want to include uh 7906 in the
+
+279
+00:26:08,000 --> 00:26:11,000
+next?
+
+280
+00:26:11,440 --> 00:26:16,080
+Got a thumbs up from Danielle. It was
+
+281
+00:26:14,080 --> 00:26:20,039
+suggested by Matt. So that's guess and
+
+282
+00:26:16,080 --> 00:26:20,039
+nethermind accounted for.
+
+283
+00:26:20,320 --> 00:26:25,880
+And again, I think that might be all of
+
+284
+00:26:21,679 --> 00:26:25,880
+the clients we have represented here.
+
+285
+00:26:26,240 --> 00:26:32,039
+Um,
+
+286
+00:26:28,159 --> 00:26:32,039
+pandas in support.
+
+287
+00:26:33,440 --> 00:26:42,080
+>> I'm in support and whatever clients can
+
+288
+00:26:37,679 --> 00:26:45,120
+ship. Can we ship this in a week?
+
+289
+00:26:42,080 --> 00:26:49,840
+I would I would prefer to have uh move
+
+290
+00:26:45,120 --> 00:26:52,000
+fast than move slow in the beginning. So
+
+291
+00:26:49,840 --> 00:26:54,960
+I would rather have fewer EIPs
+
+292
+00:26:52,000 --> 00:26:57,520
+implemented faster than uh try to add
+
+293
+00:26:54,960 --> 00:27:00,520
+you know 10 EIP already for definite
+
+294
+00:26:57,520 --> 00:27:00,520
+one.
+
+295
+00:27:00,559 --> 00:27:05,600
+>> Right. So I'll open it up to the clients
+
+296
+00:27:02,240 --> 00:27:08,880
+then. Um G or Nether mind uh what's
+
+297
+00:27:05,600 --> 00:27:11,880
+what's the status of 7906 in your
+
+298
+00:27:08,880 --> 00:27:11,880
+client?
+
+299
+00:27:14,559 --> 00:27:19,720
+Nether's implemented already. Cool.
+
+300
+00:27:25,600 --> 00:27:28,600
+Matt,
+
+301
+00:27:29,520 --> 00:27:34,679
+I've not implemented it, but I'm not
+
+302
+00:27:31,200 --> 00:27:34,679
+worried about the implementation.
+
+303
+00:27:35,120 --> 00:27:41,120
+Okay. Does that one week uh horizon seem
+
+304
+00:27:40,159 --> 00:27:44,080
+reasonable?
+
+305
+00:27:41,120 --> 00:27:46,559
+>> Yeah, that's fine.
+
+306
+00:27:44,080 --> 00:27:49,360
+>> Okay. Um,
+
+307
+00:27:46,559 --> 00:27:55,039
+let's call it a plan then. Uh, three new
+
+308
+00:27:49,360 --> 00:27:57,520
+EIPs will be added to Frames DevNet one.
+
+309
+00:27:55,039 --> 00:27:59,200
+That's, uh, 7906,
+
+310
+00:27:57,520 --> 00:28:01,919
+8272,
+
+311
+00:27:59,200 --> 00:28:05,279
+and 8250.
+
+312
+00:28:01,919 --> 00:28:10,559
+>> Do we want anything else?
+
+313
+00:28:05,279 --> 00:28:14,760
+8253 was uh, proposed and 7979 from
+
+314
+00:28:10,559 --> 00:28:14,760
+Spencer from this team.
+
+315
+00:28:16,080 --> 00:28:19,919
+Um, Spencer, did you want to make a case
+
+316
+00:28:17,679 --> 00:28:22,880
+for those?
+
+317
+00:28:19,919 --> 00:28:26,480
+>> Um, I think in initially,
+
+318
+00:28:22,880 --> 00:28:28,240
+yes. I think at least from my side, uh,
+
+319
+00:28:26,480 --> 00:28:31,600
+I'm usually quite optimistic and it's
+
+320
+00:28:28,240 --> 00:28:34,159
+nice to like get EIPs in earlier than
+
+321
+00:28:31,600 --> 00:28:36,799
+than later. But I think
+
+322
+00:28:34,159 --> 00:28:38,399
+uh would be happy to defer to add these
+
+323
+00:28:36,799 --> 00:28:41,360
+um to
+
+324
+00:28:38,399 --> 00:28:42,880
+future DevNet. Um, I think it would be
+
+325
+00:28:41,360 --> 00:28:44,720
+good to keep frames as simple as
+
+326
+00:28:42,880 --> 00:28:47,840
+possible.
+
+327
+00:28:44,720 --> 00:28:51,360
+Um, and then when we merge with Fossil
+
+328
+00:28:47,840 --> 00:28:52,559
+and do the interrupt there, um,
+
+329
+00:28:51,360 --> 00:28:54,559
+hopefully there's going to be no issues.
+
+330
+00:28:52,559 --> 00:28:57,880
+And then after that adds add these
+
+331
+00:28:54,559 --> 00:28:57,880
+smaller EIPs.
+
+332
+00:29:00,559 --> 00:29:07,200
+>> Okay. So, I'm hearing uh an advocation
+
+333
+00:29:04,240 --> 00:29:10,399
+for keeping it at the the
+
+334
+00:29:07,200 --> 00:29:14,159
+just three new additions.
+
+335
+00:29:10,399 --> 00:29:17,360
+I think with 7 796 um at least on our
+
+336
+00:29:14,159 --> 00:29:19,520
+side um there'll be like a reasonable
+
+337
+00:29:17,360 --> 00:29:22,240
+amount to test and I think yeah we'll
+
+338
+00:29:19,520 --> 00:29:25,279
+try and get release out I guess uh as
+
+339
+00:29:22,240 --> 00:29:27,600
+soon as we can. Um but yeah I guess what
+
+340
+00:29:25,279 --> 00:29:31,919
+what kind of timeline do do people want
+
+341
+00:29:27,600 --> 00:29:35,760
+to aim for for this devet I guess?
+
+342
+00:29:31,919 --> 00:29:38,720
+>> Uh Barnabas is suggesting uh a week out.
+
+343
+00:29:35,760 --> 00:29:43,880
+Is that something that feels reasonable
+
+344
+00:29:38,720 --> 00:29:43,880
+for the testing team, spec team
+
+345
+00:29:44,880 --> 00:29:47,600
+>> from my side? Yes. What do you think,
+
+346
+00:29:46,240 --> 00:29:49,760
+Guru?
+
+347
+00:29:47,600 --> 00:29:51,679
+>> Yes. So, I was about to say uh I think
+
+348
+00:29:49,760 --> 00:29:57,440
+we've been uh working a little bit on
+
+349
+00:29:51,679 --> 00:30:00,240
+the uh 8250 and uh 8272 already. Uh 7906
+
+350
+00:29:57,440 --> 00:30:04,080
+is something we are a little bit behind
+
+351
+00:30:00,240 --> 00:30:06,960
+on, I guess. So uh so those two uh EIPs
+
+352
+00:30:04,080 --> 00:30:10,320
+plus tests we should be good and S 9006
+
+353
+00:30:06,960 --> 00:30:12,799
+is something we will be will push to get
+
+354
+00:30:10,320 --> 00:30:14,240
+through during this week and uh
+
+355
+00:30:12,799 --> 00:30:17,279
+hopefully by middle of next week we
+
+356
+00:30:14,240 --> 00:30:19,520
+should be good with all three of them.
+
+357
+00:30:17,279 --> 00:30:22,799
+>> Okay, Matt has just suggested we target
+
+358
+00:30:19,520 --> 00:30:25,120
+like Thursday of next week
+
+359
+00:30:22,799 --> 00:30:27,919
+for the uh the actual DevNet. So does
+
+360
+00:30:25,120 --> 00:30:30,720
+that give folks enough time?
+
+361
+00:30:27,919 --> 00:30:32,880
+Yeah, that sounds that sounds pretty
+
+362
+00:30:30,720 --> 00:30:35,880
+good.
+
+363
+00:30:32,880 --> 00:30:35,880
+>> Cool.
+
+364
+00:30:36,480 --> 00:30:41,039
+Anything else folks want to cover
+
+365
+00:30:38,000 --> 00:30:44,080
+related to devets?
+
+366
+00:30:41,039 --> 00:30:47,840
+>> I think we should try to aim to do a new
+
+367
+00:30:44,080 --> 00:30:51,120
+devet every two weeks. Uh
+
+368
+00:30:47,840 --> 00:30:53,360
+so try to scope each based on that. So
+
+369
+00:30:51,120 --> 00:30:56,559
+like uh frames that two should be then
+
+370
+00:30:53,360 --> 00:30:58,399
+scheduled for three weeks out and uh and
+
+371
+00:30:56,559 --> 00:31:00,799
+then we can start discussing maybe next
+
+372
+00:30:58,399 --> 00:31:03,919
+week already what we what new stuff we
+
+373
+00:31:00,799 --> 00:31:06,240
+want to see in there and then uh two
+
+374
+00:31:03,919 --> 00:31:08,159
+weeks after that we should already focus
+
+375
+00:31:06,240 --> 00:31:10,320
+on having the merged uh development fit
+
+376
+00:31:08,159 --> 00:31:13,120
+for sale.
+
+377
+00:31:10,320 --> 00:31:14,799
+I'm not sure if uh we already want to.
+
+378
+00:31:13,120 --> 00:31:16,880
+Yeah, three weeks from now is probably
+
+379
+00:31:14,799 --> 00:31:22,279
+already a time when we might want to
+
+380
+00:31:16,880 --> 00:31:22,279
+have the uh fossil develop merging.
+
+381
+00:31:23,200 --> 00:31:27,840
+>> Uh that was the next question for the
+
+382
+00:31:25,120 --> 00:31:30,799
+agenda was um the strategy for for
+
+383
+00:31:27,840 --> 00:31:33,200
+merging with fossil devet. Uh at one
+
+384
+00:31:30,799 --> 00:31:35,520
+point the goal was to do that before
+
+385
+00:31:33,200 --> 00:31:37,840
+devcon. Don't know how optimistic that
+
+386
+00:31:35,520 --> 00:31:41,200
+was or realistic but um how are we
+
+387
+00:31:37,840 --> 00:31:41,200
+feeling these days?
+
+388
+00:31:46,960 --> 00:31:51,840
+I honestly haven't looked at into it a
+
+389
+00:31:49,440 --> 00:31:54,080
+lot.
+
+390
+00:31:51,840 --> 00:31:57,039
+So I think honestly it depends like how
+
+391
+00:31:54,080 --> 00:31:59,600
+ready Fossil is for us to integrate
+
+392
+00:31:57,039 --> 00:32:02,840
+with. I think others have looked into it
+
+393
+00:31:59,600 --> 00:32:02,840
+more though.
+
+394
+00:32:02,960 --> 00:32:09,519
+>> Yeah, I started working a bit on some
+
+395
+00:32:05,519 --> 00:32:11,039
+specs for it. Um but yeah, I think um
+
+396
+00:32:09,519 --> 00:32:12,720
+excuse [clears throat] me, Ether X team
+
+397
+00:32:11,039 --> 00:32:15,039
+also have been thinking about it as
+
+398
+00:32:12,720 --> 00:32:16,880
+well. So I'm still kind of uh waiting
+
+399
+00:32:15,039 --> 00:32:21,200
+for some feedback from them so we can
+
+400
+00:32:16,880 --> 00:32:22,960
+actually like align on the details. Um
+
+401
+00:32:21,200 --> 00:32:25,440
+but I think in in terms of the
+
+402
+00:32:22,960 --> 00:32:28,480
+implementation, it shouldn't be that
+
+403
+00:32:25,440 --> 00:32:30,480
+that big. Um yes, it's more about just
+
+404
+00:32:28,480 --> 00:32:33,480
+how long it takes to align on those
+
+405
+00:32:30,480 --> 00:32:33,480
+details.
+
+406
+00:32:34,559 --> 00:32:39,279
+there's uh time on the agenda for for
+
+407
+00:32:36,960 --> 00:32:43,559
+that conversation today. Is it helpful
+
+408
+00:32:39,279 --> 00:32:43,559
+to talk through any of it? Now,
+
+409
+00:32:44,640 --> 00:32:50,080
+>> this is broadly like the the frames plus
+
+410
+00:32:48,080 --> 00:32:52,880
+fossil strategy conversation.
+
+411
+00:32:50,080 --> 00:32:55,279
+>> Can we quickly just finish or go back to
+
+412
+00:32:52,880 --> 00:32:56,399
+the DevNet one? Um, I just wanted to
+
+413
+00:32:55,279 --> 00:33:02,320
+make sure people are okay with the
+
+414
+00:32:56,399 --> 00:33:04,880
+changes I proposed uh to A141 as well
+
+415
+00:33:02,320 --> 00:33:07,279
+because I also want like to do those for
+
+416
+00:33:04,880 --> 00:33:09,519
+that one.
+
+417
+00:33:07,279 --> 00:33:10,480
+>> Uh, yeah. Um, sorry, I guess I missed
+
+418
+00:33:09,519 --> 00:33:12,720
+those. Um,
+
+419
+00:33:10,480 --> 00:33:15,679
+>> it's all good.
+
+420
+00:33:12,720 --> 00:33:17,279
+>> Uh, if you go ahead um if you want to
+
+421
+00:33:15,679 --> 00:33:19,679
+jump into that first.
+
+422
+00:33:17,279 --> 00:33:21,200
+>> Yeah. So, I mean the first one I think
+
+423
+00:33:19,679 --> 00:33:23,519
+is like very straightforward. I don't
+
+424
+00:33:21,200 --> 00:33:26,960
+think anyone would be against it. Um,
+
+425
+00:33:23,519 --> 00:33:28,640
+originally when I wrote the ex expiry
+
+426
+00:33:26,960 --> 00:33:32,559
+verifier
+
+427
+00:33:28,640 --> 00:33:34,480
+um, with Tony, we we just added it to
+
+428
+00:33:32,559 --> 00:33:38,159
+the state at the fork block because it
+
+429
+00:33:34,480 --> 00:33:40,640
+was simple and we didn't spend the time
+
+430
+00:33:38,159 --> 00:33:45,440
+to actually write the implementation in
+
+431
+00:33:40,640 --> 00:33:49,039
+cism and like get the uh, the vanity
+
+432
+00:33:45,440 --> 00:33:51,440
+address minor going. And so now we've
+
+433
+00:33:49,039 --> 00:33:54,640
+kind of just gone back and and done that
+
+434
+00:33:51,440 --> 00:33:57,279
+work. So I would propose that we move
+
+435
+00:33:54,640 --> 00:34:00,799
+towards that, you know, and probably
+
+436
+00:33:57,279 --> 00:34:03,120
+need to do the same for for
+
+437
+00:34:00,799 --> 00:34:07,279
+uh the
+
+438
+00:34:03,120 --> 00:34:11,919
+the key knots and any other contracts
+
+439
+00:34:07,279 --> 00:34:15,200
+that we're relying on at the fork block.
+
+440
+00:34:11,919 --> 00:34:17,839
+Uh but yeah, my my change is just for
+
+441
+00:34:15,200 --> 00:34:19,839
+one right now.
+
+442
+00:34:17,839 --> 00:34:22,240
+I think that's probably okay with most
+
+443
+00:34:19,839 --> 00:34:26,200
+people.
+
+444
+00:34:22,240 --> 00:34:26,200
+Do the next deploy.
+
+445
+00:34:31,133 --> 00:34:32,720
+[clears throat and cough]
+
+446
+00:34:32,320 --> 00:34:35,040
+>> Okay.
+
+447
+00:34:32,720 --> 00:34:37,119
+>> Thumbs up from Daniel.
+
+448
+00:34:35,040 --> 00:34:39,599
+>> Okay. So, I'll merge that one up for the
+
+449
+00:34:37,119 --> 00:34:42,000
+call. And then the other is maybe a
+
+450
+00:34:39,599 --> 00:34:47,599
+bigger question. So two weeks ago we had
+
+451
+00:34:42,000 --> 00:34:50,879
+Anders on to present the max fee cost
+
+452
+00:34:47,599 --> 00:34:53,599
+bounding ideas kind of inherited from
+
+453
+00:34:50,879 --> 00:34:57,440
+EIP799.
+
+454
+00:34:53,599 --> 00:35:01,760
+I have tried to integrate that into
+
+455
+00:34:57,440 --> 00:35:03,760
+frames. The handling
+
+456
+00:35:01,760 --> 00:35:06,720
+is maybe like very minorly different
+
+457
+00:35:03,760 --> 00:35:08,480
+from 799 but overall
+
+458
+00:35:06,720 --> 00:35:10,960
+kind of the same. I felt like people
+
+459
+00:35:08,480 --> 00:35:12,560
+were pretty positive on it on the call
+
+460
+00:35:10,960 --> 00:35:15,680
+last week. I'm not sure if people have
+
+461
+00:35:12,560 --> 00:35:17,359
+had a chance to look at the exact
+
+462
+00:35:15,680 --> 00:35:20,359
+implementation
+
+463
+00:35:17,359 --> 00:35:20,359
+yet
+
+464
+00:35:24,240 --> 00:35:28,880
+and if people are feeling ready to make
+
+465
+00:35:27,040 --> 00:35:32,280
+a decision on it or if we need to spend
+
+466
+00:35:28,880 --> 00:35:32,280
+some more time.
+
+467
+00:35:34,000 --> 00:35:35,920
+Uh
+
+468
+00:35:34,320 --> 00:35:38,960
+>> Danil or Mark, have you had a chance to
+
+469
+00:35:35,920 --> 00:35:38,960
+look at this yet?
+
+470
+00:35:41,119 --> 00:35:44,880
+No, I I don't have a strong opinion for
+
+471
+00:35:43,280 --> 00:35:46,480
+my side. Mark, do you have anything
+
+472
+00:35:44,880 --> 00:35:49,119
+anything to say?
+
+473
+00:35:46,480 --> 00:35:51,359
+>> Um, I haven't actually seen that, so I I
+
+474
+00:35:49,119 --> 00:35:52,880
+need to read it.
+
+475
+00:35:51,359 --> 00:35:54,320
+>> Okay.
+
+476
+00:35:52,880 --> 00:35:56,800
+Doesn't sound like we should merge it
+
+477
+00:35:54,320 --> 00:35:58,800
+for this next. Um, I can leave it as
+
+478
+00:35:56,800 --> 00:36:00,400
+draft, let people have a chance to
+
+479
+00:35:58,800 --> 00:36:03,520
+review it some more. I do think this is
+
+480
+00:36:00,400 --> 00:36:06,000
+a pretty pretty big change conceptually
+
+481
+00:36:03,520 --> 00:36:07,119
+to how transactions work even though the
+
+482
+00:36:06,000 --> 00:36:10,000
+implementation is kind of
+
+483
+00:36:07,119 --> 00:36:11,599
+straightforward. So I don't want to I
+
+484
+00:36:10,000 --> 00:36:15,119
+don't want to merge this before people
+
+485
+00:36:11,599 --> 00:36:16,960
+sit with it. So let's go with deploying
+
+486
+00:36:15,119 --> 00:36:19,280
+the expiry verifier with mix method and
+
+487
+00:36:16,960 --> 00:36:23,040
+I'll hold off on bounding the cost with
+
+488
+00:36:19,280 --> 00:36:28,680
+max v until devet 2 or maybe if it goes
+
+489
+00:36:23,040 --> 00:36:28,680
+to devet o we decide that makes sense.
+
+490
+00:36:30,079 --> 00:36:34,359
+That sounds reasonable to me.
+
+491
+00:36:35,440 --> 00:36:39,320
+Okay, we got thumbs up.
+
+492
+00:36:39,760 --> 00:36:43,920
+Okay, well revisiting the agenda here
+
+493
+00:36:41,760 --> 00:36:47,680
+before
+
+494
+00:36:43,920 --> 00:36:49,599
+uh giving anybody whiplash.
+
+495
+00:36:47,680 --> 00:36:51,119
+Uh we've covered spec changes. So we
+
+496
+00:36:49,599 --> 00:36:54,640
+talked about a test release to come next
+
+497
+00:36:51,119 --> 00:36:58,880
+week. We've covered DevNets. Um zero is
+
+498
+00:36:54,640 --> 00:37:01,359
+running. the scope of one is determined.
+
+499
+00:36:58,880 --> 00:37:05,839
+Um,
+
+500
+00:37:01,359 --> 00:37:07,920
+and then I've just got space for um any
+
+501
+00:37:05,839 --> 00:37:11,119
+client team updates or which we might
+
+502
+00:37:07,920 --> 00:37:14,240
+have covered by this point. Um, after
+
+503
+00:37:11,119 --> 00:37:16,640
+that we've got um just open space for
+
+504
+00:37:14,240 --> 00:37:18,560
+new or existing proposal discussions and
+
+505
+00:37:16,640 --> 00:37:21,760
+that could include the the fossil and
+
+506
+00:37:18,560 --> 00:37:25,280
+frames strategy chat if
+
+507
+00:37:21,760 --> 00:37:27,920
+uh folks want to have that today.
+
+508
+00:37:25,280 --> 00:37:30,320
+Um, so before
+
+509
+00:37:27,920 --> 00:37:32,560
+before we chat, fossil, is there
+
+510
+00:37:30,320 --> 00:37:35,800
+anything else somebody would like to
+
+511
+00:37:32,560 --> 00:37:35,800
+touch on?
+
+512
+00:37:38,000 --> 00:37:45,200
+Yeah. Uh, maybe a couple of uh words on
+
+513
+00:37:42,240 --> 00:37:47,680
+uh the next DevNet. Uh, I'm not sure uh
+
+514
+00:37:45,200 --> 00:37:51,680
+I remember if I Yeah, I mentioned it on
+
+515
+00:37:47,680 --> 00:37:54,720
+the last call. uh are we going to uh
+
+516
+00:37:51,680 --> 00:37:58,720
+change the uh verification prefix uh
+
+517
+00:37:54,720 --> 00:38:02,480
+limit uh for for meool
+
+518
+00:37:58,720 --> 00:38:05,119
+uh to test uh like different scenarios
+
+519
+00:38:02,480 --> 00:38:07,920
+complex scenarios especially with the uh
+
+520
+00:38:05,119 --> 00:38:11,359
+kidnotes and recent roots.
+
+521
+00:38:07,920 --> 00:38:13,359
+So yeah uh that's the first thing and
+
+522
+00:38:11,359 --> 00:38:18,160
+the second thing uh just wanted to
+
+523
+00:38:13,359 --> 00:38:21,040
+mention that uh nethermind uh uh already
+
+524
+00:38:18,160 --> 00:38:25,520
+partially implemented matcha and merged
+
+525
+00:38:21,040 --> 00:38:30,320
+it uh and yeah uh probably uh to the
+
+526
+00:38:25,520 --> 00:38:32,960
+next uh call or uh next devnet uh it's
+
+527
+00:38:30,320 --> 00:38:35,040
+is going to be fully uh implemented for
+
+528
+00:38:32,960 --> 00:38:37,280
+nethermind so we're continue working on
+
+529
+00:38:35,040 --> 00:38:40,760
+that.
+
+530
+00:38:37,280 --> 00:38:40,760
+Yeah, that's it.
+
+531
+00:38:44,480 --> 00:38:49,640
+>> Got an I'm fine with the higher limit
+
+532
+00:38:46,480 --> 00:38:49,640
+from Matt.
+
+533
+00:38:49,680 --> 00:38:53,119
+>> Does anybody else want to get into
+
+534
+00:38:52,480 --> 00:38:56,720
+specifics?
+
+535
+00:38:53,119 --> 00:38:58,720
+>> Um, yeah, I think for the higher limit
+
+536
+00:38:56,720 --> 00:39:00,960
+that I don't think, you know, it should
+
+537
+00:38:58,720 --> 00:39:02,560
+be like a commitment to go to a higher
+
+538
+00:39:00,960 --> 00:39:05,440
+limit or anything, but at least it helps
+
+539
+00:39:02,560 --> 00:39:07,040
+a lot with testing. you know, when you
+
+540
+00:39:05,440 --> 00:39:09,520
+send like a bunch of like private
+
+541
+00:39:07,040 --> 00:39:11,839
+transactions and you sort of like test
+
+542
+00:39:09,520 --> 00:39:14,000
+the the app and the wallet workflow,
+
+543
+00:39:11,839 --> 00:39:15,760
+like it's very useful to have these
+
+544
+00:39:14,000 --> 00:39:19,839
+higher limits so you can actually sort
+
+545
+00:39:15,760 --> 00:39:24,200
+of like get feedback um uh from real
+
+546
+00:39:19,839 --> 00:39:24,200
+transactions uh on the test.
+
+547
+00:39:28,640 --> 00:39:33,760
+>> Do we need to lock down a specific
+
+548
+00:39:30,880 --> 00:39:39,960
+number now?
+
+549
+00:39:33,760 --> 00:39:39,960
+Yeah, 500k is is more than than enough.
+
+550
+00:39:40,240 --> 00:39:45,000
+>> Okay. Is that something we can agree to
+
+551
+00:39:42,000 --> 00:39:45,000
+here?
+
+552
+00:39:56,000 --> 00:40:00,960
+At least 300k says Danielle.
+
+553
+00:39:59,359 --> 00:40:03,760
+Matt, are you good with the 500 number
+
+554
+00:40:00,960 --> 00:40:03,760
+specifically?
+
+555
+00:40:08,000 --> 00:40:14,400
+That's fine to me.
+
+556
+00:40:11,119 --> 00:40:17,400
+>> Okay. Unless any objections then 500 it
+
+557
+00:40:14,400 --> 00:40:17,400
+is.
+
+558
+00:40:20,880 --> 00:40:24,920
+>> Okay. Cool. Um,
+
+559
+00:40:27,760 --> 00:40:33,040
+that covers agenda items as far as I've
+
+560
+00:40:31,119 --> 00:40:36,960
+seen. Actually, I I did want to mention
+
+561
+00:40:33,040 --> 00:40:41,440
+there's a the latest comment in the ETH
+
+562
+00:40:36,960 --> 00:40:45,440
+magicians uh thread for frames is
+
+563
+00:40:41,440 --> 00:40:47,920
+P Do suggesting transaction param of
+
+564
+00:40:45,440 --> 00:40:49,599
+zero halts in any other context or in
+
+565
+00:40:47,920 --> 00:40:51,599
+any context other than a frame
+
+566
+00:40:49,599 --> 00:40:54,079
+transaction.
+
+567
+00:40:51,599 --> 00:40:56,720
+um
+
+568
+00:40:54,079 --> 00:41:00,400
+should that halting be relaxed? And I'll
+
+569
+00:40:56,720 --> 00:41:02,800
+just um dropped a link
+
+570
+00:41:00,400 --> 00:41:05,839
+in the chat. I don't expect anybody to
+
+571
+00:41:02,800 --> 00:41:10,359
+have um read and formed an opinion on
+
+572
+00:41:05,839 --> 00:41:10,359
+this just yet.
+
+573
+00:41:12,880 --> 00:41:16,240
+Uh so if there's any immediate thoughts
+
+574
+00:41:14,880 --> 00:41:18,480
+on that, you're welcome to share them.
+
+575
+00:41:16,240 --> 00:41:21,119
+Otherwise, that's just uh something for
+
+576
+00:41:18,480 --> 00:41:24,119
+for folks to read and consider after the
+
+577
+00:41:21,119 --> 00:41:24,119
+call.
+
+578
+00:41:34,480 --> 00:41:42,400
+Okay. Um floor's open now for Fossil and
+
+579
+00:41:38,960 --> 00:41:44,640
+Frames um chatter if there is a
+
+580
+00:41:42,400 --> 00:41:46,960
+conversation to have here today. Is
+
+581
+00:41:44,640 --> 00:41:48,079
+there anything folks are wondering, want
+
+582
+00:41:46,960 --> 00:41:51,079
+to talk through while we've got time
+
+583
+00:41:48,079 --> 00:41:51,079
+together?
+
+584
+00:41:52,720 --> 00:41:57,200
+Go ahead, Spencer.
+
+585
+00:41:54,720 --> 00:42:00,319
+>> Hey. Yeah, I guess it's more of a an
+
+586
+00:41:57,200 --> 00:42:02,079
+alignment um for future devets. So, my
+
+587
+00:42:00,319 --> 00:42:05,040
+understanding now is that we have um
+
+588
+00:42:02,079 --> 00:42:07,520
+frames devet one with the uh free
+
+589
+00:42:05,040 --> 00:42:09,680
+additional EIPs. Then after that
+
+590
+00:42:07,520 --> 00:42:13,359
+there'll be hegatad devet zero which
+
+591
+00:42:09,680 --> 00:42:17,359
+will be the frames devnet one interrupt
+
+592
+00:42:13,359 --> 00:42:18,960
+with um I think it'll be fossil devet
+
+593
+00:42:17,359 --> 00:42:20,560
+one
+
+594
+00:42:18,960 --> 00:42:24,160
+and then after that once we have this
+
+595
+00:42:20,560 --> 00:42:28,640
+hegata devnet zero do we stop using the
+
+596
+00:42:24,160 --> 00:42:32,560
+fossil and frames devets and instead
+
+597
+00:42:28,640 --> 00:42:34,720
+um just uh use the heath devets uh
+
+598
+00:42:32,560 --> 00:42:37,200
+moving forward I guess that's that's my
+
+599
+00:42:34,720 --> 00:42:40,079
+like main question whether that question
+
+600
+00:42:37,200 --> 00:42:44,000
+should be asked here and maybe ACDT as
+
+601
+00:42:40,079 --> 00:42:48,400
+well is uh yeah
+
+602
+00:42:44,000 --> 00:42:50,800
+>> yeah we're going to be not doing like
+
+603
+00:42:48,400 --> 00:42:53,520
+for sale and and frame dead nets anymore
+
+604
+00:42:50,800 --> 00:42:57,240
+if we have the he one so everything is
+
+605
+00:42:53,520 --> 00:42:57,240
+just going to go into hea
+
+606
+00:43:00,960 --> 00:43:07,599
+>> awesome that sounds good from my side
+
+607
+00:43:03,920 --> 00:43:10,160
+>> yeah I mean it's it's a uh also trickier
+
+608
+00:43:07,599 --> 00:43:12,079
+to keep adding EIP especially when we
+
+609
+00:43:10,160 --> 00:43:15,040
+have to add a bunch of EIPs because it's
+
+610
+00:43:12,079 --> 00:43:17,440
+a super nice separation for Amsterdam. I
+
+611
+00:43:15,040 --> 00:43:19,760
+think that uh
+
+612
+00:43:17,440 --> 00:43:22,640
+that we we were able to merge it later
+
+613
+00:43:19,760 --> 00:43:25,520
+on and we could test all the features
+
+614
+00:43:22,640 --> 00:43:28,800
+separate. Uh but yeah, I think for HEG
+
+615
+00:43:25,520 --> 00:43:33,200
+it's bit more valuable to merge the two
+
+616
+00:43:28,800 --> 00:43:36,200
+earlier on and uh struggle a bit more
+
+617
+00:43:33,200 --> 00:43:36,200
+later.
+
+618
+00:43:40,079 --> 00:43:45,359
+Yeah, I've said this before, but I
+
+619
+00:43:42,240 --> 00:43:46,880
+really do think um Hegata has a
+
+620
+00:43:45,359 --> 00:43:50,000
+potential to be one of the fastest
+
+621
+00:43:46,880 --> 00:43:51,440
+postmerge forks. Um
+
+622
+00:43:50,000 --> 00:43:55,119
+and yeah, I think merging the dev nets
+
+623
+00:43:51,440 --> 00:43:56,560
+earlier feels feels good for that. Um so
+
+624
+00:43:55,119 --> 00:44:00,160
+yeah, hopefully we can do it in under
+
+625
+00:43:56,560 --> 00:44:03,160
+seven months. Let's see after class
+
+626
+00:44:00,160 --> 00:44:03,160
+mainet.
+
+627
+00:44:08,720 --> 00:44:15,200
+I think for the maybe technical sort of
+
+628
+00:44:11,920 --> 00:44:18,079
+like part of frames it's u it would have
+
+629
+00:44:15,200 --> 00:44:20,880
+been nice to have it as well because my
+
+630
+00:44:18,079 --> 00:44:24,560
+feeling right now is that nether mind
+
+631
+00:44:20,880 --> 00:44:29,200
+has made a lot of progress uh eex as
+
+632
+00:44:24,560 --> 00:44:32,319
+well and as Daniel said like I think now
+
+633
+00:44:29,200 --> 00:44:34,400
+it's mostly aligning both client teams
+
+634
+00:44:32,319 --> 00:44:36,400
+on exactly what they want to settle on.
+
+635
+00:44:34,400 --> 00:44:37,839
+Like I think like the shape the overall
+
+636
+00:44:36,400 --> 00:44:41,119
+shape is basically the same but it's
+
+637
+00:44:37,839 --> 00:44:43,520
+more like okay should we just like um
+
+638
+00:44:41,119 --> 00:44:48,560
+implement this um you know this
+
+639
+00:44:43,520 --> 00:44:50,800
+particular way or not um and but but if
+
+640
+00:44:48,560 --> 00:44:52,960
+we I guess if we need like three clients
+
+641
+00:44:50,800 --> 00:44:56,560
+to move for forward we we will also sort
+
+642
+00:44:52,960 --> 00:45:00,640
+of like need a to to align
+
+643
+00:44:56,560 --> 00:45:04,000
+G or someone else um on
+
+644
+00:45:00,640 --> 00:45:04,000
+on for frames as
+
+645
+00:45:05,680 --> 00:45:10,640
+I think we need to like uh dial down
+
+646
+00:45:08,000 --> 00:45:13,760
+what we want in the fossil deets still.
+
+647
+00:45:10,640 --> 00:45:18,160
+Uh we probably have time to do one more
+
+648
+00:45:13,760 --> 00:45:20,960
+iteration of fossil nets and uh I'm not
+
+649
+00:45:18,160 --> 00:45:25,599
+sure if we have a breakout for that
+
+650
+00:45:20,960 --> 00:45:29,119
+or yeah probably don't and I think
+
+651
+00:45:25,599 --> 00:45:32,319
+is a execution call this week or we do
+
+652
+00:45:29,119 --> 00:45:34,400
+have a for sale breakout. Okay.
+
+653
+00:45:32,319 --> 00:45:35,359
+Do we have one this week?
+
+654
+00:45:34,400 --> 00:45:38,560
+>> No, it's next.
+
+655
+00:45:35,359 --> 00:45:41,040
+>> No, it's next week.
+
+656
+00:45:38,560 --> 00:45:42,640
+>> Yeah, that might be a bit late for the
+
+657
+00:45:41,040 --> 00:45:44,720
+discussion if you want to launch a week
+
+658
+00:45:42,640 --> 00:45:46,960
+after that already
+
+659
+00:45:44,720 --> 00:45:49,359
+with the increased scope. So maybe we
+
+660
+00:45:46,960 --> 00:45:54,720
+can start some offline discussion about
+
+661
+00:45:49,359 --> 00:45:57,119
+scoping devet 2 and uh maybe aim to also
+
+662
+00:45:54,720 --> 00:45:59,760
+uh
+
+663
+00:45:57,119 --> 00:46:03,440
+make a decision already this Thursday if
+
+664
+00:45:59,760 --> 00:46:05,520
+we want to do the uh haggota uh merge by
+
+665
+00:46:03,440 --> 00:46:09,520
+the end of this month because then we
+
+666
+00:46:05,520 --> 00:46:14,240
+really have to scope the net 2 um the
+
+667
+00:46:09,520 --> 00:46:16,800
+fos side to to that size
+
+668
+00:46:14,240 --> 00:46:19,520
+but I don't think that there's any CL
+
+669
+00:46:16,800 --> 00:46:22,839
+features we could be including uh in
+
+670
+00:46:19,520 --> 00:46:22,839
+that too.
+
+671
+00:46:27,280 --> 00:46:34,880
+>> Yeah, there's not too much CFI yet.
+
+672
+00:46:30,160 --> 00:46:38,680
+>> They could do maybe quicker slots, but
+
+673
+00:46:34,880 --> 00:46:38,680
+yeah, I'm not sure.
+
+674
+00:46:38,720 --> 00:46:44,079
+>> Uh yeah, that would be a that would be a
+
+675
+00:46:41,680 --> 00:46:46,560
+reach.
+
+676
+00:46:44,079 --> 00:46:49,200
+Okay. If there's a um something to get
+
+677
+00:46:46,560 --> 00:46:52,400
+on this Thursday's agenda to help with
+
+678
+00:46:49,200 --> 00:46:53,920
+that decision making, um Barnabas, could
+
+679
+00:46:52,400 --> 00:46:56,400
+you make that? Could you add that to the
+
+680
+00:46:53,920 --> 00:46:56,800
+agenda or is there somebody else I
+
+681
+00:46:56,400 --> 00:46:59,839
+should ask?
+
+682
+00:46:56,800 --> 00:47:03,160
+>> I can I I can add that to the agenda.
+
+683
+00:46:59,839 --> 00:47:03,160
+>> Okay. Thanks.
+
+684
+00:47:03,200 --> 00:47:08,000
+Okay. Um
+
+685
+00:47:05,440 --> 00:47:10,560
+we have been getting towards the end of
+
+686
+00:47:08,000 --> 00:47:12,160
+the uh the agenda items, but I see we've
+
+687
+00:47:10,560 --> 00:47:14,640
+got a few more people joining too,
+
+688
+00:47:12,160 --> 00:47:16,160
+including Anders. So, I'll just mention
+
+689
+00:47:14,640 --> 00:47:21,920
+um
+
+690
+00:47:16,160 --> 00:47:29,280
+that Matt made a suggestion um to
+
+691
+00:47:21,920 --> 00:47:31,760
+uh alter the the frame spec and um
+
+692
+00:47:29,280 --> 00:47:34,400
+if you haven't seen that um looking for
+
+693
+00:47:31,760 --> 00:47:35,920
+a link to drop it in there. Um Andre,
+
+694
+00:47:34,400 --> 00:47:38,400
+did you get a chance to are you aware of
+
+695
+00:47:35,920 --> 00:47:40,160
+that that change? And if if you wanted
+
+696
+00:47:38,400 --> 00:47:43,160
+to comment on it, you're welcome to
+
+697
+00:47:40,160 --> 00:47:43,160
+here.
+
+698
+00:47:46,960 --> 00:47:52,720
+Uh yeah, I have reviewed the change and
+
+699
+00:47:50,079 --> 00:47:54,880
+if we're talking about this uh PR, I
+
+700
+00:47:52,720 --> 00:47:57,680
+reviewed it and we made some changes. It
+
+701
+00:47:54,880 --> 00:47:59,280
+looks good. Yeah.
+
+702
+00:47:57,680 --> 00:48:02,319
+>> Okay, great. Just wanted to see if you
+
+703
+00:47:59,280 --> 00:48:02,880
+had a chance to feedback on it.
+
+704
+00:48:02,319 --> 00:48:08,800
+>> Yeah. Yeah.
+
+705
+00:48:02,880 --> 00:48:12,000
+>> Uh the max gas changes that is okay. Um
+
+706
+00:48:08,800 --> 00:48:14,079
+we're at the end here. Um,
+
+707
+00:48:12,000 --> 00:48:17,079
+anything we want to cover before we wrap
+
+708
+00:48:14,079 --> 00:48:17,079
+up?
+
+709
+00:48:23,200 --> 00:48:28,359
+Uh, yes, Lumi, I'll get that link out to
+
+710
+00:48:25,359 --> 00:48:28,359
+you.
+
+711
+00:48:35,280 --> 00:48:38,599
+There it is.
+
+712
+00:48:42,480 --> 00:48:48,559
+Okay. Uh, we covered a lot of ground
+
+713
+00:48:44,079 --> 00:48:52,160
+here today. Um, we talked about a DevNet
+
+714
+00:48:48,559 --> 00:48:55,680
+1 scope uh, targeting next Thursday that
+
+715
+00:48:52,160 --> 00:49:01,839
+includes the addition of three new EIPs.
+
+716
+00:48:55,680 --> 00:49:04,000
+Um, 8272, 8250, and 7906.
+
+717
+00:49:01,839 --> 00:49:08,160
+Uh this Thursday we'll continue the
+
+718
+00:49:04,000 --> 00:49:12,559
+conversation about um when devets are to
+
+719
+00:49:08,160 --> 00:49:15,599
+merge uh fossil and frames that is
+
+720
+00:49:12,559 --> 00:49:20,559
+and we've made a couple other decisions
+
+721
+00:49:15,599 --> 00:49:23,440
+um about scope for example um Matt will
+
+722
+00:49:20,559 --> 00:49:26,160
+merge in uh
+
+723
+00:49:23,440 --> 00:49:31,480
+the uh Nyx method
+
+724
+00:49:26,160 --> 00:49:31,480
+x-ray verifier. Uh Danielle go ahead.
+
+725
+00:49:32,160 --> 00:49:38,880
+Yeah. Uh I just wanted to remind uh
+
+726
+00:49:35,440 --> 00:49:41,119
+about the uh PR and about the idea to
+
+727
+00:49:38,880 --> 00:49:45,280
+redefine the
+
+728
+00:49:41,119 --> 00:49:49,280
+uh const uh maxify gas as a shared
+
+729
+00:49:45,280 --> 00:49:52,240
+mempool floor rather than uh hard limit
+
+730
+00:49:49,280 --> 00:49:54,800
+uh to make it uh let's say the the
+
+731
+00:49:52,240 --> 00:49:57,760
+minimum amount of uh the guaranteed
+
+732
+00:49:54,800 --> 00:50:00,319
+amount of um frame transa uh frame
+
+733
+00:49:57,760 --> 00:50:02,880
+transaction verification prefix
+
+734
+00:50:00,319 --> 00:50:06,640
+uh for let's say the weakest node.
+
+735
+00:50:02,880 --> 00:50:09,520
+and uh allow other nodes to to use uh
+
+736
+00:50:06,640 --> 00:50:13,760
+higher uh verification prefix limits if
+
+737
+00:50:09,520 --> 00:50:18,079
+if they can. So we this way we could uh
+
+738
+00:50:13,760 --> 00:50:22,880
+uh kind of have uh organic uh gradient
+
+739
+00:50:18,079 --> 00:50:25,760
+way to uh to uh pass uh harder and
+
+740
+00:50:22,880 --> 00:50:29,760
+heavier transactions with a hard and
+
+741
+00:50:25,760 --> 00:50:32,400
+heavy uh verification prefix. Uh but
+
+742
+00:50:29,760 --> 00:50:35,440
+it's going to be slower. Uh but it's
+
+743
+00:50:32,400 --> 00:50:38,480
+there's still a floor that guarantees uh
+
+744
+00:50:35,440 --> 00:50:42,800
+some verification uh limitation but yeah
+
+745
+00:50:38,480 --> 00:50:46,720
+it's just uh just redefine uh to to add
+
+746
+00:50:42,800 --> 00:50:51,440
+more flexibility on that. So yeah uh
+
+747
+00:50:46,720 --> 00:50:54,880
+just just please uh give me uh your uh
+
+748
+00:50:51,440 --> 00:50:57,839
+opinions on that. Uh it's non urgent uh
+
+749
+00:50:54,880 --> 00:50:59,680
+can be done I think. Thank you.
+
+750
+00:50:57,839 --> 00:51:04,359
+>> How do you communicate to your peers?
+
+751
+00:50:59,680 --> 00:51:04,359
+what your verification floor is.
+
+752
+00:51:05,520 --> 00:51:17,440
+>> Uh so we basically the idea basically is
+
+753
+00:51:09,359 --> 00:51:21,280
+to use uh current uh max verify gas as u
+
+754
+00:51:17,440 --> 00:51:22,800
+floor not as limitation. Uh so yeah
+
+755
+00:51:21,280 --> 00:51:27,280
+basically
+
+756
+00:51:22,800 --> 00:51:32,960
+uh if we have uh we have let's say 100%
+
+757
+00:51:27,280 --> 00:51:35,760
+nodes that uh can uh gossip uh under uh
+
+758
+00:51:32,960 --> 00:51:41,599
+transactions that are under uh max
+
+759
+00:51:35,760 --> 00:51:45,040
+verification gas uh but uh the the more
+
+760
+00:51:41,599 --> 00:51:48,480
+uh verification prefix uh above the uh
+
+761
+00:51:45,040 --> 00:51:52,240
+max verify gas uh the less the less uh
+
+762
+00:51:48,480 --> 00:51:56,240
+node supports it. So, uh fewer chances
+
+763
+00:51:52,240 --> 00:51:57,920
+to uh for this uh transaction to be
+
+764
+00:51:56,240 --> 00:52:00,480
+gossiped.
+
+765
+00:51:57,920 --> 00:52:03,040
+So, yeah. Uh so,
+
+766
+00:52:00,480 --> 00:52:07,280
+>> you're saying that you send transactions
+
+767
+00:52:03,040 --> 00:52:09,359
+to peers who can't verify them and then
+
+768
+00:52:07,280 --> 00:52:12,520
+they fail to verify because it's over
+
+769
+00:52:09,359 --> 00:52:12,520
+their limit.
+
+770
+00:52:13,280 --> 00:52:20,319
+Yes. just uh will be slower graph with
+
+771
+00:52:17,680 --> 00:52:21,839
+fewer chance to be included
+
+772
+00:52:20,319 --> 00:52:24,880
+>> right but I think it's not a good thing
+
+773
+00:52:21,839 --> 00:52:28,000
+to send transactions around the memp
+
+774
+00:52:24,880 --> 00:52:29,599
+pool that we know can't get accepted by
+
+775
+00:52:28,000 --> 00:52:33,040
+peers
+
+776
+00:52:29,599 --> 00:52:35,200
+like we need to optimize the mem pool a
+
+777
+00:52:33,040 --> 00:52:37,920
+lot from where we are today and I think
+
+778
+00:52:35,200 --> 00:52:41,040
+adding more rules that make it not
+
+779
+00:52:37,920 --> 00:52:44,960
+possible to do that is not going to help
+
+780
+00:52:41,040 --> 00:52:48,640
+us so like the alternative is to have a
+
+781
+00:52:44,960 --> 00:52:52,400
+protocol to communicate what your
+
+782
+00:52:48,640 --> 00:52:54,160
+um you know what your verify limit is to
+
+783
+00:52:52,400 --> 00:52:56,160
+me that that feels a little a little
+
+784
+00:52:54,160 --> 00:52:57,440
+heavy but it's like something we can
+
+785
+00:52:56,160 --> 00:52:59,440
+obviously do. I mean it's the same type
+
+786
+00:52:57,440 --> 00:53:00,960
+of thing that we've done with storage of
+
+787
+00:52:59,440 --> 00:53:02,480
+history.
+
+788
+00:53:00,960 --> 00:53:04,079
+So, you know, you don't want to be
+
+789
+00:53:02,480 --> 00:53:06,640
+sending a bunch of transactions to peers
+
+790
+00:53:04,079 --> 00:53:09,200
+that can't process them because then you
+
+791
+00:53:06,640 --> 00:53:11,599
+also don't know if they didn't process
+
+792
+00:53:09,200 --> 00:53:13,920
+them and then you might again send them
+
+793
+00:53:11,599 --> 00:53:15,599
+later if they send you this hashes that
+
+794
+00:53:13,920 --> 00:53:18,720
+they have and they don't have the hash
+
+795
+00:53:15,599 --> 00:53:22,079
+hashes that you have. So, to me like
+
+796
+00:53:18,720 --> 00:53:24,559
+without a communication mechanism to say
+
+797
+00:53:22,079 --> 00:53:26,800
+what they're able to verify, like I
+
+798
+00:53:24,559 --> 00:53:28,960
+think this is
+
+799
+00:53:26,800 --> 00:53:31,839
+this is adding too much stress to the
+
+800
+00:53:28,960 --> 00:53:31,839
+network.
+
+801
+00:53:33,200 --> 00:53:39,319
+Oh, okay. Okay, I see. Yeah, thanks for
+
+802
+00:53:36,319 --> 00:53:39,319
+feedback.
+
+803
+00:53:44,240 --> 00:53:48,720
+Okay, we've we've covered a good few of
+
+804
+00:53:46,480 --> 00:53:53,440
+them. Uh, but there are friendly
+
+805
+00:53:48,720 --> 00:53:54,800
+reminder 13 open PRs against frames
+
+806
+00:53:53,440 --> 00:53:57,440
+which you can find in that forecast
+
+807
+00:53:54,800 --> 00:53:58,640
+link. Um, so if those if if any of those
+
+808
+00:53:57,440 --> 00:54:00,880
+need to get addressed before the next
+
+809
+00:53:58,640 --> 00:54:04,720
+DevNet, I guess this is your call to do
+
+810
+00:54:00,880 --> 00:54:08,880
+so. Well,
+
+811
+00:54:04,720 --> 00:54:11,359
+um, I remembered one more thread that
+
+812
+00:54:08,880 --> 00:54:14,880
+was introduced last week. Um, don't know
+
+813
+00:54:11,359 --> 00:54:18,880
+if we had any u decisions made or new
+
+814
+00:54:14,880 --> 00:54:22,079
+opinions formed, but there was um a
+
+815
+00:54:18,880 --> 00:54:24,640
+discussion about how to simulate um
+
+816
+00:54:22,079 --> 00:54:27,599
+frame transactions.
+
+817
+00:54:24,640 --> 00:54:32,440
+U the JSON RPC method. Has anybody had a
+
+818
+00:54:27,599 --> 00:54:32,440
+chance to think any more on that?
+
+819
+00:54:36,240 --> 00:54:44,119
+This came from feedback from
+
+820
+00:54:38,960 --> 00:54:44,119
+uh JXOM, the VM author.
+
+821
+00:54:56,559 --> 00:55:00,240
+If we don't think that's urgent, then I
+
+822
+00:54:58,240 --> 00:55:01,839
+will
+
+823
+00:55:00,240 --> 00:55:06,760
+uh leave that reminder with you and we
+
+824
+00:55:01,839 --> 00:55:06,760
+can pick it up again next call.
+
+825
+00:55:11,280 --> 00:55:17,400
+Okay. Um last call before we wrap up.
+
+826
+00:55:21,440 --> 00:55:26,240
+Uh that'll do it then. Thanks very much
+
+827
+00:55:23,200 --> 00:55:27,839
+everybody for attending and um sharing
+
+828
+00:55:26,240 --> 00:55:29,839
+updates, thoughts, opinions, and
+
+829
+00:55:27,839 --> 00:55:31,520
+progress. Appreciate you. See you next
+
+830
+00:55:29,839 --> 00:55:33,760
+time.
+
+831
+00:55:31,520 --> 00:55:34,880
+>> Thank you.
+
+832
+00:55:33,760 --> 00:55:38,119
+>> Thanks.
+
+833
+00:55:34,880 --> 00:55:38,119
+>> Thank you.
